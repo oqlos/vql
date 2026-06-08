@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp2vql"
+version = "0.1.0"
+description = "MCP server — thin wrappers over dsl2vql"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+dependencies = [
+    "dsl2vql>=0.1.0",
+    "mcp>=1.0",
+]
+
+[project.scripts]
+mcp2vql = "mcp2vql.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

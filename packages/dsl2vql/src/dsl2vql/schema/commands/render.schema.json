@@ -1,0 +1,12 @@
+{
+  "$id": "dsl2vql/commands/render",
+  "type": "object",
+  "required": ["verb", "path"],
+  "properties": {
+    "verb": { "const": "RENDER" },
+    "path": { "type": "string" },
+    "out": { "type": "string" },
+    "format": { "enum": ["svg", "png"], "default": "svg" }
+  },
+  "additionalProperties": false
+}

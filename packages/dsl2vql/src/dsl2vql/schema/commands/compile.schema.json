@@ -1,0 +1,12 @@
+{
+  "$id": "dsl2vql/commands/compile",
+  "type": "object",
+  "required": ["verb", "text"],
+  "properties": {
+    "verb": { "const": "COMPILE" },
+    "text": { "type": "string" },
+    "width": { "type": "number", "default": 1024 },
+    "height": { "type": "number", "default": 768 }
+  },
+  "additionalProperties": false
+}

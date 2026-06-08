@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rest2vql"
+version = "0.1.0"
+description = "REST API (FastAPI) — thin wrappers over dsl2vql"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+dependencies = [
+    "dsl2vql>=0.1.0",
+    "fastapi>=0.110",
+    "uvicorn>=0.27",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "httpx>=0.27"]
+
+[project.scripts]
+rest2vql = "rest2vql.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,12 @@
+{
+  "$id": "dsl2vql/commands/query",
+  "type": "object",
+  "required": ["verb", "target"],
+  "properties": {
+    "verb": { "const": "QUERY" },
+    "target": { "type": "string", "pattern": "^vql://" },
+    "file": { "type": "string" },
+    "format": { "enum": ["json", "yaml"], "default": "json" }
+  },
+  "additionalProperties": false
+}

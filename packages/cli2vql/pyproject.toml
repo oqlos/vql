@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cli2vql"
+version = "0.1.0"
+description = "Shell REPL for VQL control DSL"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+dependencies = ["dsl2vql>=0.1.0"]
+
+[project.scripts]
+cli2vql = "cli2vql.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
