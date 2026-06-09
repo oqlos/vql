@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "scene": {
+    "width": 400,
+    "height": 300,
+    "background": "#F0EBDC",
+    "app": "raster_trace",
+    "url": "file:///tmp/vql-roundtrip/sample_flat_shapes.png",
+    "layers": [
+      {
+        "id": "traced_regions",
+        "objects": [
+          {
+            "id": "region_000",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": { "width": 100, "height": 100 }
+              }
+            ],
+            "style": { "color": "#DC3232", "fill": true, "stroke_width": 0 },
+            "center_x": 100,
+            "center_y": 100,
+            "metadata": { "source": "img2svg_regions" }
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source": "img2svg",
+    "method": "color_grid_merge",
+    "fingerprint": { "phash": "abc123" },
+    "dominant_colors": ["#F0EBDC", "#DC3232", "#3264C8"],
+    "semantic_description": null,
+    "exif": {
+      "note": "optional slice — EXIF alone cannot reconstruct scene geometry"
+    }
+  },
+  "render_target": "svg"
+}

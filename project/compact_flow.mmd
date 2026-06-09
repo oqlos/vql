@@ -1,38 +1,42 @@
 flowchart TD
 %% generated in 0.02s
+    examples__photo_roundtrip_test["examples.photo-roundtrip-test<br/>10 funcs"]
     packages__cli2vql["packages.cli2vql<br/>2 funcs"]
     packages__dsl2img2svg["packages.dsl2img2svg<br/>4 funcs"]
     packages__dsl2vql["packages.dsl2vql<br/>46 funcs"]
-    packages__img2svg["packages.img2svg<br/>11 funcs"]
+    packages__img2svg["packages.img2svg<br/>16 funcs"]
     packages__img2vql["packages.img2vql<br/>41 funcs"]
     packages__mcp2vql["packages.mcp2vql<br/>5 funcs"]
     packages__nlp2vql["packages.nlp2vql<br/>6 funcs"]
     packages__rest2vql["packages.rest2vql<br/>17 funcs"]
     packages__uri2img2svg["packages.uri2img2svg<br/>6 funcs"]
     packages__uri2vql["packages.uri2vql<br/>44 funcs"]
-    src__vql["src.vql<br/>202 funcs"]
+    src__vql["src.vql<br/>214 funcs"]
+    examples__photo_roundtrip_test ==>|10| src__vql
     packages__uri2vql ==>|9| packages__img2vql
     packages__dsl2vql ==>|7| src__vql
     packages__rest2vql ==>|7| packages__dsl2vql
+    examples__photo_roundtrip_test ==>|7| packages__img2svg
     packages__rest2vql ==>|6| packages__img2vql
-    packages__uri2vql ==>|5| src__vql
     packages__mcp2vql ==>|5| packages__img2vql
+    packages__uri2vql ==>|5| src__vql
+    packages__uri2img2svg ==>|4| packages__img2svg
     packages__mcp2vql ==>|4| packages__dsl2vql
     packages__dsl2img2svg ==>|4| packages__img2svg
-    packages__uri2img2svg ==>|4| packages__img2svg
     packages__cli2vql -->|3| packages__dsl2vql
     src__vql -->|3| packages__img2vql
+    packages__mcp2vql -->|2| packages__nlp2vql
+    packages__mcp2vql -->|2| packages__uri2vql
     packages__uri2vql -->|2| packages__uri2img2svg
     packages__uri2vql -->|2| packages__dsl2vql
     packages__nlp2vql -->|2| packages__dsl2vql
-    packages__mcp2vql -->|2| packages__nlp2vql
-    packages__mcp2vql -->|2| packages__uri2vql
+    packages__dsl2vql -->|1| packages__uri2vql
     packages__dsl2vql -->|1| packages__uri2img2svg
     packages__dsl2vql -->|1| packages__nlp2vql
-    packages__dsl2vql -->|1| packages__uri2vql
     packages__mcp2vql -->|1| packages__uri2img2svg
+    packages__rest2vql -->|1| src__vql
+    packages__rest2vql -->|1| packages__uri2vql
     packages__dsl2img2svg -->|1| packages__dsl2vql
     packages__dsl2img2svg -->|1| packages__uri2img2svg
     packages__img2vql -->|1| src__vql
-    packages__rest2vql -->|1| src__vql
-    packages__rest2vql -->|1| packages__uri2vql
+    examples__photo_roundtrip_test -->|1| packages__img2vql

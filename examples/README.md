@@ -14,6 +14,7 @@ bash install-dev.sh
 | [live-capture-test.sh](live-capture-test.sh) | Pillow, uri2vql | Capture Wayland (`--interactive`) → analyze → summary |
 | [img2nl-vql-flow.sh](img2nl-vql-flow.sh) | img2nl, img2vql | Fingerprint, refresh, compare, diagnose --save; opcjonalnie imgl |
 | [full-pipeline.sh](full-pipeline.sh) | pełny stack | Capture → analyze → detect → svg → diagnose (jeden przebieg) |
+| [photo-roundtrip-test.py](photo-roundtrip-test.py) | Pillow, img2svg, numpy | **Test fotografia ↔ VQL** — próbki A/B/C, MSE, raport JSON |
 
 ### Zmienne środowiskowe
 
@@ -24,7 +25,8 @@ bash install-dev.sh
 | `VQL_TEST_GRID` | `24` | Rozmiar siatki (analyze + svg w `full-pipeline.sh`) |
 | `IMG2NL_ROOT` | `../../wronai/img2nl` | Ścieżka do img2nl (install-dev.sh) |
 | `IMGL_ROOT` | `~/github/semcod/imgl` | Ścieżka do imgl (opcjonalnie) |
-| `IMGL_AUTO_CAPTURE` | `1` | imgl capture zamiast synthetic PNG |
+| `IMGL_AUTO_CAPTURE` | `1` | `imgl capture` (vdisplay mirror) zamiast synthetic PNG |
+| `VDISPLAY_ROOT` | `~/github/wronai/vdisplay` | Editable install vdisplay (przez imgl) |
 | `IMGL_WINDOW_SCOPE` | `auto` | Przycięcie do okna fokusu (`scope-window.py`) |
 
 ### Szybkie uruchomienie
@@ -56,12 +58,33 @@ bash examples/img2nl-vql-flow.sh /tmp/screen.png /tmp/moj-ekran.vql.json
 ```bash
 python examples/generate-demo-screen.py -o /tmp/demo-ui.png
 python examples/scope-window.py /tmp/screen.png -o /tmp/screen.scoped.png --json
+
+# Fotografia ↔ VQL — roundtrip bez capture (próbki syntetyczne)
+python examples/photo-roundtrip-test.py --out /tmp/vql-roundtrip
+make test-roundtrip
 ```
+
+### Photo roundtrip (`photo-roundtrip-test.py`)
+
+Generuje próbki w `/tmp/vql-roundtrip/`:
+
+| Plik | Klasa | Test |
+|------|-------|------|
+| `sample_flat_shapes.png` | B | grid + vtracer + contours |
+| `sample_product.png` | B | produkt e-commerce |
+| `sample_natural.png` | C | symulowany pejzaż |
+| `sample_gradient.png` | C | gradient + szum |
+| `sample_ui.png` | A | UI grid adopt |
+| `metadata_only.vql.json` | — | dowód: sam EXIF ≠ rekonstrukcja |
+| `roundtrip_report.json` | — | pełny raport fidelity |
+
+Dokumentacja: [docs/photo-roundtrip.md](../docs/photo-roundtrip.md)
 
 ## Powiązana dokumentacja
 
+- [docs/vdisplay-imgl-automation.md](../docs/vdisplay-imgl-automation.md) — vdisplay → imgl → VQL → LLM
 - [docs/desktop-capture.md](../docs/desktop-capture.md) — czarny PNG na Wayland
 - [docs/window-pipeline.md](../docs/window-pipeline.md) — pełny przepływ
 - [docs/window-uri.md](../docs/window-uri.md) — URI i CLI
 - [docs/img2svg-uri.md](../docs/img2svg-uri.md) — wektoryzacja
-- [docs/rest-window-api.md](../docs/rest-window-api.md) — REST dla agentów
+- [docs/photo-roundtrip.md](../docs/photo-roundtrip.md) — fotografia ↔ VQL, roundtrip, biblioteki

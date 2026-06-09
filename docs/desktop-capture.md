@@ -1,5 +1,14 @@
 # Desktop capture (GNOME / Wayland)
 
+VQL oferuje **dwie ścieżki** zrzutu ekranu:
+
+| Ścieżka | Komenda | Kiedy użyć |
+|---------|---------|------------|
+| **vdisplay + imgl** (zalecane dla LLM) | `imgl capture -o screen.png` | Automatyzacja, headless, provenance DISPLAY |
+| **uri2vql** (portal) | `uri2vql capture-screen --interactive` | Szybki test bez imgl, dialog GNOME OK |
+
+Pełny przepływ vdisplay → imgl → VQL → LLM: [vdisplay-imgl-automation.md](vdisplay-imgl-automation.md).
+
 ## Problem: czarny PNG
 
 Na **GNOME + Wayland** bez uprawnienia *Nagrywanie ekranu* wiele backendów zapisuje **czarny obraz** o dużym rozmiarze wirtualnego pulpitu (np. 8416×4800, `#000000`):
@@ -12,7 +21,18 @@ Na **GNOME + Wayland** bez uprawnienia *Nagrywanie ekranu* wiele backendów zapi
 
 ## Rozwiązanie
 
-### 1. Interaktywny portal (najpewniejsze)
+### 1. imgl + vdisplay mirror (zalecane dla automatyzacji LLM)
+
+```bash
+imgl capture -o /tmp/screen.png --verify
+imgl diagnose /tmp/screen.png   # worth_analyzing: true
+```
+
+vdisplay próbuje mirror bez dialogu GNOME. Na Wayland, gdy mirror zawiedzie, imgl automatycznie przechodzi na portal (region picker). Zapisuje `screen.capture.json` z `display` / `monitor` — potrzebne przy `imgl interact --execute`.
+
+Wymaga: `pip install -e "$IMGL_ROOT[vdisplay]"` (patrz `install-dev.sh`).
+
+### 2. Interaktywny portal uri2vql (bez imgl)
 
 ```bash
 uri2vql capture-screen --interactive --out /tmp/screen.png
@@ -20,13 +40,13 @@ uri2vql capture-screen --interactive --out /tmp/screen.png
 
 Pokazuje dialog xdg-desktop-portal — po zgodzie dostajesz prawdziwy zrzut (np. 2700×4800, ~300+ kolorów).
 
-### 2. Uprawnienia systemowe
+### 3. Uprawnienia systemowe
 
 **Ustawienia → Prywatność → Nagrywanie ekranu** → włącz dla Terminala / Cursor.
 
 Wtedy `gnome-screenshot -f` i `capture-screen` bez `--interactive` mogą działać.
 
-### 3. Ręczny zrzut
+### 4. Ręczny zrzut
 
 PrtScn → `~/Pictures/Screenshots/*.png`, potem:
 

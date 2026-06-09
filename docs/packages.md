@@ -30,7 +30,8 @@
 
 | Potrzeba | Pakiet | Komenda / URI |
 |----------|--------|---------------|
-| Zrzut ekranu | uri2vql | `capture-screen --interactive` |
+| Zrzut ekranu (LLM / vdisplay) | imgl + vdisplay | `imgl capture -o screen.png` |
+| Zrzut ekranu (portal) | uri2vql | `capture-screen --interactive` |
 | Siatka kolorów + fingerprint | uri2vql | `analyze-window` |
 | Okna, przyciski, bbox | img2vql | `detect` / `adopt-ui` |
 | Relacje contains | img2vql | `adopt` → `scene.relations` |
@@ -39,7 +40,8 @@
 | DSL wektoryzacja | dsl2img2svg | `VECTORIZE PATH ... OUT ...` |
 | Czy wysłać do LLM? | img2vql + img2nl | `diagnose-window` |
 | Auto-OCR tekstu UI | img2vql[ocr] | w refresh/diagnose metadata |
-| OCR + klikalne elementy | imgl | `adopt-imgl` |
+| OCR + klikalne elementy | imgl | `adopt-imgl` / `vql://window/imgl` |
+| NL → klik na pulpicie | imgl | `interact --llm --execute` |
 | Czy ekran się zmienił? | img2vql | `compare-window` |
 | REST dla agentów | rest2vql | `POST /v1/window/detect` |
 | MCP dla agentów | mcp2vql | `vql_detect_ui`, `vql_diagnose_window` |
@@ -50,7 +52,8 @@
 export IMG2NL_ROOT=~/github/wronai/img2nl
 pip install -e "$IMG2NL_ROOT[analyze,translate,ocr]"
 
-pip install -e ~/github/semcod/imgl   # opcjonalnie
+pip install -e ~/github/semcod/imgl[vdisplay]   # capture + OCR + LLM
+pip install -e ~/github/wronai/vdisplay[pillow] # sam vdisplay (imgl instaluje też)
 ```
 
 ## Extras pip

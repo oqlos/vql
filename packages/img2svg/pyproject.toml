@@ -16,6 +16,8 @@ dependencies = [
 
 [project.optional-dependencies]
 opencv = ["opencv-python-headless>=4.8.0", "numpy>=1.24.0"]
+vtracer = ["vtracer>=0.6.10"]
+vectorize = ["opencv-python-headless>=4.8.0", "numpy>=1.24.0", "vtracer>=0.6.10"]
 
 [project.scripts]
 img2svg = "img2svg.cli:main"

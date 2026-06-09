@@ -4,7 +4,9 @@ Przepływ przetwarzania zrzutu ekranu w ekosystemie VQL.
 
 ```mermaid
 flowchart LR
-  CAP[capture-screen] --> PNG[screenshot.png]
+  VD[vdisplay mirror] --> ICAP[imgl capture]
+  ICAP --> PNG[screenshot.png]
+  CAP[uri2vql capture-screen] --> PNG
   PNG --> AN[analyze-window]
   PNG --> DET[detect-window]
   PNG --> SVG[img2svg / uri2img2svg]
@@ -37,12 +39,21 @@ Metadata w `app.vql.json`: `fingerprint`, `scene_class`, `special_hits`, `llm_hi
 
 ## 1. Capture
 
+**Automatyzacja LLM (zalecane)** — vdisplay przez imgl:
+
+```bash
+imgl capture -o /tmp/screen.png --verify --analyze --lang eng+pol
+# → screen.png + screen.capture.json + screen.vql.json
+```
+
+**Bez imgl** — portal uri2vql:
+
 ```bash
 uri2vql capture-screen --interactive --out /tmp/screen.png
 uri2vql capture-and-analyze --out app.vql.json --diagnose   # all-in-one
 ```
 
-→ [desktop-capture.md](desktop-capture.md)
+→ [vdisplay-imgl-automation.md](vdisplay-imgl-automation.md) · [desktop-capture.md](desktop-capture.md)
 
 ## 2. Analyze (grid + metadata)
 
@@ -112,12 +123,21 @@ curl -X POST http://localhost:8216/v1/window/detect \
 
 → [rest-window-api.md](rest-window-api.md)
 
-## 8. OCR + semantyka (imgl, opcjonalnie)
+## 8. OCR + semantyka + LLM (imgl + vdisplay)
 
 ```bash
+# Capture (vdisplay) + enrichment w jednym skrypcie
+bash examples/img2nl-vql-flow.sh   # IMGL_AUTO_CAPTURE=1 → imgl capture
+
+# Lub ręcznie:
 uri2vql adopt-imgl --image /tmp/screen.png --out layout.vql.json --lang eng+pol
-bash examples/img2nl-vql-flow.sh   # z imgl enrichment gdy zainstalowany
+uri2vql query "vql://window/imgl?action=list&image=/tmp/screen.png&file=layout.vql.json"
+
+# NL → klik (imgl, wymaga świeżego capture)
+imgl interact /tmp/screen.png --llm --lang eng+pol
 ```
+
+`adopt-imgl` używa `ImglConfig(use_img2vql=True)` — łączy OCR imgl z detekcją bbox img2vql. Provenance z vdisplay trafia do `metadata.capture` / `metadata.window_os`.
 
 ## Przykłady (scripts)
 

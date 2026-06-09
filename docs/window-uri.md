@@ -73,7 +73,15 @@ vql://window/imgl?action=click&target=button_3&file=...
 
 CLI: `uri2vql adopt-imgl --image ... --out layout.vql.json`
 
-## capture (CLI only)
+## capture
+
+**Zalecane (vdisplay + imgl):**
+
+```bash
+imgl capture -o /tmp/screen.png --verify --analyze
+```
+
+**uri2vql (portal, bez vdisplay):**
 
 ```bash
 uri2vql capture-screen --interactive --out /tmp/screen.png
@@ -82,6 +90,8 @@ uri2vql capture-and-analyze --out app.vql.json --diagnose
 ```
 
 `capture-and-analyze` — portal capture (domyślnie interactive) + analyze + opcjonalnie diagnose --save.
+
+→ [vdisplay-imgl-automation.md](vdisplay-imgl-automation.md)
 
 ## NLP → URI (nlp2uri)
 

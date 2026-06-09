@@ -37,6 +37,7 @@ from vql.drawing.house_generator import HouseGenerator
 from vql.drawing.line_generator import LineGenerator
 from vql.drawing.mountain_generator import MountainGenerator
 from vql.drawing.octagon_generator import OctagonGenerator
+from vql.drawing.path_generator import PathGenerator
 from vql.drawing.pentagon_generator import PentagonGenerator
 from vql.drawing.rectangle_generator import RectangleGenerator
 from vql.drawing.rocket_generator import RocketGenerator
@@ -87,7 +88,7 @@ class ShapeRegistry:
         """Register all built-in shape generators."""
         for gen_class in [
             # Basic shapes
-            CircleGenerator, EllipseGenerator, RectangleGenerator, SquareGenerator,
+            CircleGenerator, EllipseGenerator, PathGenerator, RectangleGenerator, SquareGenerator,
             TriangleGenerator, StarGenerator, HeartGenerator, SpiralGenerator,
             HouseGenerator, FlowerGenerator, SunGenerator, TreeGenerator,
             LineGenerator, DotGenerator, GridGenerator, WaveGenerator,

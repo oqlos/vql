@@ -52,3 +52,49 @@ def test_image_to_vql(tmp_path: Path) -> None:
     assert result["ok"]
     assert out.is_file()
     assert result["object_count"] >= 1
+
+
+def test_trace_vtracer(tmp_path: Path) -> None:
+    pytest.importorskip("vtracer")
+    from PIL import Image, ImageDraw
+
+    from img2svg.trace import trace_vtracer
+    from img2svg.to_vql import trace_to_vql_program
+
+    img = tmp_path / "vtracer.png"
+    im = Image.new("RGB", (120, 80), (240, 235, 220))
+    ImageDraw.Draw(im).rectangle([10, 10, 60, 50], fill=(220, 50, 50))
+    im.save(img)
+
+    trace = trace_vtracer(img)
+    assert trace["ok"], trace
+    assert trace["path_count"] >= 2
+    program = trace_to_vql_program(trace, image_path=img)
+    assert program.object_count() >= 2
+    assert any(o.primitives[0].shape_type == "path" for o in program.scene.iter_objects())
+
+
+def test_image_to_vql_vtracer(tmp_path: Path) -> None:
+    pytest.importorskip("vtracer")
+    from PIL import Image
+
+    img = tmp_path / "vt.png"
+    Image.new("RGB", (64, 64), (100, 120, 140)).save(img)
+    out = tmp_path / "vt.vql.json"
+    result = image_to_vql(img, out_program=out, method="vtracer")
+    assert result["ok"]
+    assert result["method"] == "vtracer"
+
+
+def test_image_to_vql_sets_background(tmp_path: Path) -> None:
+    import json
+
+    from PIL import Image
+    from vql.schema.program import VQLProgram
+
+    img = tmp_path / "bg.png"
+    Image.new("RGB", (80, 60), (200, 210, 220)).save(img)
+    out = tmp_path / "bg.vql.json"
+    image_to_vql(img, out_program=out, grid=8)
+    program = VQLProgram.from_dict(json.loads(out.read_text(encoding="utf-8")))
+    assert program.scene.background == "#C8D2DC"

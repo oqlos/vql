@@ -1,0 +1,147 @@
+// LESS format — define @variables here as needed
+
+app {
+  name: vql;
+  version: 0.1.3;
+}
+
+dependencies {
+  png: "cairosvg>=2.7, pillow>=10.0";
+  desktop: "pillow>=10.0, mss>=9.0";
+  playwright: playwright>=1.40.0;
+  dev: "pytest>=8.0, cairosvg>=2.7, pillow>=10.0, protobuf>=5.0, jsonschema>=4.0, goal>=2.1.0, costs>=0.1.20, pfix>=0.1.60";
+}
+
+interface[type="api"] {
+  type: rest;
+  framework: fastapi;
+}
+
+workflow[name="venv"] {
+  trigger: manual;
+  step-1: run cmd=test -d .venv || python3 -m venv .venv;
+  step-2: run cmd=echo "venv ready: .venv/";
+}
+
+workflow[name="install"] {
+  trigger: manual;
+  step-1: run cmd=$(PIP) install -e .;
+}
+
+workflow[name="install-dev"] {
+  trigger: manual;
+  step-1: run cmd=$(PIP) install -e .;
+  step-2: run cmd=$(PIP) install -e packages/uri2vql;
+  step-3: run cmd=$(PIP) install -e packages/nlp2vql;
+  step-4: run cmd=$(PIP) install -e packages/dsl2vql;
+  step-5: run cmd=$(PIP) install -e packages/cli2vql;
+  step-6: run cmd=$(PIP) install -e packages/rest2vql;
+  step-7: run cmd=-$(PIP) install -e packages/mcp2vql;
+  step-8: run cmd=$(PIP) install -e ".[dev,png]" jsonschema protobuf fastapi uvicorn httpx;
+  step-9: run cmd=echo "dev stack installed";
+}
+
+workflow[name="proto"] {
+  trigger: manual;
+  step-1: run cmd=$(PIP) install -q grpcio-tools;
+  step-2: run cmd=bash packages/dsl2vql/scripts/generate-proto.sh;
+}
+
+workflow[name="test"] {
+  trigger: manual;
+  step-1: run cmd=echo "Running tests...";
+  step-2: run cmd=$(PYTEST);
+}
+
+workflow[name="test-cov"] {
+  trigger: manual;
+  step-1: run cmd=$(PYTHON) -m pytest tests/ packages/dsl2vql/tests -v \;
+  step-2: run cmd=--cov=vql --cov=dsl2vql --cov-report=term-missing;
+}
+
+workflow[name="test-all"] {
+  trigger: manual;
+  step-1: run cmd=$(PYTHON) -m pytest tests/ packages/ -q --tb=short;
+}
+
+workflow[name="test-roundtrip"] {
+  trigger: manual;
+  step-1: run cmd=$(PYTHON) -m pytest tests/test_photo_roundtrip.py -q --tb=short;
+  step-2: run cmd=$(PYTHON) examples/photo-roundtrip-test.py --out /tmp/vql-roundtrip;
+}
+
+workflow[name="validate-schema"] {
+  trigger: manual;
+  step-1: run cmd=dsl2vql validate-schema;
+}
+
+workflow[name="compile"] {
+  trigger: manual;
+  step-1: run cmd=dsl2vql -c 'COMPILE "narysuj czerwone koło"' --json;
+}
+
+workflow[name="serve"] {
+  trigger: manual;
+  step-1: run cmd=rest2vql serve --port $(PORT) --host 127.0.0.1;
+}
+
+workflow[name="clean"] {
+  trigger: manual;
+  step-1: run cmd=find . -type f -name '*.pyc' -delete;
+  step-2: run cmd=find . -type d -name '__pycache__' -exec rm -rf {} + 2>/dev/null || true;
+  step-3: run cmd=find . -type d -name '*.egg-info' -exec rm -rf {} + 2>/dev/null || true;
+  step-4: run cmd=rm -rf build/ dist/ .coverage htmlcov/ .pytest_cache .goal_test_report.xml;
+  step-5: run cmd=echo "clean done";
+}
+
+workflow[name="build"] {
+  trigger: manual;
+  step-1: run cmd=$(PIP) install -q build;
+  step-2: run cmd=rm -rf dist/ build/;
+  step-3: run cmd=$(PYTHON) -m build;
+}
+
+workflow[name="publish"] {
+  trigger: manual;
+  step-1: run cmd=$(PIP) install -q twine;
+  step-2: run cmd=$(PYTHON) -m twine check dist/*;
+}
+
+workflow[name="publish-confirm"] {
+  trigger: manual;
+  step-1: run cmd=$(PYTHON) -m twine upload dist/*;
+}
+
+workflow[name="version"] {
+  trigger: manual;
+  step-1: run cmd=echo -n "VERSION file: ";
+  step-2: run cmd=cat VERSION;
+  step-3: run cmd=$(PYTHON) -c "from importlib.metadata import version; print('installed:', version('vql'))" 2>/dev/null || echo "installed: (not installed)";
+}
+
+workflow[name="goal"] {
+  trigger: manual;
+  step-1: run cmd=goal -a;
+}
+
+tests {
+  import: testql-scenarios/**/*.testql.toon.yaml;
+}
+
+env_vars {
+  keys: OPENROUTER_API_KEY, LLM_MODEL, PFIX_AUTO_APPLY, PFIX_AUTO_INSTALL_DEPS, PFIX_AUTO_RESTART, PFIX_MAX_RETRIES, PFIX_DRY_RUN, PFIX_ENABLED, PFIX_GIT_COMMIT, PFIX_GIT_PREFIX, PFIX_CREATE_BACKUPS, XDG_SESSION_TYPE, WAYLAND_DISPLAY, VQL_CAPTURE_INTERACTIVE, VQL_PORTAL_PYTHON, VQL_CAPTURE_BACKEND;
+}
+
+deploy {
+  target: makefile;
+}
+
+environment[name="local"] {
+  runtime: python;
+  env_file: .env;
+  template_file: .env.example;
+  python_version: >=3.10;
+  vars: LLM_MODEL, OPENROUTER_API_KEY, PFIX_AUTO_APPLY, PFIX_AUTO_INSTALL_DEPS, PFIX_AUTO_RESTART, PFIX_CREATE_BACKUPS, PFIX_DRY_RUN, PFIX_ENABLED, PFIX_GIT_COMMIT, PFIX_GIT_PREFIX, PFIX_MAX_RETRIES;
+  runtime_llm: OPENROUTER_API_KEY;
+  runtime_pfix: PFIX_AUTO_APPLY, PFIX_AUTO_INSTALL_DEPS, PFIX_AUTO_RESTART, PFIX_CREATE_BACKUPS, PFIX_DRY_RUN, PFIX_ENABLED, PFIX_GIT_COMMIT, PFIX_GIT_PREFIX, PFIX_MAX_RETRIES;
+}

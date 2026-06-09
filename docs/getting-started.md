@@ -21,6 +21,7 @@ bash install-dev.sh
 | Sterowanie | `uri2vql`, `nlp2vql`, `dsl2vql`, `cli2vql`, `rest2vql`, `mcp2vql` |
 | Obraz | `img2svg`, `uri2img2svg`, `dsl2img2svg` |
 | img2nl (gdy `IMG2NL_ROOT`) | `img2nl[analyze]`, `img2vql`, `uri2vql[diagnose]` |
+| imgl + vdisplay (gdy `IMGL_ROOT`) | `imgl[vdisplay]`, `uri2vql[imgl]`, pytesseract |
 
 Zmienna `IMG2NL_ROOT` (domyślnie `../../wronai/img2nl`):
 
@@ -28,6 +29,16 @@ Zmienna `IMG2NL_ROOT` (domyślnie `../../wronai/img2nl`):
 export IMG2NL_ROOT=~/github/wronai/img2nl
 bash install-dev.sh
 ```
+
+Zmienna `IMGL_ROOT` (domyślnie `../../semcod/imgl`) — capture vdisplay + automatyzacja LLM:
+
+```bash
+export IMGL_ROOT=~/github/semcod/imgl
+bash install-dev.sh
+imgl capture -o /tmp/screen.png --verify
+```
+
+→ [vdisplay-imgl-automation.md](vdisplay-imgl-automation.md)
 
 ### Opcjonalne extras
 
@@ -56,7 +67,10 @@ rest2vql serve --port 8216
 ## Szybki start — zrzut ekranu → VQL
 
 ```bash
-# 1. Capture (GNOME/Wayland — patrz desktop-capture.md)
+# 1a. Capture przez vdisplay + imgl (zalecane dla LLM / automatyzacji)
+imgl capture -o /tmp/screen.png --verify --analyze --lang eng+pol
+
+# 1b. Capture przez uri2vql (portal GNOME — patrz desktop-capture.md)
 uri2vql capture-screen --interactive --out /tmp/screen.png
 
 # 2. Jednym poleceniem: capture + analyze + diagnose

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "vql"
-version = "0.1.3"
+version = "0.1.4"
 description = "VQL — Visual Query Language for vector description of photographs and drawings"
 readme = "README.md"
 requires-python = ">=3.10"

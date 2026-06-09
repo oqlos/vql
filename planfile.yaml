@@ -1,0 +1,1319 @@
+name: Code Quality Improvement
+project_name: ''
+project_type: prefactoring
+domain: dev-tools
+goal: Improve code quality using prefact
+goals:
+- Fix all prefact-detected issues
+- Improve code maintainability
+- Ensure consistent code style
+quality_gates:
+- metric: Prefact Issues
+  threshold: '0'
+sprints:
+- id: sprint-1
+  name: Code Quality Improvements
+  duration: 2 weeks
+  objectives:
+  - Fix code quality issues
+  task_patterns:
+  - id: ticket-8e666f5d
+    name: Fix unused-imports issues
+    description: Resolve 6 unused-imports issues in packages/dsl2img2svg/src/dsl2img2svg/cli.py
+    task_type: prefactor
+    priority: high
+    estimate: 2d
+    files:
+    - packages/dsl2img2svg/src/dsl2img2svg/cli.py
+    rule_id: unused-imports
+    count: 6
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-e0e0ab6d
+    name: Fix ai-boilerplate issues
+    description: Resolve 1 ai-boilerplate issues in packages/dsl2img2svg/src/dsl2img2svg/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2img2svg/src/dsl2img2svg/cli.py
+    rule_id: ai-boilerplate
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-057cf9dc
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/cli2vql/src/cli2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/cli2vql/src/cli2vql/cli.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-a6d9ecee
+    name: Fix ai-boilerplate issues
+    description: Resolve 1 ai-boilerplate issues in packages/cli2vql/src/cli2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/cli2vql/src/cli2vql/cli.py
+    rule_id: ai-boilerplate
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-3e3bfd3b
+    name: Fix string-concat issues
+    description: Resolve 2 string-concat issues in packages/dsl2img2svg/src/dsl2img2svg/dispatch.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2img2svg/src/dsl2img2svg/dispatch.py
+    rule_id: string-concat
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-19c95c44
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/dsl2img2svg/src/dsl2img2svg/dispatch.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2img2svg/src/dsl2img2svg/dispatch.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-efcbfb1e
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/dsl2vql/src/dsl2vql/bus.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/bus.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-daf72a7d
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/dsl2vql/src/dsl2vql/codec.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/codec.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-6da2a8ff
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/dsl2vql/src/dsl2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/cli.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-3990d59d
+    name: Fix ai-boilerplate issues
+    description: Resolve 1 ai-boilerplate issues in packages/dsl2vql/src/dsl2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/cli.py
+    rule_id: ai-boilerplate
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-bc82e83e
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/dsl2vql/src/dsl2vql/engine.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/engine.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-abf26244
+    name: Fix string-concat issues
+    description: Resolve 4 string-concat issues in packages/dsl2vql/src/dsl2vql/events.py
+    task_type: prefactor
+    priority: medium
+    estimate: 2d
+    files:
+    - packages/dsl2vql/src/dsl2vql/events.py
+    rule_id: string-concat
+    count: 4
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-c0d7a135
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/dsl2vql/src/dsl2vql/events.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/events.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-ff5032fd
+    name: Fix string-concat issues
+    description: Resolve 2 string-concat issues in packages/dsl2vql/src/dsl2vql/grammar.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/grammar.py
+    rule_id: string-concat
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-576bab90
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/dsl2vql/src/dsl2vql/grammar.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/grammar.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-decf1bdf
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/dsl2vql/src/dsl2vql/handlers/command.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/handlers/command.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-af63ef32
+    name: Fix magic-numbers issues
+    description: Resolve 1 magic-numbers issues in packages/dsl2vql/src/dsl2vql/handlers/command.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/handlers/command.py
+    rule_id: magic-numbers
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-6b15430f
+    name: Fix string-concat issues
+    description: Resolve 1 string-concat issues in packages/dsl2vql/src/dsl2vql/handlers/query.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/handlers/query.py
+    rule_id: string-concat
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-8a867444
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/dsl2vql/src/dsl2vql/handlers/query.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/handlers/query.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-96185ba6
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/dsl2vql/src/dsl2vql/pb_codec.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/pb_codec.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-0f7890e8
+    name: Fix magic-numbers issues
+    description: Resolve 1 magic-numbers issues in packages/dsl2vql/src/dsl2vql/pb_codec.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/pb_codec.py
+    rule_id: magic-numbers
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-bf838267
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/dsl2vql/src/dsl2vql/result.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/result.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-d3cdea36
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/dsl2vql/src/dsl2vql/schema_registry.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/dsl2vql/src/dsl2vql/schema_registry.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-f4a4b7eb
+    name: Fix magic-numbers issues
+    description: Resolve 18 magic-numbers issues in packages/dsl2vql/src/dsl2vql/v1/command_pb2.py
+    task_type: prefactor
+    priority: high
+    estimate: 3d
+    files:
+    - packages/dsl2vql/src/dsl2vql/v1/command_pb2.py
+    rule_id: magic-numbers
+    count: 18
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-8a571a4a
+    name: Fix unused-imports issues
+    description: Resolve 4 unused-imports issues in packages/dsl2vql/src/dsl2vql/v1/result_pb2.py
+    task_type: prefactor
+    priority: medium
+    estimate: 2d
+    files:
+    - packages/dsl2vql/src/dsl2vql/v1/result_pb2.py
+    rule_id: unused-imports
+    count: 4
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-43fe4d81
+    name: Fix magic-numbers issues
+    description: Resolve 5 magic-numbers issues in packages/dsl2vql/src/dsl2vql/v1/result_pb2.py
+    task_type: prefactor
+    priority: medium
+    estimate: 2d
+    files:
+    - packages/dsl2vql/src/dsl2vql/v1/result_pb2.py
+    rule_id: magic-numbers
+    count: 5
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-eee4c1b8
+    name: Fix unused-imports issues
+    description: Resolve 6 unused-imports issues in packages/img2svg/src/img2svg/cli.py
+    task_type: prefactor
+    priority: high
+    estimate: 2d
+    files:
+    - packages/img2svg/src/img2svg/cli.py
+    rule_id: unused-imports
+    count: 6
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-7d1ffd9b
+    name: Fix ai-boilerplate issues
+    description: Resolve 1 ai-boilerplate issues in packages/img2svg/src/img2svg/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2svg/src/img2svg/cli.py
+    rule_id: ai-boilerplate
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-d63d2189
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/img2svg/src/img2svg/svg_emit.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2svg/src/img2svg/svg_emit.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-c3de3b8f
+    name: Fix string-concat issues
+    description: Resolve 3 string-concat issues in packages/img2svg/src/img2svg/to_vql.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2svg/src/img2svg/to_vql.py
+    rule_id: string-concat
+    count: 3
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-f1f5c59f
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/img2svg/src/img2svg/to_vql.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2svg/src/img2svg/to_vql.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-48bfab49
+    name: Fix magic-numbers issues
+    description: Resolve 1 magic-numbers issues in packages/img2svg/src/img2svg/to_vql.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2svg/src/img2svg/to_vql.py
+    rule_id: magic-numbers
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-8a25b787
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/img2vql/src/img2vql/adopt.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/adopt.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-d2c1408e
+    name: Fix magic-numbers issues
+    description: Resolve 1 magic-numbers issues in packages/img2vql/src/img2vql/adopt.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/adopt.py
+    rule_id: magic-numbers
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-c1c2051c
+    name: Fix string-concat issues
+    description: Resolve 10 string-concat issues in packages/img2svg/src/img2svg/trace.py
+    task_type: prefactor
+    priority: high
+    estimate: 2d
+    files:
+    - packages/img2svg/src/img2svg/trace.py
+    rule_id: string-concat
+    count: 10
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-e87661a6
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/img2svg/src/img2svg/trace.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2svg/src/img2svg/trace.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-26e77a10
+    name: Fix magic-numbers issues
+    description: Resolve 5 magic-numbers issues in packages/img2svg/src/img2svg/trace.py
+    task_type: prefactor
+    priority: medium
+    estimate: 2d
+    files:
+    - packages/img2svg/src/img2svg/trace.py
+    rule_id: magic-numbers
+    count: 5
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-1fd2d0c8
+    name: Fix unused-imports issues
+    description: Resolve 6 unused-imports issues in packages/img2vql/src/img2vql/cli.py
+    task_type: prefactor
+    priority: high
+    estimate: 2d
+    files:
+    - packages/img2vql/src/img2vql/cli.py
+    rule_id: unused-imports
+    count: 6
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-5c52a68e
+    name: Fix magic-numbers issues
+    description: Resolve 2 magic-numbers issues in packages/img2vql/src/img2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/cli.py
+    rule_id: magic-numbers
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-81f97908
+    name: Fix ai-boilerplate issues
+    description: Resolve 1 ai-boilerplate issues in packages/img2vql/src/img2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/cli.py
+    rule_id: ai-boilerplate
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-eb25a27a
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/img2vql/src/img2vql/describe_ui.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/describe_ui.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-83cc4d96
+    name: Fix magic-numbers issues
+    description: Resolve 5 magic-numbers issues in packages/img2vql/src/img2vql/describe_ui.py
+    task_type: prefactor
+    priority: medium
+    estimate: 2d
+    files:
+    - packages/img2vql/src/img2vql/describe_ui.py
+    rule_id: magic-numbers
+    count: 5
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-4129ca21
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/img2vql/src/img2vql/diagnose.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/diagnose.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-a873a55c
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/img2vql/src/img2vql/fingerprint.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/fingerprint.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-6297287f
+    name: Fix string-concat issues
+    description: Resolve 22 string-concat issues in packages/img2vql/src/img2vql/detect.py
+    task_type: prefactor
+    priority: high
+    estimate: 3d
+    files:
+    - packages/img2vql/src/img2vql/detect.py
+    rule_id: string-concat
+    count: 22
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-de4c3522
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/img2vql/src/img2vql/detect.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/detect.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-17e6563c
+    name: Fix magic-numbers issues
+    description: Resolve 16 magic-numbers issues in packages/img2vql/src/img2vql/detect.py
+    task_type: prefactor
+    priority: high
+    estimate: 3d
+    files:
+    - packages/img2vql/src/img2vql/detect.py
+    rule_id: magic-numbers
+    count: 16
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-28425684
+    name: Fix string-concat issues
+    description: Resolve 2 string-concat issues in packages/img2vql/src/img2vql/metadata.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/metadata.py
+    rule_id: string-concat
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-427bd01d
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/img2vql/src/img2vql/metadata.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/metadata.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-faea61b1
+    name: Fix magic-numbers issues
+    description: Resolve 3 magic-numbers issues in packages/img2vql/src/img2vql/metadata.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/metadata.py
+    rule_id: magic-numbers
+    count: 3
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-45bc2485
+    name: Fix string-concat issues
+    description: Resolve 2 string-concat issues in packages/img2vql/src/img2vql/program.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/program.py
+    rule_id: string-concat
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-21e70bbe
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/img2vql/src/img2vql/program.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/program.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-a19a8d81
+    name: Fix magic-numbers issues
+    description: Resolve 2 magic-numbers issues in packages/img2vql/src/img2vql/program.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/img2vql/src/img2vql/program.py
+    rule_id: magic-numbers
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-d13efe8b
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/mcp2vql/src/mcp2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/mcp2vql/src/mcp2vql/cli.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-c09ede63
+    name: Fix ai-boilerplate issues
+    description: Resolve 1 ai-boilerplate issues in packages/mcp2vql/src/mcp2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/mcp2vql/src/mcp2vql/cli.py
+    rule_id: ai-boilerplate
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-c44d7d5e
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/nlp2vql/src/nlp2vql/apply.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/nlp2vql/src/nlp2vql/apply.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-3a99c323
+    name: Fix unused-imports issues
+    description: Resolve 6 unused-imports issues in packages/nlp2vql/src/nlp2vql/cli.py
+    task_type: prefactor
+    priority: high
+    estimate: 2d
+    files:
+    - packages/nlp2vql/src/nlp2vql/cli.py
+    rule_id: unused-imports
+    count: 6
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-3bb4df62
+    name: Fix ai-boilerplate issues
+    description: Resolve 1 ai-boilerplate issues in packages/nlp2vql/src/nlp2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/nlp2vql/src/nlp2vql/cli.py
+    rule_id: ai-boilerplate
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-4d166942
+    name: Fix unused-imports issues
+    description: Resolve 6 unused-imports issues in packages/nlp2vql/src/nlp2vql/to_dsl.py
+    task_type: prefactor
+    priority: high
+    estimate: 2d
+    files:
+    - packages/nlp2vql/src/nlp2vql/to_dsl.py
+    rule_id: unused-imports
+    count: 6
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-e57a5c56
+    name: Fix unused-imports issues
+    description: Resolve 6 unused-imports issues in packages/mcp2vql/src/mcp2vql/server.py
+    task_type: prefactor
+    priority: high
+    estimate: 2d
+    files:
+    - packages/mcp2vql/src/mcp2vql/server.py
+    rule_id: unused-imports
+    count: 6
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-436cd286
+    name: Fix ai-boilerplate issues
+    description: Resolve 1 ai-boilerplate issues in packages/mcp2vql/src/mcp2vql/server.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/mcp2vql/src/mcp2vql/server.py
+    rule_id: ai-boilerplate
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-dc4069d3
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/rest2vql/src/rest2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/rest2vql/src/rest2vql/cli.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-d75fa5c9
+    name: Fix magic-numbers issues
+    description: Resolve 1 magic-numbers issues in packages/rest2vql/src/rest2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/rest2vql/src/rest2vql/cli.py
+    rule_id: magic-numbers
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-a5ef0b2d
+    name: Fix ai-boilerplate issues
+    description: Resolve 1 ai-boilerplate issues in packages/rest2vql/src/rest2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/rest2vql/src/rest2vql/cli.py
+    rule_id: ai-boilerplate
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-8d4aa7f8
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/rest2vql/src/rest2vql/window_routes.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/rest2vql/src/rest2vql/window_routes.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-d4f17b07
+    name: Fix magic-numbers issues
+    description: Resolve 9 magic-numbers issues in packages/rest2vql/src/rest2vql/window_routes.py
+    task_type: prefactor
+    priority: high
+    estimate: 2d
+    files:
+    - packages/rest2vql/src/rest2vql/window_routes.py
+    rule_id: magic-numbers
+    count: 9
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-e3990176
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/rest2vql/src/rest2vql/app.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/rest2vql/src/rest2vql/app.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-38166679
+    name: Fix magic-numbers issues
+    description: Resolve 1 magic-numbers issues in packages/rest2vql/src/rest2vql/app.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/rest2vql/src/rest2vql/app.py
+    rule_id: magic-numbers
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-806125af
+    name: Fix unused-imports issues
+    description: Resolve 6 unused-imports issues in packages/uri2img2svg/src/uri2img2svg/cli.py
+    task_type: prefactor
+    priority: high
+    estimate: 2d
+    files:
+    - packages/uri2img2svg/src/uri2img2svg/cli.py
+    rule_id: unused-imports
+    count: 6
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-f6b9f81a
+    name: Fix ai-boilerplate issues
+    description: Resolve 1 ai-boilerplate issues in packages/uri2img2svg/src/uri2img2svg/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2img2svg/src/uri2img2svg/cli.py
+    rule_id: ai-boilerplate
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-cd9d2ee1
+    name: Fix string-concat issues
+    description: Resolve 1 string-concat issues in packages/uri2img2svg/src/uri2img2svg/uri.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2img2svg/src/uri2img2svg/uri.py
+    rule_id: string-concat
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-0b9a1932
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/uri2img2svg/src/uri2img2svg/uri.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2img2svg/src/uri2img2svg/uri.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-eb9ebfae
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/uri2img2svg/src/uri2img2svg/query.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2img2svg/src/uri2img2svg/query.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-ae4fef90
+    name: Fix unused-imports issues
+    description: Resolve 6 unused-imports issues in packages/uri2vql/src/uri2vql/cli.py
+    task_type: prefactor
+    priority: high
+    estimate: 2d
+    files:
+    - packages/uri2vql/src/uri2vql/cli.py
+    rule_id: unused-imports
+    count: 6
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-47bc9ec0
+    name: Fix magic-numbers issues
+    description: Resolve 5 magic-numbers issues in packages/uri2vql/src/uri2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 2d
+    files:
+    - packages/uri2vql/src/uri2vql/cli.py
+    rule_id: magic-numbers
+    count: 5
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-32e8ee8a
+    name: Fix ai-boilerplate issues
+    description: Resolve 1 ai-boilerplate issues in packages/uri2vql/src/uri2vql/cli.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/cli.py
+    rule_id: ai-boilerplate
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-b9f60342
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/rest2vql/src/rest2vql/window.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/rest2vql/src/rest2vql/window.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-eae11564
+    name: Fix magic-numbers issues
+    description: Resolve 3 magic-numbers issues in packages/rest2vql/src/rest2vql/window.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/rest2vql/src/rest2vql/window.py
+    rule_id: magic-numbers
+    count: 3
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-d05b0eac
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/uri2vql/src/uri2vql/nlp2uri.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/nlp2uri.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-4bd3e952
+    name: Fix magic-numbers issues
+    description: Resolve 3 magic-numbers issues in packages/uri2vql/src/uri2vql/nlp2uri.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/nlp2uri.py
+    rule_id: magic-numbers
+    count: 3
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-08384f5b
+    name: Fix string-concat issues
+    description: Resolve 1 string-concat issues in packages/uri2vql/src/uri2vql/compile.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/compile.py
+    rule_id: string-concat
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-c5168216
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/uri2vql/src/uri2vql/compile.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/compile.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-f83889cc
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/uri2vql/src/uri2vql/patch.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/patch.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-768744b5
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/uri2vql/src/uri2vql/run.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/run.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-bfb11370
+    name: Fix string-concat issues
+    description: Resolve 1 string-concat issues in packages/uri2vql/src/uri2vql/uri.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/uri.py
+    rule_id: string-concat
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-85b9f059
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/uri2vql/src/uri2vql/uri.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/uri.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-133bcadd
+    name: Fix magic-numbers issues
+    description: Resolve 2 magic-numbers issues in packages/uri2vql/src/uri2vql/uri.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/uri.py
+    rule_id: magic-numbers
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-302606cf
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/uri2vql/src/uri2vql/query.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/query.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-45576b5a
+    name: Fix string-concat issues
+    description: Resolve 1 string-concat issues in packages/uri2vql/src/uri2vql/window.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/window.py
+    rule_id: string-concat
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-dc3a69a1
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in packages/uri2vql/src/uri2vql/window.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/window.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-aa4961c7
+    name: Fix magic-numbers issues
+    description: Resolve 3 magic-numbers issues in packages/uri2vql/src/uri2vql/window.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - packages/uri2vql/src/uri2vql/window.py
+    rule_id: magic-numbers
+    count: 3
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-fbfe0729
+    name: Fix unused-imports issues
+    description: Resolve 6 unused-imports issues in src/vql/adopt/portal_capture.py
+    task_type: prefactor
+    priority: high
+    estimate: 2d
+    files:
+    - src/vql/adopt/portal_capture.py
+    rule_id: unused-imports
+    count: 6
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-54003a1a
+    name: Fix magic-numbers issues
+    description: Resolve 2 magic-numbers issues in src/vql/adopt/portal_capture.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/vql/adopt/portal_capture.py
+    rule_id: magic-numbers
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-2851b104
+    name: Fix ai-boilerplate issues
+    description: Resolve 1 ai-boilerplate issues in src/vql/adopt/portal_capture.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/vql/adopt/portal_capture.py
+    rule_id: ai-boilerplate
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-2884aeb6
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in src/vql/api.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/vql/api.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-6a5bf3de
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in src/vql/compiler/legacy_drawcommand.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/vql/compiler/legacy_drawcommand.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-18d718a2
+    name: Fix magic-numbers issues
+    description: Resolve 2 magic-numbers issues in src/vql/compiler/legacy_drawcommand.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/vql/compiler/legacy_drawcommand.py
+    rule_id: magic-numbers
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-7efa2b0b
+    name: Fix unused-imports issues
+    description: Resolve 2 unused-imports issues in src/vql/compiler/nl_to_vql.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/vql/compiler/nl_to_vql.py
+    rule_id: unused-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-aa07c23c
+    name: Fix magic-numbers issues
+    description: Resolve 2 magic-numbers issues in src/vql/compiler/nl_to_vql.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/vql/compiler/nl_to_vql.py
+    rule_id: magic-numbers
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-3b8e7d2c
+    name: Fix llm-generated-code issues
+    description: Resolve 1 llm-generated-code issues in src/vql/compiler/nl_to_vql.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/vql/compiler/nl_to_vql.py
+    rule_id: llm-generated-code
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced

@@ -1,108 +1,122 @@
 flowchart LR
 %% generated in 0.02s
     subgraph examples__generate_demo_screen
-        examples__generate_demo_screen__write_demo_screen["write_demo_screen"]
         examples__generate_demo_screen___load_font["_load_font"]
+        examples__generate_demo_screen__write_demo_screen["write_demo_screen"]
         examples__generate_demo_screen__main["main"]
+    end
+    subgraph examples__photo_roundtrip_test
+        examples__photo_roundtrip_test__test_vtracer_roundtrip["test_vtracer_roundtrip"]
+        examples__photo_roundtrip_test__sample_flat_shapes["sample_flat_shapes"]
+        examples__photo_roundtrip_test__test_img2vql_detect["test_img2vql_detect"]
+        examples__photo_roundtrip_test__sample_nl_drawing["sample_nl_drawing"]
+        examples__photo_roundtrip_test__test_img2svg_roundtrip["test_img2svg_roundtrip"]
+        examples__photo_roundtrip_test___require_pil["_require_pil"]
+        examples__photo_roundtrip_test__test_ui_grid_adopt["test_ui_grid_adopt"]
+        examples__photo_roundtrip_test__sample_gradient["sample_gradient"]
+        examples__photo_roundtrip_test__test_opencv_contours["test_opencv_contours"]
+        examples__photo_roundtrip_test__main["main"]
     end
     subgraph packages__cli2vql
         packages__cli2vql__src__cli2vql__cli___repl["_repl"]
     end
     subgraph packages__dsl2img2svg
         packages__dsl2img2svg__src__dsl2img2svg__dispatch___parse_kv_args["_parse_kv_args"]
-        packages__dsl2img2svg__src__dsl2img2svg__dispatch__dispatch["dispatch"]
         packages__dsl2img2svg__src__dsl2img2svg__cli__main["main"]
+        packages__dsl2img2svg__src__dsl2img2svg__dispatch__dispatch["dispatch"]
     end
     subgraph packages__dsl2vql
-        packages__dsl2vql__src__dsl2vql__pb_codec__encode_result_protobuf["encode_result_protobuf"]
+        packages__dsl2vql__src__dsl2vql__schema_registry___load_schemas["_load_schemas"]
+        packages__dsl2vql__src__dsl2vql__grammar__parse_line["parse_line"]
+        packages__dsl2vql__src__dsl2vql__cli__main["main"]
+        packages__dsl2vql__src__dsl2vql__events__default_event_store["default_event_store"]
+        packages__dsl2vql__src__dsl2vql__bus__execute_dsl_line["execute_dsl_line"]
+        packages__dsl2vql__src__dsl2vql__pb_codec___set_body["_set_body"]
+        packages__dsl2vql__src__dsl2vql__codec__roundtrip_text["roundtrip_text"]
+        packages__dsl2vql__src__dsl2vql__pb_codec__encode_protobuf["encode_protobuf"]
+        packages__dsl2vql__src__dsl2vql__handlers__command___read_json["_read_json"]
+        packages__dsl2vql__src__dsl2vql__bus__execute_dsl["execute_dsl"]
+        packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf_to_text["decode_protobuf_to_text"]
+        packages__dsl2vql__src__dsl2vql__events__EventStore__append["append"]
+        packages__dsl2vql__src__dsl2vql__cli___main_subcommand["_main_subcommand"]
+        packages__dsl2vql__src__dsl2vql__handlers__command__handle_export["handle_export"]
+        packages__dsl2vql__src__dsl2vql__grammar__to_text["to_text"]
+        packages__dsl2vql__src__dsl2vql__handlers__command__handle_generate["handle_generate"]
+        packages__dsl2vql__src__dsl2vql__handlers__query__handle_resolve["handle_resolve"]
+        packages__dsl2vql__src__dsl2vql__schema_registry__validate_command_dict["validate_command_dict"]
+        packages__dsl2vql__src__dsl2vql__handlers__command__handle_from_tokens["handle_from_tokens"]
+        packages__dsl2vql__src__dsl2vql__handlers__query__handle_render["handle_render"]
+        packages__dsl2vql__src__dsl2vql__handlers__command__handle_patch["handle_patch"]
+        packages__dsl2vql__src__dsl2vql__codec__decode_protobuf["decode_protobuf"]
+        packages__dsl2vql__src__dsl2vql__grammar__split_command["split_command"]
+        packages__dsl2vql__src__dsl2vql__pb_codec__envelope_to_dict["envelope_to_dict"]
+        packages__dsl2vql__src__dsl2vql__bus___bytes_to_cmd["_bytes_to_cmd"]
+        packages__dsl2vql__src__dsl2vql__handlers__query__handle_query["handle_query"]
+        packages__dsl2vql__src__dsl2vql__cli___main_legacy["_main_legacy"]
+        packages__dsl2vql__src__dsl2vql__schema_registry__all_schemas["all_schemas"]
         packages__dsl2vql__src__dsl2vql__schema_registry__schema_for_verb["schema_for_verb"]
         packages__dsl2vql__src__dsl2vql__handlers__query__handle_validate["handle_validate"]
-        packages__dsl2vql__src__dsl2vql__handlers__command__handle_from_tokens["handle_from_tokens"]
-        packages__dsl2vql__src__dsl2vql__handlers__query__handle_query["handle_query"]
-        packages__dsl2vql__src__dsl2vql__codec__roundtrip_text["roundtrip_text"]
-        packages__dsl2vql__src__dsl2vql__schema_registry__validate_schema_registry["validate_schema_registry"]
-        packages__dsl2vql__src__dsl2vql__schema_registry__validate_command_dict["validate_command_dict"]
-        packages__dsl2vql__src__dsl2vql__bus__execute_dsl_line["execute_dsl_line"]
-        packages__dsl2vql__src__dsl2vql__handlers__query__handle_render["handle_render"]
-        packages__dsl2vql__src__dsl2vql__grammar__to_text["to_text"]
-        packages__dsl2vql__src__dsl2vql__pb_codec__envelope_to_dict["envelope_to_dict"]
-        packages__dsl2vql__src__dsl2vql__codec__decode_protobuf["decode_protobuf"]
-        packages__dsl2vql__src__dsl2vql__pb_codec__encode_protobuf["encode_protobuf"]
-        packages__dsl2vql__src__dsl2vql__bus__execute_dsl["execute_dsl"]
-        packages__dsl2vql__src__dsl2vql__pb_codec__result_to_pb["result_to_pb"]
         packages__dsl2vql__src__dsl2vql__codec__encode_text["encode_text"]
-        packages__dsl2vql__src__dsl2vql__grammar__parse_line["parse_line"]
-        packages__dsl2vql__src__dsl2vql__schema_registry__all_schemas["all_schemas"]
-        packages__dsl2vql__src__dsl2vql__pb_codec__encode_text_to_protobuf["encode_text_to_protobuf"]
-        packages__dsl2vql__src__dsl2vql__cli___main_legacy["_main_legacy"]
-        packages__dsl2vql__src__dsl2vql__cli__main["main"]
-        packages__dsl2vql__src__dsl2vql__grammar__split_command["split_command"]
-        packages__dsl2vql__src__dsl2vql__events__default_event_store["default_event_store"]
-        packages__dsl2vql__src__dsl2vql__codec__encode_protobuf["encode_protobuf"]
-        packages__dsl2vql__src__dsl2vql__handlers__command__handle_generate["handle_generate"]
-        packages__dsl2vql__src__dsl2vql__pb_codec___set_body["_set_body"]
         packages__dsl2vql__src__dsl2vql__handlers__command__handle_compile["handle_compile"]
-        packages__dsl2vql__src__dsl2vql__handlers__command___read_json["_read_json"]
-        packages__dsl2vql__src__dsl2vql__handlers__query___load_program["_load_program"]
-        packages__dsl2vql__src__dsl2vql__bus___bytes_to_cmd["_bytes_to_cmd"]
-        packages__dsl2vql__src__dsl2vql__events__EventStore__append["append"]
-        packages__dsl2vql__src__dsl2vql__bus__dispatch["dispatch"]
-        packages__dsl2vql__src__dsl2vql__handlers__query__handle_resolve["handle_resolve"]
-        packages__dsl2vql__src__dsl2vql__handlers__command__handle_export["handle_export"]
-        packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf["decode_protobuf"]
-        packages__dsl2vql__src__dsl2vql__handlers__command__handle_patch["handle_patch"]
-        packages__dsl2vql__src__dsl2vql__cli___main_subcommand["_main_subcommand"]
-        packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf_to_text["decode_protobuf_to_text"]
         packages__dsl2vql__src__dsl2vql__bus___dispatch_cmd["_dispatch_cmd"]
         packages__dsl2vql__src__dsl2vql__grammar__pick_flag["pick_flag"]
-        packages__dsl2vql__src__dsl2vql__schema_registry___load_schemas["_load_schemas"]
+        packages__dsl2vql__src__dsl2vql__pb_codec__result_to_pb["result_to_pb"]
+        packages__dsl2vql__src__dsl2vql__handlers__query___load_program["_load_program"]
+        packages__dsl2vql__src__dsl2vql__bus__dispatch["dispatch"]
+        packages__dsl2vql__src__dsl2vql__pb_codec__encode_result_protobuf["encode_result_protobuf"]
+        packages__dsl2vql__src__dsl2vql__codec__encode_protobuf["encode_protobuf"]
+        packages__dsl2vql__src__dsl2vql__schema_registry__validate_schema_registry["validate_schema_registry"]
+        packages__dsl2vql__src__dsl2vql__pb_codec__encode_text_to_protobuf["encode_text_to_protobuf"]
+        packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf["decode_protobuf"]
     end
     subgraph packages__img2svg
-        packages__img2svg__src__img2svg__svg_emit__regions_to_svg["regions_to_svg"]
+        packages__img2svg__src__img2svg__trace__trace_vtracer["trace_vtracer"]
+        packages__img2svg__src__img2svg__svg_emit__image_to_svg["image_to_svg"]
+        packages__img2svg__src__img2svg__trace___parse_translate["_parse_translate"]
+        packages__img2svg__src__img2svg__trace___parse_vtracer_svg["_parse_vtracer_svg"]
+        packages__img2svg__src__img2svg__svg_emit__paths_to_svg["paths_to_svg"]
         packages__img2svg__src__img2svg__to_vql__trace_to_vql_program["trace_to_vql_program"]
         packages__img2svg__src__img2svg__trace__trace_contours_opencv["trace_contours_opencv"]
-        packages__img2svg__src__img2svg__trace__trace_image_regions["trace_image_regions"]
-        packages__img2svg__src__img2svg__svg_emit__paths_to_svg["paths_to_svg"]
-        packages__img2svg__src__img2svg__svg_emit__image_to_svg["image_to_svg"]
-        packages__img2svg__src__img2svg__to_vql__image_to_vql["image_to_vql"]
         packages__img2svg__src__img2svg__trace___hex_color["_hex_color"]
         packages__img2svg__src__img2svg__trace___merge_grid_cells["_merge_grid_cells"]
+        packages__img2svg__src__img2svg__to_vql__image_to_vql["image_to_vql"]
+        packages__img2svg__src__img2svg__trace__trace_image_regions["trace_image_regions"]
     end
     subgraph packages__img2vql
-        packages__img2vql__src__img2vql__detect___flood_rects["_flood_rects"]
-        packages__img2vql__src__img2vql__metadata___json_safe["_json_safe"]
-        packages__img2vql__src__img2vql__diagnose__diagnose_for_vql["diagnose_for_vql"]
-        packages__img2vql__src__img2vql__describe_ui__describe_ui_layout["describe_ui_layout"]
         packages__img2vql__src__img2vql__diagnose___normalize_locale["_normalize_locale"]
-        packages__img2vql__src__img2vql__metadata___merge_special_hits["_merge_special_hits"]
-        packages__img2vql__src__img2vql__detect___dedupe["_dedupe"]
-        packages__img2vql__src__img2vql__fingerprint___json_safe["_json_safe"]
-        packages__img2vql__src__img2vql__metadata___text_likely["_text_likely"]
-        packages__img2vql__src__img2vql__fingerprint__compare_with_program["compare_with_program"]
-        packages__img2vql__src__img2vql__metadata__merge_program_metadata["merge_program_metadata"]
         packages__img2vql__src__img2vql__metadata__img2nl_metadata_slice["img2nl_metadata_slice"]
-        packages__img2vql__src__img2vql__detect___avg_color["_avg_color"]
-        packages__img2vql__src__img2vql__detect___iou["_iou"]
+        packages__img2vql__src__img2vql__metadata___merge_special_hits["_merge_special_hits"]
         packages__img2vql__src__img2vql__metadata__metadata_from_diagnose["metadata_from_diagnose"]
-        packages__img2vql__src__img2vql__diagnose___recommendation["_recommendation"]
-        packages__img2vql__src__img2vql__adopt__adopt_screenshot["adopt_screenshot"]
-        packages__img2vql__src__img2vql__metadata__auto_ocr_special_hits["auto_ocr_special_hits"]
-        packages__img2vql__src__img2vql__detect___hex_color["_hex_color"]
         packages__img2vql__src__img2vql__detect___detect_panels["_detect_panels"]
-        packages__img2vql__src__img2vql__program__elements_to_vql_program["elements_to_vql_program"]
-        packages__img2vql__src__img2vql__detect___detect_toolbar["_detect_toolbar"]
-        packages__img2vql__src__img2vql__program___bbox_contains["_bbox_contains"]
+        packages__img2vql__src__img2vql__metadata__save_diagnose_to_program["save_diagnose_to_program"]
+        packages__img2vql__src__img2vql__detect__detect_ui_elements["detect_ui_elements"]
         packages__img2vql__src__img2vql__metadata___compact_special_hits["_compact_special_hits"]
         packages__img2vql__src__img2vql__detect___detect_buttons["_detect_buttons"]
-        packages__img2vql__src__img2vql__metadata__rapidocr_special_hits["rapidocr_special_hits"]
-        packages__img2vql__src__img2vql__detect___detect_titlebar["_detect_titlebar"]
-        packages__img2vql__src__img2vql__metadata__save_diagnose_to_program["save_diagnose_to_program"]
-        packages__img2vql__src__img2vql__diagnose__diagnose_image["diagnose_image"]
-        packages__img2vql__src__img2vql__detect__detect_ui_elements["detect_ui_elements"]
+        packages__img2vql__src__img2vql__detect___dedupe["_dedupe"]
         packages__img2vql__src__img2vql__fingerprint__load_program_fingerprint["load_program_fingerprint"]
+        packages__img2vql__src__img2vql__fingerprint__compare_with_program["compare_with_program"]
+        packages__img2vql__src__img2vql__fingerprint___json_safe["_json_safe"]
+        packages__img2vql__src__img2vql__program___bbox_contains["_bbox_contains"]
+        packages__img2vql__src__img2vql__metadata__refresh_program_metadata["refresh_program_metadata"]
+        packages__img2vql__src__img2vql__detect___avg_color["_avg_color"]
+        packages__img2vql__src__img2vql__detect___detect_toolbar["_detect_toolbar"]
+        packages__img2vql__src__img2vql__diagnose__diagnose_image["diagnose_image"]
+        packages__img2vql__src__img2vql__metadata__auto_ocr_special_hits["auto_ocr_special_hits"]
         packages__img2vql__src__img2vql__metadata__imgl_ocr_special_hits["imgl_ocr_special_hits"]
         packages__img2vql__src__img2vql__program___build_contains_relations["_build_contains_relations"]
-        packages__img2vql__src__img2vql__metadata__refresh_program_metadata["refresh_program_metadata"]
+        packages__img2vql__src__img2vql__program__elements_to_vql_program["elements_to_vql_program"]
+        packages__img2vql__src__img2vql__metadata___json_safe["_json_safe"]
+        packages__img2vql__src__img2vql__diagnose__diagnose_for_vql["diagnose_for_vql"]
+        packages__img2vql__src__img2vql__metadata___text_likely["_text_likely"]
+        packages__img2vql__src__img2vql__describe_ui__describe_ui_layout["describe_ui_layout"]
+        packages__img2vql__src__img2vql__metadata__merge_program_metadata["merge_program_metadata"]
+        packages__img2vql__src__img2vql__detect___iou["_iou"]
+        packages__img2vql__src__img2vql__detect___detect_titlebar["_detect_titlebar"]
+        packages__img2vql__src__img2vql__adopt__adopt_screenshot["adopt_screenshot"]
+        packages__img2vql__src__img2vql__detect___flood_rects["_flood_rects"]
+        packages__img2vql__src__img2vql__metadata__rapidocr_special_hits["rapidocr_special_hits"]
+        packages__img2vql__src__img2vql__diagnose___recommendation["_recommendation"]
+        packages__img2vql__src__img2vql__detect___hex_color["_hex_color"]
     end
     subgraph packages__mcp2vql
         packages__mcp2vql__src__mcp2vql__server__VqlMCPServer____post_init__["__post_init__"]
@@ -110,28 +124,28 @@ flowchart LR
     end
     subgraph packages__nlp2vql
         packages__nlp2vql__src__nlp2vql__to_dsl__nl_to_dsl_line["nl_to_dsl_line"]
-        packages__nlp2vql__src__nlp2vql__apply__apply_nl["apply_nl"]
         packages__nlp2vql__src__nlp2vql__to_dsl__to_dsl["to_dsl"]
+        packages__nlp2vql__src__nlp2vql__apply__apply_nl["apply_nl"]
         packages__nlp2vql__src__nlp2vql__to_dsl___intent["_intent"]
     end
     subgraph packages__rest2vql
-        packages__rest2vql__src__rest2vql__window__window_adopt["window_adopt"]
-        packages__rest2vql__src__rest2vql__window_routes__post_window_diagnose["post_window_diagnose"]
-        packages__rest2vql__src__rest2vql__window_routes__post_window_detect["post_window_detect"]
-        packages__rest2vql__src__rest2vql__window_routes__post_window_compare["post_window_compare"]
-        packages__rest2vql__src__rest2vql__window_routes__post_window_summary["post_window_summary"]
+        packages__rest2vql__src__rest2vql__window__window_compare["window_compare"]
+        packages__rest2vql__src__rest2vql__window__window_diagnose["window_diagnose"]
         packages__rest2vql__src__rest2vql__window_routes__post_window_refresh["post_window_refresh"]
+        packages__rest2vql__src__rest2vql__window_routes__post_window_analyze["post_window_analyze"]
+        packages__rest2vql__src__rest2vql__window_routes__post_window_compare["post_window_compare"]
         packages__rest2vql__src__rest2vql__window__window_analyze["window_analyze"]
         packages__rest2vql__src__rest2vql__window__window_refresh["window_refresh"]
         packages__rest2vql__src__rest2vql__app__create_app["create_app"]
-        packages__rest2vql__src__rest2vql__window__window_compare["window_compare"]
-        packages__rest2vql__src__rest2vql__window__window_summary["window_summary"]
-        packages__rest2vql__src__rest2vql__window_routes___window_response["_window_response"]
+        packages__rest2vql__src__rest2vql__window_routes__post_window_detect["post_window_detect"]
         packages__rest2vql__src__rest2vql__window_routes__post_window_adopt["post_window_adopt"]
+        packages__rest2vql__src__rest2vql__window_routes__post_window_summary["post_window_summary"]
+        packages__rest2vql__src__rest2vql__window__window_summary["window_summary"]
+        packages__rest2vql__src__rest2vql__window_routes__post_window_diagnose["post_window_diagnose"]
         packages__rest2vql__src__rest2vql__window__window_detect["window_detect"]
-        packages__rest2vql__src__rest2vql__window__window_diagnose["window_diagnose"]
+        packages__rest2vql__src__rest2vql__window_routes___window_response["_window_response"]
+        packages__rest2vql__src__rest2vql__window__window_adopt["window_adopt"]
         packages__rest2vql__src__rest2vql__cli__main["main"]
-        packages__rest2vql__src__rest2vql__window_routes__post_window_analyze["post_window_analyze"]
     end
     subgraph packages__uri2img2svg
         packages__uri2img2svg__src__uri2img2svg__cli__main["main"]
@@ -139,115 +153,106 @@ flowchart LR
         packages__uri2img2svg__src__uri2img2svg__query__query_uri["query_uri"]
     end
     subgraph packages__uri2vql
-        packages__uri2vql__src__uri2vql__window__query_window["query_window"]
-        packages__uri2vql__src__uri2vql__run__run_uri["run_uri"]
-        packages__uri2vql__src__uri2vql__uri___with_file["_with_file"]
-        packages__uri2vql__src__uri2vql__patch__patch_uri["patch_uri"]
-        packages__uri2vql__src__uri2vql__nlp2uri__resolve_prompt_to_vql_uri["resolve_prompt_to_vql_uri"]
         packages__uri2vql__src__uri2vql__window__compare_window_image["compare_window_image"]
-        packages__uri2vql__src__uri2vql__uri__uri_for_imgl_type["uri_for_imgl_type"]
-        packages__uri2vql__src__uri2vql__nlp2uri__best_uri["best_uri"]
-        packages__uri2vql__src__uri2vql__uri__uri_for_window_imgl["uri_for_window_imgl"]
-        packages__uri2vql__src__uri2vql__uri__uri_for_window_summary["uri_for_window_summary"]
-        packages__uri2vql__src__uri2vql__window__analyze_window_uri["analyze_window_uri"]
-        packages__uri2vql__src__uri2vql__window__refresh_window_metadata["refresh_window_metadata"]
-        packages__uri2vql__src__uri2vql__uri__uri_for_window_diagnose["uri_for_window_diagnose"]
         packages__uri2vql__src__uri2vql__nlp2uri__nlp2uri["nlp2uri"]
-        packages__uri2vql__src__uri2vql__uri__uri_for_object["uri_for_object"]
-        packages__uri2vql__src__uri2vql__run__run_uri_json["run_uri_json"]
         packages__uri2vql__src__uri2vql__uri__is_vql_uri["is_vql_uri"]
-        packages__uri2vql__src__uri2vql__uri__uri_for_scene["uri_for_scene"]
-        packages__uri2vql__src__uri2vql__window___resolve_image_param["_resolve_image_param"]
-        packages__uri2vql__src__uri2vql__uri__uri_for_imgl_click["uri_for_imgl_click"]
-        packages__uri2vql__src__uri2vql__window___diagnose_fallback["_diagnose_fallback"]
-        packages__uri2vql__src__uri2vql__compile___dsl_from_uri["_dsl_from_uri"]
-        packages__uri2vql__src__uri2vql__window__diagnose_window_image["diagnose_window_image"]
-        packages__uri2vql__src__uri2vql__window___query_window_imgl["_query_window_imgl"]
-        packages__uri2vql__src__uri2vql__compile__compile_vql_uri["compile_vql_uri"]
-        packages__uri2vql__src__uri2vql__uri__uri_for_window_compare["uri_for_window_compare"]
-        packages__uri2vql__src__uri2vql__uri__uri_for_window_analyze["uri_for_window_analyze"]
-        packages__uri2vql__src__uri2vql__uri__uri_for_program["uri_for_program"]
-        packages__uri2vql__src__uri2vql__uri__uri_for_window_refresh["uri_for_window_refresh"]
         packages__uri2vql__src__uri2vql__uri__uri_for_objects["uri_for_objects"]
+        packages__uri2vql__src__uri2vql__window__diagnose_window_image["diagnose_window_image"]
+        packages__uri2vql__src__uri2vql__patch__patch_uri["patch_uri"]
+        packages__uri2vql__src__uri2vql__window___query_window_imgl["_query_window_imgl"]
+        packages__uri2vql__src__uri2vql__window___diagnose_fallback["_diagnose_fallback"]
+        packages__uri2vql__src__uri2vql__window___resolve_image_param["_resolve_image_param"]
+        packages__uri2vql__src__uri2vql__uri__uri_for_program["uri_for_program"]
+        packages__uri2vql__src__uri2vql__uri__uri_for_window_diagnose["uri_for_window_diagnose"]
+        packages__uri2vql__src__uri2vql__window__query_window["query_window"]
+        packages__uri2vql__src__uri2vql__uri__uri_for_imgl_type["uri_for_imgl_type"]
+        packages__uri2vql__src__uri2vql__uri__uri_for_window_summary["uri_for_window_summary"]
+        packages__uri2vql__src__uri2vql__uri__uri_for_window_compare["uri_for_window_compare"]
         packages__uri2vql__src__uri2vql__uri__parse_vql_uri["parse_vql_uri"]
-        packages__uri2vql__src__uri2vql__query___load_program["_load_program"]
         packages__uri2vql__src__uri2vql__window___normalize_locale["_normalize_locale"]
-        packages__uri2vql__src__uri2vql__uri__uri_for_imgl_list["uri_for_imgl_list"]
         packages__uri2vql__src__uri2vql__query__query_uri["query_uri"]
+        packages__uri2vql__src__uri2vql__uri__uri_for_window_imgl["uri_for_window_imgl"]
+        packages__uri2vql__src__uri2vql__nlp2uri__best_uri["best_uri"]
+        packages__uri2vql__src__uri2vql__query___load_program["_load_program"]
+        packages__uri2vql__src__uri2vql__window__refresh_window_metadata["refresh_window_metadata"]
+        packages__uri2vql__src__uri2vql__run__run_uri_json["run_uri_json"]
+        packages__uri2vql__src__uri2vql__uri__uri_for_object["uri_for_object"]
+        packages__uri2vql__src__uri2vql__uri__uri_for_imgl_list["uri_for_imgl_list"]
+        packages__uri2vql__src__uri2vql__uri__uri_for_window_analyze["uri_for_window_analyze"]
+        packages__uri2vql__src__uri2vql__uri__uri_for_scene["uri_for_scene"]
+        packages__uri2vql__src__uri2vql__uri__uri_for_window_refresh["uri_for_window_refresh"]
+        packages__uri2vql__src__uri2vql__uri___with_file["_with_file"]
+        packages__uri2vql__src__uri2vql__uri__uri_for_imgl_click["uri_for_imgl_click"]
+        packages__uri2vql__src__uri2vql__compile__compile_vql_uri["compile_vql_uri"]
+        packages__uri2vql__src__uri2vql__run__run_uri["run_uri"]
+        packages__uri2vql__src__uri2vql__window__analyze_window_uri["analyze_window_uri"]
+        packages__uri2vql__src__uri2vql__compile___dsl_from_uri["_dsl_from_uri"]
+        packages__uri2vql__src__uri2vql__nlp2uri__resolve_prompt_to_vql_uri["resolve_prompt_to_vql_uri"]
     end
     subgraph src__vql
-        src__vql__adopt__window___capture_with_grim["_capture_with_grim"]
-        src__vql__adopt__window___is_wayland["_is_wayland"]
-        src__vql__compiler__legacy_drawcommand__compile_to_events["compile_to_events"]
-        src__vql__compiler__nl_to_vql__nl_to_program["nl_to_program"]
-        src__vql__adopt__window__capture_screen["capture_screen"]
-        src__vql__facade__VQLFacade__render_svg["render_svg"]
-        src__vql__validation__spec___match_items["_match_items"]
-        src__vql__compiler__legacy_drawcommand__commands_to_program["commands_to_program"]
-        src__vql__validation__spec___program_shapes["_program_shapes"]
-        src__vql__adopt__window___image_is_blank["_image_is_blank"]
-        src__vql__renderers__svg__render_to_svg["render_to_svg"]
-        src__vql__renderers__base__render_program["render_program"]
-        src__vql__compiler__legacy_drawcommand__program_to_commands["program_to_commands"]
-        src__vql__validation__spec___program_colors["_program_colors"]
-        src__vql__adopt__window__capture_diagnose["capture_diagnose"]
-        src__vql__adopt__window___capture_with_gnome_shell["_capture_with_gnome_shell"]
-        src__vql__adopt__window__analyze_screenshot["analyze_screenshot"]
-        src__vql__drawing__nl_parser__NLDrawingParser__to_vql["to_vql"]
-        src__vql__adopt__window___active_window_title["_active_window_title"]
         src__vql__adopt__window___capture_with_mss["_capture_with_mss"]
-        src__vql__adopt__window___capture_with_portal["_capture_with_portal"]
-        src__vql__adopt__window___portal_python["_portal_python"]
-        src__vql__adopt__window___capture_backends["_capture_backends"]
-        src__vql__adopt__window___capture_with_gnome_screenshot["_capture_with_gnome_screenshot"]
-        src__vql__adopt__window__screenshot_to_program["screenshot_to_program"]
-        src__vql__adopt__window___session_type["_session_type"]
-        src__vql__adopt__portal_capture__capture_via_portal["capture_via_portal"]
-        src__vql__adopt__window___capture_interactive_mode["_capture_interactive_mode"]
-        src__vql__renderers__svg__render_to_png["render_to_png"]
-        src__vql__adopt__window___capture_with_scrot["_capture_with_scrot"]
-        src__vql__adopt__window___require_pillow["_require_pillow"]
-        src__vql__facade__VQLFacade__compile["compile"]
-        src__vql__renderers__base__VQLRendererAdapter__render["render"]
-        src__vql__adopt__window___capture_permission_hint["_capture_permission_hint"]
-        src__vql__validation__spec__validate_program["validate_program"]
-        src__vql__adopt__window___run_capture["_run_capture"]
-        src__vql__facade__VQLFacade__validate["validate"]
-        src__vql__adopt__window___finalize_capture["_finalize_capture"]
-        src__vql__adopt__window___optional_fingerprint["_optional_fingerprint"]
-        src__vql__adopt__window___should_use_interactive_portal["_should_use_interactive_portal"]
-        src__vql__facade__VQLFacade__render_png["render_png"]
         src__vql__facade__VQLFacade__to_commands["to_commands"]
-        src__vql__facade__VQLFacade__to_events["to_events"]
-        src__vql__adopt__portal_capture__main["main"]
-        src__vql__adopt__window___enrich_program_metadata["_enrich_program_metadata"]
+        src__vql__drawing__svg_path_parser___dispatch_command["_dispatch_command"]
+        src__vql__drawing__svg_path_parser__parse_svg_path["parse_svg_path"]
+        src__vql__renderers__svg__render_to_svg["render_to_svg"]
+        src__vql__compiler__legacy_drawcommand__commands_to_program["commands_to_program"]
+        src__vql__validation__spec___program_colors["_program_colors"]
+        src__vql__validation__spec___program_shapes["_program_shapes"]
+        src__vql__adopt__window___capture_with_portal["_capture_with_portal"]
+        src__vql__validation__metadata___load_imgl_metadata_schema["_load_imgl_metadata_schema"]
+        src__vql__drawing__svg_path_parser___scale_groups["_scale_groups"]
+        src__vql__compiler__legacy_drawcommand__compile_to_events["compile_to_events"]
+        src__vql__adopt__window___session_type["_session_type"]
+        src__vql__validation__metadata__validate_program_metadata["validate_program_metadata"]
         src__vql__adopt__window__image_stats["image_stats"]
+        src__vql__compiler__legacy_drawcommand__program_to_commands["program_to_commands"]
+        src__vql__adopt__window___should_use_interactive_portal["_should_use_interactive_portal"]
+        src__vql__adopt__portal_capture__capture_via_portal["capture_via_portal"]
+        src__vql__adopt__window___capture_with_gnome_screenshot["_capture_with_gnome_screenshot"]
+        src__vql__adopt__window___capture_with_scrot["_capture_with_scrot"]
+        src__vql__adopt__window__capture_screen["capture_screen"]
+        src__vql__facade__VQLFacade__render_png["render_png"]
+        src__vql__renderers__base__VQLRendererAdapter__render["render"]
+        src__vql__adopt__window___enrich_program_metadata["_enrich_program_metadata"]
+        src__vql__facade__VQLFacade__to_events["to_events"]
+        src__vql__renderers__base__render_program["render_program"]
+        src__vql__adopt__window___is_wayland["_is_wayland"]
+        src__vql__drawing__nl_parser__NLDrawingParser__to_vql["to_vql"]
+        src__vql__adopt__window___image_is_blank["_image_is_blank"]
+        src__vql__facade__VQLFacade__render_svg["render_svg"]
+        src__vql__adopt__window___capture_with_grim["_capture_with_grim"]
+        src__vql__adopt__window___capture_permission_hint["_capture_permission_hint"]
+        src__vql__adopt__window___require_pillow["_require_pillow"]
+        src__vql__adopt__window___portal_python["_portal_python"]
+        src__vql__validation__spec___match_items["_match_items"]
+        src__vql__adopt__window___active_window_title["_active_window_title"]
+        src__vql__compiler__nl_to_vql__nl_to_program["nl_to_program"]
+        src__vql__adopt__window___capture_with_gnome_shell["_capture_with_gnome_shell"]
+        src__vql__adopt__window__screenshot_to_program["screenshot_to_program"]
+        src__vql__facade__VQLFacade__validate["validate"]
+        src__vql__facade__VQLFacade__compile["compile"]
+        src__vql__adopt__window__capture_diagnose["capture_diagnose"]
+        src__vql__adopt__portal_capture__main["main"]
+        src__vql__adopt__window___run_capture["_run_capture"]
+        src__vql__adopt__window___finalize_capture["_finalize_capture"]
+        src__vql__adopt__window__analyze_screenshot["analyze_screenshot"]
+        src__vql__drawing__path_generator__PathGenerator__generate["generate"]
+        src__vql__renderers__svg__render_to_png["render_to_png"]
+        src__vql__adopt__window___capture_backends["_capture_backends"]
+        src__vql__adopt__window___capture_interactive_mode["_capture_interactive_mode"]
+        src__vql__adopt__window___optional_fingerprint["_optional_fingerprint"]
+        src__vql__drawing__svg_path_parser___tokenize_path["_tokenize_path"]
+        src__vql__validation__spec__validate_program["validate_program"]
     end
-    packages__dsl2vql__src__dsl2vql__schema_registry__schema_for_verb --> packages__dsl2vql__src__dsl2vql__schema_registry___load_schemas
-    packages__dsl2vql__src__dsl2vql__schema_registry__all_schemas --> packages__dsl2vql__src__dsl2vql__schema_registry___load_schemas
-    packages__dsl2vql__src__dsl2vql__schema_registry__validate_command_dict --> packages__dsl2vql__src__dsl2vql__schema_registry__schema_for_verb
-    packages__dsl2vql__src__dsl2vql__schema_registry__validate_schema_registry --> packages__dsl2vql__src__dsl2vql__schema_registry___load_schemas
     packages__uri2img2svg__src__uri2img2svg__cli__main --> packages__uri2img2svg__src__uri2img2svg__query__query_uri
-    packages__dsl2vql__src__dsl2vql__cli___main_legacy --> packages__dsl2vql__src__dsl2vql__bus__execute_dsl_line
-    packages__dsl2vql__src__dsl2vql__cli___main_legacy --> packages__dsl2vql__src__dsl2vql__bus__execute_dsl
-    packages__dsl2vql__src__dsl2vql__cli___main_subcommand --> packages__dsl2vql__src__dsl2vql__schema_registry__validate_schema_registry
-    packages__dsl2vql__src__dsl2vql__cli__main --> packages__dsl2vql__src__dsl2vql__cli___main_legacy
-    packages__dsl2vql__src__dsl2vql__cli__main --> packages__dsl2vql__src__dsl2vql__cli___main_subcommand
-    packages__cli2vql__src__cli2vql__cli___repl --> packages__dsl2vql__src__dsl2vql__bus__dispatch
-    packages__img2svg__src__img2svg__to_vql__image_to_vql --> packages__img2svg__src__img2svg__to_vql__trace_to_vql_program
-    packages__img2svg__src__img2svg__to_vql__image_to_vql --> packages__img2svg__src__img2svg__trace__trace_contours_opencv
-    packages__img2svg__src__img2svg__to_vql__image_to_vql --> packages__img2svg__src__img2svg__trace__trace_image_regions
-    packages__img2svg__src__img2svg__svg_emit__image_to_svg --> packages__img2svg__src__img2svg__trace__trace_contours_opencv
-    packages__img2svg__src__img2svg__svg_emit__image_to_svg --> packages__img2svg__src__img2svg__svg_emit__paths_to_svg
-    packages__img2svg__src__img2svg__svg_emit__image_to_svg --> packages__img2svg__src__img2svg__trace__trace_image_regions
-    packages__img2svg__src__img2svg__svg_emit__image_to_svg --> packages__img2svg__src__img2svg__svg_emit__regions_to_svg
-    packages__dsl2vql__src__dsl2vql__grammar__parse_line --> packages__dsl2vql__src__dsl2vql__grammar__split_command
-    packages__dsl2vql__src__dsl2vql__grammar__parse_line --> packages__dsl2vql__src__dsl2vql__grammar__pick_flag
+    packages__uri2img2svg__src__uri2img2svg__query__query_uri --> packages__uri2img2svg__src__uri2img2svg__uri__parse_img2svg_uri
+    packages__uri2img2svg__src__uri2img2svg__query__query_uri --> packages__img2svg__src__img2svg__svg_emit__image_to_svg
+    packages__uri2img2svg__src__uri2img2svg__query__query_uri --> packages__img2svg__src__img2svg__to_vql__image_to_vql
     packages__dsl2vql__src__dsl2vql__bus___dispatch_cmd --> packages__dsl2vql__src__dsl2vql__schema_registry__validate_command_dict
     packages__dsl2vql__src__dsl2vql__bus___dispatch_cmd --> packages__dsl2vql__src__dsl2vql__grammar__split_command
     packages__dsl2vql__src__dsl2vql__bus___dispatch_cmd --> packages__dsl2vql__src__dsl2vql__handlers__command__handle_from_tokens
     packages__dsl2vql__src__dsl2vql__bus___dispatch_cmd --> packages__dsl2vql__src__dsl2vql__events__default_event_store
-    packages__dsl2vql__src__dsl2vql__bus___bytes_to_cmd --> packages__dsl2vql__src__dsl2vql__codec__decode_protobuf
+    packages__dsl2vql__src__dsl2vql__bus___bytes_to_cmd --> packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf
     packages__dsl2vql__src__dsl2vql__bus___bytes_to_cmd --> packages__dsl2vql__src__dsl2vql__grammar__to_text
     packages__dsl2vql__src__dsl2vql__bus___bytes_to_cmd --> packages__dsl2vql__src__dsl2vql__grammar__parse_line
     packages__dsl2vql__src__dsl2vql__bus__dispatch --> packages__dsl2vql__src__dsl2vql__grammar__split_command
@@ -256,15 +261,32 @@ flowchart LR
     packages__dsl2vql__src__dsl2vql__bus__dispatch --> packages__dsl2vql__src__dsl2vql__grammar__to_text
     packages__dsl2vql__src__dsl2vql__bus__execute_dsl_line --> packages__dsl2vql__src__dsl2vql__bus__dispatch
     packages__dsl2vql__src__dsl2vql__bus__execute_dsl --> packages__dsl2vql__src__dsl2vql__bus__execute_dsl_line
-    packages__dsl2vql__src__dsl2vql__handlers__query__handle_query --> packages__uri2img2svg__src__uri2img2svg__query__query_uri
-    packages__dsl2vql__src__dsl2vql__handlers__query__handle_validate --> packages__dsl2vql__src__dsl2vql__handlers__query___load_program
-    packages__dsl2vql__src__dsl2vql__handlers__query__handle_validate --> src__vql__validation__spec__validate_program
-    packages__dsl2vql__src__dsl2vql__handlers__query__handle_render --> packages__dsl2vql__src__dsl2vql__handlers__query___load_program
-    packages__dsl2vql__src__dsl2vql__handlers__query__handle_render --> src__vql__renderers__svg__render_to_svg
-    packages__dsl2vql__src__dsl2vql__handlers__query__handle_render --> src__vql__renderers__svg__render_to_png
-    packages__dsl2vql__src__dsl2vql__handlers__query__handle_resolve --> packages__nlp2vql__src__nlp2vql__to_dsl__nl_to_dsl_line
-    packages__uri2vql__src__uri2vql__compile__compile_vql_uri --> packages__uri2vql__src__uri2vql__compile___dsl_from_uri
-    packages__uri2vql__src__uri2vql__compile__compile_vql_uri --> packages__uri2vql__src__uri2vql__uri__is_vql_uri
+    packages__dsl2vql__src__dsl2vql__cli___main_legacy --> packages__dsl2vql__src__dsl2vql__bus__execute_dsl_line
+    packages__dsl2vql__src__dsl2vql__cli___main_legacy --> packages__dsl2vql__src__dsl2vql__bus__execute_dsl
+    packages__dsl2vql__src__dsl2vql__cli___main_subcommand --> packages__dsl2vql__src__dsl2vql__schema_registry__validate_schema_registry
+    packages__dsl2vql__src__dsl2vql__cli__main --> packages__dsl2vql__src__dsl2vql__cli___main_legacy
+    packages__dsl2vql__src__dsl2vql__cli__main --> packages__dsl2vql__src__dsl2vql__cli___main_subcommand
+    packages__dsl2vql__src__dsl2vql__events__EventStore__append --> packages__dsl2vql__src__dsl2vql__pb_codec__encode_protobuf
+    packages__dsl2vql__src__dsl2vql__pb_codec__encode_protobuf --> packages__dsl2vql__src__dsl2vql__pb_codec___set_body
+    packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf --> packages__dsl2vql__src__dsl2vql__pb_codec__envelope_to_dict
+    packages__dsl2vql__src__dsl2vql__pb_codec__encode_text_to_protobuf --> packages__dsl2vql__src__dsl2vql__grammar__parse_line
+    packages__dsl2vql__src__dsl2vql__pb_codec__encode_text_to_protobuf --> packages__dsl2vql__src__dsl2vql__pb_codec__encode_protobuf
+    packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf_to_text --> packages__dsl2vql__src__dsl2vql__grammar__to_text
+    packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf_to_text --> packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf
+    packages__dsl2vql__src__dsl2vql__pb_codec__encode_result_protobuf --> packages__dsl2vql__src__dsl2vql__pb_codec__result_to_pb
+    packages__dsl2vql__src__dsl2vql__schema_registry__schema_for_verb --> packages__dsl2vql__src__dsl2vql__schema_registry___load_schemas
+    packages__dsl2vql__src__dsl2vql__schema_registry__all_schemas --> packages__dsl2vql__src__dsl2vql__schema_registry___load_schemas
+    packages__dsl2vql__src__dsl2vql__schema_registry__validate_command_dict --> packages__dsl2vql__src__dsl2vql__schema_registry__schema_for_verb
+    packages__dsl2vql__src__dsl2vql__schema_registry__validate_schema_registry --> packages__dsl2vql__src__dsl2vql__schema_registry___load_schemas
+    packages__dsl2vql__src__dsl2vql__grammar__parse_line --> packages__dsl2vql__src__dsl2vql__grammar__split_command
+    packages__dsl2vql__src__dsl2vql__grammar__parse_line --> packages__dsl2vql__src__dsl2vql__grammar__pick_flag
+    packages__dsl2vql__src__dsl2vql__codec__encode_text --> packages__dsl2vql__src__dsl2vql__grammar__parse_line
+    packages__dsl2vql__src__dsl2vql__codec__encode_text --> packages__dsl2vql__src__dsl2vql__schema_registry__validate_command_dict
+    packages__dsl2vql__src__dsl2vql__codec__roundtrip_text --> packages__dsl2vql__src__dsl2vql__grammar__parse_line
+    packages__dsl2vql__src__dsl2vql__codec__roundtrip_text --> packages__dsl2vql__src__dsl2vql__schema_registry__validate_command_dict
+    packages__dsl2vql__src__dsl2vql__codec__roundtrip_text --> packages__dsl2vql__src__dsl2vql__grammar__to_text
+    packages__dsl2vql__src__dsl2vql__codec__encode_protobuf --> packages__dsl2vql__src__dsl2vql__pb_codec__encode_text_to_protobuf
+    packages__dsl2vql__src__dsl2vql__codec__decode_protobuf --> packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf_to_text
     packages__dsl2vql__src__dsl2vql__handlers__command__handle_generate --> src__vql__compiler__nl_to_vql__nl_to_program
     packages__dsl2vql__src__dsl2vql__handlers__command__handle_compile --> src__vql__compiler__nl_to_vql__nl_to_program
     packages__dsl2vql__src__dsl2vql__handlers__command__handle_patch --> packages__uri2vql__src__uri2vql__patch__patch_uri
@@ -279,10 +301,72 @@ flowchart LR
     packages__dsl2vql__src__dsl2vql__handlers__command__handle_from_tokens --> packages__dsl2vql__src__dsl2vql__handlers__command__handle_generate
     packages__dsl2vql__src__dsl2vql__handlers__command__handle_from_tokens --> packages__dsl2vql__src__dsl2vql__handlers__command__handle_compile
     packages__dsl2vql__src__dsl2vql__handlers__command__handle_from_tokens --> packages__dsl2vql__src__dsl2vql__handlers__command__handle_patch
+    packages__dsl2vql__src__dsl2vql__handlers__query__handle_query --> packages__uri2img2svg__src__uri2img2svg__query__query_uri
+    packages__dsl2vql__src__dsl2vql__handlers__query__handle_validate --> packages__dsl2vql__src__dsl2vql__handlers__query___load_program
+    packages__dsl2vql__src__dsl2vql__handlers__query__handle_validate --> src__vql__validation__spec__validate_program
+    packages__dsl2vql__src__dsl2vql__handlers__query__handle_render --> packages__dsl2vql__src__dsl2vql__handlers__query___load_program
+    packages__dsl2vql__src__dsl2vql__handlers__query__handle_render --> src__vql__renderers__svg__render_to_svg
+    packages__dsl2vql__src__dsl2vql__handlers__query__handle_render --> src__vql__renderers__svg__render_to_png
+    packages__dsl2vql__src__dsl2vql__handlers__query__handle_resolve --> packages__nlp2vql__src__nlp2vql__to_dsl__nl_to_dsl_line
+    packages__cli2vql__src__cli2vql__cli___repl --> packages__dsl2vql__src__dsl2vql__bus__dispatch
+    packages__img2svg__src__img2svg__svg_emit__image_to_svg --> packages__img2svg__src__img2svg__trace__trace_contours_opencv
+    packages__img2svg__src__img2svg__svg_emit__image_to_svg --> packages__img2svg__src__img2svg__svg_emit__paths_to_svg
+    packages__img2svg__src__img2svg__trace___merge_grid_cells --> packages__img2svg__src__img2svg__trace___hex_color
+    packages__img2svg__src__img2svg__trace__trace_image_regions --> packages__img2svg__src__img2svg__trace___merge_grid_cells
+    packages__img2svg__src__img2svg__trace___parse_vtracer_svg --> packages__img2svg__src__img2svg__trace___parse_translate
+    packages__img2svg__src__img2svg__trace__trace_vtracer --> packages__img2svg__src__img2svg__trace___parse_vtracer_svg
+    packages__img2svg__src__img2svg__to_vql__image_to_vql --> packages__img2svg__src__img2svg__to_vql__trace_to_vql_program
+    packages__img2svg__src__img2svg__to_vql__image_to_vql --> packages__img2svg__src__img2svg__trace__trace_contours_opencv
     packages__mcp2vql__src__mcp2vql__server__VqlMCPServer____post_init__ --> packages__mcp2vql__src__mcp2vql__server___require_fastmcp
+    packages__uri2vql__src__uri2vql__nlp2uri__nlp2uri --> packages__uri2vql__src__uri2vql__nlp2uri__resolve_prompt_to_vql_uri
+    packages__uri2vql__src__uri2vql__nlp2uri__best_uri --> packages__uri2vql__src__uri2vql__nlp2uri__nlp2uri
+    packages__uri2vql__src__uri2vql__query__query_uri --> packages__uri2vql__src__uri2vql__window__query_window
+    packages__uri2vql__src__uri2vql__query__query_uri --> packages__uri2vql__src__uri2vql__uri__parse_vql_uri
+    packages__uri2vql__src__uri2vql__query__query_uri --> packages__uri2vql__src__uri2vql__query___load_program
+    packages__uri2vql__src__uri2vql__uri__uri_for_program --> packages__uri2vql__src__uri2vql__uri___with_file
+    packages__uri2vql__src__uri2vql__uri__uri_for_scene --> packages__uri2vql__src__uri2vql__uri___with_file
+    packages__uri2vql__src__uri2vql__uri__uri_for_objects --> packages__uri2vql__src__uri2vql__uri___with_file
+    packages__uri2vql__src__uri2vql__uri__uri_for_object --> packages__uri2vql__src__uri2vql__uri___with_file
+    packages__uri2vql__src__uri2vql__uri__uri_for_window_analyze --> packages__uri2vql__src__uri2vql__uri___with_file
+    packages__uri2vql__src__uri2vql__uri__uri_for_window_summary --> packages__uri2vql__src__uri2vql__uri___with_file
+    packages__uri2vql__src__uri2vql__uri__uri_for_window_imgl --> packages__uri2vql__src__uri2vql__uri___with_file
+    packages__uri2vql__src__uri2vql__uri__uri_for_imgl_list --> packages__uri2vql__src__uri2vql__uri__uri_for_window_imgl
+    packages__uri2vql__src__uri2vql__uri__uri_for_imgl_click --> packages__uri2vql__src__uri2vql__uri___with_file
+    packages__uri2vql__src__uri2vql__uri__uri_for_imgl_type --> packages__uri2vql__src__uri2vql__uri___with_file
+    packages__uri2vql__src__uri2vql__uri__uri_for_window_diagnose --> packages__uri2vql__src__uri2vql__uri___with_file
+    packages__uri2vql__src__uri2vql__uri__uri_for_window_compare --> packages__uri2vql__src__uri2vql__uri___with_file
+    packages__uri2vql__src__uri2vql__uri__uri_for_window_refresh --> packages__uri2vql__src__uri2vql__uri___with_file
+    packages__uri2vql__src__uri2vql__window___diagnose_fallback --> src__vql__adopt__window__image_stats
+    packages__uri2vql__src__uri2vql__window___diagnose_fallback --> packages__uri2vql__src__uri2vql__window___normalize_locale
+    packages__uri2vql__src__uri2vql__window__refresh_window_metadata --> packages__img2vql__src__img2vql__metadata__refresh_program_metadata
+    packages__uri2vql__src__uri2vql__window__compare_window_image --> packages__img2vql__src__img2vql__fingerprint__compare_with_program
+    packages__uri2vql__src__uri2vql__window__diagnose_window_image --> packages__uri2vql__src__uri2vql__window___normalize_locale
+    packages__uri2vql__src__uri2vql__window__diagnose_window_image --> packages__img2vql__src__img2vql__diagnose__diagnose_for_vql
+    packages__uri2vql__src__uri2vql__window__diagnose_window_image --> packages__uri2vql__src__uri2vql__window___diagnose_fallback
+    packages__uri2vql__src__uri2vql__window___query_window_imgl --> packages__uri2vql__src__uri2vql__window___resolve_image_param
+    packages__uri2vql__src__uri2vql__window__analyze_window_uri --> src__vql__adopt__window__analyze_screenshot
+    packages__uri2vql__src__uri2vql__window__query_window --> packages__uri2vql__src__uri2vql__window__analyze_window_uri
+    packages__uri2vql__src__uri2vql__compile__compile_vql_uri --> packages__uri2vql__src__uri2vql__compile___dsl_from_uri
+    packages__uri2vql__src__uri2vql__compile__compile_vql_uri --> packages__uri2vql__src__uri2vql__uri__is_vql_uri
+    packages__uri2vql__src__uri2vql__run__run_uri --> packages__uri2vql__src__uri2vql__uri__parse_vql_uri
+    packages__uri2vql__src__uri2vql__run__run_uri --> packages__uri2vql__src__uri2vql__uri__is_vql_uri
+    packages__uri2vql__src__uri2vql__run__run_uri --> packages__dsl2vql__src__dsl2vql__bus__dispatch
+    packages__uri2vql__src__uri2vql__run__run_uri_json --> packages__uri2vql__src__uri2vql__run__run_uri
+    packages__uri2vql__src__uri2vql__patch__patch_uri --> packages__uri2vql__src__uri2vql__uri__parse_vql_uri
+    packages__nlp2vql__src__nlp2vql__apply__apply_nl --> packages__nlp2vql__src__nlp2vql__to_dsl__nl_to_dsl_line
+    packages__nlp2vql__src__nlp2vql__apply__apply_nl --> packages__dsl2vql__src__dsl2vql__bus__dispatch
     packages__nlp2vql__src__nlp2vql__to_dsl__nl_to_dsl_line --> packages__nlp2vql__src__nlp2vql__to_dsl___intent
     packages__nlp2vql__src__nlp2vql__to_dsl__to_dsl --> packages__nlp2vql__src__nlp2vql__to_dsl__nl_to_dsl_line
     packages__rest2vql__src__rest2vql__cli__main --> packages__rest2vql__src__rest2vql__app__create_app
+    packages__rest2vql__src__rest2vql__app__create_app --> packages__dsl2vql__src__dsl2vql__schema_registry__schema_for_verb
+    packages__rest2vql__src__rest2vql__window__window_detect --> packages__img2vql__src__img2vql__detect__detect_ui_elements
+    packages__rest2vql__src__rest2vql__window__window_detect --> packages__img2vql__src__img2vql__describe_ui__describe_ui_layout
+    packages__rest2vql__src__rest2vql__window__window_compare --> packages__img2vql__src__img2vql__fingerprint__compare_with_program
+    packages__rest2vql__src__rest2vql__window__window_refresh --> packages__img2vql__src__img2vql__metadata__refresh_program_metadata
+    packages__rest2vql__src__rest2vql__window__window_diagnose --> packages__img2vql__src__img2vql__diagnose__diagnose_for_vql
+    packages__rest2vql__src__rest2vql__window__window_analyze --> src__vql__adopt__window__analyze_screenshot
+    packages__rest2vql__src__rest2vql__window__window_adopt --> packages__img2vql__src__img2vql__adopt__adopt_screenshot
+    packages__rest2vql__src__rest2vql__window__window_summary --> packages__uri2vql__src__uri2vql__window__query_window
     packages__rest2vql__src__rest2vql__window_routes__post_window_detect --> packages__rest2vql__src__rest2vql__window_routes___window_response
     packages__rest2vql__src__rest2vql__window_routes__post_window_detect --> packages__rest2vql__src__rest2vql__window__window_detect
     packages__rest2vql__src__rest2vql__window_routes__post_window_compare --> packages__rest2vql__src__rest2vql__window_routes___window_response
@@ -297,56 +381,11 @@ flowchart LR
     packages__rest2vql__src__rest2vql__window_routes__post_window_adopt --> packages__rest2vql__src__rest2vql__window__window_adopt
     packages__rest2vql__src__rest2vql__window_routes__post_window_summary --> packages__rest2vql__src__rest2vql__window_routes___window_response
     packages__rest2vql__src__rest2vql__window_routes__post_window_summary --> packages__rest2vql__src__rest2vql__window__window_summary
-    packages__img2svg__src__img2svg__trace___merge_grid_cells --> packages__img2svg__src__img2svg__trace___hex_color
-    packages__img2svg__src__img2svg__trace__trace_image_regions --> packages__img2svg__src__img2svg__trace___merge_grid_cells
     packages__dsl2img2svg__src__dsl2img2svg__cli__main --> packages__dsl2vql__src__dsl2vql__bus__dispatch
-    packages__dsl2vql__src__dsl2vql__codec__encode_text --> packages__dsl2vql__src__dsl2vql__grammar__parse_line
-    packages__dsl2vql__src__dsl2vql__codec__encode_text --> packages__dsl2vql__src__dsl2vql__schema_registry__validate_command_dict
-    packages__dsl2vql__src__dsl2vql__codec__roundtrip_text --> packages__dsl2vql__src__dsl2vql__grammar__parse_line
-    packages__dsl2vql__src__dsl2vql__codec__roundtrip_text --> packages__dsl2vql__src__dsl2vql__schema_registry__validate_command_dict
-    packages__dsl2vql__src__dsl2vql__codec__roundtrip_text --> packages__dsl2vql__src__dsl2vql__grammar__to_text
-    packages__dsl2vql__src__dsl2vql__codec__encode_protobuf --> packages__dsl2vql__src__dsl2vql__pb_codec__encode_text_to_protobuf
-    packages__dsl2vql__src__dsl2vql__codec__decode_protobuf --> packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf_to_text
-    packages__dsl2vql__src__dsl2vql__events__EventStore__append --> packages__dsl2vql__src__dsl2vql__codec__encode_protobuf
     packages__dsl2img2svg__src__dsl2img2svg__dispatch__dispatch --> packages__dsl2img2svg__src__dsl2img2svg__dispatch___parse_kv_args
     packages__dsl2img2svg__src__dsl2img2svg__dispatch__dispatch --> packages__uri2img2svg__src__uri2img2svg__query__query_uri
-    packages__uri2vql__src__uri2vql__nlp2uri__nlp2uri --> packages__uri2vql__src__uri2vql__nlp2uri__resolve_prompt_to_vql_uri
-    packages__uri2vql__src__uri2vql__nlp2uri__best_uri --> packages__uri2vql__src__uri2vql__nlp2uri__nlp2uri
     packages__img2vql__src__img2vql__program__elements_to_vql_program --> packages__img2vql__src__img2vql__program___build_contains_relations
     packages__img2vql__src__img2vql__program___build_contains_relations --> packages__img2vql__src__img2vql__program___bbox_contains
-    packages__img2vql__src__img2vql__adopt__adopt_screenshot --> packages__img2vql__src__img2vql__detect__detect_ui_elements
-    packages__img2vql__src__img2vql__adopt__adopt_screenshot --> packages__img2vql__src__img2vql__program__elements_to_vql_program
-    packages__img2vql__src__img2vql__adopt__adopt_screenshot --> packages__img2vql__src__img2vql__describe_ui__describe_ui_layout
-    packages__uri2vql__src__uri2vql__patch__patch_uri --> packages__uri2vql__src__uri2vql__uri__parse_vql_uri
-    packages__uri2vql__src__uri2vql__uri__uri_for_program --> packages__uri2vql__src__uri2vql__uri___with_file
-    packages__uri2vql__src__uri2vql__uri__uri_for_scene --> packages__uri2vql__src__uri2vql__uri___with_file
-    packages__uri2vql__src__uri2vql__uri__uri_for_objects --> packages__uri2vql__src__uri2vql__uri___with_file
-    packages__uri2vql__src__uri2vql__uri__uri_for_object --> packages__uri2vql__src__uri2vql__uri___with_file
-    packages__uri2vql__src__uri2vql__uri__uri_for_window_analyze --> packages__uri2vql__src__uri2vql__uri___with_file
-    packages__uri2vql__src__uri2vql__uri__uri_for_window_summary --> packages__uri2vql__src__uri2vql__uri___with_file
-    packages__uri2vql__src__uri2vql__uri__uri_for_window_imgl --> packages__uri2vql__src__uri2vql__uri___with_file
-    packages__uri2vql__src__uri2vql__uri__uri_for_imgl_list --> packages__uri2vql__src__uri2vql__uri__uri_for_window_imgl
-    packages__uri2vql__src__uri2vql__uri__uri_for_imgl_click --> packages__uri2vql__src__uri2vql__uri___with_file
-    packages__uri2vql__src__uri2vql__uri__uri_for_imgl_type --> packages__uri2vql__src__uri2vql__uri___with_file
-    packages__uri2vql__src__uri2vql__uri__uri_for_window_diagnose --> packages__uri2vql__src__uri2vql__uri___with_file
-    packages__uri2vql__src__uri2vql__uri__uri_for_window_compare --> packages__uri2vql__src__uri2vql__uri___with_file
-    packages__uri2vql__src__uri2vql__uri__uri_for_window_refresh --> packages__uri2vql__src__uri2vql__uri___with_file
-    packages__img2vql__src__img2vql__diagnose__diagnose_image --> packages__img2vql__src__img2vql__diagnose___normalize_locale
-    packages__img2vql__src__img2vql__diagnose__diagnose_for_vql --> packages__img2vql__src__img2vql__fingerprint__load_program_fingerprint
-    packages__img2vql__src__img2vql__diagnose__diagnose_for_vql --> packages__img2vql__src__img2vql__diagnose__diagnose_image
-    packages__img2vql__src__img2vql__diagnose__diagnose_for_vql --> packages__img2vql__src__img2vql__fingerprint___json_safe
-    packages__img2vql__src__img2vql__diagnose__diagnose_for_vql --> packages__img2vql__src__img2vql__diagnose___recommendation
-    packages__img2vql__src__img2vql__diagnose__diagnose_for_vql --> packages__img2vql__src__img2vql__metadata__save_diagnose_to_program
-    examples__generate_demo_screen__write_demo_screen --> examples__generate_demo_screen___load_font
-    examples__generate_demo_screen__main --> examples__generate_demo_screen__write_demo_screen
-    packages__uri2vql__src__uri2vql__run__run_uri --> packages__uri2vql__src__uri2vql__uri__parse_vql_uri
-    packages__uri2vql__src__uri2vql__run__run_uri --> packages__uri2vql__src__uri2vql__uri__is_vql_uri
-    packages__uri2vql__src__uri2vql__run__run_uri --> packages__dsl2vql__src__dsl2vql__bus__dispatch
-    packages__uri2vql__src__uri2vql__run__run_uri_json --> packages__uri2vql__src__uri2vql__run__run_uri
-    packages__img2vql__src__img2vql__fingerprint__compare_with_program --> packages__img2vql__src__img2vql__fingerprint__load_program_fingerprint
-    packages__img2vql__src__img2vql__fingerprint__compare_with_program --> packages__img2vql__src__img2vql__fingerprint___json_safe
-    packages__nlp2vql__src__nlp2vql__apply__apply_nl --> packages__nlp2vql__src__nlp2vql__to_dsl__nl_to_dsl_line
-    packages__nlp2vql__src__nlp2vql__apply__apply_nl --> packages__dsl2vql__src__dsl2vql__bus__dispatch
     packages__img2vql__src__img2vql__metadata__auto_ocr_special_hits --> packages__img2vql__src__img2vql__metadata__rapidocr_special_hits
     packages__img2vql__src__img2vql__metadata__auto_ocr_special_hits --> packages__img2vql__src__img2vql__metadata__imgl_ocr_special_hits
     packages__img2vql__src__img2vql__metadata__auto_ocr_special_hits --> packages__img2vql__src__img2vql__metadata___text_likely
@@ -359,24 +398,9 @@ flowchart LR
     packages__img2vql__src__img2vql__metadata__metadata_from_diagnose --> packages__img2vql__src__img2vql__metadata___json_safe
     packages__img2vql__src__img2vql__metadata__metadata_from_diagnose --> packages__img2vql__src__img2vql__metadata__auto_ocr_special_hits
     packages__img2vql__src__img2vql__metadata__save_diagnose_to_program --> packages__img2vql__src__img2vql__metadata__metadata_from_diagnose
-    packages__dsl2vql__src__dsl2vql__pb_codec__encode_protobuf --> packages__dsl2vql__src__dsl2vql__pb_codec___set_body
-    packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf --> packages__dsl2vql__src__dsl2vql__pb_codec__envelope_to_dict
-    packages__dsl2vql__src__dsl2vql__pb_codec__encode_text_to_protobuf --> packages__dsl2vql__src__dsl2vql__grammar__parse_line
-    packages__dsl2vql__src__dsl2vql__pb_codec__encode_text_to_protobuf --> packages__dsl2vql__src__dsl2vql__pb_codec__encode_protobuf
-    packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf_to_text --> packages__dsl2vql__src__dsl2vql__grammar__to_text
-    packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf_to_text --> packages__dsl2vql__src__dsl2vql__pb_codec__decode_protobuf
-    packages__dsl2vql__src__dsl2vql__pb_codec__encode_result_protobuf --> packages__dsl2vql__src__dsl2vql__pb_codec__result_to_pb
-    src__vql__drawing__nl_parser__NLDrawingParser__to_vql --> src__vql__compiler__nl_to_vql__nl_to_program
-    packages__uri2vql__src__uri2vql__window___diagnose_fallback --> src__vql__adopt__window__image_stats
-    packages__uri2vql__src__uri2vql__window___diagnose_fallback --> packages__uri2vql__src__uri2vql__window___normalize_locale
-    packages__uri2vql__src__uri2vql__window__refresh_window_metadata --> packages__img2vql__src__img2vql__metadata__refresh_program_metadata
-    packages__uri2vql__src__uri2vql__window__compare_window_image --> packages__img2vql__src__img2vql__fingerprint__compare_with_program
-    packages__uri2vql__src__uri2vql__window__diagnose_window_image --> packages__uri2vql__src__uri2vql__window___normalize_locale
-    packages__uri2vql__src__uri2vql__window__diagnose_window_image --> packages__img2vql__src__img2vql__diagnose__diagnose_for_vql
-    packages__uri2vql__src__uri2vql__window__diagnose_window_image --> packages__uri2vql__src__uri2vql__window___diagnose_fallback
-    packages__uri2vql__src__uri2vql__window___query_window_imgl --> packages__uri2vql__src__uri2vql__window___resolve_image_param
-    packages__uri2vql__src__uri2vql__window__analyze_window_uri --> src__vql__adopt__window__analyze_screenshot
-    packages__uri2vql__src__uri2vql__window__query_window --> packages__uri2vql__src__uri2vql__window__analyze_window_uri
+    packages__img2vql__src__img2vql__adopt__adopt_screenshot --> packages__img2vql__src__img2vql__detect__detect_ui_elements
+    packages__img2vql__src__img2vql__adopt__adopt_screenshot --> packages__img2vql__src__img2vql__program__elements_to_vql_program
+    packages__img2vql__src__img2vql__adopt__adopt_screenshot --> packages__img2vql__src__img2vql__describe_ui__describe_ui_layout
     packages__img2vql__src__img2vql__detect___detect_titlebar --> packages__img2vql__src__img2vql__detect___avg_color
     packages__img2vql__src__img2vql__detect___detect_titlebar --> packages__img2vql__src__img2vql__detect___hex_color
     packages__img2vql__src__img2vql__detect___detect_panels --> packages__img2vql__src__img2vql__detect___avg_color
@@ -386,18 +410,55 @@ flowchart LR
     packages__img2vql__src__img2vql__detect__detect_ui_elements --> packages__img2vql__src__img2vql__detect___detect_toolbar
     packages__img2vql__src__img2vql__detect__detect_ui_elements --> packages__img2vql__src__img2vql__detect___dedupe
     packages__img2vql__src__img2vql__detect__detect_ui_elements --> packages__img2vql__src__img2vql__detect___detect_buttons
-    src__vql__validation__spec__validate_program --> src__vql__validation__spec___match_items
-    src__vql__validation__spec__validate_program --> src__vql__validation__spec___program_shapes
-    src__vql__validation__spec__validate_program --> src__vql__validation__spec___program_colors
-    src__vql__adopt__portal_capture__main --> src__vql__adopt__portal_capture__capture_via_portal
-    packages__rest2vql__src__rest2vql__app__create_app --> packages__dsl2vql__src__dsl2vql__schema_registry__schema_for_verb
+    packages__img2vql__src__img2vql__fingerprint__compare_with_program --> packages__img2vql__src__img2vql__fingerprint__load_program_fingerprint
+    packages__img2vql__src__img2vql__fingerprint__compare_with_program --> packages__img2vql__src__img2vql__fingerprint___json_safe
+    packages__img2vql__src__img2vql__diagnose__diagnose_image --> packages__img2vql__src__img2vql__diagnose___normalize_locale
+    packages__img2vql__src__img2vql__diagnose__diagnose_for_vql --> packages__img2vql__src__img2vql__fingerprint__load_program_fingerprint
+    packages__img2vql__src__img2vql__diagnose__diagnose_for_vql --> packages__img2vql__src__img2vql__diagnose__diagnose_image
+    packages__img2vql__src__img2vql__diagnose__diagnose_for_vql --> packages__img2vql__src__img2vql__metadata___json_safe
+    packages__img2vql__src__img2vql__diagnose__diagnose_for_vql --> packages__img2vql__src__img2vql__diagnose___recommendation
+    packages__img2vql__src__img2vql__diagnose__diagnose_for_vql --> packages__img2vql__src__img2vql__metadata__save_diagnose_to_program
+    examples__photo_roundtrip_test__sample_flat_shapes --> examples__photo_roundtrip_test___require_pil
+    examples__photo_roundtrip_test__sample_gradient --> examples__photo_roundtrip_test___require_pil
+    examples__photo_roundtrip_test__sample_nl_drawing --> src__vql__compiler__nl_to_vql__nl_to_program
+    examples__photo_roundtrip_test__sample_nl_drawing --> src__vql__renderers__svg__render_to_png
+    examples__photo_roundtrip_test__sample_nl_drawing --> src__vql__renderers__svg__render_to_svg
+    examples__photo_roundtrip_test__test_img2svg_roundtrip --> packages__img2svg__src__img2svg__to_vql__image_to_vql
+    examples__photo_roundtrip_test__test_img2svg_roundtrip --> src__vql__renderers__svg__render_to_png
+    examples__photo_roundtrip_test__test_img2svg_roundtrip --> packages__img2svg__src__img2svg__svg_emit__image_to_svg
+    examples__photo_roundtrip_test__test_img2svg_roundtrip --> packages__img2svg__src__img2svg__trace__trace_image_regions
+    examples__photo_roundtrip_test__test_img2svg_roundtrip --> src__vql__renderers__svg__render_to_svg
+    examples__photo_roundtrip_test__test_ui_grid_adopt --> src__vql__adopt__window__screenshot_to_program
+    examples__photo_roundtrip_test__test_ui_grid_adopt --> src__vql__renderers__svg__render_to_png
+    examples__photo_roundtrip_test__test_ui_grid_adopt --> src__vql__renderers__svg__render_to_svg
+    examples__photo_roundtrip_test__test_vtracer_roundtrip --> packages__img2svg__src__img2svg__trace__trace_vtracer
+    examples__photo_roundtrip_test__test_vtracer_roundtrip --> packages__img2svg__src__img2svg__to_vql__trace_to_vql_program
+    examples__photo_roundtrip_test__test_vtracer_roundtrip --> src__vql__renderers__svg__render_to_png
+    examples__photo_roundtrip_test__test_opencv_contours --> packages__img2svg__src__img2svg__trace__trace_contours_opencv
+    examples__photo_roundtrip_test__test_opencv_contours --> packages__img2svg__src__img2svg__to_vql__trace_to_vql_program
+    examples__photo_roundtrip_test__test_opencv_contours --> src__vql__renderers__svg__render_to_png
+    examples__photo_roundtrip_test__test_img2vql_detect --> packages__img2vql__src__img2vql__detect__detect_ui_elements
+    examples__photo_roundtrip_test__main --> examples__photo_roundtrip_test__sample_flat_shapes
+    examples__photo_roundtrip_test__main --> examples__photo_roundtrip_test__sample_gradient
+    examples__generate_demo_screen__write_demo_screen --> examples__generate_demo_screen___load_font
+    examples__generate_demo_screen__main --> examples__generate_demo_screen__write_demo_screen
     src__vql__facade__VQLFacade__compile --> src__vql__compiler__nl_to_vql__nl_to_program
     src__vql__facade__VQLFacade__validate --> src__vql__validation__spec__validate_program
     src__vql__facade__VQLFacade__render_svg --> src__vql__renderers__svg__render_to_svg
     src__vql__facade__VQLFacade__render_png --> src__vql__renderers__svg__render_to_png
     src__vql__facade__VQLFacade__to_commands --> src__vql__compiler__legacy_drawcommand__program_to_commands
     src__vql__facade__VQLFacade__to_events --> src__vql__compiler__legacy_drawcommand__compile_to_events
+    src__vql__renderers__base__render_program --> src__vql__compiler__legacy_drawcommand__compile_to_events
+    src__vql__renderers__base__VQLRendererAdapter__render --> src__vql__renderers__base__render_program
+    src__vql__renderers__svg__render_to_svg --> src__vql__renderers__base__render_program
+    src__vql__renderers__svg__render_to_png --> src__vql__renderers__svg__render_to_svg
+    src__vql__drawing__nl_parser__NLDrawingParser__to_vql --> src__vql__compiler__nl_to_vql__nl_to_program
+    src__vql__drawing__path_generator__PathGenerator__generate --> src__vql__drawing__svg_path_parser__parse_svg_path
     src__vql__compiler__legacy_drawcommand__compile_to_events --> src__vql__compiler__legacy_drawcommand__program_to_commands
+    src__vql__compiler__nl_to_vql__nl_to_program --> src__vql__compiler__legacy_drawcommand__commands_to_program
+    src__vql__validation__spec__validate_program --> src__vql__validation__spec___match_items
+    src__vql__validation__spec__validate_program --> src__vql__validation__spec___program_shapes
+    src__vql__validation__spec__validate_program --> src__vql__validation__spec___program_colors
     src__vql__adopt__window___is_wayland --> src__vql__adopt__window___session_type
     src__vql__adopt__window___should_use_interactive_portal --> src__vql__adopt__window___capture_interactive_mode
     src__vql__adopt__window__image_stats --> src__vql__adopt__window___require_pillow
@@ -434,22 +495,8 @@ flowchart LR
     src__vql__adopt__window__analyze_screenshot --> src__vql__adopt__window__image_stats
     src__vql__adopt__window__analyze_screenshot --> src__vql__adopt__window__screenshot_to_program
     src__vql__adopt__window__analyze_screenshot --> src__vql__adopt__window__capture_screen
-    src__vql__compiler__nl_to_vql__nl_to_program --> src__vql__compiler__legacy_drawcommand__commands_to_program
-    packages__uri2img2svg__src__uri2img2svg__query__query_uri --> packages__uri2img2svg__src__uri2img2svg__uri__parse_img2svg_uri
-    packages__uri2img2svg__src__uri2img2svg__query__query_uri --> packages__img2svg__src__img2svg__svg_emit__image_to_svg
-    packages__uri2img2svg__src__uri2img2svg__query__query_uri --> packages__img2svg__src__img2svg__to_vql__image_to_vql
-    src__vql__renderers__base__render_program --> src__vql__compiler__legacy_drawcommand__compile_to_events
-    src__vql__renderers__base__VQLRendererAdapter__render --> src__vql__renderers__base__render_program
-    packages__uri2vql__src__uri2vql__query__query_uri --> packages__uri2vql__src__uri2vql__window__query_window
-    packages__uri2vql__src__uri2vql__query__query_uri --> packages__uri2vql__src__uri2vql__uri__parse_vql_uri
-    packages__uri2vql__src__uri2vql__query__query_uri --> packages__uri2vql__src__uri2vql__query___load_program
-    src__vql__renderers__svg__render_to_svg --> src__vql__renderers__base__render_program
-    src__vql__renderers__svg__render_to_png --> src__vql__renderers__svg__render_to_svg
-    packages__rest2vql__src__rest2vql__window__window_detect --> packages__img2vql__src__img2vql__detect__detect_ui_elements
-    packages__rest2vql__src__rest2vql__window__window_detect --> packages__img2vql__src__img2vql__describe_ui__describe_ui_layout
-    packages__rest2vql__src__rest2vql__window__window_compare --> packages__img2vql__src__img2vql__fingerprint__compare_with_program
-    packages__rest2vql__src__rest2vql__window__window_refresh --> packages__img2vql__src__img2vql__metadata__refresh_program_metadata
-    packages__rest2vql__src__rest2vql__window__window_diagnose --> packages__img2vql__src__img2vql__diagnose__diagnose_for_vql
-    packages__rest2vql__src__rest2vql__window__window_analyze --> src__vql__adopt__window__analyze_screenshot
-    packages__rest2vql__src__rest2vql__window__window_adopt --> packages__img2vql__src__img2vql__adopt__adopt_screenshot
-    packages__rest2vql__src__rest2vql__window__window_summary --> packages__uri2vql__src__uri2vql__window__query_window
+    src__vql__adopt__portal_capture__main --> src__vql__adopt__portal_capture__capture_via_portal
+    src__vql__drawing__svg_path_parser__parse_svg_path --> src__vql__drawing__svg_path_parser___scale_groups
+    src__vql__drawing__svg_path_parser__parse_svg_path --> src__vql__drawing__svg_path_parser___dispatch_command
+    src__vql__drawing__svg_path_parser__parse_svg_path --> src__vql__drawing__svg_path_parser___tokenize_path
+    src__vql__validation__metadata__validate_program_metadata --> src__vql__validation__metadata___load_imgl_metadata_schema

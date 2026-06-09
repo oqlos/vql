@@ -28,6 +28,7 @@ class SVGRenderer(Renderer):
     def __init__(self) -> None:
         self._width = 800
         self._height = 600
+        self._background = "#FFFFFF"
         self._elements: list[str] = []
         self._current_color = "#000000"
 
@@ -86,7 +87,7 @@ class SVGRenderer(Renderer):
             f'<svg xmlns="http://www.w3.org/2000/svg" '
             f'width="{self._width}" height="{self._height}" '
             f'viewBox="0 0 {self._width} {self._height}">\n'
-            f'  <rect width="100%" height="100%" fill="white" />\n'
+            f'  <rect width="100%" height="100%" fill="{self._background}" />\n'
             f'  {elements}\n'
             f'</svg>'
         )

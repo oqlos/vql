@@ -71,6 +71,10 @@ test-cov: venv install-dev
 test-all: venv install-dev
 	$(PYTHON) -m pytest tests/ packages/ -q --tb=short
 
+test-roundtrip: venv install-dev
+	$(PYTHON) -m pytest tests/test_photo_roundtrip.py -q --tb=short
+	$(PYTHON) examples/photo-roundtrip-test.py --out /tmp/vql-roundtrip
+
 validate-schema: venv install-dev
 	dsl2vql validate-schema
 

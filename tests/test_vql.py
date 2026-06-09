@@ -203,6 +203,10 @@ def test_vql_library_exposes_primitives():
     groups = parse_svg_path("M 0 0 L 10 0 L 10 10 Z")
     assert groups and len(groups[0]) >= 2
 
+    absolute = parse_svg_path("M 0 0 L 20 0 L 20 15 Z", center=False)
+    xs = [p[0] for g in absolute for p in g]
+    assert max(xs) <= 20.0
+
 
 # ── Playwright VQL renderer ───────────────────────────────────────────────────────
 

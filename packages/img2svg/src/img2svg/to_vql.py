@@ -7,8 +7,20 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
-from img2svg.trace import trace_contours_opencv, trace_image_regions
+from img2svg.trace import trace_contours_opencv, trace_image_regions, trace_vtracer
 from vql.schema.program import Layer, Object, Primitive, Scene, Style, VQLProgram
+
+
+def _background_from_regions(regions: list[dict[str, Any]]) -> str:
+    """Pick canvas background as the color covering the most pixel area."""
+    if not regions:
+        return "#FFFFFF"
+    area_by_color: dict[str, float] = {}
+    for reg in regions:
+        color = reg.get("color", "#FFFFFF")
+        area = float(reg.get("width", 0)) * float(reg.get("height", 0))
+        area_by_color[color] = area_by_color.get(color, 0.0) + area
+    return max(area_by_color, key=area_by_color.get)  # type: ignore[arg-type]
 
 
 def trace_to_vql_program(trace: dict[str, Any], *, image_path: str | Path = "") -> VQLProgram:
@@ -21,17 +33,34 @@ def trace_to_vql_program(trace: dict[str, Any], *, image_path: str | Path = "") 
     path = Path(image_path or trace.get("path", ""))
     objects: list[Object] = []
 
-    if trace.get("method") == "opencv_contour":
+    if trace.get("method") in ("opencv_contour", "vtracer"):
         for p in trace.get("paths", []):
-            cx = cy = 0.0
+            fill_color = p.get("fill", "#CCCCCC")
+            filled = fill_color.lower() not in ("none", "transparent")
             objects.append(
                 Object(
                     id=p.get("id", f"path_{len(objects)}"),
-                    primitives=[Primitive(shape_type="path", params={"d": p["d"]})],
-                    style=Style(color="#CCCCCC", fill=False, stroke_width=1.0),
-                    center_x=cx,
-                    center_y=cy,
-                    metadata={"source": "img2svg_contour", "point_count": p.get("point_count", 0)},
+                    primitives=[
+                        Primitive(
+                            shape_type="path",
+                            params={
+                                "d": p["d"],
+                                "tx": p.get("tx", 0.0),
+                                "ty": p.get("ty", 0.0),
+                            },
+                        )
+                    ],
+                    style=Style(
+                        color=fill_color if filled else "#CCCCCC",
+                        fill=filled,
+                        stroke_width=0.0 if filled else 1.0,
+                    ),
+                    center_x=0.0,
+                    center_y=0.0,
+                    metadata={
+                        "source": f"img2svg_{trace.get('method', 'path')}",
+                        "point_count": p.get("point_count", 0),
+                    },
                 )
             )
     else:
@@ -52,10 +81,20 @@ def trace_to_vql_program(trace: dict[str, Any], *, image_path: str | Path = "") 
                 )
             )
 
+    regions = trace.get("regions", [])
+    if regions:
+        background = _background_from_regions(regions)
+    elif trace.get("method") == "vtracer":
+        fills = [p.get("fill", "") for p in trace.get("paths", []) if p.get("fill")]
+        background = fills[0] if fills else "#FFFFFF"
+    else:
+        background = "#1A1A1A"
+
     return VQLProgram(
         scene=Scene(
             width=w,
             height=h,
+            background=background,
             app="raster_trace",
             url=f"file://{path.resolve()}" if path.is_file() else "",
             layers=[Layer(id="traced_regions", objects=objects)],
@@ -81,6 +120,8 @@ def image_to_vql(
     path = Path(image_path).expanduser()
     if method == "contours":
         trace = trace_contours_opencv(path)
+    elif method == "vtracer":
+        trace = trace_vtracer(path)
     else:
         trace = trace_image_regions(path, grid=grid)
     if not trace.get("ok"):

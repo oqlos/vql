@@ -1,6 +1,6 @@
 # code2llm call graph | /home/tom/github/oqlos/vql
 # generated in 0.10s
-# nodes: 199 | edges: 230 | modules: 49
+# nodes: 218 | edges: 256 | modules: 53
 # CC̄=4.1
 
 HUBS[20]:
@@ -8,10 +8,14 @@ HUBS[20]:
     CC=69  in:2  out:147  total:149
   packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
     CC=54  in:2  out:68  total:70
+  packages.img2svg.src.img2svg.to_vql.trace_to_vql_program
+    CC=15  in:3  out:46  total:49
+  src.vql.drawing.svg_path_parser._dispatch_command
+    CC=16  in:1  out:47  total:48
+  src.vql.adopt.window.screenshot_to_program
+    CC=12  in:3  out:44  total:47
   src.vql.adopt.window.analyze_screenshot
     CC=13  in:2  out:45  total:47
-  src.vql.adopt.window.screenshot_to_program
-    CC=12  in:2  out:44  total:46
   packages.dsl2vql.src.dsl2vql.pb_codec._set_body
     CC=12  in:1  out:45  total:46
   packages.uri2vql.src.uri2vql.window._query_window_imgl
@@ -22,14 +26,14 @@ HUBS[20]:
     CC=14  in:6  out:39  total:45
   src.vql.adopt.window.capture_diagnose
     CC=33  in:1  out:44  total:45
+  examples.photo-roundtrip-test.main
+    CC=5  in:0  out:45  total:45
   packages.rest2vql.src.rest2vql.app.create_app
     CC=1  in:1  out:43  total:44
-  packages.img2vql.src.img2vql.program.elements_to_vql_program
-    CC=11  in:1  out:40  total:41
   packages.dsl2img2svg.src.dsl2img2svg.dispatch.dispatch
     CC=14  in:0  out:41  total:41
-  packages.img2svg.src.img2svg.to_vql.trace_to_vql_program
-    CC=8  in:1  out:35  total:36
+  packages.img2vql.src.img2vql.program.elements_to_vql_program
+    CC=11  in:1  out:40  total:41
   packages.uri2img2svg.src.uri2img2svg.query.query_uri
     CC=13  in:6  out:28  total:34
   packages.dsl2vql.src.dsl2vql.grammar.parse_line
@@ -38,18 +42,25 @@ HUBS[20]:
     CC=3  in:0  out:33  total:33
   src.vql.adopt.portal_capture.capture_via_portal
     CC=4  in:1  out:30  total:31
-  packages.uri2vql.src.uri2vql.window._diagnose_fallback
-    CC=15  in:1  out:29  total:30
-  packages.img2svg.src.img2svg.trace.trace_contours_opencv
-    CC=8  in:5  out:23  total:28
-  packages.dsl2vql.src.dsl2vql.bus.dispatch
-    CC=6  in:12  out:15  total:27
+  examples.photo-roundtrip-test.test_img2svg_roundtrip
+    CC=8  in:2  out:29  total:31
 
 MODULES:
   examples.generate-demo-screen  [3 funcs]
     _load_font  CC=3  out:2
     main  CC=1  out:6
     write_demo_screen  CC=1  out:18
+  examples.photo-roundtrip-test  [10 funcs]
+    _require_pil  CC=2  out:1
+    main  CC=5  out:45
+    sample_flat_shapes  CC=1  out:8
+    sample_gradient  CC=3  out:21
+    sample_nl_drawing  CC=2  out:12
+    test_img2svg_roundtrip  CC=8  out:29
+    test_img2vql_detect  CC=5  out:5
+    test_opencv_contours  CC=2  out:13
+    test_ui_grid_adopt  CC=2  out:17
+    test_vtracer_roundtrip  CC=10  out:27
   packages.cli2vql.src.cli2vql.cli  [1 funcs]
     _repl  CC=6  out:8
   packages.dsl2img2svg.src.dsl2img2svg.cli  [1 funcs]
@@ -108,18 +119,20 @@ MODULES:
     schema_for_verb  CC=1  out:3
     validate_command_dict  CC=3  out:7
     validate_schema_registry  CC=3  out:6
-  packages.img2svg.src.img2svg.svg_emit  [3 funcs]
-    image_to_svg  CC=5  out:21
+  packages.img2svg.src.img2svg.svg_emit  [2 funcs]
+    image_to_svg  CC=7  out:24
     paths_to_svg  CC=3  out:9
-    regions_to_svg  CC=4  out:10
   packages.img2svg.src.img2svg.to_vql  [2 funcs]
-    image_to_vql  CC=4  out:16
-    trace_to_vql_program  CC=8  out:35
-  packages.img2svg.src.img2svg.trace  [4 funcs]
+    image_to_vql  CC=5  out:17
+    trace_to_vql_program  CC=15  out:46
+  packages.img2svg.src.img2svg.trace  [7 funcs]
     _hex_color  CC=1  out:0
     _merge_grid_cells  CC=15  out:9
+    _parse_translate  CC=3  out:5
+    _parse_vtracer_svg  CC=5  out:16
     trace_contours_opencv  CC=8  out:23
     trace_image_regions  CC=6  out:17
+    trace_vtracer  CC=6  out:17
   packages.img2vql.src.img2vql.adopt  [1 funcs]
     adopt_screenshot  CC=2  out:20
   packages.img2vql.src.img2vql.describe_ui  [1 funcs]
@@ -253,6 +266,13 @@ MODULES:
     nl_to_program  CC=6  out:9
   src.vql.drawing.nl_parser  [1 funcs]
     to_vql  CC=1  out:1
+  src.vql.drawing.path_generator  [1 funcs]
+    generate  CC=5  out:7
+  src.vql.drawing.svg_path_parser  [4 funcs]
+    _dispatch_command  CC=16  out:47
+    _scale_groups  CC=15  out:6
+    _tokenize_path  CC=1  out:1
+    parse_svg_path  CC=7  out:7
   src.vql.facade  [6 funcs]
     compile  CC=1  out:1
     render_png  CC=1  out:1
@@ -266,6 +286,9 @@ MODULES:
   src.vql.renderers.svg  [2 funcs]
     render_to_png  CC=2  out:8
     render_to_svg  CC=1  out:4
+  src.vql.validation.metadata  [2 funcs]
+    _load_imgl_metadata_schema  CC=1  out:3
+    validate_program_metadata  CC=14  out:14
   src.vql.validation.spec  [4 funcs]
     _match_items  CC=4  out:3
     _program_colors  CC=2  out:2
@@ -273,31 +296,15 @@ MODULES:
     validate_program  CC=4  out:12
 
 EDGES:
-  packages.dsl2vql.src.dsl2vql.schema_registry.schema_for_verb → packages.dsl2vql.src.dsl2vql.schema_registry._load_schemas
-  packages.dsl2vql.src.dsl2vql.schema_registry.all_schemas → packages.dsl2vql.src.dsl2vql.schema_registry._load_schemas
-  packages.dsl2vql.src.dsl2vql.schema_registry.validate_command_dict → packages.dsl2vql.src.dsl2vql.schema_registry.schema_for_verb
-  packages.dsl2vql.src.dsl2vql.schema_registry.validate_schema_registry → packages.dsl2vql.src.dsl2vql.schema_registry._load_schemas
   packages.uri2img2svg.src.uri2img2svg.cli.main → packages.uri2img2svg.src.uri2img2svg.query.query_uri
-  packages.dsl2vql.src.dsl2vql.cli._main_legacy → packages.dsl2vql.src.dsl2vql.bus.execute_dsl_line
-  packages.dsl2vql.src.dsl2vql.cli._main_legacy → packages.dsl2vql.src.dsl2vql.bus.execute_dsl
-  packages.dsl2vql.src.dsl2vql.cli._main_subcommand → packages.dsl2vql.src.dsl2vql.schema_registry.validate_schema_registry
-  packages.dsl2vql.src.dsl2vql.cli.main → packages.dsl2vql.src.dsl2vql.cli._main_legacy
-  packages.dsl2vql.src.dsl2vql.cli.main → packages.dsl2vql.src.dsl2vql.cli._main_subcommand
-  packages.cli2vql.src.cli2vql.cli._repl → packages.dsl2vql.src.dsl2vql.bus.dispatch
-  packages.img2svg.src.img2svg.to_vql.image_to_vql → packages.img2svg.src.img2svg.to_vql.trace_to_vql_program
-  packages.img2svg.src.img2svg.to_vql.image_to_vql → packages.img2svg.src.img2svg.trace.trace_contours_opencv
-  packages.img2svg.src.img2svg.to_vql.image_to_vql → packages.img2svg.src.img2svg.trace.trace_image_regions
-  packages.img2svg.src.img2svg.svg_emit.image_to_svg → packages.img2svg.src.img2svg.trace.trace_contours_opencv
-  packages.img2svg.src.img2svg.svg_emit.image_to_svg → packages.img2svg.src.img2svg.svg_emit.paths_to_svg
-  packages.img2svg.src.img2svg.svg_emit.image_to_svg → packages.img2svg.src.img2svg.trace.trace_image_regions
-  packages.img2svg.src.img2svg.svg_emit.image_to_svg → packages.img2svg.src.img2svg.svg_emit.regions_to_svg
-  packages.dsl2vql.src.dsl2vql.grammar.parse_line → packages.dsl2vql.src.dsl2vql.grammar.split_command
-  packages.dsl2vql.src.dsl2vql.grammar.parse_line → packages.dsl2vql.src.dsl2vql.grammar.pick_flag
+  packages.uri2img2svg.src.uri2img2svg.query.query_uri → packages.uri2img2svg.src.uri2img2svg.uri.parse_img2svg_uri
+  packages.uri2img2svg.src.uri2img2svg.query.query_uri → packages.img2svg.src.img2svg.svg_emit.image_to_svg
+  packages.uri2img2svg.src.uri2img2svg.query.query_uri → packages.img2svg.src.img2svg.to_vql.image_to_vql
   packages.dsl2vql.src.dsl2vql.bus._dispatch_cmd → packages.dsl2vql.src.dsl2vql.schema_registry.validate_command_dict
   packages.dsl2vql.src.dsl2vql.bus._dispatch_cmd → packages.dsl2vql.src.dsl2vql.grammar.split_command
   packages.dsl2vql.src.dsl2vql.bus._dispatch_cmd → packages.dsl2vql.src.dsl2vql.handlers.command.handle_from_tokens
   packages.dsl2vql.src.dsl2vql.bus._dispatch_cmd → packages.dsl2vql.src.dsl2vql.events.default_event_store
-  packages.dsl2vql.src.dsl2vql.bus._bytes_to_cmd → packages.dsl2vql.src.dsl2vql.codec.decode_protobuf
+  packages.dsl2vql.src.dsl2vql.bus._bytes_to_cmd → packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf
   packages.dsl2vql.src.dsl2vql.bus._bytes_to_cmd → packages.dsl2vql.src.dsl2vql.grammar.to_text
   packages.dsl2vql.src.dsl2vql.bus._bytes_to_cmd → packages.dsl2vql.src.dsl2vql.grammar.parse_line
   packages.dsl2vql.src.dsl2vql.bus.dispatch → packages.dsl2vql.src.dsl2vql.grammar.split_command
@@ -306,15 +313,32 @@ EDGES:
   packages.dsl2vql.src.dsl2vql.bus.dispatch → packages.dsl2vql.src.dsl2vql.grammar.to_text
   packages.dsl2vql.src.dsl2vql.bus.execute_dsl_line → packages.dsl2vql.src.dsl2vql.bus.dispatch
   packages.dsl2vql.src.dsl2vql.bus.execute_dsl → packages.dsl2vql.src.dsl2vql.bus.execute_dsl_line
-  packages.dsl2vql.src.dsl2vql.handlers.query.handle_query → packages.uri2img2svg.src.uri2img2svg.query.query_uri
-  packages.dsl2vql.src.dsl2vql.handlers.query.handle_validate → packages.dsl2vql.src.dsl2vql.handlers.query._load_program
-  packages.dsl2vql.src.dsl2vql.handlers.query.handle_validate → src.vql.validation.spec.validate_program
-  packages.dsl2vql.src.dsl2vql.handlers.query.handle_render → packages.dsl2vql.src.dsl2vql.handlers.query._load_program
-  packages.dsl2vql.src.dsl2vql.handlers.query.handle_render → src.vql.renderers.svg.render_to_svg
-  packages.dsl2vql.src.dsl2vql.handlers.query.handle_render → src.vql.renderers.svg.render_to_png
-  packages.dsl2vql.src.dsl2vql.handlers.query.handle_resolve → packages.nlp2vql.src.nlp2vql.to_dsl.nl_to_dsl_line
-  packages.uri2vql.src.uri2vql.compile.compile_vql_uri → packages.uri2vql.src.uri2vql.compile._dsl_from_uri
-  packages.uri2vql.src.uri2vql.compile.compile_vql_uri → packages.uri2vql.src.uri2vql.uri.is_vql_uri
+  packages.dsl2vql.src.dsl2vql.cli._main_legacy → packages.dsl2vql.src.dsl2vql.bus.execute_dsl_line
+  packages.dsl2vql.src.dsl2vql.cli._main_legacy → packages.dsl2vql.src.dsl2vql.bus.execute_dsl
+  packages.dsl2vql.src.dsl2vql.cli._main_subcommand → packages.dsl2vql.src.dsl2vql.schema_registry.validate_schema_registry
+  packages.dsl2vql.src.dsl2vql.cli.main → packages.dsl2vql.src.dsl2vql.cli._main_legacy
+  packages.dsl2vql.src.dsl2vql.cli.main → packages.dsl2vql.src.dsl2vql.cli._main_subcommand
+  packages.dsl2vql.src.dsl2vql.events.EventStore.append → packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf
+  packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf → packages.dsl2vql.src.dsl2vql.pb_codec._set_body
+  packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf → packages.dsl2vql.src.dsl2vql.pb_codec.envelope_to_dict
+  packages.dsl2vql.src.dsl2vql.pb_codec.encode_text_to_protobuf → packages.dsl2vql.src.dsl2vql.grammar.parse_line
+  packages.dsl2vql.src.dsl2vql.pb_codec.encode_text_to_protobuf → packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf
+  packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf_to_text → packages.dsl2vql.src.dsl2vql.grammar.to_text
+  packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf_to_text → packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf
+  packages.dsl2vql.src.dsl2vql.pb_codec.encode_result_protobuf → packages.dsl2vql.src.dsl2vql.pb_codec.result_to_pb
+  packages.dsl2vql.src.dsl2vql.schema_registry.schema_for_verb → packages.dsl2vql.src.dsl2vql.schema_registry._load_schemas
+  packages.dsl2vql.src.dsl2vql.schema_registry.all_schemas → packages.dsl2vql.src.dsl2vql.schema_registry._load_schemas
+  packages.dsl2vql.src.dsl2vql.schema_registry.validate_command_dict → packages.dsl2vql.src.dsl2vql.schema_registry.schema_for_verb
+  packages.dsl2vql.src.dsl2vql.schema_registry.validate_schema_registry → packages.dsl2vql.src.dsl2vql.schema_registry._load_schemas
+  packages.dsl2vql.src.dsl2vql.grammar.parse_line → packages.dsl2vql.src.dsl2vql.grammar.split_command
+  packages.dsl2vql.src.dsl2vql.grammar.parse_line → packages.dsl2vql.src.dsl2vql.grammar.pick_flag
+  packages.dsl2vql.src.dsl2vql.codec.encode_text → packages.dsl2vql.src.dsl2vql.grammar.parse_line
+  packages.dsl2vql.src.dsl2vql.codec.encode_text → packages.dsl2vql.src.dsl2vql.schema_registry.validate_command_dict
+  packages.dsl2vql.src.dsl2vql.codec.roundtrip_text → packages.dsl2vql.src.dsl2vql.grammar.parse_line
+  packages.dsl2vql.src.dsl2vql.codec.roundtrip_text → packages.dsl2vql.src.dsl2vql.schema_registry.validate_command_dict
+  packages.dsl2vql.src.dsl2vql.codec.roundtrip_text → packages.dsl2vql.src.dsl2vql.grammar.to_text
+  packages.dsl2vql.src.dsl2vql.codec.encode_protobuf → packages.dsl2vql.src.dsl2vql.pb_codec.encode_text_to_protobuf
+  packages.dsl2vql.src.dsl2vql.codec.decode_protobuf → packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf_to_text
   packages.dsl2vql.src.dsl2vql.handlers.command.handle_generate → src.vql.compiler.nl_to_vql.nl_to_program
   packages.dsl2vql.src.dsl2vql.handlers.command.handle_compile → src.vql.compiler.nl_to_vql.nl_to_program
   packages.dsl2vql.src.dsl2vql.handlers.command.handle_patch → packages.uri2vql.src.uri2vql.patch.patch_uri
@@ -322,4 +346,3 @@ EDGES:
   packages.dsl2vql.src.dsl2vql.handlers.command.handle_export → src.vql.renderers.svg.render_to_png
   packages.dsl2vql.src.dsl2vql.handlers.command.handle_export → src.vql.renderers.svg.render_to_svg
   packages.dsl2vql.src.dsl2vql.handlers.command.handle_from_tokens → packages.dsl2vql.src.dsl2vql.grammar.parse_line
-  packages.dsl2vql.src.dsl2vql.handlers.command.handle_from_tokens → packages.dsl2vql.src.dsl2vql.handlers.query.handle_query

@@ -11,12 +11,12 @@ IMGL_ROOT="${IMGL_ROOT:-$ROOT/../../semcod/imgl}"
 if [ -f "$IMG2NL_ROOT/pyproject.toml" ]; then
   pip install -e "$IMG2NL_ROOT[analyze,similarity]"
   pip install -e packages/img2vql
-  pip install -e packages/img2svg
+  pip install -e "packages/img2svg[vectorize]"
   pip install -e packages/uri2img2svg
   pip install -e packages/dsl2img2svg
   pip install -e "packages/uri2vql[diagnose]"
 else
-  pip install -e packages/img2svg
+  pip install -e "packages/img2svg[vectorize]"
   pip install -e packages/uri2img2svg
   pip install -e packages/dsl2img2svg
   echo "skip img2nl/img2vql (set IMG2NL_ROOT or clone wronai/img2nl)"

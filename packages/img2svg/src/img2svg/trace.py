@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
-from collections import deque
+import re
+import tempfile
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
+from xml.etree import ElementTree as ET
 
 
 @dataclass
@@ -176,4 +178,86 @@ def trace_contours_opencv(
         "path_count": len(paths),
         "paths": paths,
         "method": "opencv_contour",
+    }
+
+
+def _parse_translate(transform: str) -> tuple[float, float]:
+    match = re.search(r"translate\(\s*([-\d.]+)\s*,\s*([-\d.]+)\s*\)", transform or "")
+    if match:
+        return float(match.group(1)), float(match.group(2))
+    return 0.0, 0.0
+
+
+def _parse_vtracer_svg(svg_path: Path) -> tuple[int, int, list[dict[str, Any]]]:
+    root = ET.parse(svg_path).getroot()
+    width = int(float(root.attrib.get("width", "0") or 0))
+    height = int(float(root.attrib.get("height", "0") or 0))
+    paths: list[dict[str, Any]] = []
+    for i, elem in enumerate(root.findall(".//{*}path")):
+        d = elem.attrib.get("d", "")
+        if not d:
+            continue
+        fill = elem.attrib.get("fill", "none")
+        tx, ty = _parse_translate(elem.attrib.get("transform", ""))
+        paths.append(
+            {
+                "id": elem.attrib.get("id", f"vpath_{i}"),
+                "d": d,
+                "fill": fill,
+                "tx": tx,
+                "ty": ty,
+            }
+        )
+    return width, height, paths
+
+
+def trace_vtracer(
+    image_path: str | Path,
+    *,
+    colormode: str = "color",
+    filter_speckle: int = 4,
+    color_precision: int = 6,
+) -> dict[str, Any]:
+    """High-quality color vectorization via vtracer (pip install img2svg[vtracer])."""
+    try:
+        import vtracer
+    except ImportError:
+        return {"ok": False, "error": "vtracer not installed: pip install img2svg[vtracer]"}
+
+    from PIL import Image
+
+    path = Path(image_path).expanduser()
+    if not path.is_file():
+        return {"ok": False, "path": str(path), "error": "file not found"}
+
+    im = Image.open(path).convert("RGB")
+    w, h = im.size
+
+    with tempfile.NamedTemporaryFile(suffix=".svg", delete=False) as tmp:
+        svg_out = Path(tmp.name)
+
+    try:
+        vtracer.convert_image_to_svg_py(
+            str(path),
+            str(svg_out),
+            colormode=colormode,
+            hierarchical="stacked",
+            mode="spline",
+            filter_speckle=filter_speckle,
+            color_precision=color_precision,
+        )
+        svg_w, svg_h, paths = _parse_vtracer_svg(svg_out)
+    except Exception as exc:  # pragma: no cover - depends on vtracer runtime
+        return {"ok": False, "path": str(path), "error": str(exc)}
+    finally:
+        svg_out.unlink(missing_ok=True)
+
+    return {
+        "ok": True,
+        "path": str(path),
+        "width": svg_w or w,
+        "height": svg_h or h,
+        "path_count": len(paths),
+        "paths": paths,
+        "method": "vtracer",
     }

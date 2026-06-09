@@ -1,142 +1,145 @@
-# code2llm | 160f 118929L | python:127,toml:11,json:9,shell:8,yaml:2,proto:2 | 2026-06-09
-# generated in 0.05s
-# CC̅=4.1 | critical:14/394 | dups:0 | cycles:2
+# code2llm | 168f 121044L | python:130,toml:11,json:10,shell:8,yaml:6,proto:2 | 2026-06-09
+# generated in 0.04s
+# CC̅=4.1 | critical:16/421 | dups:0 | cycles:0
 
-HEALTH[14]:
-  🟡 CC    parse_line CC=28 (limit:15)
-  🟡 CC    main CC=53 (limit:15)
-  🟡 CC    _merge_grid_cells CC=15 (limit:15)
-  🟡 CC    resolve_prompt_to_vql_uri CC=54 (limit:15)
+HEALTH[16]:
   🟡 CC    envelope_to_dict CC=31 (limit:15)
+  🟡 CC    parse_line CC=28 (limit:15)
+  🟡 CC    _merge_grid_cells CC=15 (limit:15)
+  🟡 CC    trace_to_vql_program CC=15 (limit:15)
+  🟡 CC    main CC=53 (limit:15)
+  🟡 CC    resolve_prompt_to_vql_uri CC=54 (limit:15)
+  🟡 CC    query_uri CC=15 (limit:15)
   🟡 CC    _diagnose_fallback CC=15 (limit:15)
   🟡 CC    _query_window_imgl CC=17 (limit:15)
   🟡 CC    query_window CC=69 (limit:15)
   🟡 CC    _detect_buttons CC=25 (limit:15)
-  🟡 CC    parse_svg_path CC=41 (limit:15)
   🟡 CC    _capture_with_portal CC=15 (limit:15)
   🟡 CC    capture_diagnose CC=33 (limit:15)
   🟡 CC    _merge_grid_colors CC=15 (limit:15)
-  🟡 CC    query_uri CC=15 (limit:15)
+  🟡 CC    _dispatch_command CC=16 (limit:15)
+  🟡 CC    _scale_groups CC=15 (limit:15)
 
-REFACTOR[2]:
-  1. split 14 high-CC methods  (CC>15)
-  2. break 2 circular dependencies
+REFACTOR[1]:
+  1. split 16 high-CC methods  (CC>15)
 
-PIPELINES[164]:
+PIPELINES[174]:
   [1] Src [main]: main → query_uri → parse_img2svg_uri
       PURITY: 100% pure
-  [2] Src [main]: main → _main_legacy → execute_dsl_line → dispatch → ...(1 more)
+  [2] Src [is_img2svg_uri]: is_img2svg_uri
       PURITY: 100% pure
-  [3] Src [main]: main → image_to_svg → trace_contours_opencv
+  [3] Src [uri_for_vectorize]: uri_for_vectorize
       PURITY: 100% pure
-  [4] Src [main]: main → _repl → dispatch → split_command
+  [4] Src [main]: main → _main_legacy → execute_dsl_line → dispatch → ...(1 more)
       PURITY: 100% pure
-  [5] Src [main]: main → query_uri → parse_img2svg_uri
+  [5] Src [to_dict]: to_dict
       PURITY: 100% pure
-  [6] Src [compile_vql_uri]: compile_vql_uri → _dsl_from_uri
+  [6] Src [__init__]: __init__
       PURITY: 100% pure
-  [7] Src [main]: main → apply_nl → nl_to_dsl_line → _intent
+  [7] Src [append]: append → encode_protobuf → _set_body
       PURITY: 100% pure
-  [8] Src [__post_init__]: __post_init__ → _require_fastmcp
+  [8] Src [replay]: replay
       PURITY: 100% pure
-  [9] Src [_register_tools]: _register_tools → query_uri → parse_img2svg_uri
+  [9] Src [encode_text]: encode_text → parse_line → split_command
       PURITY: 100% pure
-  [10] Src [run]: run
+  [10] Src [roundtrip_text]: roundtrip_text → parse_line → split_command
       PURITY: 100% pure
-  [11] Src [main]: main
+  [11] Src [encode_protobuf]: encode_protobuf → encode_text_to_protobuf → parse_line → split_command
       PURITY: 100% pure
-  [12] Src [main]: main → create_app → schema_for_verb → _load_schemas
+  [12] Src [decode_protobuf]: decode_protobuf → decode_protobuf_to_text → to_text
       PURITY: 100% pure
-  [13] Src [is_img2svg_uri]: is_img2svg_uri
+  [13] Src [main]: main → _repl → dispatch → split_command
       PURITY: 100% pure
-  [14] Src [uri_for_vectorize]: uri_for_vectorize
+  [14] Src [main]: main → image_to_svg → trace_contours_opencv
       PURITY: 100% pure
-  [15] Src [post_window_detect]: post_window_detect → _window_response
+  [15] Src [to_dict]: to_dict
       PURITY: 100% pure
-  [16] Src [post_window_compare]: post_window_compare → _window_response
+  [16] Src [__post_init__]: __post_init__ → _require_fastmcp
       PURITY: 100% pure
-  [17] Src [post_window_refresh]: post_window_refresh → _window_response
+  [17] Src [_register_tools]: _register_tools → query_uri → parse_img2svg_uri
       PURITY: 100% pure
-  [18] Src [post_window_diagnose]: post_window_diagnose → _window_response
+  [18] Src [run]: run
       PURITY: 100% pure
-  [19] Src [post_window_analyze]: post_window_analyze → _window_response
+  [19] Src [main]: main
       PURITY: 100% pure
-  [20] Src [post_window_adopt]: post_window_adopt → _window_response
+  [20] Src [main]: main → query_uri → parse_img2svg_uri
       PURITY: 100% pure
-  [21] Src [post_window_summary]: post_window_summary → _window_response
+  [21] Src [best_uri]: best_uri → nlp2uri → resolve_prompt_to_vql_uri → _extract_click_target
       PURITY: 100% pure
-  [22] Src [to_dict]: to_dict
+  [22] Src [query_uri]: query_uri → query_window → analyze_window_uri → analyze_screenshot → ...(2 more)
       PURITY: 100% pure
-  [23] Src [main]: main → dispatch → split_command
+  [23] Src [uri_for_object]: uri_for_object → _with_file
       PURITY: 100% pure
-  [24] Src [encode_text]: encode_text → parse_line → split_command
+  [24] Src [compile_vql_uri]: compile_vql_uri → _dsl_from_uri
       PURITY: 100% pure
-  [25] Src [roundtrip_text]: roundtrip_text → parse_line → split_command
+  [25] Src [run_uri_json]: run_uri_json → run_uri → parse_vql_uri
       PURITY: 100% pure
-  [26] Src [to_dict]: to_dict
+  [26] Src [main]: main → apply_nl → nl_to_dsl_line → _intent
       PURITY: 100% pure
-  [27] Src [__init__]: __init__
+  [27] Src [main]: main → create_app → schema_for_verb → _load_schemas
       PURITY: 100% pure
-  [28] Src [append]: append → encode_protobuf → encode_text_to_protobuf → parse_line → ...(1 more)
+  [28] Src [post_window_detect]: post_window_detect → _window_response
       PURITY: 100% pure
-  [29] Src [replay]: replay
+  [29] Src [post_window_compare]: post_window_compare → _window_response
       PURITY: 100% pure
-  [30] Src [dispatch]: dispatch → _parse_kv_args
+  [30] Src [post_window_refresh]: post_window_refresh → _window_response
       PURITY: 100% pure
-  [31] Src [best_uri]: best_uri → nlp2uri → resolve_prompt_to_vql_uri → _extract_click_target
+  [31] Src [post_window_diagnose]: post_window_diagnose → _window_response
       PURITY: 100% pure
-  [32] Src [main]: main → detect_ui_elements → _detect_titlebar → _avg_color
+  [32] Src [post_window_analyze]: post_window_analyze → _window_response
       PURITY: 100% pure
-  [33] Src [uri_for_object]: uri_for_object → _with_file
+  [33] Src [post_window_adopt]: post_window_adopt → _window_response
       PURITY: 100% pure
-  [34] Src [main]: main
+  [34] Src [post_window_summary]: post_window_summary → _window_response
       PURITY: 100% pure
-  [35] Src [main]: main → write_demo_screen → _load_font
+  [35] Src [main]: main → dispatch → split_command
       PURITY: 100% pure
-  [36] Src [__getattr__]: __getattr__
+  [36] Src [dispatch]: dispatch → _parse_kv_args
       PURITY: 100% pure
-  [37] Src [run_uri_json]: run_uri_json → run_uri → parse_vql_uri
+  [37] Src [main]: main → detect_ui_elements → _detect_titlebar → _avg_color
       PURITY: 100% pure
-  [38] Src [fingerprint_for_image]: fingerprint_for_image
+  [38] Src [to_dict]: to_dict
       PURITY: 100% pure
-  [39] Src [generate]: generate
+  [39] Src [fingerprint_for_image]: fingerprint_for_image
       PURITY: 100% pure
-  [40] Src [generate]: generate
+  [40] Src [main]: main → sample_flat_shapes → _require_pil
       PURITY: 100% pure
-  [41] Src [generate]: generate
+  [41] Src [main]: main → write_demo_screen → _load_font
       PURITY: 100% pure
-  [42] Src [__init__]: __init__
+  [42] Src [main]: main
       PURITY: 100% pure
-  [43] Src [parse]: parse
+  [43] Src [compile]: compile → nl_to_program → commands_to_program
       PURITY: 100% pure
-  [44] Src [to_vql]: to_vql → nl_to_program → commands_to_program
+  [44] Src [validate]: validate → validate_program → _match_items
       PURITY: 100% pure
-  [45] Src [detect_shape]: detect_shape
+  [45] Src [render_svg]: render_svg → render_to_svg → render_program → compile_to_events → ...(1 more)
       PURITY: 100% pure
-  [46] Src [detect_color]: detect_color
+  [46] Src [render_png]: render_png → render_to_png → render_to_svg → render_program → ...(2 more)
       PURITY: 100% pure
-  [47] Src [_extract_shapes]: _extract_shapes
+  [47] Src [to_commands]: to_commands → program_to_commands
       PURITY: 100% pure
-  [48] Src [_extract_size_params]: _extract_size_params
+  [48] Src [to_events]: to_events → compile_to_events → program_to_commands
       PURITY: 100% pure
-  [49] Src [_extract_shape_specific_params]: _extract_shape_specific_params
+  [49] Src [run]: run
       PURITY: 100% pure
-  [50] Src [generate]: generate
+  [50] Src [render]: render → render_program → compile_to_events → program_to_commands
       PURITY: 100% pure
 
 LAYERS:
   packages/                       CC̄=5.6    ←in:0  →out:0
   │ !! window                     653L  1C   11m  CC=69     ←4
-  │ !! detect                     379L  1C   12m  CC=25     ←6
+  │ !! detect                     379L  1C   12m  CC=25     ←7
   │ !! cli                        352L  0C    1m  CC=53     ←0
   │ metadata                   339L  0C   12m  CC=10     ←6
   │ !! nlp2uri                    329L  1C    6m  CC=54     ←1
+  │ !! trace                      263L  1C    8m  CC=15     ←6
   │ uri                        183L  1C   16m  CC=6      ←5
-  │ !! trace                      179L  1C    5m  CC=15     ←5
-  │ !! pb_codec                   157L  0C    8m  CC=31     ←4
+  │ !! pb_codec                   157L  0C    8m  CC=31     ←6
   │ query                      144L  1C    2m  CC=13     ←6
+  │ !! to_vql                     141L  0C    3m  CC=15     ←4
   │ program                    141L  0C    4m  CC=11     ←1
   │ server                     135L  1C    5m  CC=2      ←0
+  │ svg_emit                   134L  0C    4m  CC=7      ←4
   │ command                    130L  0C    6m  CC=11     ←1
   │ diagnose                   125L  0C    4m  CC=10     ←4
   │ window                     124L  1C    7m  CC=7      ←1
@@ -146,15 +149,13 @@ LAYERS:
   │ query                      109L  0C    5m  CC=9      ←1
   │ events                     108L  2C    5m  CC=6      ←2
   │ fingerprint                104L  0C    4m  CC=7      ←6
-  │ to_vql                     100L  0C    2m  CC=8      ←3
-  │ svg_emit                    99L  0C    3m  CC=5      ←3
   │ cli                         97L  0C    3m  CC=9      ←0
   │ !! grammar                     96L  0C    4m  CC=28     ←4
   │ !! query                       95L  1C    3m  CC=15     ←0
   │ cli                         87L  0C    1m  CC=10     ←0
   │ bus                         77L  0C    5m  CC=6      ←9
   │ app                         72L  0C    1m  CC=1      ←1
-  │ cli                         69L  0C    1m  CC=10     ←0
+  │ cli                         71L  0C    1m  CC=11     ←0
   │ cli                         68L  0C    2m  CC=14     ←0
   │ run                         64L  1C    3m  CC=7      ←0
   │ adopt                       63L  0C    1m  CC=2      ←4
@@ -169,16 +170,16 @@ LAYERS:
   │ patch                       40L  1C    2m  CC=7      ←3
   │ result_pb2                  39L  0C    0m  CC=0.0    ←0
   │ compile                     36L  0C    2m  CC=7      ←0
-  │ codec                       35L  0C    4m  CC=3      ←3
+  │ codec                       35L  0C    4m  CC=3      ←0
   │ pyproject.toml              33L  0C    0m  CC=0.0    ←0
   │ cli                         28L  0C    1m  CC=4      ←0
   │ result                      28L  1C    1m  CC=1      ←0
   │ pyproject.toml              26L  0C    0m  CC=0.0    ←0
   │ pyproject.toml              26L  0C    0m  CC=0.0    ←0
   │ pyproject.toml              26L  0C    0m  CC=0.0    ←0
+  │ pyproject.toml              26L  0C    0m  CC=0.0    ←0
   │ __init__                    26L  0C    0m  CC=0.0    ←0
   │ cli                         24L  0C    1m  CC=1      ←0
-  │ pyproject.toml              24L  0C    0m  CC=0.0    ←0
   │ pyproject.toml              24L  0C    0m  CC=0.0    ←0
   │ result.proto                23L  0C    0m  CC=0.0    ←0
   │ cli                         21L  0C    1m  CC=4      ←0
@@ -186,16 +187,16 @@ LAYERS:
   │ pyproject.toml              18L  0C    0m  CC=0.0    ←0
   │ pyproject.toml              18L  0C    0m  CC=0.0    ←0
   │ pyproject.toml              18L  0C    0m  CC=0.0    ←0
+  │ __init__                    13L  0C    0m  CC=0.0    ←0
   │ patch.schema.json           12L  0C    0m  CC=0.0    ←0
   │ compile.schema.json         12L  0C    0m  CC=0.0    ←0
   │ query.schema.json           12L  0C    0m  CC=0.0    ←0
   │ render.schema.json          12L  0C    0m  CC=0.0    ←0
   │ generate.schema.json        11L  0C    0m  CC=0.0    ←0
   │ validate.schema.json        10L  0C    0m  CC=0.0    ←0
-  │ cli                          8L  0C    0m  CC=0.0    ←0
   │ engine                       8L  0C    0m  CC=0.0    ←0
+  │ cli                          8L  0C    0m  CC=0.0    ←0
   │ generate-proto.sh            7L  0C    0m  CC=0.0    ←0
-  │ __init__                     7L  0C    0m  CC=0.0    ←0
   │ __init__                     6L  0C    0m  CC=0.0    ←0
   │ __init__                     6L  0C    0m  CC=0.0    ←0
   │ __init__                     6L  0C    0m  CC=0.0    ←0
@@ -207,42 +208,44 @@ LAYERS:
   │ __init__                     1L  0C    0m  CC=0.0    ←0
   │
   src/                            CC̄=2.9    ←in:0  →out:0
-  │ !! window                     804L  3C   29m  CC=33     ←4
+  │ !! window                     804L  3C   29m  CC=33     ←5
   │ program                    423L  12C   32m  CC=5      ←0
-  │ commands                   267L  8C   19m  CC=7      ←0
+  │ commands                   271L  8C   19m  CC=8      ←0
   │ nl_parser                  225L  1C    8m  CC=11     ←0
   │ playwright                 215L  1C    8m  CC=9      ←0
-  │ !! svg_path_parser            189L  0C    1m  CC=41     ←0
+  │ !! svg_path_parser            205L  1C   10m  CC=16     ←1
   │ events                     142L  7C    7m  CC=1      ←0
   │ legacy_drawcommand         142L  0C    3m  CC=9      ←3
   │ colors                     135L  1C    6m  CC=6      ←0
   │ portal_capture             109L  0C    2m  CC=4      ←0
-  │ shape_registry             102L  1C    4m  CC=3      ←0
+  │ shape_registry             103L  1C    4m  CC=3      ←0
   │ event_store                101L  1C   13m  CC=3      ←0
   │ facade                      95L  2C    7m  CC=2      ←0
-  │ svg                         92L  1C    8m  CC=6      ←0
+  │ svg                         93L  1C    8m  CC=6      ←0
   │ spec                        91L  1C    5m  CC=4      ←2
   │ base                        84L  1C    8m  CC=3      ←0
   │ shapes                      78L  0C    0m  CC=0.0    ←0
-  │ nl_to_vql                   69L  0C    1m  CC=6      ←3
+  │ nl_to_vql                   69L  0C    1m  CC=6      ←4
   │ base                        65L  2C    3m  CC=1      ←1
   │ castle_generator            63L  1C    1m  CC=3      ←0
+  │ metadata                    57L  0C    2m  CC=14     ←0
+  │ __init__                    56L  0C    0m  CC=0.0    ←0
   │ cat_generator               55L  1C    1m  CC=4      ←0
-  │ __init__                    54L  0C    0m  CC=0.0    ←0
-  │ api                         54L  0C    0m  CC=0.0    ←0
+  │ api                         55L  0C    0m  CC=0.0    ←0
   │ rocket_generator            52L  1C    1m  CC=2      ←0
+  │ svg                         51L  1C    2m  CC=2      ←4
   │ butterfly_generator         50L  1C    1m  CC=5      ←0
-  │ svg                         50L  1C    2m  CC=2      ←3
   │ bird_generator              49L  1C    1m  CC=2      ←0
   │ car_generator               48L  1C    1m  CC=3      ←0
+  │ program_metadata_imgl.json    48L  0C    0m  CC=0.0    ←0
   │ cloud_detailed_generator    47L  1C    1m  CC=4      ←0
   │ fish_generator              46L  1C    1m  CC=3      ←0
   │ arrow_generator             46L  1C    1m  CC=3      ←0
   │ boat_generator              40L  1C    1m  CC=1      ←0
   │ mountain_generator          39L  1C    1m  CC=1      ←0
   │ shape_generator             37L  1C    1m  CC=1      ←0
-  │ crescent_generator          36L  1C    1m  CC=3      ←0
   │ diamond_generator           36L  1C    1m  CC=1      ←0
+  │ crescent_generator          36L  1C    1m  CC=3      ←0
   │ sun_generator               36L  1C    1m  CC=3      ←0
   │ grid_generator              36L  1C    1m  CC=3      ←0
   │ flower_generator            35L  1C    1m  CC=3      ←0
@@ -262,6 +265,7 @@ LAYERS:
   │ pentagon_generator          27L  1C    1m  CC=2      ←0
   │ triangle_generator          26L  1C    1m  CC=1      ←0
   │ rectangle_generator         26L  1C    1m  CC=1      ←0
+  │ path_generator              25L  1C    1m  CC=5      ←0
   │ line_generator              25L  1C    1m  CC=1      ←0
   │ square_generator            25L  1C    1m  CC=1      ←0
   │ __init__                    23L  0C    1m  CC=2      ←0
@@ -270,10 +274,11 @@ LAYERS:
   │ __init__                    16L  0C    0m  CC=0.0    ←0
   │ __init__                    15L  0C    0m  CC=0.0    ←0
   │ __init__                    14L  0C    0m  CC=0.0    ←0
-  │ __init__                    11L  0C    0m  CC=0.0    ←0
+  │ __init__                    13L  0C    0m  CC=0.0    ←0
   │ __init__                     9L  0C    0m  CC=0.0    ←0
   │
-  examples/                       CC̄=1.1    ←in:0  →out:0
+  examples/                       CC̄=2.5    ←in:0  →out:18  !! split
+  │ photo-roundtrip-test       338L  0C   10m  CC=10     ←0
   │ img2nl-vql-flow.sh         214L  0C    6m  CC=0.0    ←0
   │ live-capture-test.sh        94L  0C    0m  CC=0.0    ←0
   │ full-pipeline.sh            80L  0C    0m  CC=0.0    ←0
@@ -284,8 +289,10 @@ LAYERS:
   │ !! layout.vql.json          78775L  0C    0m  CC=0.0    ←0
   │ !! layout.vql.imgl.json     21939L  0C    0m  CC=0.0    ←0
   │ !! app.vql.json              5803L  0C    0m  CC=0.0    ←0
+  │ !! planfile.yaml             1319L  0C    0m  CC=0.0    ←0
   │ !! goal.yaml                  511L  0C    0m  CC=0.0    ←0
-  │ Makefile                   108L  0C    0m  CC=0.0    ←0
+  │ Makefile                   112L  0C    0m  CC=0.0    ←0
+  │ prefact.yaml                94L  0C    0m  CC=0.0    ←0
   │ pyproject.toml              65L  0C    0m  CC=0.0    ←0
   │ project.sh                  59L  0C    0m  CC=0.0    ←0
   │ install-dev.sh              37L  0C    0m  CC=0.0    ←0
@@ -295,30 +302,36 @@ LAYERS:
   scripts/                        CC̄=0.0    ←in:0  →out:0
   │ test-goal.sh                 6L  0C    0m  CC=0.0    ←0
   │
+  testql-scenarios/               CC̄=0.0    ←in:0  →out:0
+  │ generated-cli-tests.testql.toon.yaml    20L  0C    0m  CC=0.0    ←0
+  │ generated-from-pytests.testql.toon.yaml    12L  0C    0m  CC=0.0    ←0
+  │
 
 COUPLING:
-                            packages.dsl2vql      packages.img2vql      packages.uri2vql               src.vql     packages.rest2vql      packages.mcp2vql  packages.uri2img2svg      packages.img2svg  packages.dsl2img2svg      packages.nlp2vql      packages.cli2vql
-      packages.dsl2vql                    ──                                           1                     7                    ←7                    ←4                     1                                          ←1                     1                    ←3  hub
-      packages.img2vql                                          ──                    ←9                     1                    ←6                    ←5                                                                                                                hub
-      packages.uri2vql                     2                     9                    ──                     5                    ←1                    ←2                     2                                                                                          !! fan-out
-               src.vql                    ←7                     3                    ←5                    ──                    ←1                                                                                                                                      hub
-     packages.rest2vql                     7                     6                     1                     1                    ──                                                                                                                                      !! fan-out
-      packages.mcp2vql                     4                     5                     2                                                                ──                     1                                                                 2                        !! fan-out
-  packages.uri2img2svg                    ←1                                          ←2                                                                ←1                    ──                     4                    ←1                                              hub
-      packages.img2svg                                                                                                                                                        ←4                    ──                    ←4                                              hub
-  packages.dsl2img2svg                     1                                                                                                                                   1                     4                    ──                                            
-      packages.nlp2vql                     2                                                                                                            ←2                                                                                      ──                      
-      packages.cli2vql                     3                                                                                                                                                                                                                          ──
-  CYCLES: 2
+                            packages.dsl2vql               src.vql      packages.img2vql      packages.uri2vql              examples      packages.img2svg     packages.rest2vql      packages.mcp2vql  packages.uri2img2svg  packages.dsl2img2svg      packages.nlp2vql      packages.cli2vql
+      packages.dsl2vql                    ──                     7                                           1                                                                ←7                    ←4                     1                    ←1                     1                    ←3  hub
+               src.vql                    ←7                    ──                     3                    ←5                   ←10                                          ←1                                                                                                                hub
+      packages.img2vql                                           1                    ──                    ←9                    ←1                                          ←6                    ←5                                                                                          hub
+      packages.uri2vql                     2                     5                     9                    ──                                                                ←1                    ←2                     2                                                                    !! fan-out
+              examples                                          10                     1                                          ──                     7                                                                                                                                      !! fan-out
+      packages.img2svg                                                                                                            ←7                    ──                                                                ←4                    ←4                                              hub
+     packages.rest2vql                     7                     1                     6                     1                                                                ──                                                                                                                !! fan-out
+      packages.mcp2vql                     4                                           5                     2                                                                                      ──                     1                                           2                        !! fan-out
+  packages.uri2img2svg                    ←1                                                                ←2                                           4                                          ←1                    ──                    ←1                                              hub
+  packages.dsl2img2svg                     1                                                                                                             4                                                                 1                    ──                                            
+      packages.nlp2vql                     2                                                                                                                                                        ←2                                                                ──                      
+      packages.cli2vql                     3                                                                                                                                                                                                                                                ──
+  CYCLES: none
   HUB: packages.uri2img2svg/ (fan-in=5)
-  HUB: packages.img2vql/ (fan-in=23)
-  HUB: packages.img2svg/ (fan-in=8)
-  HUB: src.vql/ (fan-in=14)
   HUB: packages.dsl2vql/ (fan-in=19)
-  SMELL: packages.mcp2vql/ fan-out=14 → split needed
-  SMELL: packages.uri2vql/ fan-out=18 → split needed
-  SMELL: packages.rest2vql/ fan-out=15 → split needed
+  HUB: packages.img2svg/ (fan-in=15)
+  HUB: packages.img2vql/ (fan-in=24)
+  HUB: src.vql/ (fan-in=24)
   SMELL: packages.dsl2vql/ fan-out=10 → split needed
+  SMELL: packages.rest2vql/ fan-out=15 → split needed
+  SMELL: examples/ fan-out=18 → split needed
+  SMELL: packages.uri2vql/ fan-out=18 → split needed
+  SMELL: packages.mcp2vql/ fan-out=14 → split needed
 
 EXTERNAL:
   validation: run `vallm batch .` → validation.toon

@@ -14,7 +14,9 @@ Indeks dokumentacji monorepo [vql](../README.md).
 ### Screenshot → VQL
 | Dokument | Opis |
 |----------|------|
-| [desktop-capture.md](desktop-capture.md) | GNOME/Wayland, blank PNG, `--interactive` |
+| [photo-roundtrip.md](photo-roundtrip.md) | **Fotografia ↔ VQL** — opis i odtworzenie, jakość, biblioteki |
+| [vdisplay-imgl-automation.md](vdisplay-imgl-automation.md) | **vdisplay → imgl → VQL → LLM** (zalecane) |
+| [desktop-capture.md](desktop-capture.md) | GNOME/Wayland, blank PNG, dwie ścieżki capture |
 | [window-pipeline.md](window-pipeline.md) | Capture → analyze → detect → diagnose → SVG |
 | [window-uri.md](window-uri.md) | `vql://window/*` URI + CLI `uri2vql` |
 
@@ -52,6 +54,7 @@ Szczegóły: [examples/README.md](../examples/README.md)
 | [live-capture-test.sh](../examples/live-capture-test.sh) | Capture + analyze + nlp2uri |
 | [full-pipeline.sh](../examples/full-pipeline.sh) | Pełny pipeline: capture → detect → svg → diagnose |
 | [img2nl-vql-flow.sh](../examples/img2nl-vql-flow.sh) | Fingerprint, refresh, compare; opcjonalnie imgl |
+| [photo-roundtrip-test.py](../examples/photo-roundtrip-test.py) | Test fotografia ↔ VQL (próbki A/B/C, MSE, JSON) |
 | [generate-demo-screen.py](../examples/generate-demo-screen.py) | Syntetyczny UI PNG (headless) |
 | [scope-window.py](../examples/scope-window.py) | Przycięcie do okna fokusu (imgl) |
 
@@ -59,8 +62,9 @@ Szczegóły: [examples/README.md](../examples/README.md)
 
 | Projekt | Rola |
 |---------|------|
+| [wronai/vdisplay](https://github.com/wronai/vdisplay) | Zrzut z wirtualnego display (mirror, bez portalu) |
+| [semcod/imgl](https://github.com/semcod/imgl) | OCR, semantyczny layout, `capture`, `interact --llm` |
 | [wronai/img2nl](https://github.com/wronai/img2nl) | Heurystyki, i18n, offline translate, OCR trigger |
-| [semcod/imgl](https://github.com/semcod/imgl) | OCR Tesseract, semantyczny layout, interakcja |
 
 ## Interfejsy — mapa
 

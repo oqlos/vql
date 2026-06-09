@@ -37,6 +37,33 @@ def regions_to_svg(
     return "\n".join(lines)
 
 
+def _vtracer_paths_to_svg(trace: dict[str, Any]) -> str:
+    """Build SVG from vtracer paths (fill + transform)."""
+    if not trace.get("ok"):
+        raise ValueError(trace.get("error", "trace failed"))
+    w = trace.get("width", 100)
+    h = trace.get("height", 100)
+    bg = "#FFFFFF"
+    paths = trace.get("paths", [])
+    if paths:
+        bg = paths[0].get("fill", bg)
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">',
+        f'  <rect width="{w}" height="{h}" fill="{bg}"/>',
+    ]
+    for p in paths:
+        tx = p.get("tx", 0.0)
+        ty = p.get("ty", 0.0)
+        transform = f' transform="translate({tx},{ty})"' if tx or ty else ""
+        fill = p.get("fill", "none")
+        lines.append(
+            f'  <path id="{p["id"]}" d="{p["d"]}" fill="{fill}"{transform}/>'
+        )
+    lines.append("</svg>")
+    return "\n".join(lines)
+
+
 def paths_to_svg(trace: dict[str, Any], *, stroke: str = "#CCCCCC", fill: str = "none") -> str:
     """Build SVG from OpenCV contour paths."""
     if not trace.get("ok"):
@@ -69,6 +96,7 @@ def image_to_svg(
     Methods:
       - regions (default): merged color rectangles — fast, good for UI screenshots
       - contours: OpenCV edge contours — requires img2svg[opencv]
+      - vtracer: color-filled paths — requires img2svg[vtracer]
     """
     path = Path(image_path).expanduser()
     if method == "contours":
@@ -78,6 +106,13 @@ def image_to_svg(
         if not trace.get("ok"):
             return trace
         svg = paths_to_svg(trace)
+    elif method == "vtracer":
+        from img2svg.trace import trace_vtracer
+
+        trace = trace_vtracer(path)
+        if not trace.get("ok"):
+            return trace
+        svg = _vtracer_paths_to_svg(trace)
     else:
         trace = trace_image_regions(path, grid=grid)
         if not trace.get("ok"):

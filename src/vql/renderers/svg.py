@@ -22,6 +22,7 @@ class SVGVQLRenderer(VQLRendererAdapter, SVGRenderer):
 def render_to_svg(program: VQLProgram) -> str:
     """Render a VQL program to an SVG string (synchronous convenience)."""
     renderer = SVGVQLRenderer()
+    renderer._background = program.scene.background  # type: ignore[attr-defined]
     asyncio.run(render_program(renderer, program))
     return renderer.to_svg()
 

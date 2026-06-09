@@ -230,9 +230,13 @@ class CommandBus:
         from vql.drawing.shapes import ShapeRegistry
 
         # Generate points via registry
-        cx = cmd.center_x or self._state["canvas_width"] / 2
-        cy = cmd.center_y or self._state["canvas_height"] / 2
-        size = cmd.params.get("size", min(cx, cy) * 0.5) if cx > 0 else 150
+        if cmd.shape_type == "path":
+            cx = cy = 0.0
+            size = 1.0
+        else:
+            cx = cmd.center_x or self._state["canvas_width"] / 2
+            cy = cmd.center_y or self._state["canvas_height"] / 2
+            size = cmd.params.get("size", min(cx, cy) * 0.5) if cx > 0 else 150
 
         generator = ShapeRegistry.get(cmd.shape_type)
         params_without_size = {k: v for k, v in cmd.params.items() if k != "size"}

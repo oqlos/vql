@@ -1,4 +1,4 @@
-# code2llm/evolution | 384 func | 99f | 2026-06-09
+# code2llm/evolution | 401 func | 101f | 2026-06-09
 # generated in 0.00s
 
 NEXT[10] (ranked by impact):
@@ -22,13 +22,13 @@ NEXT[10] (ranked by impact):
       WHY: CC=25 exceeds 15
       EFFORT: ~1h  IMPACT: 625
 
-  [6] !! SPLIT-FUNC      parse_svg_path  CC=41  fan=12
-      WHY: CC=41 exceeds 15
-      EFFORT: ~1h  IMPACT: 492
-
-  [7] !  SPLIT-FUNC      _query_window_imgl  CC=17  fan=22
+  [6] !  SPLIT-FUNC      _query_window_imgl  CC=17  fan=22
       WHY: CC=17 exceeds 15
       EFFORT: ~1h  IMPACT: 374
+
+  [7] !  SPLIT-FUNC      trace_to_vql_program  CC=15  fan=22
+      WHY: CC=15 exceeds 15
+      EFFORT: ~1h  IMPACT: 330
 
   [8] !  SPLIT-FUNC      query_uri  CC=15  fan=17
       WHY: CC=15 exceeds 15
@@ -51,8 +51,8 @@ RISKS[3]:
 METRICS-TARGET:
   CC̄:          4.2 → ≤2.9
   max-CC:      69 → ≤20
-  god-modules: 6 → 0
-  high-CC(≥15): 14 → ≤7
+  god-modules: 7 → 0
+  high-CC(≥15): 16 → ≤8
   hub-types:   0 → ≤0
 
 PATTERNS (language parser shared logic):
@@ -80,4 +80,4 @@ PATTERNS (language parser shared logic):
     - Standardized FunctionInfo/ClassInfo models
 
 HISTORY:
-  (first run — no previous data)
+  prev CC̄=4.2 → now CC̄=4.2
