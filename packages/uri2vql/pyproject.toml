@@ -9,7 +9,15 @@ description = "vql:// URI — query and patch VQL programs"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "Apache-2.0"
-dependencies = ["vql>=0.1.0"]
+dependencies = [
+    "vql[desktop]>=0.1.0",
+    "pillow>=10.0",
+    "mss>=9.0",
+]
+
+[project.optional-dependencies]
+diagnose = ["img2vql>=0.1.0"]
+imgl = ["imgl>=0.6.0"]
 
 [project.scripts]
 uri2vql = "uri2vql.cli:main"

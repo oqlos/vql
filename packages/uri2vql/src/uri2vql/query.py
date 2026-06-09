@@ -44,6 +44,10 @@ def _load_program(path: str):
 
 
 def query_uri(uri: str, *, file: str | None = None, fmt: str = "json") -> QueryResult:
+    if uri.startswith("vql://window/"):
+        from uri2vql.window import query_window
+
+        return query_window(uri, file=file, fmt=fmt)
     try:
         parsed = parse_vql_uri(uri, default_file=file or "app.vql.json")
         program = _load_program(parsed.file)

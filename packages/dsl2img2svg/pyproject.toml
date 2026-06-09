@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dsl2img2svg"
+version = "0.1.0"
+description = "DSL verbs for img2svg vectorization"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+dependencies = ["uri2img2svg>=0.1.0", "img2svg>=0.1.0"]
+
+[project.scripts]
+dsl2img2svg = "dsl2img2svg.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

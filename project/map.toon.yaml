@@ -1,0 +1,752 @@
+# vql | 160f 118929L | yaml:2,toml:11,shell:8,json:9,python:127,proto:2 | 2026-06-09
+# generated in 0.03s
+# stats: 394 func | 0 cls | 160 mod | CC̄=4.1 | critical:14 | cycles:0
+# alerts[5]: CC query_window=69; CC resolve_prompt_to_vql_uri=54; CC main=53; fan-out main=44; CC parse_svg_path=41
+# hotspots[5]: main fan=44; query_window fan=34; screenshot_to_program fan=30; capture_diagnose fan=29; create_app fan=27
+# evolution: baseline
+# Keys: M=modules, D=details, i=imports, e=exports, c=classes, f=functions, m=methods
+M[160]:
+  Makefile,108
+  app.vql.json,5803
+  examples/full-pipeline.sh,80
+  examples/generate-demo-screen.py,76
+  examples/img2nl-vql-flow.sh,214
+  examples/live-capture-test.sh,94
+  examples/scope-window.py,53
+  goal.yaml,511
+  install-dev.sh,37
+  layout.vql.json,78775
+  layout.vql.imgl.json,21939
+  nlp2uri.yaml,8
+  packages/cli2vql/pyproject.toml,18
+  packages/cli2vql/src/cli2vql/__init__.py,1
+  packages/cli2vql/src/cli2vql/cli.py,68
+  packages/dsl2img2svg/pyproject.toml,18
+  packages/dsl2img2svg/src/dsl2img2svg/__init__.py,5
+  packages/dsl2img2svg/src/dsl2img2svg/cli.py,21
+  packages/dsl2img2svg/src/dsl2img2svg/dispatch.py,115
+  packages/dsl2vql/proto/dsl2vql/v1/command.proto,62
+  packages/dsl2vql/proto/dsl2vql/v1/result.proto,23
+  packages/dsl2vql/pyproject.toml,33
+  packages/dsl2vql/scripts/generate-proto.sh,7
+  packages/dsl2vql/src/dsl2vql/__init__.py,6
+  packages/dsl2vql/src/dsl2vql/bus.py,77
+  packages/dsl2vql/src/dsl2vql/cli.py,97
+  packages/dsl2vql/src/dsl2vql/codec.py,35
+  packages/dsl2vql/src/dsl2vql/engine.py,8
+  packages/dsl2vql/src/dsl2vql/events.py,108
+  packages/dsl2vql/src/dsl2vql/grammar.py,96
+  packages/dsl2vql/src/dsl2vql/handlers/__init__.py,5
+  packages/dsl2vql/src/dsl2vql/handlers/command.py,130
+  packages/dsl2vql/src/dsl2vql/handlers/query.py,109
+  packages/dsl2vql/src/dsl2vql/pb_codec.py,157
+  packages/dsl2vql/src/dsl2vql/result.py,28
+  packages/dsl2vql/src/dsl2vql/schema/commands/compile.schema.json,12
+  packages/dsl2vql/src/dsl2vql/schema/commands/generate.schema.json,11
+  packages/dsl2vql/src/dsl2vql/schema/commands/patch.schema.json,12
+  packages/dsl2vql/src/dsl2vql/schema/commands/query.schema.json,12
+  packages/dsl2vql/src/dsl2vql/schema/commands/render.schema.json,12
+  packages/dsl2vql/src/dsl2vql/schema/commands/validate.schema.json,10
+  packages/dsl2vql/src/dsl2vql/schema_registry.py,46
+  packages/dsl2vql/src/dsl2vql/v1/__init__.py,5
+  packages/dsl2vql/src/dsl2vql/v1/command_pb2.py,52
+  packages/dsl2vql/src/dsl2vql/v1/result_pb2.py,39
+  packages/img2svg/pyproject.toml,24
+  packages/img2svg/src/img2svg/__init__.py,7
+  packages/img2svg/src/img2svg/cli.py,69
+  packages/img2svg/src/img2svg/svg_emit.py,99
+  packages/img2svg/src/img2svg/to_vql.py,100
+  packages/img2svg/src/img2svg/trace.py,179
+  packages/img2vql/pyproject.toml,26
+  packages/img2vql/src/img2vql/__init__.py,26
+  packages/img2vql/src/img2vql/adopt.py,63
+  packages/img2vql/src/img2vql/cli.py,87
+  packages/img2vql/src/img2vql/describe_ui.py,121
+  packages/img2vql/src/img2vql/detect.py,379
+  packages/img2vql/src/img2vql/diagnose.py,125
+  packages/img2vql/src/img2vql/fingerprint.py,104
+  packages/img2vql/src/img2vql/metadata.py,339
+  packages/img2vql/src/img2vql/program.py,141
+  packages/mcp2vql/pyproject.toml,24
+  packages/mcp2vql/src/mcp2vql/__init__.py,5
+  packages/mcp2vql/src/mcp2vql/cli.py,8
+  packages/mcp2vql/src/mcp2vql/server.py,135
+  packages/nlp2vql/pyproject.toml,18
+  packages/nlp2vql/src/nlp2vql/__init__.py,6
+  packages/nlp2vql/src/nlp2vql/apply.py,48
+  packages/nlp2vql/src/nlp2vql/cli.py,53
+  packages/nlp2vql/src/nlp2vql/to_dsl.py,42
+  packages/rest2vql/pyproject.toml,26
+  packages/rest2vql/src/rest2vql/__init__.py,5
+  packages/rest2vql/src/rest2vql/app.py,72
+  packages/rest2vql/src/rest2vql/cli.py,24
+  packages/rest2vql/src/rest2vql/window.py,124
+  packages/rest2vql/src/rest2vql/window_routes.py,110
+  packages/uri2img2svg/pyproject.toml,18
+  packages/uri2img2svg/src/uri2img2svg/__init__.py,6
+  packages/uri2img2svg/src/uri2img2svg/cli.py,28
+  packages/uri2img2svg/src/uri2img2svg/query.py,144
+  packages/uri2img2svg/src/uri2img2svg/uri.py,59
+  packages/uri2vql/pyproject.toml,26
+  packages/uri2vql/src/uri2vql/__init__.py,45
+  packages/uri2vql/src/uri2vql/cli.py,352
+  packages/uri2vql/src/uri2vql/compile.py,36
+  packages/uri2vql/src/uri2vql/nlp2uri.py,329
+  packages/uri2vql/src/uri2vql/patch.py,40
+  packages/uri2vql/src/uri2vql/query.py,95
+  packages/uri2vql/src/uri2vql/run.py,64
+  packages/uri2vql/src/uri2vql/uri.py,183
+  packages/uri2vql/src/uri2vql/window.py,653
+  project.sh,59
+  pyproject.toml,65
+  scripts/test-goal.sh,6
+  src/vql/__init__.py,54
+  src/vql/adopt/__init__.py,19
+  src/vql/adopt/portal_capture.py,109
+  src/vql/adopt/window.py,804
+  src/vql/api.py,54
+  src/vql/compiler/__init__.py,15
+  src/vql/compiler/legacy_drawcommand.py,142
+  src/vql/compiler/nl_to_vql.py,69
+  src/vql/drawing/__init__.py,16
+  src/vql/drawing/arrow_generator.py,46
+  src/vql/drawing/bird_generator.py,49
+  src/vql/drawing/boat_generator.py,40
+  src/vql/drawing/butterfly_generator.py,50
+  src/vql/drawing/car_generator.py,48
+  src/vql/drawing/castle_generator.py,63
+  src/vql/drawing/cat_generator.py,55
+  src/vql/drawing/circle_generator.py,29
+  src/vql/drawing/cloud_detailed_generator.py,47
+  src/vql/drawing/colors.py,135
+  src/vql/drawing/commands.py,267
+  src/vql/drawing/crescent_generator.py,36
+  src/vql/drawing/cross_generator.py,33
+  src/vql/drawing/diamond_generator.py,36
+  src/vql/drawing/dot_generator.py,29
+  src/vql/drawing/ellipse_generator.py,30
+  src/vql/drawing/event_store.py,101
+  src/vql/drawing/events.py,142
+  src/vql/drawing/fish_generator.py,46
+  src/vql/drawing/flower_generator.py,35
+  src/vql/drawing/grid_generator.py,36
+  src/vql/drawing/heart_generator.py,30
+  src/vql/drawing/hexagon_generator.py,27
+  src/vql/drawing/house_generator.py,30
+  src/vql/drawing/line_generator.py,25
+  src/vql/drawing/mountain_generator.py,39
+  src/vql/drawing/nl_parser.py,225
+  src/vql/drawing/octagon_generator.py,27
+  src/vql/drawing/pentagon_generator.py,27
+  src/vql/drawing/rectangle_generator.py,26
+  src/vql/drawing/renderers/__init__.py,9
+  src/vql/drawing/renderers/base.py,84
+  src/vql/drawing/renderers/playwright.py,215
+  src/vql/drawing/renderers/svg.py,92
+  src/vql/drawing/rocket_generator.py,52
+  src/vql/drawing/shape_generator.py,37
+  src/vql/drawing/shape_registry.py,102
+  src/vql/drawing/shapes.py,78
+  src/vql/drawing/spiral_generator.py,32
+  src/vql/drawing/square_generator.py,25
+  src/vql/drawing/star_generator.py,33
+  src/vql/drawing/sun_generator.py,36
+  src/vql/drawing/svg_path_parser.py,189
+  src/vql/drawing/tree_generator.py,33
+  src/vql/drawing/triangle_generator.py,26
+  src/vql/drawing/wave_generator.py,34
+  src/vql/facade.py,95
+  src/vql/library/__init__.py,14
+  src/vql/renderers/__init__.py,23
+  src/vql/renderers/base.py,65
+  src/vql/renderers/playwright.py,22
+  src/vql/renderers/svg.py,50
+  src/vql/schema/__init__.py,33
+  src/vql/schema/program.py,423
+  src/vql/validation/__init__.py,11
+  src/vql/validation/spec.py,91
+  tree.sh,1
+D:
+  packages/uri2vql/src/uri2vql/window.py:
+    e: WindowAnalyzeResult,_resolve_image_param,_normalize_locale,_diagnose_fallback,_resolve_window_image,refresh_window_metadata,compare_window_image,diagnose_window_image,_query_window_imgl,analyze_window_uri,query_window
+    WindowAnalyzeResult: to_dict(0)
+    _resolve_image_param(image)
+    _normalize_locale(locale)
+    _diagnose_fallback(image)
+    _resolve_window_image(out_file;image)
+    refresh_window_metadata(image)
+    compare_window_image(image)
+    diagnose_window_image(image)
+    _query_window_imgl()
+    analyze_window_uri(uri)
+    query_window(uri)
+  packages/uri2vql/src/uri2vql/nlp2uri.py:
+    e: ResolvedVqlUri,resolve_prompt_to_vql_uri,_extract_click_target,_extract_type_parts,nlp2uri,best_uri
+    ResolvedVqlUri: to_dict(0)
+    resolve_prompt_to_vql_uri(prompt)
+    _extract_click_target(normalized)
+    _extract_type_parts(normalized)
+    nlp2uri(prompt)
+    best_uri(prompt)
+  packages/uri2vql/src/uri2vql/cli.py:
+    e: main
+    main(argv)
+  src/vql/drawing/svg_path_parser.py:
+    e: parse_svg_path
+    parse_svg_path(d;scale;center)
+  src/vql/adopt/window.py:
+    e: CaptureError,CaptureInfo,CaptureAttempt,_require_pillow,_session_type,_is_wayland,_capture_interactive_mode,_should_use_interactive_portal,_portal_python,image_stats,_image_is_blank,_finalize_capture,_run_capture,_capture_with_gnome_shell,_capture_with_grim,_capture_with_gnome_screenshot,_capture_with_portal,_capture_with_scrot,_capture_with_mss,_capture_backends,capture_diagnose,_capture_permission_hint,_active_window_title,capture_screen,_hex_color,_optional_fingerprint,_enrich_program_metadata,_merge_grid_colors,screenshot_to_program,analyze_screenshot
+    CaptureError(RuntimeError):  # Raised when no capture backend produced a usable image...
+    CaptureInfo: to_dict(0)
+    CaptureAttempt: to_dict(0)
+    _require_pillow()
+    _session_type()
+    _is_wayland()
+    _capture_interactive_mode()
+    _should_use_interactive_portal()
+    _portal_python()
+    image_stats(path)
+    _image_is_blank(path)
+    _finalize_capture(out)
+    _run_capture(out)
+    _capture_with_gnome_shell(out)
+    _capture_with_grim(out)
+    _capture_with_gnome_screenshot(out)
+    _capture_with_portal(out)
+    _capture_with_scrot(out)
+    _capture_with_mss(out)
+    _capture_backends()
+    capture_diagnose(out)
+    _capture_permission_hint()
+    _active_window_title()
+    capture_screen(out)
+    _hex_color(rgb)
+    _optional_fingerprint(image_path)
+    _enrich_program_metadata(base;path)
+    _merge_grid_colors(colors)
+    screenshot_to_program(image_path)
+    analyze_screenshot(image_path)
+  packages/dsl2vql/src/dsl2vql/pb_codec.py:
+    e: _set_body,envelope_to_dict,encode_protobuf,decode_protobuf,encode_text_to_protobuf,decode_protobuf_to_text,result_to_pb,encode_result_protobuf
+    _set_body(envelope;cmd)
+    envelope_to_dict(envelope)
+    encode_protobuf(cmd)
+    decode_protobuf(data)
+    encode_text_to_protobuf(line)
+    decode_protobuf_to_text(data)
+    result_to_pb(result)
+    encode_result_protobuf(result)
+  packages/dsl2vql/src/dsl2vql/grammar.py:
+    e: split_command,pick_flag,parse_line,to_text
+    split_command(line)
+    pick_flag(tokens;flag)
+    parse_line(line)
+    to_text(cmd)
+  packages/img2vql/src/img2vql/detect.py:
+    e: UIElement,_hex_color,_location_label,_avg_color,_detect_titlebar,_detect_panels,_flood_rects,_detect_buttons,_detect_toolbar,_iou,_dedupe,detect_ui_elements
+    UIElement: to_dict(0)  # Detected UI region with role and location...
+    _hex_color(rgb)
+    _location_label(cx;cy;w;h)
+    _avg_color(im;x0;y0;x1;y1)
+    _detect_titlebar(im;w;h)
+    _detect_panels(im;w;h)
+    _flood_rects(mask)
+    _detect_buttons(im;w;h)
+    _detect_toolbar(buttons;w;h)
+    _iou(a;b)
+    _dedupe(elements)
+    detect_ui_elements(image_path)
+  packages/img2svg/src/img2svg/trace.py:
+    e: TracedRegion,_hex_color,_merge_grid_cells,trace_image_regions,trace_contours_opencv
+    TracedRegion: to_dict(0)  # A merged rectangular region from the image...
+    _hex_color(rgb)
+    _merge_grid_cells(colors)
+    trace_image_regions(image_path)
+    trace_contours_opencv(image_path)
+  packages/uri2vql/src/uri2vql/query.py:
+    e: QueryResult,_load_program,query_uri
+    QueryResult: to_dict(0)
+    _load_program(path)
+    query_uri(uri)
+  packages/cli2vql/src/cli2vql/cli.py:
+    e: _repl,main
+    _repl(default_file)
+    main(argv)
+  packages/dsl2img2svg/src/dsl2img2svg/dispatch.py:
+    e: DispatchResult,_parse_kv_args,dispatch
+    DispatchResult: to_dict(0)
+    _parse_kv_args(tokens)
+    dispatch(line)
+  packages/img2vql/src/img2vql/describe_ui.py:
+    e: _role_name,_loc_name,describe_ui_layout
+    _role_name(role;locale)
+    _loc_name(loc;locale)
+    describe_ui_layout(detection)
+  packages/uri2img2svg/src/uri2img2svg/query.py:
+    e: QueryResult,query_uri
+    QueryResult: to_dict(0)
+    query_uri(uri)
+  packages/nlp2vql/src/nlp2vql/cli.py:
+    e: main
+    main(argv)
+  packages/dsl2vql/src/dsl2vql/handlers/command.py:
+    e: _read_json,handle_generate,handle_compile,handle_patch,handle_export,handle_from_tokens
+    _read_json(path)
+    handle_generate(cmd)
+    handle_compile(cmd)
+    handle_patch(cmd)
+    handle_export(cmd)
+    handle_from_tokens(line;tokens)
+  packages/nlp2vql/src/nlp2vql/to_dsl.py:
+    e: _intent,nl_to_dsl_line,to_dsl
+    _intent(prompt)
+    nl_to_dsl_line(prompt)
+    to_dsl(prompt)
+  packages/img2vql/src/img2vql/program.py:
+    e: _role_style,elements_to_vql_program,_bbox_contains,_build_contains_relations
+    _role_style(role)
+    elements_to_vql_program(detection)
+    _bbox_contains(outer;inner)
+    _build_contains_relations(objects)
+  src/vql/drawing/nl_parser.py:
+    e: NLDrawingParser
+    NLDrawingParser: __init__(1),parse(3),to_vql(5),detect_shape(1),detect_color(2),_extract_shapes(1),_extract_size_params(1),_extract_shape_specific_params(2)  # Parse natural language drawing instructions into DrawCommand...
+  packages/img2svg/src/img2svg/cli.py:
+    e: main
+    main(argv)
+  packages/img2vql/src/img2vql/cli.py:
+    e: main
+    main(argv)
+  packages/img2vql/src/img2vql/diagnose.py:
+    e: _normalize_locale,diagnose_image,diagnose_for_vql,_recommendation
+    _normalize_locale(locale)
+    diagnose_image(image_path)
+    diagnose_for_vql(image_path)
+    _recommendation(diag)
+  packages/img2vql/src/img2vql/metadata.py:
+    e: _json_safe,_compact_special_hits,_text_likely,rapidocr_special_hits,auto_ocr_special_hits,imgl_ocr_special_hits,_merge_special_hits,img2nl_metadata_slice,merge_program_metadata,refresh_program_metadata,metadata_from_diagnose,save_diagnose_to_program
+    _json_safe(value)
+    _compact_special_hits(special)
+    _text_likely(features;special)
+    rapidocr_special_hits(image_path)
+    auto_ocr_special_hits(image_path;features)
+    imgl_ocr_special_hits(image_path)
+    _merge_special_hits(img2nl_special;imgl_special)
+    img2nl_metadata_slice(image_path)
+    merge_program_metadata(metadata;image_path)
+    refresh_program_metadata(vql_program;image_path)
+    metadata_from_diagnose(diag)
+    save_diagnose_to_program(vql_program;diag)
+  packages/dsl2vql/src/dsl2vql/cli.py:
+    e: _main_legacy,_main_subcommand,main
+    _main_legacy(argv)
+    _main_subcommand(argv)
+    main(argv)
+  packages/dsl2vql/src/dsl2vql/handlers/query.py:
+    e: _load_program,handle_query,handle_validate,handle_render,handle_resolve
+    _load_program(path)
+    handle_query(cmd)
+    handle_validate(cmd)
+    handle_render(cmd)
+    handle_resolve(cmd)
+  packages/uri2img2svg/src/uri2img2svg/uri.py:
+    e: Img2SvgUri,is_img2svg_uri,uri_for_vectorize,parse_img2svg_uri
+    Img2SvgUri:
+    is_img2svg_uri(uri)
+    uri_for_vectorize(path)
+    parse_img2svg_uri(uri)
+  src/vql/drawing/renderers/playwright.py:
+    e: PlaywrightRenderer
+    PlaywrightRenderer(Renderer): __init__(2),init_canvas(4),set_color(1),draw_path(3),draw_shape(1),clear(0),screenshot(1),dispose(0)  # Render drawings on a browser canvas via Playwright mouse con...
+  src/vql/compiler/legacy_drawcommand.py:
+    e: program_to_commands,commands_to_program,compile_to_events
+    program_to_commands(program)
+    commands_to_program(commands)
+    compile_to_events(program)
+  packages/img2svg/src/img2svg/to_vql.py:
+    e: trace_to_vql_program,image_to_vql
+    trace_to_vql_program(trace)
+    image_to_vql(image_path)
+  packages/uri2vql/src/uri2vql/compile.py:
+    e: _dsl_from_uri,compile_vql_uri
+    _dsl_from_uri(uri)
+    compile_vql_uri(uri;host)
+  packages/uri2vql/src/uri2vql/patch.py:
+    e: PatchResult,patch_uri
+    PatchResult: to_dict(0)
+    patch_uri(uri)
+  packages/uri2vql/src/uri2vql/run.py:
+    e: RunResult,run_uri,run_uri_json
+    RunResult: to_dict(0)
+    run_uri(uri)
+    run_uri_json(uri)
+  packages/img2vql/src/img2vql/fingerprint.py:
+    e: fingerprint_for_image,load_program_fingerprint,_json_safe,compare_with_program
+    fingerprint_for_image(image_path)
+    load_program_fingerprint(vql_program)
+    _json_safe(value)
+    compare_with_program(image_path;vql_program)
+  src/vql/drawing/commands.py:
+    e: DrawCommand,InitCanvas,DrawShape,SetColor,SelectTool,ClearCanvas,CommandHandler,CommandBus
+    DrawCommand(ABC): validate(0)  # Abstract base for all drawing commands...
+    InitCanvas(DrawCommand): validate(0)  # Initialize a drawing canvas...
+    DrawShape(DrawCommand): validate(0)  # Draw a shape on the canvas...
+    SetColor(DrawCommand): validate(0)  # Change the active drawing color...
+    SelectTool(DrawCommand): validate(0)  # Select a drawing tool...
+    ClearCanvas(DrawCommand): validate(0)  # Clear the entire canvas...
+    CommandHandler(Protocol): __call__(3)  # Protocol for command handlers...
+    CommandBus: __init__(1),register_handler(2),add_pre_hook(1),add_post_hook(1),dispatch(1),rebuild_state(0),_apply_event(1),_handle_init_canvas(1),_handle_draw_shape(1),_handle_set_color(1),_handle_select_tool(1),_handle_clear_canvas(1)  # Dispatches commands to handlers, validates, and emits events...
+  packages/rest2vql/src/rest2vql/window.py:
+    e: WindowImageBody,window_detect,window_compare,window_refresh,window_diagnose,window_analyze,window_adopt,window_summary
+    WindowImageBody(BaseModel):
+    window_detect(image)
+    window_compare(image)
+    window_refresh(image)
+    window_diagnose(image)
+    window_analyze(image)
+    window_adopt(image)
+    window_summary()
+  packages/dsl2vql/src/dsl2vql/bus.py:
+    e: _dispatch_cmd,_bytes_to_cmd,dispatch,execute_dsl_line,execute_dsl
+    _dispatch_cmd(cmd)
+    _bytes_to_cmd(data)
+    dispatch(envelope)
+    execute_dsl_line(line)
+    execute_dsl(text)
+  packages/dsl2vql/src/dsl2vql/events.py:
+    e: DslEvent,EventStore,default_event_store
+    DslEvent: to_dict(0)
+    EventStore: __init__(1),append(2),replay(0)
+    default_event_store(default_file)
+  packages/uri2vql/src/uri2vql/uri.py:
+    e: VqlUri,is_vql_uri,_with_file,uri_for_program,uri_for_scene,uri_for_objects,uri_for_object,uri_for_window_analyze,uri_for_window_summary,uri_for_window_imgl,uri_for_imgl_list,uri_for_imgl_click,uri_for_imgl_type,uri_for_window_diagnose,uri_for_window_compare,uri_for_window_refresh,parse_vql_uri
+    VqlUri:
+    is_vql_uri(uri)
+    _with_file(selector)
+    uri_for_program(file)
+    uri_for_scene(file)
+    uri_for_objects(file)
+    uri_for_object(obj_id)
+    uri_for_window_analyze()
+    uri_for_window_summary(file)
+    uri_for_window_imgl()
+    uri_for_imgl_list()
+    uri_for_imgl_click()
+    uri_for_imgl_type()
+    uri_for_window_diagnose()
+    uri_for_window_compare()
+    uri_for_window_refresh()
+    parse_vql_uri(uri)
+  examples/scope-window.py:
+    e: main
+    main()
+  src/vql/drawing/colors.py:
+    e: ColorResolver
+    ColorResolver: __init__(0),register(2),resolve(2),extract_colors(1),available(0),unique_colors(0)  # Resolves color names to hex codes with Polish + English supp...
+  src/vql/drawing/renderers/svg.py:
+    e: SVGRenderer
+    SVGRenderer(Renderer): __init__(0),init_canvas(4),set_color(1),draw_path(3),draw_shape(1),clear(0),screenshot(1),to_svg(0)  # Render drawings as SVG markup.
+
+Usage:
+    renderer = SVGRen...
+  src/vql/compiler/nl_to_vql.py:
+    e: nl_to_program
+    nl_to_program(text)
+  packages/img2svg/src/img2svg/svg_emit.py:
+    e: regions_to_svg,paths_to_svg,image_to_svg
+    regions_to_svg(trace)
+    paths_to_svg(trace)
+    image_to_svg(image_path)
+  src/vql/drawing/butterfly_generator.py:
+    e: ButterflyGenerator
+    ButterflyGenerator(ShapeGenerator): generate(3)
+  src/vql/schema/program.py:
+    e: RenderTarget,Style,Transform,Anchor,Constraint,Relation,Primitive,Object,Layer,Scene,ValidationSpec,VQLProgram
+    RenderTarget(str,Enum):  # Supported render backends for a VQL program...
+    Style: validate(0),to_dict(0),from_dict(1)  # Visual style for an object/primitive...
+    Transform: is_identity(0),to_dict(0),from_dict(1)  # Affine transform applied to an object...
+    Anchor: to_dict(0),from_dict(1)  # A named reference point on the canvas/object...
+    Constraint: to_dict(0),from_dict(1)  # A declarative constraint on an object (placeholder for solve...
+    Relation: to_dict(0),from_dict(1)  # A relation between two objects (placeholder for layout engin...
+    Primitive: validate(0),to_dict(0),from_dict(1)  # A drawable primitive — the smallest unit of geometry.
+
+``sha...
+    Object: validate(0),to_dict(0),from_dict(1)  # A logical drawing object — one or more primitives sharing a ...
+    Layer: validate(0),to_dict(0),from_dict(1)  # An ordered group of objects...
+    Scene: validate(0),iter_objects(0),to_dict(0),from_dict(1)  # The root container — canvas dimensions, background, and laye...
+    ValidationSpec: to_dict(0),from_dict(1)  # Declarative expectation describing what a correct render mus...
+    VQLProgram: validate(0),is_valid(0),object_count(0),to_dict(0),from_dict(1)  # Top-level VQL program — the contract between NL parsing and ...
+  packages/uri2img2svg/src/uri2img2svg/cli.py:
+    e: main
+    main(argv)
+  packages/dsl2img2svg/src/dsl2img2svg/cli.py:
+    e: main
+    main(argv)
+  src/vql/drawing/cat_generator.py:
+    e: CatGenerator
+    CatGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/cloud_detailed_generator.py:
+    e: CloudDetailedGenerator
+    CloudDetailedGenerator(ShapeGenerator): generate(3)
+  src/vql/validation/spec.py:
+    e: VQLValidationReport,_program_shapes,_program_colors,_match_items,validate_program
+    VQLValidationReport: to_dict(0)  # Outcome of validating a program against a spec...
+    _program_shapes(program)
+    _program_colors(program)
+    _match_items(expected;present;label)
+    validate_program(program;spec)
+  src/vql/adopt/portal_capture.py:
+    e: capture_via_portal,main
+    capture_via_portal(out)
+    main(argv)
+  packages/dsl2vql/src/dsl2vql/schema_registry.py:
+    e: _load_schemas,schema_for_verb,all_schemas,validate_command_dict,validate_schema_registry
+    _load_schemas()
+    schema_for_verb(verb)
+    all_schemas()
+    validate_command_dict(cmd)
+    validate_schema_registry()
+  packages/dsl2vql/src/dsl2vql/codec.py:
+    e: encode_text,roundtrip_text,encode_protobuf,decode_protobuf
+    encode_text(line)
+    roundtrip_text(line)
+    encode_protobuf(line)
+    decode_protobuf(data)
+  examples/generate-demo-screen.py:
+    e: _load_font,write_demo_screen,main
+    _load_font(size)
+    write_demo_screen(path)
+    main()
+  src/vql/drawing/castle_generator.py:
+    e: CastleGenerator
+    CastleGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/fish_generator.py:
+    e: FishGenerator
+    FishGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/crescent_generator.py:
+    e: CrescentGenerator
+    CrescentGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/flower_generator.py:
+    e: FlowerGenerator
+    FlowerGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/sun_generator.py:
+    e: SunGenerator
+    SunGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/car_generator.py:
+    e: CarGenerator
+    CarGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/grid_generator.py:
+    e: GridGenerator
+    GridGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/shape_registry.py:
+    e: ShapeRegistry
+    ShapeRegistry: register(1),get(1),available(0),_init_defaults(0)  # Registry of all available shape generators.
+
+New shapes can ...
+  src/vql/drawing/arrow_generator.py:
+    e: ArrowGenerator
+    ArrowGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/renderers/base.py:
+    e: Renderer
+    Renderer(ABC): init_canvas(4),set_color(1),draw_path(3),draw_shape(1),clear(0),screenshot(1),render_events(1),dispose(0)  # Abstract renderer interface.
+
+Concrete implementations:
+- Pl...
+  src/vql/drawing/event_store.py:
+    e: EventStore
+    EventStore: __init__(0),append(1),subscribe(1),unsubscribe(1),replay(1),events_since(1),events_of_type(1),clear(0),to_dict(0),save(1),load(1),__len__(0),__repr__(0)  # Append-only event store with optional persistence and subscr...
+  packages/mcp2vql/src/mcp2vql/server.py:
+    e: VqlMCPServer,_require_fastmcp,main
+    VqlMCPServer: __post_init__(0),_register_tools(0),run(0)
+    _require_fastmcp()
+    main()
+  packages/rest2vql/src/rest2vql/window_routes.py:
+    e: _window_response,post_window_detect,post_window_compare,post_window_refresh,post_window_diagnose,post_window_analyze,post_window_adopt,post_window_summary
+    _window_response(payload)
+    post_window_detect(req)
+    post_window_compare(req)
+    post_window_refresh(req)
+    post_window_diagnose(req)
+    post_window_analyze(req)
+    post_window_adopt(req)
+    post_window_summary(req)
+  packages/img2vql/src/img2vql/adopt.py:
+    e: adopt_screenshot
+    adopt_screenshot(image_path)
+  src/vql/renderers/__init__.py:
+    e: __getattr__
+    __getattr__(name)
+  packages/nlp2vql/src/nlp2vql/apply.py:
+    e: ApplyResult,apply_nl
+    ApplyResult: to_dict(0)
+    apply_nl(prompt)
+  src/vql/drawing/dot_generator.py:
+    e: DotGenerator
+    DotGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/octagon_generator.py:
+    e: OctagonGenerator
+    OctagonGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/bird_generator.py:
+    e: BirdGenerator
+    BirdGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/tree_generator.py:
+    e: TreeGenerator
+    TreeGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/hexagon_generator.py:
+    e: HexagonGenerator
+    HexagonGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/circle_generator.py:
+    e: CircleGenerator
+    CircleGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/star_generator.py:
+    e: StarGenerator
+    StarGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/rocket_generator.py:
+    e: RocketGenerator
+    RocketGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/spiral_generator.py:
+    e: SpiralGenerator
+    SpiralGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/ellipse_generator.py:
+    e: EllipseGenerator
+    EllipseGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/heart_generator.py:
+    e: HeartGenerator
+    HeartGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/wave_generator.py:
+    e: WaveGenerator
+    WaveGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/pentagon_generator.py:
+    e: PentagonGenerator
+    PentagonGenerator(ShapeGenerator): generate(3)
+  src/vql/facade.py:
+    e: VQLResult,VQLFacade
+    VQLResult:  # Bundle returned by :meth:`VQLFacade.run`...
+    VQLFacade: compile(1),validate(1),render_svg(1),render_png(2),to_commands(1),to_events(1),run(1)  # Stateless high-level entry point for the VQL pipeline...
+  src/vql/renderers/svg.py:
+    e: SVGVQLRenderer,render_to_svg,render_to_png
+    SVGVQLRenderer(VQLRendererAdapter,SVGRenderer):  # SVG renderer that can consume a :class:`VQLProgram` directly...
+    render_to_svg(program)
+    render_to_png(program;path)
+  packages/rest2vql/src/rest2vql/cli.py:
+    e: main
+    main(argv)
+  packages/dsl2vql/src/dsl2vql/result.py:
+    e: DslResult
+    DslResult: to_dict(0)
+  src/vql/drawing/triangle_generator.py:
+    e: TriangleGenerator
+    TriangleGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/house_generator.py:
+    e: HouseGenerator
+    HouseGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/mountain_generator.py:
+    e: MountainGenerator
+    MountainGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/shape_generator.py:
+    e: ShapeGenerator
+    ShapeGenerator(ABC): generate(3)  # Abstract shape generator — one responsibility: produce point...
+  src/vql/drawing/line_generator.py:
+    e: LineGenerator
+    LineGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/diamond_generator.py:
+    e: DiamondGenerator
+    DiamondGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/rectangle_generator.py:
+    e: RectangleGenerator
+    RectangleGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/cross_generator.py:
+    e: CrossGenerator
+    CrossGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/square_generator.py:
+    e: SquareGenerator
+    SquareGenerator(ShapeGenerator): generate(3)
+  src/vql/drawing/boat_generator.py:
+    e: BoatGenerator
+    BoatGenerator(ShapeGenerator): generate(3)
+  packages/rest2vql/src/rest2vql/app.py:
+    e: create_app
+    create_app()
+  src/vql/drawing/events.py:
+    e: EventType,DrawingEvent,CanvasInitialized,CanvasCleared,ShapeDrawn,ColorChanged,ToolSelected
+    EventType(str,Enum):
+    DrawingEvent: to_dict(0),from_dict(1)  # Base immutable event — all drawing events inherit from this...
+    CanvasInitialized(DrawingEvent): __post_init__(0)  # Fired when a canvas is created or discovered...
+    CanvasCleared(DrawingEvent): __post_init__(0)  # Fired when the canvas is cleared...
+    ShapeDrawn(DrawingEvent): __post_init__(0)  # Fired when a shape is drawn on the canvas...
+    ColorChanged(DrawingEvent): __post_init__(0)  # Fired when the active drawing color is changed...
+    ToolSelected(DrawingEvent): __post_init__(0)  # Fired when a drawing tool is selected...
+  src/vql/renderers/base.py:
+    e: VQLRenderer,VQLRendererAdapter,render_program
+    VQLRenderer(Protocol): render(1)  # Structural protocol for any backend able to render a VQL pro...
+    VQLRendererAdapter: render(1)  # Mixin granting an existing ``Renderer`` subclass a ``render(...
+    render_program(renderer;program)
+  src/vql/renderers/playwright.py:
+    e: PlaywrightVQLRenderer
+    PlaywrightVQLRenderer(VQLRendererAdapter,PlaywrightRenderer): __init__(2)  # Playwright renderer that can consume a :class:`VQLProgram` d...
+  goal.yaml:
+  pyproject.toml:
+  nlp2uri.yaml:
+  tree.sh:
+  Makefile:
+  install-dev.sh:
+  project.sh:
+  app.vql.json:
+  packages/uri2img2svg/pyproject.toml:
+  layout.vql.imgl.json:
+  packages/dsl2vql/pyproject.toml:
+  packages/dsl2vql/src/dsl2vql/schema/commands/patch.schema.json:
+  packages/dsl2vql/src/dsl2vql/schema/commands/compile.schema.json:
+  packages/dsl2vql/src/dsl2vql/schema/commands/generate.schema.json:
+  packages/dsl2vql/src/dsl2vql/schema/commands/query.schema.json:
+  packages/dsl2vql/src/dsl2vql/schema/commands/render.schema.json:
+  packages/dsl2vql/src/dsl2vql/schema/commands/validate.schema.json:
+  layout.vql.json:
+  packages/dsl2vql/src/dsl2vql/handlers/__init__.py:
+  packages/dsl2vql/src/dsl2vql/v1/__init__.py:
+  packages/dsl2vql/src/dsl2vql/v1/result_pb2.py:
+  packages/dsl2vql/scripts/generate-proto.sh:
+  packages/dsl2vql/proto/dsl2vql/v1/result.proto:
+  packages/uri2img2svg/src/uri2img2svg/__init__.py:
+  packages/dsl2vql/proto/dsl2vql/v1/command.proto:
+  packages/cli2vql/src/cli2vql/__init__.py:
+  packages/cli2vql/pyproject.toml:
+  packages/img2svg/pyproject.toml:
+  packages/dsl2vql/src/dsl2vql/v1/command_pb2.py:
+  packages/img2svg/src/img2svg/__init__.py:
+  packages/mcp2vql/pyproject.toml:
+  packages/mcp2vql/src/mcp2vql/cli.py:
+  packages/mcp2vql/src/mcp2vql/__init__.py:
+  packages/uri2vql/pyproject.toml:
+  packages/dsl2vql/src/dsl2vql/engine.py:
+  packages/dsl2vql/src/dsl2vql/__init__.py:
+  packages/uri2vql/src/uri2vql/__init__.py:
+  packages/nlp2vql/pyproject.toml:
+  packages/nlp2vql/src/nlp2vql/__init__.py:
+  packages/rest2vql/pyproject.toml:
+  packages/rest2vql/src/rest2vql/__init__.py:
+  packages/dsl2img2svg/pyproject.toml:
+  packages/dsl2img2svg/src/dsl2img2svg/__init__.py:
+  packages/img2vql/pyproject.toml:
+  packages/img2vql/src/img2vql/__init__.py:
+  examples/img2nl-vql-flow.sh:
+    e: resolve_venv_bin,run_uri2vql,run_imgl,ensure_demo_image,maybe_scope_window,run_imgl_enrichment
+    resolve_venv_bin()
+    run_uri2vql()
+    run_imgl()
+    ensure_demo_image()
+    maybe_scope_window()
+    run_imgl_enrichment()
+  examples/full-pipeline.sh:
+  examples/live-capture-test.sh:
+  src/vql/__init__.py:
+  src/vql/api.py:
+  src/vql/schema/__init__.py:
+  src/vql/drawing/__init__.py:
+  src/vql/drawing/shapes.py:
+  src/vql/drawing/renderers/__init__.py:
+  src/vql/compiler/__init__.py:
+  src/vql/validation/__init__.py:
+  src/vql/library/__init__.py:
+  src/vql/adopt/__init__.py:
+  scripts/test-goal.sh:

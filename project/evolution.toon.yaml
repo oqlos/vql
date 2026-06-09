@@ -1,0 +1,83 @@
+# code2llm/evolution | 384 func | 99f | 2026-06-09
+# generated in 0.00s
+
+NEXT[10] (ranked by impact):
+  [1] !! SPLIT-FUNC      query_window  CC=69  fan=34
+      WHY: CC=69 exceeds 15
+      EFFORT: ~1h  IMPACT: 2346
+
+  [2] !! SPLIT-FUNC      main  CC=53  fan=44
+      WHY: CC=53 exceeds 15
+      EFFORT: ~1h  IMPACT: 2332
+
+  [3] !! SPLIT-FUNC      resolve_prompt_to_vql_uri  CC=54  fan=24
+      WHY: CC=54 exceeds 15
+      EFFORT: ~1h  IMPACT: 1296
+
+  [4] !! SPLIT-FUNC      capture_diagnose  CC=33  fan=29
+      WHY: CC=33 exceeds 15
+      EFFORT: ~1h  IMPACT: 957
+
+  [5] !! SPLIT-FUNC      _detect_buttons  CC=25  fan=25
+      WHY: CC=25 exceeds 15
+      EFFORT: ~1h  IMPACT: 625
+
+  [6] !! SPLIT-FUNC      parse_svg_path  CC=41  fan=12
+      WHY: CC=41 exceeds 15
+      EFFORT: ~1h  IMPACT: 492
+
+  [7] !  SPLIT-FUNC      _query_window_imgl  CC=17  fan=22
+      WHY: CC=17 exceeds 15
+      EFFORT: ~1h  IMPACT: 374
+
+  [8] !  SPLIT-FUNC      query_uri  CC=15  fan=17
+      WHY: CC=15 exceeds 15
+      EFFORT: ~1h  IMPACT: 255
+
+  [9] !  SPLIT-FUNC      _capture_with_portal  CC=15  fan=15
+      WHY: CC=15 exceeds 15
+      EFFORT: ~1h  IMPACT: 225
+
+  [10] !  SPLIT-FUNC      _diagnose_fallback  CC=15  fan=14
+      WHY: CC=15 exceeds 15
+      EFFORT: ~1h  IMPACT: 210
+
+
+RISKS[3]:
+  ⚠ Splitting layout.vql.json may break 0 import paths
+  ⚠ Splitting layout.vql.imgl.json may break 0 import paths
+  ⚠ Splitting app.vql.json may break 0 import paths
+
+METRICS-TARGET:
+  CC̄:          4.2 → ≤2.9
+  max-CC:      69 → ≤20
+  god-modules: 6 → 0
+  high-CC(≥15): 14 → ≤7
+  hub-types:   0 → ≤0
+
+PATTERNS (language parser shared logic):
+  _extract_declarations() in base.py — unified extraction for:
+    - TypeScript: interfaces, types, classes, functions, arrow funcs
+    - PHP: namespaces, traits, classes, functions, includes
+    - Ruby: modules, classes, methods, requires
+    - C++: classes, structs, functions, #includes
+    - C#: classes, interfaces, methods, usings
+    - Java: classes, interfaces, methods, imports
+    - Go: packages, functions, structs
+    - Rust: modules, functions, traits, use statements
+
+  Shared regex patterns per language:
+    - import: language-specific import/require/using patterns
+    - class: class/struct/trait declarations with inheritance
+    - function: function/method signatures with visibility
+    - brace_tracking: for C-family languages ({ })
+    - end_keyword_tracking: for Ruby (module/class/def...end)
+
+  Benefits:
+    - Consistent extraction logic across all languages
+    - Reduced code duplication (~70% reduction in parser LOC)
+    - Easier maintenance: fix once, apply everywhere
+    - Standardized FunctionInfo/ClassInfo models
+
+HISTORY:
+  (first run — no previous data)

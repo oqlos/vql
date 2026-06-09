@@ -1,0 +1,34 @@
+flowchart TD
+%% generated in 0.02s
+
+    %% Entry points (blue)
+    classDef entry fill:#4dabf7,stroke:#1971c2,color:#fff
+
+    subgraph CLI
+        packages__cli2vql__src__cli2vql__cli___repl["_repl"]
+        packages__cli2vql__src__cli2vql__cli__main["main"]
+    end
+
+    subgraph Core
+        packages__uri2img2svg__src__uri2img2svg__cli__main["main"]
+        packages__dsl2vql__src__dsl2vql__cli___main_legacy["_main_legacy"]
+        packages__dsl2vql__src__dsl2vql__cli___main_subcommand["_main_subcommand"]
+        packages__dsl2vql__src__dsl2vql__cli__main["main"]
+        packages__img2svg__src__img2svg__cli__main["main"]
+        packages__img2svg__src__img2svg__svg_emit__image_to_svg["image_to_svg"]
+        packages__dsl2vql__src__dsl2vql__grammar__parse_line{{parse_line CC=28}}
+        packages__dsl2vql__src__dsl2vql__bus___dispatch_cmd["_dispatch_cmd"]
+        packages__dsl2vql__src__dsl2vql__bus__dispatch["dispatch"]
+        packages__dsl2vql__src__dsl2vql__bus__execute_dsl_line["execute_dsl_line"]
+        packages__dsl2vql__src__dsl2vql__bus__execute_dsl["execute_dsl"]
+        packages__dsl2vql__src__dsl2vql__handlers__query__handle_query["handle_query"]
+        packages__uri2vql__src__uri2vql__cli__main["main"]
+        packages__uri2vql__src__uri2vql__compile__compile_vql_uri["compile_vql_uri"]
+        packages__nlp2vql__src__nlp2vql__cli__main["main"]
+        ...["+213 more"]
+    end
+
+    subgraph Exporters
+    end
+
+    class packages__uri2img2svg__src__uri2img2svg__cli__main,packages__dsl2vql__src__dsl2vql__cli___main_legacy,packages__dsl2vql__src__dsl2vql__cli___main_subcommand,packages__dsl2vql__src__dsl2vql__cli__main,packages__img2svg__src__img2svg__cli__main,packages__cli2vql__src__cli2vql__cli___repl,packages__cli2vql__src__cli2vql__cli__main,packages__uri2vql__src__uri2vql__cli__main,packages__uri2vql__src__uri2vql__compile__compile_vql_uri,packages__nlp2vql__src__nlp2vql__cli__main entry

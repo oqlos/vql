@@ -16,6 +16,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+window = ["uri2vql>=0.1.0", "img2vql>=0.2.0", "vql[desktop]"]
 dev = ["pytest>=8.0", "httpx>=0.27"]
 
 [project.scripts]

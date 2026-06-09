@@ -14,6 +14,9 @@ dependencies = [
     "mcp>=1.0",
 ]
 
+[project.optional-dependencies]
+window = ["uri2vql>=0.1.0", "img2vql>=0.2.0"]
+
 [project.scripts]
 mcp2vql = "mcp2vql.cli:main"
 

@@ -1,0 +1,54 @@
+# vql | 394 func | 102f | 118929L | python | 2026-06-09
+# generated in 0.00s
+
+HEALTH:
+  CC̄=4.1  critical=32 (limit:10)  dup=2  cycles=2
+
+ALERTS[20]:
+  !!! cc_exceeded      query_window = 69 (limit:15)
+  !!! cc_exceeded      resolve_prompt_to_vql_uri = 54 (limit:15)
+  !!! cc_exceeded      main = 53 (limit:15)
+  !!! high_fan_out     main = 44 (limit:10)
+  !!! cc_exceeded      parse_svg_path = 41 (limit:15)
+  !!! high_fan_out     query_window = 34 (limit:10)
+  !!! cc_exceeded      capture_diagnose = 33 (limit:15)
+  !!! cc_exceeded      envelope_to_dict = 31 (limit:15)
+  !!! high_fan_out     screenshot_to_program = 30 (limit:10)
+  !!! high_fan_out     capture_diagnose = 29 (limit:10)
+
+MODULES[160] (top by size):
+  M[layout.vql.json] 78775L C:0 F:0 CC↑0 D:0 (json)
+  M[layout.vql.imgl.json] 21939L C:0 F:0 CC↑0 D:0 (json)
+  M[app.vql.json] 5803L C:0 F:0 CC↑0 D:0 (json)
+  M[src/vql/adopt/window.py] 804L C:3 F:29 CC↑33 D:4 (python)
+  M[packages/uri2vql/src/uri2vql/window.py] 653L C:1 F:11 CC↑69 D:4 (python)
+  M[goal.yaml] 511L C:0 F:0 CC↑0 D:0 (yaml)
+  M[src/vql/schema/program.py] 423L C:12 F:32 CC↑5 D:0 (python)
+  M[packages/img2vql/src/img2vql/detect.py] 379L C:1 F:12 CC↑25 D:6 (python)
+  M[packages/uri2vql/src/uri2vql/cli.py] 352L C:0 F:1 CC↑53 D:0 (python)
+  M[packages/img2vql/src/img2vql/metadata.py] 339L C:0 F:12 CC↑10 D:6 (python)
+  M[packages/uri2vql/src/uri2vql/nlp2uri.py] 329L C:1 F:6 CC↑54 D:1 (python)
+  M[src/vql/drawing/commands.py] 267L C:8 F:19 CC↑7 D:0 (python)
+  M[src/vql/drawing/nl_parser.py] 225L C:1 F:8 CC↑11 D:0 (python)
+  M[src/vql/drawing/renderers/playwright.py] 215L C:1 F:8 CC↑9 D:0 (python)
+  M[examples/img2nl-vql-flow.sh] 214L C:0 F:6 CC↑0 D:0 (shell)
+  LANGS: python:127/toml:11/json:9/shell:8/yaml:2/proto:2/other:1
+
+HOTSPOTS[10]:
+  ★ main fan=44  // Orchestrates 44 calls
+  ★ query_window fan=34  // Handle vql://window/* URIs (analyze + query adopted program).
+  ★ screenshot_to_program fan=30  // Adopt a screenshot into a VQL program.
+
+Uses a coarse color grid to emit rectang
+  ★ capture_diagnose fan=29  // Try each capture backend and report why it failed (blank, denied, missing tool).
+  ★ create_app fan=27  // Orchestrates 27 calls
+
+REFACTOR[15]:
+  [1] H/L Split parse_line (CC=28)
+  [2] H/L Split main (CC=53)
+  [3] H/L Split resolve_prompt_to_vql_uri (CC=54)
+  [4] H/L Split envelope_to_dict (CC=31)
+  [5] H/L Split query_window (CC=69)
+
+EVOLUTION:
+  2026-06-09 CC̄=4.1 crit=32 118929L // Automated analysis

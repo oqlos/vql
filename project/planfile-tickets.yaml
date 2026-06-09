@@ -1,0 +1,3762 @@
+source: code2llm
+# generated in 0.14s
+schema: code2llm.planfile_tickets.v1
+project_root: /home/tom/github/oqlos/vql
+tickets:
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: packages.dsl2vql.src.dsl2vql.grammar.parse_line
+    (CC=28)'
+  description: 'code2llm reports `packages.dsl2vql.src.dsl2vql.grammar.parse_line`
+    at `packages/dsl2vql/src/dsl2vql/grammar.py:27` with cyclomatic complexity 28
+    (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - packages/dsl2vql/src/dsl2vql/grammar.py
+  dedupe_key: code2llm:cc:packages/dsl2vql/src/dsl2vql/grammar.py:packages.dsl2vql.src.dsl2vql.grammar.parse_line
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: packages.dsl2vql.src.dsl2vql.pb_codec.envelope_to_dict
+    (CC=31)'
+  description: 'code2llm reports `packages.dsl2vql.src.dsl2vql.pb_codec.envelope_to_dict`
+    at `packages/dsl2vql/src/dsl2vql/pb_codec.py:60` with cyclomatic complexity 31
+    (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - packages/dsl2vql/src/dsl2vql/pb_codec.py
+  dedupe_key: code2llm:cc:packages/dsl2vql/src/dsl2vql/pb_codec.py:packages.dsl2vql.src.dsl2vql.pb_codec.envelope_to_dict
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: packages.img2vql.src.img2vql.detect._detect_buttons
+    (CC=25)'
+  description: 'code2llm reports `packages.img2vql.src.img2vql.detect._detect_buttons`
+    at `packages/img2vql/src/img2vql/detect.py:180` with cyclomatic complexity 25
+    (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: code2llm:cc:packages/img2vql/src/img2vql/detect.py:packages.img2vql.src.img2vql.detect._detect_buttons
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.cli.main (CC=53)'
+  description: 'code2llm reports `packages.uri2vql.src.uri2vql.cli.main` at `packages/uri2vql/src/uri2vql/cli.py:13`
+    with cyclomatic complexity 53 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - packages/uri2vql/src/uri2vql/cli.py
+  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/cli.py:packages.uri2vql.src.uri2vql.cli.main
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
+    (CC=54)'
+  description: 'code2llm reports `packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri`
+    at `packages/uri2vql/src/uri2vql/nlp2uri.py:39` with cyclomatic complexity 54
+    (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - packages/uri2vql/src/uri2vql/nlp2uri.py
+  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/nlp2uri.py:packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.window.query_window
+    (CC=69)'
+  description: 'code2llm reports `packages.uri2vql.src.uri2vql.window.query_window`
+    at `packages/uri2vql/src/uri2vql/window.py:391` with cyclomatic complexity 69
+    (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - packages/uri2vql/src/uri2vql/window.py
+  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/window.py:packages.uri2vql.src.uri2vql.window.query_window
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: src.vql.adopt.window.capture_diagnose (CC=33)'
+  description: 'code2llm reports `src.vql.adopt.window.capture_diagnose` at `src/vql/adopt/window.py:388`
+    with cyclomatic complexity 33 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: code2llm:cc:src/vql/adopt/window.py:src.vql.adopt.window.capture_diagnose
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: src.vql.drawing.svg_path_parser.parse_svg_path
+    (CC=41)'
+  description: 'code2llm reports `src.vql.drawing.svg_path_parser.parse_svg_path`
+    at `src/vql/drawing/svg_path_parser.py:8` with cyclomatic complexity 41 (limit
+    15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - src/vql/drawing/svg_path_parser.py
+  dedupe_key: code2llm:cc:src/vql/drawing/svg_path_parser.py:src.vql.drawing.svg_path_parser.parse_svg_path
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _flood_rects'
+  description: 'code2llm reports `God Function: _flood_rects` in `packages/img2vql/src/img2vql/detect.py:151`.
+
+
+    Function ''_flood_rects'' is oversized: CC=14, fan-out=8, mutations=30.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/detect.py:151:God
+    Function: _flood_rects'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: analyze_screenshot'
+  description: 'code2llm reports `God Function: analyze_screenshot` in `src/vql/adopt/window.py:712`.
+
+
+    Function ''analyze_screenshot'' is oversized: CC=13, fan-out=25, mutations=13.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/window.py:712:God Function:
+    analyze_screenshot'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: describe_ui_layout'
+  description: 'code2llm reports `God Function: describe_ui_layout` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
+
+
+    Function ''describe_ui_layout'' is oversized: CC=14, fan-out=12, mutations=26.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/describe_ui.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/describe_ui.py:67:God
+    Function: describe_ui_layout'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: dispatch'
+  description: 'code2llm reports `God Function: dispatch` in `packages/dsl2img2svg/src/dsl2img2svg/dispatch.py:42`.
+
+
+    Function ''dispatch'' is oversized: CC=14, fan-out=19, mutations=17.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/dsl2img2svg/src/dsl2img2svg/dispatch.py
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2img2svg/src/dsl2img2svg/dispatch.py:42:God
+    Function: dispatch'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: elements_to_vql_program'
+  description: 'code2llm reports `God Function: elements_to_vql_program` in `packages/img2vql/src/img2vql/program.py:25`.
+
+
+    Function ''elements_to_vql_program'' is oversized: CC=11, fan-out=21, mutations=28.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/program.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/program.py:25:God
+    Function: elements_to_vql_program'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `packages/img2svg/src/img2svg/cli.py:14`.
+
+
+    Function ''main'' is oversized: CC=10, fan-out=14, mutations=25.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2svg/src/img2svg/cli.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2svg/src/img2svg/cli.py:14:God
+    Function: main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `packages/cli2vql/src/cli2vql/cli.py:29`.
+
+
+    Function ''main'' is oversized: CC=14, fan-out=18, mutations=21.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/cli2vql/src/cli2vql/cli.py
+  dedupe_key: 'code2llm:smell:god_function:packages/cli2vql/src/cli2vql/cli.py:29:God
+    Function: main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `packages/img2vql/src/img2vql/cli.py:15`.
+
+
+    Function ''main'' is oversized: CC=10, fan-out=15, mutations=31.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/cli.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/cli.py:15:God
+    Function: main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: screenshot_to_program'
+  description: 'code2llm reports `God Function: screenshot_to_program` in `src/vql/adopt/window.py:593`.
+
+
+    Function ''screenshot_to_program'' is oversized: CC=12, fan-out=30, mutations=33.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/window.py:593:God Function:
+    screenshot_to_program'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: args'
+  description: 'code2llm reports `Shotgun Surgery: args` in `packages/rest2vql/src/rest2vql/cli.py:8`.
+
+
+    Mutation of variable ''args'' spans 14 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/rest2vql/src/rest2vql/cli.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/rest2vql/src/rest2vql/cli.py:8:Shotgun
+    Surgery: args'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: cmd'
+  description: 'code2llm reports `Shotgun Surgery: cmd` in `packages/dsl2vql/src/dsl2vql/handlers/command.py:104`.
+
+
+    Mutation of variable ''cmd'' spans 13 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/dsl2vql/src/dsl2vql/handlers/command.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/handlers/command.py:104:Shotgun
+    Surgery: cmd'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: colors'
+  description: 'code2llm reports `Shotgun Surgery: colors` in `packages/img2svg/src/img2svg/trace.py:87`.
+
+
+    Mutation of variable ''colors'' spans 6 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/trace.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/trace.py:87:Shotgun
+    Surgery: colors'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: cx'
+  description: 'code2llm reports `Shotgun Surgery: cx` in `packages/img2svg/src/img2svg/to_vql.py:14`.
+
+
+    Mutation of variable ''cx'' spans 10 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/to_vql.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/to_vql.py:14:Shotgun
+    Surgery: cx'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: cy'
+  description: 'code2llm reports `Shotgun Surgery: cy` in `packages/img2svg/src/img2svg/to_vql.py:14`.
+
+
+    Mutation of variable ''cy'' spans 10 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/to_vql.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/to_vql.py:14:Shotgun
+    Surgery: cy'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: data'
+  description: 'code2llm reports `Shotgun Surgery: data` in `packages/uri2vql/src/uri2vql/run.py:32`.
+
+
+    Mutation of variable ''data'' spans 15 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/uri2vql/src/uri2vql/run.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/run.py:32:Shotgun
+    Surgery: data'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: dx'
+  description: 'code2llm reports `Shotgun Surgery: dx` in `src/vql/adopt/window.py:559`.
+
+
+    Mutation of variable ''dx'' spans 5 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:559:Shotgun
+    Surgery: dx'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: dy'
+  description: 'code2llm reports `Shotgun Surgery: dy` in `src/vql/adopt/window.py:559`.
+
+
+    Mutation of variable ''dy'' spans 5 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:559:Shotgun
+    Surgery: dy'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: elements'
+  description: 'code2llm reports `Shotgun Surgery: elements` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
+
+
+    Mutation of variable ''elements'' spans 7 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/describe_ui.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/describe_ui.py:67:Shotgun
+    Surgery: elements'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: errors'
+  description: 'code2llm reports `Shotgun Surgery: errors` in `packages/dsl2vql/src/dsl2vql/cli.py:52`.
+
+
+    Mutation of variable ''errors'' spans 7 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/dsl2vql/src/dsl2vql/cli.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/cli.py:52:Shotgun
+    Surgery: errors'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: event'
+  description: 'code2llm reports `Shotgun Surgery: event` in `src/vql/compiler/legacy_drawcommand.py:127`.
+
+
+    Mutation of variable ''event'' spans 10 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - src/vql/compiler/legacy_drawcommand.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/compiler/legacy_drawcommand.py:127:Shotgun
+    Surgery: event'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: extra'
+  description: 'code2llm reports `Shotgun Surgery: extra` in `packages/uri2vql/src/uri2vql/uri.py:66`.
+
+
+    Mutation of variable ''extra'' spans 7 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/uri2vql/src/uri2vql/uri.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/uri.py:66:Shotgun
+    Surgery: extra'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: fp'
+  description: 'code2llm reports `Shotgun Surgery: fp` in `src/vql/adopt/window.py:532`.
+
+
+    Mutation of variable ''fp'' spans 5 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:532:Shotgun
+    Surgery: fp'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: h'
+  description: 'code2llm reports `Shotgun Surgery: h` in `packages/img2svg/src/img2svg/trace.py:87`.
+
+
+    Mutation of variable ''h'' spans 14 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/trace.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/trace.py:87:Shotgun
+    Surgery: h'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: idx'
+  description: 'code2llm reports `Shotgun Surgery: idx` in `src/vql/adopt/window.py:593`.
+
+
+    Mutation of variable ''idx'' spans 5 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:593:Shotgun
+    Surgery: idx'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: im'
+  description: 'code2llm reports `Shotgun Surgery: im` in `packages/img2svg/src/img2svg/trace.py:87`.
+
+
+    Mutation of variable ''im'' spans 9 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/trace.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/trace.py:87:Shotgun
+    Surgery: im'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: image'
+  description: 'code2llm reports `Shotgun Surgery: image` in `packages/uri2vql/src/uri2vql/window.py:391`.
+
+
+    Mutation of variable ''image'' spans 5 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/uri2vql/src/uri2vql/window.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/window.py:391:Shotgun
+    Surgery: image'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: line'
+  description: 'code2llm reports `Shotgun Surgery: line` in `packages/uri2vql/src/uri2vql/compile.py:12`.
+
+
+    Mutation of variable ''line'' spans 9 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/uri2vql/src/uri2vql/compile.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/compile.py:12:Shotgun
+    Surgery: line'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: lines'
+  description: 'code2llm reports `Shotgun Surgery: lines` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
+
+
+    Mutation of variable ''lines'' spans 5 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/describe_ui.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/describe_ui.py:67:Shotgun
+    Surgery: lines'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: loc'
+  description: 'code2llm reports `Shotgun Surgery: loc` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
+
+
+    Mutation of variable ''loc'' spans 6 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/describe_ui.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/describe_ui.py:67:Shotgun
+    Surgery: loc'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: meta'
+  description: 'code2llm reports `Shotgun Surgery: meta` in `packages/img2vql/src/img2vql/metadata.py:313`.
+
+
+    Mutation of variable ''meta'' spans 6 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/metadata.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/metadata.py:313:Shotgun
+    Surgery: meta'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: ok'
+  description: 'code2llm reports `Shotgun Surgery: ok` in `src/vql/adopt/window.py:559`.
+
+
+    Mutation of variable ''ok'' spans 7 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:559:Shotgun
+    Surgery: ok'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: out'
+  description: 'code2llm reports `Shotgun Surgery: out` in `packages/img2svg/src/img2svg/svg_emit.py:59`.
+
+
+    Mutation of variable ''out'' spans 19 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/svg_emit.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/svg_emit.py:59:Shotgun
+    Surgery: out'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: p'
+  description: 'code2llm reports `Shotgun Surgery: p` in `packages/uri2vql/src/uri2vql/cli.py:13`.
+
+
+    Mutation of variable ''p'' spans 5 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/uri2vql/src/uri2vql/cli.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/cli.py:13:Shotgun
+    Surgery: p'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: parsed'
+  description: 'code2llm reports `Shotgun Surgery: parsed` in `packages/uri2vql/src/uri2vql/compile.py:12`.
+
+
+    Mutation of variable ''parsed'' spans 8 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/uri2vql/src/uri2vql/compile.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/compile.py:12:Shotgun
+    Surgery: parsed'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: parser'
+  description: 'code2llm reports `Shotgun Surgery: parser` in `packages/rest2vql/src/rest2vql/cli.py:8`.
+
+
+    Mutation of variable ''parser'' spans 14 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/rest2vql/src/rest2vql/cli.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/rest2vql/src/rest2vql/cli.py:8:Shotgun
+    Surgery: parser'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: path'
+  description: 'code2llm reports `Shotgun Surgery: path` in `packages/img2svg/src/img2svg/trace.py:133`.
+
+
+    Mutation of variable ''path'' spans 27 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/trace.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/trace.py:133:Shotgun
+    Surgery: path'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: payload'
+  description: 'code2llm reports `Shotgun Surgery: payload` in `packages/uri2vql/src/uri2vql/window.py:391`.
+
+
+    Mutation of variable ''payload'' spans 22 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/uri2vql/src/uri2vql/window.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/window.py:391:Shotgun
+    Surgery: payload'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: proc'
+  description: 'code2llm reports `Shotgun Surgery: proc` in `src/vql/adopt/window.py:479`.
+
+
+    Mutation of variable ''proc'' spans 5 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:479:Shotgun
+    Surgery: proc'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: program'
+  description: 'code2llm reports `Shotgun Surgery: program` in `packages/dsl2vql/src/dsl2vql/handlers/command.py:16`.
+
+
+    Mutation of variable ''program'' spans 13 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/dsl2vql/src/dsl2vql/handlers/command.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/handlers/command.py:16:Shotgun
+    Surgery: program'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: pts'
+  description: 'code2llm reports `Shotgun Surgery: pts` in `packages/img2svg/src/img2svg/trace.py:133`.
+
+
+    Mutation of variable ''pts'' spans 14 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/trace.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/trace.py:133:Shotgun
+    Surgery: pts'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: result'
+  description: 'code2llm reports `Shotgun Surgery: result` in `packages/uri2vql/src/uri2vql/window.py:391`.
+
+
+    Mutation of variable ''result'' spans 26 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/uri2vql/src/uri2vql/window.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/window.py:391:Shotgun
+    Surgery: result'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: rgb'
+  description: 'code2llm reports `Shotgun Surgery: rgb` in `packages/img2svg/src/img2svg/trace.py:87`.
+
+
+    Mutation of variable ''rgb'' spans 5 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/trace.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/trace.py:87:Shotgun
+    Surgery: rgb'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: rw'
+  description: 'code2llm reports `Shotgun Surgery: rw` in `packages/img2svg/src/img2svg/to_vql.py:14`.
+
+
+    Mutation of variable ''rw'' spans 5 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/to_vql.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/to_vql.py:14:Shotgun
+    Surgery: rw'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: scene'
+  description: 'code2llm reports `Shotgun Surgery: scene` in `src/vql/compiler/legacy_drawcommand.py:72`.
+
+
+    Mutation of variable ''scene'' spans 8 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - src/vql/compiler/legacy_drawcommand.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/compiler/legacy_drawcommand.py:72:Shotgun
+    Surgery: scene'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: similarity'
+  description: 'code2llm reports `Shotgun Surgery: similarity` in `packages/img2vql/src/img2vql/fingerprint.py:56`.
+
+
+    Mutation of variable ''similarity'' spans 5 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/fingerprint.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/fingerprint.py:56:Shotgun
+    Surgery: similarity'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: small'
+  description: 'code2llm reports `Shotgun Surgery: small` in `packages/img2svg/src/img2svg/trace.py:87`.
+
+
+    Mutation of variable ''small'' spans 5 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/trace.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/trace.py:87:Shotgun
+    Surgery: small'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: sub'
+  description: 'code2llm reports `Shotgun Surgery: sub` in `packages/uri2vql/src/uri2vql/window.py:391`.
+
+
+    Mutation of variable ''sub'' spans 7 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/uri2vql/src/uri2vql/window.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/window.py:391:Shotgun
+    Surgery: sub'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: svg'
+  description: 'code2llm reports `Shotgun Surgery: svg` in `src/vql/renderers/svg.py:29`.
+
+
+    Mutation of variable ''svg'' spans 5 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - src/vql/renderers/svg.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/renderers/svg.py:29:Shotgun
+    Surgery: svg'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: text'
+  description: 'code2llm reports `Shotgun Surgery: text` in `packages/dsl2vql/src/dsl2vql/handlers/command.py:16`.
+
+
+    Mutation of variable ''text'' spans 6 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/dsl2vql/src/dsl2vql/handlers/command.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/handlers/command.py:16:Shotgun
+    Surgery: text'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: tokens'
+  description: 'code2llm reports `Shotgun Surgery: tokens` in `src/vql/drawing/svg_path_parser.py:8`.
+
+
+    Mutation of variable ''tokens'' spans 5 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - src/vql/drawing/svg_path_parser.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/drawing/svg_path_parser.py:8:Shotgun
+    Surgery: tokens'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: unique'
+  description: 'code2llm reports `Shotgun Surgery: unique` in `src/vql/adopt/window.py:131`.
+
+
+    Mutation of variable ''unique'' spans 5 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:131:Shotgun
+    Surgery: unique'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: verb'
+  description: 'code2llm reports `Shotgun Surgery: verb` in `packages/dsl2vql/src/dsl2vql/pb_codec.py:24`.
+
+
+    Mutation of variable ''verb'' spans 9 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/dsl2vql/src/dsl2vql/pb_codec.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/pb_codec.py:24:Shotgun
+    Surgery: verb'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: w'
+  description: 'code2llm reports `Shotgun Surgery: w` in `packages/img2svg/src/img2svg/trace.py:87`.
+
+
+    Mutation of variable ''w'' spans 16 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/trace.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/trace.py:87:Shotgun
+    Surgery: w'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: x'
+  description: 'code2llm reports `Shotgun Surgery: x` in `packages/img2vql/src/img2vql/detect.py:151`.
+
+
+    Mutation of variable ''x'' spans 7 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/detect.py:151:Shotgun
+    Surgery: x'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: x0'
+  description: 'code2llm reports `Shotgun Surgery: x0` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
+
+
+    Mutation of variable ''x0'' spans 9 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/describe_ui.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/describe_ui.py:67:Shotgun
+    Surgery: x0'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: x1'
+  description: 'code2llm reports `Shotgun Surgery: x1` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
+
+
+    Mutation of variable ''x1'' spans 6 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/describe_ui.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/describe_ui.py:67:Shotgun
+    Surgery: x1'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: y'
+  description: 'code2llm reports `Shotgun Surgery: y` in `packages/img2vql/src/img2vql/detect.py:151`.
+
+
+    Mutation of variable ''y'' spans 6 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/detect.py:151:Shotgun
+    Surgery: y'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: y0'
+  description: 'code2llm reports `Shotgun Surgery: y0` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
+
+
+    Mutation of variable ''y0'' spans 8 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/describe_ui.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/describe_ui.py:67:Shotgun
+    Surgery: y0'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: y1'
+  description: 'code2llm reports `Shotgun Surgery: y1` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
+
+
+    Mutation of variable ''y1'' spans 6 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/describe_ui.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/describe_ui.py:67:Shotgun
+    Surgery: y1'
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: packages.img2svg.src.img2svg.trace._merge_grid_cells
+    (CC=15)'
+  description: 'code2llm reports `packages.img2svg.src.img2svg.trace._merge_grid_cells`
+    at `packages/img2svg/src/img2svg/trace.py:39` with cyclomatic complexity 15 (limit
+    15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - packages/img2svg/src/img2svg/trace.py
+  dedupe_key: code2llm:cc:packages/img2svg/src/img2svg/trace.py:packages.img2svg.src.img2svg.trace._merge_grid_cells
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.query.query_uri
+    (CC=15)'
+  description: 'code2llm reports `packages.uri2vql.src.uri2vql.query.query_uri` at
+    `packages/uri2vql/src/uri2vql/query.py:46` with cyclomatic complexity 15 (limit
+    15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - packages/uri2vql/src/uri2vql/query.py
+  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/query.py:packages.uri2vql.src.uri2vql.query.query_uri
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.window._diagnose_fallback
+    (CC=15)'
+  description: 'code2llm reports `packages.uri2vql.src.uri2vql.window._diagnose_fallback`
+    at `packages/uri2vql/src/uri2vql/window.py:42` with cyclomatic complexity 15 (limit
+    15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - packages/uri2vql/src/uri2vql/window.py
+  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/window.py:packages.uri2vql.src.uri2vql.window._diagnose_fallback
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.window._query_window_imgl
+    (CC=17)'
+  description: 'code2llm reports `packages.uri2vql.src.uri2vql.window._query_window_imgl`
+    at `packages/uri2vql/src/uri2vql/window.py:204` with cyclomatic complexity 17
+    (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - packages/uri2vql/src/uri2vql/window.py
+  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/window.py:packages.uri2vql.src.uri2vql.window._query_window_imgl
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: src.vql.adopt.window._capture_with_portal
+    (CC=15)'
+  description: 'code2llm reports `src.vql.adopt.window._capture_with_portal` at `src/vql/adopt/window.py:251`
+    with cyclomatic complexity 15 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: code2llm:cc:src/vql/adopt/window.py:src.vql.adopt.window._capture_with_portal
+- signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: src.vql.adopt.window._merge_grid_colors (CC=15)'
+  description: 'code2llm reports `src.vql.adopt.window._merge_grid_colors` at `src/vql/adopt/window.py:559`
+    with cyclomatic complexity 15 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: code2llm:cc:src/vql/adopt/window.py:src.vql.adopt.window._merge_grid_colors
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/butterfly_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/butterfly_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/butterfly_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/dot_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/dot_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/dot_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/octagon_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/octagon_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/octagon_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/triangle_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/triangle_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/triangle_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/house_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/house_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/house_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/castle_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/castle_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/castle_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/bird_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/bird_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/bird_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/fish_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/fish_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/fish_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/mountain_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/mountain_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/mountain_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/tree_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/tree_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/tree_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/crescent_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/crescent_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/crescent_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/shape_generator.py:23`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/shape_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/shape_generator.py:23:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/hexagon_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/hexagon_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/hexagon_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/circle_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/circle_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/circle_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/line_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/line_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/line_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/diamond_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/diamond_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/diamond_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/star_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/star_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/star_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/flower_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/flower_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/flower_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/rocket_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/rocket_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/rocket_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/spiral_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/spiral_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/spiral_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/sun_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/sun_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/sun_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/car_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/car_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/car_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/ellipse_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/ellipse_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/ellipse_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/heart_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/heart_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/heart_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/rectangle_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/rectangle_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/rectangle_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/wave_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/wave_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/wave_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/cat_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/cat_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/cat_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/cross_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/cross_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/cross_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/square_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/square_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/square_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/grid_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/grid_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/grid_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/arrow_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/arrow_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/arrow_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/pentagon_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/pentagon_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/pentagon_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/boat_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/boat_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/boat_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: cy, cx, self, size'
+  description: 'code2llm reports `Data Clump: cy, cx, self, size` in `src/vql/drawing/cloud_detailed_generator.py:22`.
+
+
+    Arguments (cy, cx, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.octagon_generator.OctagonGenerator.generate,
+    src.vql.drawing.triangle_generator.TriangleGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
+    src.vql.drawing.castle_generator.CastleGenerator.generate, src.vql.drawing.bird_generator.BirdGenerator.generate,
+    src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.mountain_generator.MountainGenerator.generate,
+    src.vql.drawing.tree_generator.TreeGenerator.generate, src.vql.drawing.crescent_generator.CrescentGenerator.generate,
+    src.vql.drawing.shape_generator.ShapeGenerator.generate, src.vql.drawing.hexagon_generator.HexagonGenerator.generate,
+    src.vql.drawing.circle_generator.CircleGenerator.generate, src.vql.drawing.line_generator.LineGenerator.generate,
+    src.vql.drawing.diamond_generator.DiamondGenerator.generate, src.vql.drawing.star_generator.StarGenerator.generate,
+    src.vql.drawing.flower_generator.FlowerGenerator.generate, src.vql.drawing.rocket_generator.RocketGenerator.generate,
+    src.vql.drawing.spiral_generator.SpiralGenerator.generate, src.vql.drawing.sun_generator.SunGenerator.generate,
+    src.vql.drawing.car_generator.CarGenerator.generate, src.vql.drawing.ellipse_generator.EllipseGenerator.generate,
+    src.vql.drawing.heart_generator.HeartGenerator.generate, src.vql.drawing.rectangle_generator.RectangleGenerator.generate,
+    src.vql.drawing.wave_generator.WaveGenerator.generate, src.vql.drawing.cat_generator.CatGenerator.generate,
+    src.vql.drawing.cross_generator.CrossGenerator.generate, src.vql.drawing.square_generator.SquareGenerator.generate,
+    src.vql.drawing.grid_generator.GridGenerator.generate, src.vql.drawing.arrow_generator.ArrowGenerator.generate,
+    src.vql.drawing.pentagon_generator.PentagonGenerator.generate, src.vql.drawing.boat_generator.BoatGenerator.generate,
+    src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/cloud_detailed_generator.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/cloud_detailed_generator.py:22:Data
+    Clump: cy, cx, self, size'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: height, self, url, width, app'
+  description: 'code2llm reports `Data Clump: height, self, url, width, app` in `src/vql/drawing/renderers/base.py:30`.
+
+
+    Arguments (height, self, url, width, app) are used together in multiple functions:
+    src.vql.drawing.renderers.base.Renderer.init_canvas, src.vql.drawing.renderers.svg.SVGRenderer.init_canvas,
+    src.vql.drawing.renderers.playwright.PlaywrightRenderer.init_canvas.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/renderers/base.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/base.py:30:Data
+    Clump: height, self, url, width, app'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: height, self, url, width, app'
+  description: 'code2llm reports `Data Clump: height, self, url, width, app` in `src/vql/drawing/renderers/svg.py:34`.
+
+
+    Arguments (height, self, url, width, app) are used together in multiple functions:
+    src.vql.drawing.renderers.base.Renderer.init_canvas, src.vql.drawing.renderers.svg.SVGRenderer.init_canvas,
+    src.vql.drawing.renderers.playwright.PlaywrightRenderer.init_canvas.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/renderers/svg.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/svg.py:34:Data
+    Clump: height, self, url, width, app'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: height, self, url, width, app'
+  description: 'code2llm reports `Data Clump: height, self, url, width, app` in `src/vql/drawing/renderers/playwright.py:34`.
+
+
+    Arguments (height, self, url, width, app) are used together in multiple functions:
+    src.vql.drawing.renderers.base.Renderer.init_canvas, src.vql.drawing.renderers.svg.SVGRenderer.init_canvas,
+    src.vql.drawing.renderers.playwright.PlaywrightRenderer.init_canvas.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/renderers/playwright.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/playwright.py:34:Data
+    Clump: height, self, url, width, app'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: human_like, page, self'
+  description: 'code2llm reports `Data Clump: human_like, page, self` in `src/vql/drawing/renderers/playwright.py:28`.
+
+
+    Arguments (human_like, page, self) are used together in multiple functions: src.vql.drawing.renderers.playwright.PlaywrightRenderer.__init__,
+    src.vql.renderers.playwright.PlaywrightVQLRenderer.__init__.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/renderers/playwright.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/playwright.py:28:Data
+    Clump: human_like, page, self'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: human_like, page, self'
+  description: 'code2llm reports `Data Clump: human_like, page, self` in `src/vql/renderers/playwright.py:21`.
+
+
+    Arguments (human_like, page, self) are used together in multiple functions: src.vql.drawing.renderers.playwright.PlaywrightRenderer.__init__,
+    src.vql.renderers.playwright.PlaywrightVQLRenderer.__init__.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/renderers/playwright.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/renderers/playwright.py:21:Data Clump:
+    human_like, page, self'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: im, w, h'
+  description: 'code2llm reports `Data Clump: im, w, h` in `packages/img2vql/src/img2vql/detect.py:91`.
+
+
+    Arguments (im, w, h) are used together in multiple functions: packages.img2vql.src.img2vql.detect._detect_titlebar,
+    packages.img2vql.src.img2vql.detect._detect_panels, packages.img2vql.src.img2vql.detect._detect_buttons.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:data_clump:packages/img2vql/src/img2vql/detect.py:91:Data
+    Clump: im, w, h'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: im, w, h'
+  description: 'code2llm reports `Data Clump: im, w, h` in `packages/img2vql/src/img2vql/detect.py:116`.
+
+
+    Arguments (im, w, h) are used together in multiple functions: packages.img2vql.src.img2vql.detect._detect_titlebar,
+    packages.img2vql.src.img2vql.detect._detect_panels, packages.img2vql.src.img2vql.detect._detect_buttons.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:data_clump:packages/img2vql/src/img2vql/detect.py:116:Data
+    Clump: im, w, h'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: im, w, h'
+  description: 'code2llm reports `Data Clump: im, w, h` in `packages/img2vql/src/img2vql/detect.py:180`.
+
+
+    Arguments (im, w, h) are used together in multiple functions: packages.img2vql.src.img2vql.detect._detect_titlebar,
+    packages.img2vql.src.img2vql.detect._detect_panels, packages.img2vql.src.img2vql.detect._detect_buttons.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:data_clump:packages/img2vql/src/img2vql/detect.py:180:Data
+    Clump: im, w, h'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: points, fill, self, color'
+  description: 'code2llm reports `Data Clump: points, fill, self, color` in `src/vql/drawing/renderers/base.py:45`.
+
+
+    Arguments (points, fill, self, color) are used together in multiple functions:
+    src.vql.drawing.renderers.base.Renderer.draw_path, src.vql.drawing.renderers.svg.SVGRenderer.draw_path,
+    src.vql.drawing.renderers.playwright.PlaywrightRenderer.draw_path.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/renderers/base.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/base.py:45:Data
+    Clump: points, fill, self, color'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: points, fill, self, color'
+  description: 'code2llm reports `Data Clump: points, fill, self, color` in `src/vql/drawing/renderers/svg.py:50`.
+
+
+    Arguments (points, fill, self, color) are used together in multiple functions:
+    src.vql.drawing.renderers.base.Renderer.draw_path, src.vql.drawing.renderers.svg.SVGRenderer.draw_path,
+    src.vql.drawing.renderers.playwright.PlaywrightRenderer.draw_path.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/renderers/svg.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/svg.py:50:Data
+    Clump: points, fill, self, color'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: points, fill, self, color'
+  description: 'code2llm reports `Data Clump: points, fill, self, color` in `src/vql/drawing/renderers/playwright.py:152`.
+
+
+    Arguments (points, fill, self, color) are used together in multiple functions:
+    src.vql.drawing.renderers.base.Renderer.draw_path, src.vql.drawing.renderers.svg.SVGRenderer.draw_path,
+    src.vql.drawing.renderers.playwright.PlaywrightRenderer.draw_path.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/renderers/playwright.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/playwright.py:152:Data
+    Clump: points, fill, self, color'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _bbox_contains'
+  description: 'code2llm reports `God Function: _bbox_contains` in `packages/img2vql/src/img2vql/program.py:108`.
+
+
+    Function ''_bbox_contains'' is oversized: CC=4, fan-out=0, mutations=16.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/program.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/program.py:108:God
+    Function: _bbox_contains'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _detect_panels'
+  description: 'code2llm reports `God Function: _detect_panels` in `packages/img2vql/src/img2vql/detect.py:116`.
+
+
+    Function ''_detect_panels'' is oversized: CC=5, fan-out=11, mutations=25.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/detect.py:116:God
+    Function: _detect_panels'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _detect_toolbar'
+  description: 'code2llm reports `God Function: _detect_toolbar` in `packages/img2vql/src/img2vql/detect.py:270`.
+
+
+    Function ''_detect_toolbar'' is oversized: CC=10, fan-out=10, mutations=14.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/detect.py:270:God
+    Function: _detect_toolbar'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _dispatch_cmd'
+  description: 'code2llm reports `God Function: _dispatch_cmd` in `packages/dsl2vql/src/dsl2vql/bus.py:16`.
+
+
+    Function ''_dispatch_cmd'' is oversized: CC=5, fan-out=12, mutations=8.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/dsl2vql/src/dsl2vql/bus.py
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/bus.py:16:God
+    Function: _dispatch_cmd'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _image_is_blank'
+  description: 'code2llm reports `God Function: _image_is_blank` in `src/vql/adopt/window.py:131`.
+
+
+    Function ''_image_is_blank'' is oversized: CC=8, fan-out=11, mutations=5.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/window.py:131:God Function:
+    _image_is_blank'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _iou'
+  description: 'code2llm reports `God Function: _iou` in `packages/img2vql/src/img2vql/detect.py:304`.
+
+
+    Function ''_iou'' is oversized: CC=3, fan-out=2, mutations=27.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/detect.py:304:God
+    Function: _iou'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _main_legacy'
+  description: 'code2llm reports `God Function: _main_legacy` in `packages/dsl2vql/src/dsl2vql/cli.py:13`.
+
+
+    Function ''_main_legacy'' is oversized: CC=9, fan-out=14, mutations=13.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/dsl2vql/src/dsl2vql/cli.py
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/cli.py:13:God
+    Function: _main_legacy'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _main_subcommand'
+  description: 'code2llm reports `God Function: _main_subcommand` in `packages/dsl2vql/src/dsl2vql/cli.py:52`.
+
+
+    Function ''_main_subcommand'' is oversized: CC=9, fan-out=18, mutations=8.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/dsl2vql/src/dsl2vql/cli.py
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/cli.py:52:God
+    Function: _main_subcommand'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _register_tools'
+  description: 'code2llm reports `God Function: _register_tools` in `packages/mcp2vql/src/mcp2vql/server.py:29`.
+
+
+    Function ''_register_tools'' is oversized: CC=1, fan-out=21, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/mcp2vql/src/mcp2vql/server.py
+  dedupe_key: 'code2llm:smell:god_function:packages/mcp2vql/src/mcp2vql/server.py:29:God
+    Function: _register_tools'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: _set_body'
+  description: 'code2llm reports `God Function: _set_body` in `packages/dsl2vql/src/dsl2vql/pb_codec.py:24`.
+
+
+    Function ''_set_body'' is oversized: CC=12, fan-out=6, mutations=23.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/dsl2vql/src/dsl2vql/pb_codec.py
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/pb_codec.py:24:God
+    Function: _set_body'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: adopt_screenshot'
+  description: 'code2llm reports `God Function: adopt_screenshot` in `packages/img2vql/src/img2vql/adopt.py:14`.
+
+
+    Function ''adopt_screenshot'' is oversized: CC=2, fan-out=13, mutations=5.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/adopt.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/adopt.py:14:God
+    Function: adopt_screenshot'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: append'
+  description: 'code2llm reports `God Function: append` in `packages/dsl2vql/src/dsl2vql/events.py:41`.
+
+
+    Function ''append'' is oversized: CC=3, fan-out=22, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/dsl2vql/src/dsl2vql/events.py
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/events.py:41:God
+    Function: append'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: capture_screen'
+  description: 'code2llm reports `God Function: capture_screen` in `src/vql/adopt/window.py:495`.
+
+
+    Function ''capture_screen'' is oversized: CC=7, fan-out=14, mutations=7.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/window.py:495:God Function:
+    capture_screen'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: capture_via_portal'
+  description: 'code2llm reports `God Function: capture_via_portal` in `src/vql/adopt/portal_capture.py:18`.
+
+
+    Function ''capture_via_portal'' is oversized: CC=4, fan-out=24, mutations=11.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - src/vql/adopt/portal_capture.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/portal_capture.py:18:God
+    Function: capture_via_portal'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: commands_to_program'
+  description: 'code2llm reports `God Function: commands_to_program` in `src/vql/compiler/legacy_drawcommand.py:72`.
+
+
+    Function ''commands_to_program'' is oversized: CC=9, fan-out=11, mutations=13.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - src/vql/compiler/legacy_drawcommand.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/compiler/legacy_drawcommand.py:72:God
+    Function: commands_to_program'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: create_app'
+  description: 'code2llm reports `God Function: create_app` in `packages/rest2vql/src/rest2vql/app.py:19`.
+
+
+    Function ''create_app'' is oversized: CC=1, fan-out=27, mutations=6.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/rest2vql/src/rest2vql/app.py
+  dedupe_key: 'code2llm:smell:god_function:packages/rest2vql/src/rest2vql/app.py:19:God
+    Function: create_app'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: detect_ui_elements'
+  description: 'code2llm reports `God Function: detect_ui_elements` in `packages/img2vql/src/img2vql/detect.py:330`.
+
+
+    Function ''detect_ui_elements'' is oversized: CC=8, fan-out=16, mutations=14.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/detect.py:330:God
+    Function: detect_ui_elements'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: diagnose_for_vql'
+  description: 'code2llm reports `God Function: diagnose_for_vql` in `packages/img2vql/src/img2vql/diagnose.py:57`.
+
+
+    Function ''diagnose_for_vql'' is oversized: CC=10, fan-out=17, mutations=13.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/diagnose.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/diagnose.py:57:God
+    Function: diagnose_for_vql'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: dispatch'
+  description: 'code2llm reports `God Function: dispatch` in `packages/dsl2vql/src/dsl2vql/bus.py:46`.
+
+
+    Function ''dispatch'' is oversized: CC=6, fan-out=11, mutations=8.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/dsl2vql/src/dsl2vql/bus.py
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/bus.py:46:God
+    Function: dispatch'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: handle_export'
+  description: 'code2llm reports `God Function: handle_export` in `packages/dsl2vql/src/dsl2vql/handlers/command.py:76`.
+
+
+    Function ''handle_export'' is oversized: CC=7, fan-out=11, mutations=7.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/dsl2vql/src/dsl2vql/handlers/command.py
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/handlers/command.py:76:God
+    Function: handle_export'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: handle_from_tokens'
+  description: 'code2llm reports `God Function: handle_from_tokens` in `packages/dsl2vql/src/dsl2vql/handlers/command.py:104`.
+
+
+    Function ''handle_from_tokens'' is oversized: CC=11, fan-out=14, mutations=2.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/dsl2vql/src/dsl2vql/handlers/command.py
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/handlers/command.py:104:God
+    Function: handle_from_tokens'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: handle_render'
+  description: 'code2llm reports `God Function: handle_render` in `packages/dsl2vql/src/dsl2vql/handlers/query.py:64`.
+
+
+    Function ''handle_render'' is oversized: CC=9, fan-out=11, mutations=6.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/dsl2vql/src/dsl2vql/handlers/query.py
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/handlers/query.py:64:God
+    Function: handle_render'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: image_stats'
+  description: 'code2llm reports `God Function: image_stats` in `src/vql/adopt/window.py:97`.
+
+
+    Function ''image_stats'' is oversized: CC=4, fan-out=20, mutations=17.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - src/vql/adopt/window.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/window.py:97:God Function:
+    image_stats'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: image_to_svg'
+  description: 'code2llm reports `God Function: image_to_svg` in `packages/img2svg/src/img2svg/svg_emit.py:59`.
+
+
+    Function ''image_to_svg'' is oversized: CC=5, fan-out=13, mutations=6.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2svg/src/img2svg/svg_emit.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2svg/src/img2svg/svg_emit.py:59:God
+    Function: image_to_svg'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: image_to_vql'
+  description: 'code2llm reports `God Function: image_to_vql` in `packages/img2svg/src/img2svg/to_vql.py:73`.
+
+
+    Function ''image_to_vql'' is oversized: CC=4, fan-out=13, mutations=5.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2svg/src/img2svg/to_vql.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2svg/src/img2svg/to_vql.py:73:God
+    Function: image_to_vql'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: img2nl_metadata_slice'
+  description: 'code2llm reports `God Function: img2nl_metadata_slice` in `packages/img2vql/src/img2vql/metadata.py:181`.
+
+
+    Function ''img2nl_metadata_slice'' is oversized: CC=9, fan-out=13, mutations=9.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/metadata.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/metadata.py:181:God
+    Function: img2nl_metadata_slice'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `packages/uri2img2svg/src/uri2img2svg/cli.py:12`.
+
+
+    Function ''main'' is oversized: CC=4, fan-out=9, mutations=8.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/uri2img2svg/src/uri2img2svg/cli.py
+  dedupe_key: 'code2llm:smell:god_function:packages/uri2img2svg/src/uri2img2svg/cli.py:12:God
+    Function: main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `packages/nlp2vql/src/nlp2vql/cli.py:13`.
+
+
+    Function ''main'' is oversized: CC=11, fan-out=13, mutations=20.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/nlp2vql/src/nlp2vql/cli.py
+  dedupe_key: 'code2llm:smell:god_function:packages/nlp2vql/src/nlp2vql/cli.py:13:God
+    Function: main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `examples/scope-window.py:11`.
+
+
+    Function ''main'' is oversized: CC=6, fan-out=7, mutations=10.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/scope-window.py
+  dedupe_key: 'code2llm:smell:god_function:examples/scope-window.py:11:God Function:
+    main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: metadata_from_diagnose'
+  description: 'code2llm reports `God Function: metadata_from_diagnose` in `packages/img2vql/src/img2vql/metadata.py:285`.
+
+
+    Function ''metadata_from_diagnose'' is oversized: CC=6, fan-out=12, mutations=8.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/metadata.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/metadata.py:285:God
+    Function: metadata_from_diagnose'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse'
+  description: 'code2llm reports `God Function: parse` in `src/vql/drawing/nl_parser.py:76`.
+
+
+    Function ''parse'' is oversized: CC=8, fan-out=14, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - src/vql/drawing/nl_parser.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/drawing/nl_parser.py:76:God Function:
+    parse'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: parse_img2svg_uri'
+  description: 'code2llm reports `God Function: parse_img2svg_uri` in `packages/uri2img2svg/src/uri2img2svg/uri.py:42`.
+
+
+    Function ''parse_img2svg_uri'' is oversized: CC=9, fan-out=7, mutations=7.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/uri2img2svg/src/uri2img2svg/uri.py
+  dedupe_key: 'code2llm:smell:god_function:packages/uri2img2svg/src/uri2img2svg/uri.py:42:God
+    Function: parse_img2svg_uri'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: patch_uri'
+  description: 'code2llm reports `God Function: patch_uri` in `packages/uri2vql/src/uri2vql/patch.py:24`.
+
+
+    Function ''patch_uri'' is oversized: CC=7, fan-out=12, mutations=7.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/uri2vql/src/uri2vql/patch.py
+  dedupe_key: 'code2llm:smell:god_function:packages/uri2vql/src/uri2vql/patch.py:24:God
+    Function: patch_uri'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: query_uri'
+  description: 'code2llm reports `God Function: query_uri` in `packages/uri2img2svg/src/uri2img2svg/query.py:37`.
+
+
+    Function ''query_uri'' is oversized: CC=13, fan-out=12, mutations=7.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/uri2img2svg/src/uri2img2svg/query.py
+  dedupe_key: 'code2llm:smell:god_function:packages/uri2img2svg/src/uri2img2svg/query.py:37:God
+    Function: query_uri'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: rapidocr_special_hits'
+  description: 'code2llm reports `God Function: rapidocr_special_hits` in `packages/img2vql/src/img2vql/metadata.py:51`.
+
+
+    Function ''rapidocr_special_hits'' is oversized: CC=10, fan-out=13, mutations=10.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/metadata.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/metadata.py:51:God
+    Function: rapidocr_special_hits'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: refresh_program_metadata'
+  description: 'code2llm reports `God Function: refresh_program_metadata` in `packages/img2vql/src/img2vql/metadata.py:245`.
+
+
+    Function ''refresh_program_metadata'' is oversized: CC=4, fan-out=13, mutations=6.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/metadata.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/metadata.py:245:God
+    Function: refresh_program_metadata'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: regions_to_svg'
+  description: 'code2llm reports `God Function: regions_to_svg` in `packages/img2svg/src/img2svg/svg_emit.py:11`.
+
+
+    Function ''regions_to_svg'' is oversized: CC=4, fan-out=5, mutations=15.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2svg/src/img2svg/svg_emit.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2svg/src/img2svg/svg_emit.py:11:God
+    Function: regions_to_svg'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: replay'
+  description: 'code2llm reports `God Function: replay` in `packages/dsl2vql/src/dsl2vql/events.py:75`.
+
+
+    Function ''replay'' is oversized: CC=6, fan-out=12, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/dsl2vql/src/dsl2vql/events.py
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/events.py:75:God
+    Function: replay'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: result_to_pb'
+  description: 'code2llm reports `God Function: result_to_pb` in `packages/dsl2vql/src/dsl2vql/pb_codec.py:143`.
+
+
+    Function ''result_to_pb'' is oversized: CC=4, fan-out=4, mutations=9.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/dsl2vql/src/dsl2vql/pb_codec.py
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/pb_codec.py:143:God
+    Function: result_to_pb'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: save_diagnose_to_program'
+  description: 'code2llm reports `God Function: save_diagnose_to_program` in `packages/img2vql/src/img2vql/metadata.py:313`.
+
+
+    Function ''save_diagnose_to_program'' is oversized: CC=4, fan-out=13, mutations=5.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/metadata.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/metadata.py:313:God
+    Function: save_diagnose_to_program'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: trace_contours_opencv'
+  description: 'code2llm reports `God Function: trace_contours_opencv` in `packages/img2svg/src/img2svg/trace.py:133`.
+
+
+    Function ''trace_contours_opencv'' is oversized: CC=8, fan-out=18, mutations=18.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2svg/src/img2svg/trace.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2svg/src/img2svg/trace.py:133:God
+    Function: trace_contours_opencv'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: trace_image_regions'
+  description: 'code2llm reports `God Function: trace_image_regions` in `packages/img2svg/src/img2svg/trace.py:87`.
+
+
+    Function ''trace_image_regions'' is oversized: CC=6, fan-out=15, mutations=14.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2svg/src/img2svg/trace.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2svg/src/img2svg/trace.py:87:God
+    Function: trace_image_regions'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: trace_to_vql_program'
+  description: 'code2llm reports `God Function: trace_to_vql_program` in `packages/img2svg/src/img2svg/to_vql.py:14`.
+
+
+    Function ''trace_to_vql_program'' is oversized: CC=8, fan-out=20, mutations=13.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2svg/src/img2svg/to_vql.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2svg/src/img2svg/to_vql.py:14:God
+    Function: trace_to_vql_program'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: validate_program'
+  description: 'code2llm reports `God Function: validate_program` in `src/vql/validation/spec.py:60`.
+
+
+    Function ''validate_program'' is oversized: CC=4, fan-out=9, mutations=12.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - src/vql/validation/spec.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/validation/spec.py:60:God Function:
+    validate_program'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: write_demo_screen'
+  description: 'code2llm reports `God Function: write_demo_screen` in `examples/generate-demo-screen.py:24`.
+
+
+    Function ''write_demo_screen'' is oversized: CC=1, fan-out=9, mutations=15.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/generate-demo-screen.py
+  dedupe_key: 'code2llm:smell:god_function:examples/generate-demo-screen.py:24:God
+    Function: write_demo_screen'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Module: src.vql.schema.program'
+  description: 'code2llm reports `God Module: src.vql.schema.program` in `src/vql/schema/program.py:1`.
+
+
+    Module ''src.vql.schema.program'' is too large (32 functions, 12 classes). Consider
+    splitting into sub-modules.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - src/vql/schema/program.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/schema/program.py:1:God Module:
+    src.vql.schema.program'
+applied: []
+skipped: []

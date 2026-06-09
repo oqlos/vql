@@ -5,7 +5,7 @@ PYTHON ?= .venv/bin/python
 PIP    ?= .venv/bin/pip
 PORT   ?= 8216
 
-PACKAGES := uri2vql nlp2vql dsl2vql cli2vql rest2vql mcp2vql
+PACKAGES := uri2vql nlp2vql img2vql img2svg uri2img2svg dsl2img2svg dsl2vql cli2vql rest2vql mcp2vql
 PYTEST   := $(PYTHON) -m pytest tests/ packages/dsl2vql/tests -q --tb=short
 
 .PHONY: help venv install install-dev proto test test-cov test-all \

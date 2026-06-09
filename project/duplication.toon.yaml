@@ -1,0 +1,112 @@
+# redup/duplication | 10 groups | 127f 10837L | 2026-06-09
+
+SUMMARY:
+  files_scanned: 127
+  total_lines:   10837
+  dup_groups:    10
+  dup_fragments: 20
+  saved_lines:   82
+  scan_ms:       4517
+
+HOTSPOTS[7] (files with most duplication):
+  src/vql/adopt/window.py  dup=48L  groups=2  frags=4  (0.4%)
+  packages/rest2vql/src/rest2vql/window_routes.py  dup=36L  groups=2  frags=4  (0.3%)
+  packages/uri2vql/src/uri2vql/uri.py  dup=20L  groups=1  frags=2  (0.2%)
+  packages/img2vql/src/img2vql/fingerprint.py  dup=11L  groups=1  frags=1  (0.1%)
+  packages/img2vql/src/img2vql/metadata.py  dup=11L  groups=1  frags=1  (0.1%)
+  packages/img2vql/src/img2vql/diagnose.py  dup=8L  groups=1  frags=1  (0.1%)
+  packages/uri2vql/src/uri2vql/window.py  dup=8L  groups=1  frags=1  (0.1%)
+
+DUPLICATES[10] (ranked by impact):
+  [a493779543db54d2]   STRU  _capture_with_grim  L=15 N=2 saved=15 sim=1.00
+      src/vql/adopt/window.py:217-231  (_capture_with_grim)
+      src/vql/adopt/window.py:289-303  (_capture_with_scrot)
+  [b0bee04d87d1dcf7]   STRU  post_window_diagnose  L=13 N=2 saved=13 sim=1.00
+      packages/rest2vql/src/rest2vql/window_routes.py:52-64  (post_window_diagnose)
+      packages/rest2vql/src/rest2vql/window_routes.py:83-95  (post_window_adopt)
+  [1c4cf578f377406c]   EXAC  _json_safe  L=11 N=2 saved=11 sim=1.00
+      packages/img2vql/src/img2vql/fingerprint.py:43-53  (_json_safe)
+      packages/img2vql/src/img2vql/metadata.py:13-23  (_json_safe)
+  [085bde726092c26c]   STRU  uri_for_window_diagnose  L=10 N=2 saved=10 sim=1.00
+      packages/uri2vql/src/uri2vql/uri.py:141-150  (uri_for_window_diagnose)
+      packages/uri2vql/src/uri2vql/uri.py:164-173  (uri_for_window_refresh)
+  [de5cf8cb508ec617]   STRU  runner  L=9 N=2 saved=9 sim=1.00
+      src/vql/adopt/window.py:221-229  (runner)
+      src/vql/adopt/window.py:293-301  (runner)
+  [99163857767f8c3d]   EXAC  _normalize_locale  L=8 N=2 saved=8 sim=1.00
+      packages/img2vql/src/img2vql/diagnose.py:9-16  (_normalize_locale)
+      packages/uri2vql/src/uri2vql/window.py:32-39  (_normalize_locale)
+  [6369695505dbbdc9]   EXAC  _load_program  L=5 N=2 saved=5 sim=1.00
+      packages/dsl2vql/src/dsl2vql/handlers/query.py:12-16  (_load_program)
+      packages/uri2vql/src/uri2vql/query.py:39-43  (_load_program)
+  [d0f06494257d1187]   STRU  post_window_detect  L=5 N=2 saved=5 sim=1.00
+      packages/rest2vql/src/rest2vql/window_routes.py:28-32  (post_window_detect)
+      packages/rest2vql/src/rest2vql/window_routes.py:36-40  (post_window_compare)
+  [5a0ff58926871c07]   EXAC  dispose  L=3 N=2 saved=3 sim=1.00
+      src/vql/drawing/renderers/base.py:82-84  (dispose)
+      src/vql/drawing/renderers/playwright.py:213-215  (dispose)
+  [ee7230ffe84d4777]   STRU  _role_name  L=3 N=2 saved=3 sim=1.00
+      packages/img2vql/src/img2vql/describe_ui.py:57-59  (_role_name)
+      packages/img2vql/src/img2vql/describe_ui.py:62-64  (_loc_name)
+
+REFACTOR[10] (ranked by priority):
+  [1] ○ extract_function   → src/vql/adopt/utils/_capture_with_grim.py
+      WHY: 2 occurrences of 15-line block across 1 files — saves 15 lines
+      FILES: src/vql/adopt/window.py
+  [2] ○ extract_function   → packages/rest2vql/src/rest2vql/utils/post_window_diagnose.py
+      WHY: 2 occurrences of 13-line block across 1 files — saves 13 lines
+      FILES: packages/rest2vql/src/rest2vql/window_routes.py
+  [3] ○ extract_function   → packages/img2vql/src/img2vql/utils/_json_safe.py
+      WHY: 2 occurrences of 11-line block across 2 files — saves 11 lines
+      FILES: packages/img2vql/src/img2vql/fingerprint.py, packages/img2vql/src/img2vql/metadata.py
+  [4] ○ extract_function   → packages/uri2vql/src/uri2vql/utils/uri_for_window_diagnose.py
+      WHY: 2 occurrences of 10-line block across 1 files — saves 10 lines
+      FILES: packages/uri2vql/src/uri2vql/uri.py
+  [5] ○ extract_function   → src/vql/adopt/utils/runner.py
+      WHY: 2 occurrences of 9-line block across 1 files — saves 9 lines
+      FILES: src/vql/adopt/window.py
+  [6] ○ extract_function   → packages/utils/_normalize_locale.py
+      WHY: 2 occurrences of 8-line block across 2 files — saves 8 lines
+      FILES: packages/img2vql/src/img2vql/diagnose.py, packages/uri2vql/src/uri2vql/window.py
+  [7] ○ extract_function   → packages/utils/_load_program.py
+      WHY: 2 occurrences of 5-line block across 2 files — saves 5 lines
+      FILES: packages/dsl2vql/src/dsl2vql/handlers/query.py, packages/uri2vql/src/uri2vql/query.py
+  [8] ○ extract_function   → packages/rest2vql/src/rest2vql/utils/post_window_detect.py
+      WHY: 2 occurrences of 5-line block across 1 files — saves 5 lines
+      FILES: packages/rest2vql/src/rest2vql/window_routes.py
+  [9] ○ extract_function   → src/vql/drawing/renderers/utils/dispose.py
+      WHY: 2 occurrences of 3-line block across 2 files — saves 3 lines
+      FILES: src/vql/drawing/renderers/base.py, src/vql/drawing/renderers/playwright.py
+  [10] ○ extract_function   → packages/img2vql/src/img2vql/utils/_role_name.py
+      WHY: 2 occurrences of 3-line block across 1 files — saves 3 lines
+      FILES: packages/img2vql/src/img2vql/describe_ui.py
+
+QUICK_WINS[6] (low risk, high savings — do first):
+  [1] extract_function   saved=15L  → src/vql/adopt/utils/_capture_with_grim.py
+      FILES: window.py
+  [2] extract_function   saved=13L  → packages/rest2vql/src/rest2vql/utils/post_window_diagnose.py
+      FILES: window_routes.py
+  [3] extract_function   saved=11L  → packages/img2vql/src/img2vql/utils/_json_safe.py
+      FILES: fingerprint.py, metadata.py
+  [4] extract_function   saved=10L  → packages/uri2vql/src/uri2vql/utils/uri_for_window_diagnose.py
+      FILES: uri.py
+  [5] extract_function   saved=9L  → src/vql/adopt/utils/runner.py
+      FILES: window.py
+  [6] extract_function   saved=8L  → packages/utils/_normalize_locale.py
+      FILES: diagnose.py, window.py
+
+EFFORT_ESTIMATE (total ≈ 2.7h):
+  medium _capture_with_grim                  saved=15L  ~30min
+  easy   post_window_diagnose                saved=13L  ~26min
+  easy   _json_safe                          saved=11L  ~22min
+  easy   uri_for_window_diagnose             saved=10L  ~20min
+  easy   runner                              saved=9L  ~18min
+  easy   _normalize_locale                   saved=8L  ~16min
+  easy   _load_program                       saved=5L  ~10min
+  easy   post_window_detect                  saved=5L  ~10min
+  easy   dispose                             saved=3L  ~6min
+  easy   _role_name                          saved=3L  ~6min
+
+METRICS-TARGET:
+  dup_groups:  10 → 0
+  saved_lines: 82 lines recoverable

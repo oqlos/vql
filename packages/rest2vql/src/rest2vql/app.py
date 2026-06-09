@@ -65,4 +65,8 @@ def create_app() -> FastAPI:
     async def post_commands(request: Request, file: str = "") -> Response:
         return await _handle(request, default_file=file)
 
+    from rest2vql.window_routes import router as window_router
+
+    app.include_router(window_router)
+
     return app
