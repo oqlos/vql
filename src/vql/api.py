@@ -24,7 +24,7 @@ from vql.schema import (
     ValidationSpec,
     VQLProgram,
 )
-from vql.validation import VQLValidationReport, validate_program
+from vql.validation import VQLValidationReport, validate_program, validate_program_metadata
 
 __all__ = [
     # Facade
@@ -50,5 +50,6 @@ __all__ = [
     "ShapeRegistry",
     # Validation
     "validate_program",
+    "validate_program_metadata",
     "VQLValidationReport",
 ]

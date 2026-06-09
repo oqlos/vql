@@ -32,6 +32,7 @@ from vql.api import (
     render_to_png,
     render_to_svg,
     validate_program,
+    validate_program_metadata,
 )
 
 __all__ = [
@@ -50,5 +51,6 @@ __all__ = [
     "render_to_png",
     "render_program",
     "validate_program",
+    "validate_program_metadata",
     "VQLValidationReport",
 ]

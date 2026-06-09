@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://oqlos.dev/vql/program-metadata/imgl-desktop.v1.json",
+  "title": "VQLProgram metadata — imgl desktop automation",
+  "description": "Optional metadata keys written by imgl export (capture provenance, OS window correlation).",
+  "type": "object",
+  "properties": {
+    "source": {
+      "type": "string",
+      "const": "imgl"
+    },
+    "image": {
+      "type": "string"
+    },
+    "analyzed_at": {
+      "type": "string"
+    },
+    "capture": {
+      "type": "object",
+      "properties": {
+        "path": { "type": "string" },
+        "method": { "type": "string" },
+        "display": { "type": "string" },
+        "session_type": { "type": "string" },
+        "monitor": { "type": "integer" },
+        "width": { "type": "integer" },
+        "height": { "type": "integer" },
+        "bytes": { "type": "integer" }
+      },
+      "additionalProperties": true
+    },
+    "window_os": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "app_label": { "type": ["string", "null"] },
+          "window_id": { "type": ["string", "null"] },
+          "monitor_name": { "type": ["string", "null"] },
+          "vision_iou": { "type": "number" },
+          "nl": { "type": ["string", "null"] }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
