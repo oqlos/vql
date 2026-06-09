@@ -1,46 +1,8 @@
 source: code2llm
-# generated in 0.13s
+# generated in 0.14s
 schema: code2llm.planfile_tickets.v1
 project_root: /home/tom/github/oqlos/vql
 tickets:
-- signal: code2llm_cc
-  title: 'Reduce cyclomatic complexity: packages.dsl2vql.src.dsl2vql.grammar.parse_line
-    (CC=28)'
-  description: 'code2llm reports `packages.dsl2vql.src.dsl2vql.grammar.parse_line`
-    at `packages/dsl2vql/src/dsl2vql/grammar.py:27` with cyclomatic complexity 28
-    (limit 15).
-
-
-    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
-    code2llm after the change and keep tests green.'
-  priority: high
-  labels:
-  - llm-ready
-  - code2llm
-  - complexity
-  - refactor
-  files:
-  - packages/dsl2vql/src/dsl2vql/grammar.py
-  dedupe_key: code2llm:cc:packages/dsl2vql/src/dsl2vql/grammar.py:packages.dsl2vql.src.dsl2vql.grammar.parse_line
-- signal: code2llm_cc
-  title: 'Reduce cyclomatic complexity: packages.dsl2vql.src.dsl2vql.pb_codec.envelope_to_dict
-    (CC=31)'
-  description: 'code2llm reports `packages.dsl2vql.src.dsl2vql.pb_codec.envelope_to_dict`
-    at `packages/dsl2vql/src/dsl2vql/pb_codec.py:60` with cyclomatic complexity 31
-    (limit 15).
-
-
-    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
-    code2llm after the change and keep tests green.'
-  priority: high
-  labels:
-  - llm-ready
-  - code2llm
-  - complexity
-  - refactor
-  files:
-  - packages/dsl2vql/src/dsl2vql/pb_codec.py
-  dedupe_key: code2llm:cc:packages/dsl2vql/src/dsl2vql/pb_codec.py:packages.dsl2vql.src.dsl2vql.pb_codec.envelope_to_dict
 - signal: code2llm_cc
   title: 'Reduce cyclomatic complexity: packages.img2vql.src.img2vql.detect._detect_buttons
     (CC=25)'
@@ -61,9 +23,11 @@ tickets:
   - packages/img2vql/src/img2vql/detect.py
   dedupe_key: code2llm:cc:packages/img2vql/src/img2vql/detect.py:packages.img2vql.src.img2vql.detect._detect_buttons
 - signal: code2llm_cc
-  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.cli.main (CC=53)'
-  description: 'code2llm reports `packages.uri2vql.src.uri2vql.cli.main` at `packages/uri2vql/src/uri2vql/cli.py:13`
-    with cyclomatic complexity 53 (limit 15).
+  title: 'Reduce cyclomatic complexity: src.vql.adopt.capture_diagnose.capture_diagnose
+    (CC=33)'
+  description: 'code2llm reports `src.vql.adopt.capture_diagnose.capture_diagnose`
+    at `src/vql/adopt/capture_diagnose.py:22` with cyclomatic complexity 33 (limit
+    15).
 
 
     Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
@@ -75,63 +39,8 @@ tickets:
   - complexity
   - refactor
   files:
-  - packages/uri2vql/src/uri2vql/cli.py
-  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/cli.py:packages.uri2vql.src.uri2vql.cli.main
-- signal: code2llm_cc
-  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
-    (CC=54)'
-  description: 'code2llm reports `packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri`
-    at `packages/uri2vql/src/uri2vql/nlp2uri.py:39` with cyclomatic complexity 54
-    (limit 15).
-
-
-    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
-    code2llm after the change and keep tests green.'
-  priority: high
-  labels:
-  - llm-ready
-  - code2llm
-  - complexity
-  - refactor
-  files:
-  - packages/uri2vql/src/uri2vql/nlp2uri.py
-  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/nlp2uri.py:packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
-- signal: code2llm_cc
-  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.window.query_window
-    (CC=69)'
-  description: 'code2llm reports `packages.uri2vql.src.uri2vql.window.query_window`
-    at `packages/uri2vql/src/uri2vql/window.py:391` with cyclomatic complexity 69
-    (limit 15).
-
-
-    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
-    code2llm after the change and keep tests green.'
-  priority: high
-  labels:
-  - llm-ready
-  - code2llm
-  - complexity
-  - refactor
-  files:
-  - packages/uri2vql/src/uri2vql/window.py
-  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/window.py:packages.uri2vql.src.uri2vql.window.query_window
-- signal: code2llm_cc
-  title: 'Reduce cyclomatic complexity: src.vql.adopt.window.capture_diagnose (CC=33)'
-  description: 'code2llm reports `src.vql.adopt.window.capture_diagnose` at `src/vql/adopt/window.py:388`
-    with cyclomatic complexity 33 (limit 15).
-
-
-    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
-    code2llm after the change and keep tests green.'
-  priority: high
-  labels:
-  - llm-ready
-  - code2llm
-  - complexity
-  - refactor
-  files:
-  - src/vql/adopt/window.py
-  dedupe_key: code2llm:cc:src/vql/adopt/window.py:src.vql.adopt.window.capture_diagnose
+  - src/vql/adopt/capture_diagnose.py
+  dedupe_key: code2llm:cc:src/vql/adopt/capture_diagnose.py:src.vql.adopt.capture_diagnose.capture_diagnose
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: _flood_rects'
   description: 'code2llm reports `God Function: _flood_rects` in `packages/img2vql/src/img2vql/detect.py:151`.
@@ -153,7 +62,7 @@ tickets:
     Function: _flood_rects'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: analyze_screenshot'
-  description: 'code2llm reports `God Function: analyze_screenshot` in `src/vql/adopt/window.py:712`.
+  description: 'code2llm reports `God Function: analyze_screenshot` in `src/vql/adopt/window.py:33`.
 
 
     Function ''analyze_screenshot'' is oversized: CC=13, fan-out=25, mutations=13.
@@ -168,8 +77,27 @@ tickets:
   - god-function
   files:
   - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/window.py:712:God Function:
+  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/window.py:33:God Function:
     analyze_screenshot'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: build_parser'
+  description: 'code2llm reports `God Function: build_parser` in `packages/uri2vql/src/uri2vql/cli.py:10`.
+
+
+    Function ''build_parser'' is oversized: CC=1, fan-out=19, mutations=102.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/uri2vql/src/uri2vql/cli.py
+  dedupe_key: 'code2llm:smell:god_function:packages/uri2vql/src/uri2vql/cli.py:10:God
+    Function: build_parser'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: describe_ui_layout'
   description: 'code2llm reports `God Function: describe_ui_layout` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
@@ -285,8 +213,27 @@ tickets:
   dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/cli.py:15:God
     Function: main'
 - signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: main'
+  description: 'code2llm reports `God Function: main` in `examples/photo-roundtrip-test.py:356`.
+
+
+    Function ''main'' is oversized: CC=5, fan-out=24, mutations=20.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/photo-roundtrip-test.py
+  dedupe_key: 'code2llm:smell:god_function:examples/photo-roundtrip-test.py:356:God
+    Function: main'
+- signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: screenshot_to_program'
-  description: 'code2llm reports `God Function: screenshot_to_program` in `src/vql/adopt/window.py:593`.
+  description: 'code2llm reports `God Function: screenshot_to_program` in `src/vql/adopt/program_grid.py:51`.
 
 
     Function ''screenshot_to_program'' is oversized: CC=12, fan-out=30, mutations=33.
@@ -300,12 +247,12 @@ tickets:
   - code-smell
   - god-function
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/window.py:593:God Function:
+  - src/vql/adopt/program_grid.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/program_grid.py:51:God Function:
     screenshot_to_program'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: test_img2svg_roundtrip'
-  description: 'code2llm reports `God Function: test_img2svg_roundtrip` in `examples/photo-roundtrip-test.py:99`.
+  description: 'code2llm reports `God Function: test_img2svg_roundtrip` in `examples/photo-roundtrip-test.py:134`.
 
 
     Function ''test_img2svg_roundtrip'' is oversized: CC=8, fan-out=22, mutations=19.
@@ -320,11 +267,31 @@ tickets:
   - god-function
   files:
   - examples/photo-roundtrip-test.py
-  dedupe_key: 'code2llm:smell:god_function:examples/photo-roundtrip-test.py:99:God
+  dedupe_key: 'code2llm:smell:god_function:examples/photo-roundtrip-test.py:134:God
     Function: test_img2svg_roundtrip'
 - signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: a'
+  description: 'code2llm reports `Shotgun Surgery: a` in `packages/img2vql/src/img2vql/cli.py:15`.
+
+
+    Mutation of variable ''a'' spans 16 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/cli.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/cli.py:15:Shotgun
+    Surgery: a'
+- signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: args'
-  description: 'code2llm reports `Shotgun Surgery: args` in `packages/dsl2img2svg/src/dsl2img2svg/cli.py:11`.
+  description: 'code2llm reports `Shotgun Surgery: args` in `packages/img2vql/src/img2vql/cli.py:15`.
 
 
     Mutation of variable ''args'' spans 15 functions. Changing this logic requires
@@ -339,12 +306,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/dsl2img2svg/src/dsl2img2svg/cli.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2img2svg/src/dsl2img2svg/cli.py:11:Shotgun
+  - packages/img2vql/src/img2vql/cli.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/cli.py:15:Shotgun
     Surgery: args'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: b'
-  description: 'code2llm reports `Shotgun Surgery: b` in `packages/img2vql/src/img2vql/detect.py:180`.
+  description: 'code2llm reports `Shotgun Surgery: b` in `packages/img2vql/src/img2vql/detect.py:79`.
 
 
     Mutation of variable ''b'' spans 5 functions. Changing this logic requires work
@@ -360,14 +327,34 @@ tickets:
   - shotgun-surgery
   files:
   - packages/img2vql/src/img2vql/detect.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/detect.py:180:Shotgun
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/detect.py:79:Shotgun
     Surgery: b'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: body'
+  description: 'code2llm reports `Shotgun Surgery: body` in `packages/rest2vql/src/rest2vql/app.py:19`.
+
+
+    Mutation of variable ''body'' spans 6 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/rest2vql/src/rest2vql/app.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/rest2vql/src/rest2vql/app.py:19:Shotgun
+    Surgery: body'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: cmd'
   description: 'code2llm reports `Shotgun Surgery: cmd` in `packages/dsl2vql/src/dsl2vql/handlers/command.py:104`.
 
 
-    Mutation of variable ''cmd'' spans 12 functions. Changing this logic requires
+    Mutation of variable ''cmd'' spans 27 functions. Changing this logic requires
     work in many places.
 
 
@@ -384,7 +371,7 @@ tickets:
     Surgery: cmd'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: color'
-  description: 'code2llm reports `Shotgun Surgery: color` in `src/vql/adopt/window.py:593`.
+  description: 'code2llm reports `Shotgun Surgery: color` in `packages/img2svg/src/img2svg/svg_emit.py:11`.
 
 
     Mutation of variable ''color'' spans 5 functions. Changing this logic requires
@@ -399,12 +386,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:593:Shotgun
+  - packages/img2svg/src/img2svg/svg_emit.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/svg_emit.py:11:Shotgun
     Surgery: color'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: colors'
-  description: 'code2llm reports `Shotgun Surgery: colors` in `src/vql/adopt/window.py:593`.
+  description: 'code2llm reports `Shotgun Surgery: colors` in `packages/img2vql/src/img2vql/diagnose.py:113`.
 
 
     Mutation of variable ''colors'' spans 6 functions. Changing this logic requires
@@ -419,55 +406,15 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:593:Shotgun
+  - packages/img2vql/src/img2vql/diagnose.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/diagnose.py:113:Shotgun
     Surgery: colors'
-- signal: code2llm_smell_shotgun_surgery
-  title: 'Address code smell: Shotgun Surgery: cx'
-  description: 'code2llm reports `Shotgun Surgery: cx` in `src/vql/adopt/window.py:593`.
-
-
-    Mutation of variable ''cx'' spans 9 functions. Changing this logic requires work
-    in many places.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: high
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - shotgun-surgery
-  files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:593:Shotgun
-    Surgery: cx'
-- signal: code2llm_smell_shotgun_surgery
-  title: 'Address code smell: Shotgun Surgery: cy'
-  description: 'code2llm reports `Shotgun Surgery: cy` in `src/vql/adopt/window.py:593`.
-
-
-    Mutation of variable ''cy'' spans 9 functions. Changing this logic requires work
-    in many places.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: high
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - shotgun-surgery
-  files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:593:Shotgun
-    Surgery: cy'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: d'
   description: 'code2llm reports `Shotgun Surgery: d` in `packages/img2vql/src/img2vql/cli.py:15`.
 
 
-    Mutation of variable ''d'' spans 6 functions. Changing this logic requires work
+    Mutation of variable ''d'' spans 8 functions. Changing this logic requires work
     in many places.
 
 
@@ -483,28 +430,8 @@ tickets:
   dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/cli.py:15:Shotgun
     Surgery: d'
 - signal: code2llm_smell_shotgun_surgery
-  title: 'Address code smell: Shotgun Surgery: data'
-  description: 'code2llm reports `Shotgun Surgery: data` in `packages/img2vql/src/img2vql/fingerprint.py:26`.
-
-
-    Mutation of variable ''data'' spans 15 functions. Changing this logic requires
-    work in many places.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: high
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - shotgun-surgery
-  files:
-  - packages/img2vql/src/img2vql/fingerprint.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/fingerprint.py:26:Shotgun
-    Surgery: data'
-- signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: elements'
-  description: 'code2llm reports `Shotgun Surgery: elements` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
+  description: 'code2llm reports `Shotgun Surgery: elements` in `packages/img2vql/src/img2vql/detect.py:317`.
 
 
     Mutation of variable ''elements'' spans 7 functions. Changing this logic requires
@@ -519,12 +446,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/img2vql/src/img2vql/describe_ui.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/describe_ui.py:67:Shotgun
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/detect.py:317:Shotgun
     Surgery: elements'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: extra'
-  description: 'code2llm reports `Shotgun Surgery: extra` in `packages/uri2vql/src/uri2vql/uri.py:116`.
+  description: 'code2llm reports `Shotgun Surgery: extra` in `packages/uri2vql/src/uri2vql/uri.py:49`.
 
 
     Mutation of variable ''extra'' spans 7 functions. Changing this logic requires
@@ -540,11 +467,11 @@ tickets:
   - shotgun-surgery
   files:
   - packages/uri2vql/src/uri2vql/uri.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/uri.py:116:Shotgun
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/uri.py:49:Shotgun
     Surgery: extra'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: fp'
-  description: 'code2llm reports `Shotgun Surgery: fp` in `packages/img2vql/src/img2vql/fingerprint.py:26`.
+  description: 'code2llm reports `Shotgun Surgery: fp` in `packages/img2vql/src/img2vql/fingerprint.py:10`.
 
 
     Mutation of variable ''fp'' spans 5 functions. Changing this logic requires work
@@ -560,14 +487,34 @@ tickets:
   - shotgun-surgery
   files:
   - packages/img2vql/src/img2vql/fingerprint.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/fingerprint.py:26:Shotgun
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/fingerprint.py:10:Shotgun
     Surgery: fp'
 - signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: grid'
+  description: 'code2llm reports `Shotgun Surgery: grid` in `packages/uri2img2svg/src/uri2img2svg/uri.py:42`.
+
+
+    Mutation of variable ''grid'' spans 5 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/uri2img2svg/src/uri2img2svg/uri.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2img2svg/src/uri2img2svg/uri.py:42:Shotgun
+    Surgery: grid'
+- signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: h'
-  description: 'code2llm reports `Shotgun Surgery: h` in `src/vql/adopt/window.py:97`.
+  description: 'code2llm reports `Shotgun Surgery: h` in `packages/img2svg/src/img2svg/svg_emit.py:11`.
 
 
-    Mutation of variable ''h'' spans 16 functions. Changing this logic requires work
+    Mutation of variable ''h'' spans 17 functions. Changing this logic requires work
     in many places.
 
 
@@ -579,12 +526,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:97:Shotgun Surgery:
-    h'
+  - packages/img2svg/src/img2svg/svg_emit.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/svg_emit.py:11:Shotgun
+    Surgery: h'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: idx'
-  description: 'code2llm reports `Shotgun Surgery: idx` in `src/vql/adopt/window.py:593`.
+  description: 'code2llm reports `Shotgun Surgery: idx` in `src/vql/adopt/capture_backends.py:168`.
 
 
     Mutation of variable ''idx'' spans 5 functions. Changing this logic requires work
@@ -599,15 +546,15 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:593:Shotgun
+  - src/vql/adopt/capture_backends.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/capture_backends.py:168:Shotgun
     Surgery: idx'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: im'
-  description: 'code2llm reports `Shotgun Surgery: im` in `src/vql/adopt/window.py:97`.
+  description: 'code2llm reports `Shotgun Surgery: im` in `src/vql/adopt/capture_backends.py:19`.
 
 
-    Mutation of variable ''im'' spans 12 functions. Changing this logic requires work
+    Mutation of variable ''im'' spans 14 functions. Changing this logic requires work
     in many places.
 
 
@@ -619,15 +566,15 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:97:Shotgun Surgery:
-    im'
+  - src/vql/adopt/capture_backends.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/capture_backends.py:19:Shotgun
+    Surgery: im'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: image'
-  description: 'code2llm reports `Shotgun Surgery: image` in `examples/generate-demo-screen.py:24`.
+  description: 'code2llm reports `Shotgun Surgery: image` in `packages/uri2vql/src/uri2vql/window_imgl.py:13`.
 
 
-    Mutation of variable ''image'' spans 5 functions. Changing this logic requires
+    Mutation of variable ''image'' spans 11 functions. Changing this logic requires
     work in many places.
 
 
@@ -639,12 +586,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - examples/generate-demo-screen.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:examples/generate-demo-screen.py:24:Shotgun
+  - packages/uri2vql/src/uri2vql/window_imgl.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/window_imgl.py:13:Shotgun
     Surgery: image'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: line'
-  description: 'code2llm reports `Shotgun Surgery: line` in `packages/dsl2vql/src/dsl2vql/bus.py:32`.
+  description: 'code2llm reports `Shotgun Surgery: line` in `packages/dsl2vql/src/dsl2vql/grammar_tokens.py:8`.
 
 
     Mutation of variable ''line'' spans 9 functions. Changing this logic requires
@@ -659,12 +606,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/dsl2vql/src/dsl2vql/bus.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/bus.py:32:Shotgun
+  - packages/dsl2vql/src/dsl2vql/grammar_tokens.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/grammar_tokens.py:8:Shotgun
     Surgery: line'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: lines'
-  description: 'code2llm reports `Shotgun Surgery: lines` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
+  description: 'code2llm reports `Shotgun Surgery: lines` in `packages/img2svg/src/img2svg/svg_emit.py:11`.
 
 
     Mutation of variable ''lines'' spans 6 functions. Changing this logic requires
@@ -679,12 +626,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/img2vql/src/img2vql/describe_ui.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/describe_ui.py:67:Shotgun
+  - packages/img2svg/src/img2svg/svg_emit.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/svg_emit.py:11:Shotgun
     Surgery: lines'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: loc'
-  description: 'code2llm reports `Shotgun Surgery: loc` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
+  description: 'code2llm reports `Shotgun Surgery: loc` in `packages/uri2vql/src/uri2vql/window_utils.py:29`.
 
 
     Mutation of variable ''loc'' spans 6 functions. Changing this logic requires work
@@ -699,15 +646,15 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/img2vql/src/img2vql/describe_ui.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/describe_ui.py:67:Shotgun
+  - packages/uri2vql/src/uri2vql/window_utils.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/window_utils.py:29:Shotgun
     Surgery: loc'
 - signal: code2llm_smell_shotgun_surgery
-  title: 'Address code smell: Shotgun Surgery: meta'
-  description: 'code2llm reports `Shotgun Surgery: meta` in `src/vql/adopt/window.py:593`.
+  title: 'Address code smell: Shotgun Surgery: locale'
+  description: 'code2llm reports `Shotgun Surgery: locale` in `packages/uri2vql/src/uri2vql/window_handlers.py:216`.
 
 
-    Mutation of variable ''meta'' spans 6 functions. Changing this logic requires
+    Mutation of variable ''locale'' spans 5 functions. Changing this logic requires
     work in many places.
 
 
@@ -719,15 +666,55 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:593:Shotgun
+  - packages/uri2vql/src/uri2vql/window_handlers.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/window_handlers.py:216:Shotgun
+    Surgery: locale'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: merged'
+  description: 'code2llm reports `Shotgun Surgery: merged` in `packages/img2vql/src/img2vql/pipeline/llm_vql.py:166`.
+
+
+    Mutation of variable ''merged'' spans 5 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/pipeline/llm_vql.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/pipeline/llm_vql.py:166:Shotgun
+    Surgery: merged'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: meta'
+  description: 'code2llm reports `Shotgun Surgery: meta` in `packages/img2vql/src/img2vql/pipeline/llm_vql.py:166`.
+
+
+    Mutation of variable ''meta'' spans 8 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2vql/src/img2vql/pipeline/llm_vql.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/pipeline/llm_vql.py:166:Shotgun
     Surgery: meta'
 - signal: code2llm_smell_shotgun_surgery
-  title: 'Address code smell: Shotgun Surgery: ok'
-  description: 'code2llm reports `Shotgun Surgery: ok` in `packages/dsl2vql/src/dsl2vql/handlers/query.py:36`.
+  title: 'Address code smell: Shotgun Surgery: msg'
+  description: 'code2llm reports `Shotgun Surgery: msg` in `packages/dsl2vql/src/dsl2vql/pb_body_codec.py:35`.
 
 
-    Mutation of variable ''ok'' spans 7 functions. Changing this logic requires work
+    Mutation of variable ''msg'' spans 8 functions. Changing this logic requires work
     in many places.
 
 
@@ -739,15 +726,35 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/dsl2vql/src/dsl2vql/handlers/query.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/handlers/query.py:36:Shotgun
+  - packages/dsl2vql/src/dsl2vql/pb_body_codec.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/pb_body_codec.py:35:Shotgun
+    Surgery: msg'
+- signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: ok'
+  description: 'code2llm reports `Shotgun Surgery: ok` in `packages/uri2vql/src/uri2vql/window_imgl.py:13`.
+
+
+    Mutation of variable ''ok'' spans 6 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/uri2vql/src/uri2vql/window_imgl.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/window_imgl.py:13:Shotgun
     Surgery: ok'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: out'
-  description: 'code2llm reports `Shotgun Surgery: out` in `packages/dsl2vql/src/dsl2vql/handlers/query.py:64`.
+  description: 'code2llm reports `Shotgun Surgery: out` in `packages/dsl2vql/src/dsl2vql/handlers/command.py:76`.
 
 
-    Mutation of variable ''out'' spans 19 functions. Changing this logic requires
+    Mutation of variable ''out'' spans 21 functions. Changing this logic requires
     work in many places.
 
 
@@ -759,15 +766,15 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/dsl2vql/src/dsl2vql/handlers/query.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/handlers/query.py:64:Shotgun
+  - packages/dsl2vql/src/dsl2vql/handlers/command.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/handlers/command.py:76:Shotgun
     Surgery: out'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: p'
-  description: 'code2llm reports `Shotgun Surgery: p` in `src/vql/adopt/window.py:97`.
+  description: 'code2llm reports `Shotgun Surgery: p` in `packages/img2vql/src/img2vql/pipeline/llm_client.py:19`.
 
 
-    Mutation of variable ''p'' spans 6 functions. Changing this logic requires work
+    Mutation of variable ''p'' spans 7 functions. Changing this logic requires work
     in many places.
 
 
@@ -779,9 +786,9 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:97:Shotgun Surgery:
-    p'
+  - packages/img2vql/src/img2vql/pipeline/llm_client.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/pipeline/llm_client.py:19:Shotgun
+    Surgery: p'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: parsed'
   description: 'code2llm reports `Shotgun Surgery: parsed` in `packages/uri2img2svg/src/uri2img2svg/uri.py:42`.
@@ -804,7 +811,7 @@ tickets:
     Surgery: parsed'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: parser'
-  description: 'code2llm reports `Shotgun Surgery: parser` in `packages/dsl2img2svg/src/dsl2img2svg/cli.py:11`.
+  description: 'code2llm reports `Shotgun Surgery: parser` in `packages/img2vql/src/img2vql/cli.py:15`.
 
 
     Mutation of variable ''parser'' spans 15 functions. Changing this logic requires
@@ -819,15 +826,15 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/dsl2img2svg/src/dsl2img2svg/cli.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2img2svg/src/dsl2img2svg/cli.py:11:Shotgun
+  - packages/img2vql/src/img2vql/cli.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/cli.py:15:Shotgun
     Surgery: parser'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: path'
-  description: 'code2llm reports `Shotgun Surgery: path` in `packages/uri2vql/src/uri2vql/window.py:13`.
+  description: 'code2llm reports `Shotgun Surgery: path` in `packages/uri2vql/src/uri2vql/window_utils.py:10`.
 
 
-    Mutation of variable ''path'' spans 31 functions. Changing this logic requires
+    Mutation of variable ''path'' spans 36 functions. Changing this logic requires
     work in many places.
 
 
@@ -839,15 +846,15 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/uri2vql/src/uri2vql/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/window.py:13:Shotgun
+  - packages/uri2vql/src/uri2vql/window_utils.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/window_utils.py:10:Shotgun
     Surgery: path'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: payload'
-  description: 'code2llm reports `Shotgun Surgery: payload` in `packages/uri2vql/src/uri2vql/window.py:157`.
+  description: 'code2llm reports `Shotgun Surgery: payload` in `packages/img2vql/src/img2vql/cli.py:15`.
 
 
-    Mutation of variable ''payload'' spans 22 functions. Changing this logic requires
+    Mutation of variable ''payload'' spans 38 functions. Changing this logic requires
     work in many places.
 
 
@@ -859,12 +866,32 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/uri2vql/src/uri2vql/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/window.py:157:Shotgun
+  - packages/img2vql/src/img2vql/cli.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/cli.py:15:Shotgun
     Surgery: payload'
 - signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: png_path'
+  description: 'code2llm reports `Shotgun Surgery: png_path` in `examples/photo-roundtrip-test.py:306`.
+
+
+    Mutation of variable ''png_path'' spans 5 functions. Changing this logic requires
+    work in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - examples/photo-roundtrip-test.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:examples/photo-roundtrip-test.py:306:Shotgun
+    Surgery: png_path'
+- signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: proc'
-  description: 'code2llm reports `Shotgun Surgery: proc` in `src/vql/adopt/window.py:388`.
+  description: 'code2llm reports `Shotgun Surgery: proc` in `src/vql/adopt/capture_backends.py:119`.
 
 
     Mutation of variable ''proc'' spans 5 functions. Changing this logic requires
@@ -879,15 +906,15 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:388:Shotgun
+  - src/vql/adopt/capture_backends.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/capture_backends.py:119:Shotgun
     Surgery: proc'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: program'
-  description: 'code2llm reports `Shotgun Surgery: program` in `packages/dsl2vql/src/dsl2vql/handlers/command.py:16`.
+  description: 'code2llm reports `Shotgun Surgery: program` in `examples/photo-roundtrip-test.py:306`.
 
 
-    Mutation of variable ''program'' spans 18 functions. Changing this logic requires
+    Mutation of variable ''program'' spans 23 functions. Changing this logic requires
     work in many places.
 
 
@@ -899,15 +926,35 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/dsl2vql/src/dsl2vql/handlers/command.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/handlers/command.py:16:Shotgun
+  - examples/photo-roundtrip-test.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:examples/photo-roundtrip-test.py:306:Shotgun
     Surgery: program'
 - signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: r'
+  description: 'code2llm reports `Shotgun Surgery: r` in `examples/photo-roundtrip-test.py:49`.
+
+
+    Mutation of variable ''r'' spans 8 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - examples/photo-roundtrip-test.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:examples/photo-roundtrip-test.py:49:Shotgun
+    Surgery: r'
+- signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: result'
-  description: 'code2llm reports `Shotgun Surgery: result` in `packages/dsl2vql/src/dsl2vql/handlers/command.py:58`.
+  description: 'code2llm reports `Shotgun Surgery: result` in `packages/img2vql/src/img2vql/fingerprint.py:56`.
 
 
-    Mutation of variable ''result'' spans 27 functions. Changing this logic requires
+    Mutation of variable ''result'' spans 32 functions. Changing this logic requires
     work in many places.
 
 
@@ -919,12 +966,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/dsl2vql/src/dsl2vql/handlers/command.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/handlers/command.py:58:Shotgun
+  - packages/img2vql/src/img2vql/fingerprint.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/fingerprint.py:56:Shotgun
     Surgery: result'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: rgb'
-  description: 'code2llm reports `Shotgun Surgery: rgb` in `src/vql/adopt/window.py:593`.
+  description: 'code2llm reports `Shotgun Surgery: rgb` in `packages/img2svg/src/img2svg/trace.py:89`.
 
 
     Mutation of variable ''rgb'' spans 5 functions. Changing this logic requires work
@@ -939,12 +986,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:593:Shotgun
+  - packages/img2svg/src/img2svg/trace.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/trace.py:89:Shotgun
     Surgery: rgb'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: rw'
-  description: 'code2llm reports `Shotgun Surgery: rw` in `src/vql/adopt/window.py:593`.
+  description: 'code2llm reports `Shotgun Surgery: rw` in `packages/img2svg/src/img2svg/svg_emit.py:11`.
 
 
     Mutation of variable ''rw'' spans 5 functions. Changing this logic requires work
@@ -959,15 +1006,15 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:593:Shotgun
+  - packages/img2svg/src/img2svg/svg_emit.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/svg_emit.py:11:Shotgun
     Surgery: rw'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: scene'
-  description: 'code2llm reports `Shotgun Surgery: scene` in `src/vql/compiler/legacy_drawcommand.py:33`.
+  description: 'code2llm reports `Shotgun Surgery: scene` in `packages/img2vql/src/img2vql/fingerprint.py:56`.
 
 
-    Mutation of variable ''scene'' spans 8 functions. Changing this logic requires
+    Mutation of variable ''scene'' spans 9 functions. Changing this logic requires
     work in many places.
 
 
@@ -979,12 +1026,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/compiler/legacy_drawcommand.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/compiler/legacy_drawcommand.py:33:Shotgun
+  - packages/img2vql/src/img2vql/fingerprint.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/fingerprint.py:56:Shotgun
     Surgery: scene'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: similarity'
-  description: 'code2llm reports `Shotgun Surgery: similarity` in `packages/img2vql/src/img2vql/diagnose.py:113`.
+  description: 'code2llm reports `Shotgun Surgery: similarity` in `packages/img2vql/src/img2vql/fingerprint.py:56`.
 
 
     Mutation of variable ''similarity'' spans 5 functions. Changing this logic requires
@@ -999,12 +1046,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/img2vql/src/img2vql/diagnose.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/diagnose.py:113:Shotgun
+  - packages/img2vql/src/img2vql/fingerprint.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/fingerprint.py:56:Shotgun
     Surgery: similarity'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: small'
-  description: 'code2llm reports `Shotgun Surgery: small` in `src/vql/adopt/window.py:97`.
+  description: 'code2llm reports `Shotgun Surgery: small` in `src/vql/adopt/capture_image.py:32`.
 
 
     Mutation of variable ''small'' spans 5 functions. Changing this logic requires
@@ -1019,9 +1066,9 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:97:Shotgun Surgery:
-    small'
+  - src/vql/adopt/capture_image.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/capture_image.py:32:Shotgun
+    Surgery: small'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: sub'
   description: 'code2llm reports `Shotgun Surgery: sub` in `packages/img2vql/src/img2vql/cli.py:15`.
@@ -1044,7 +1091,7 @@ tickets:
     Surgery: sub'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: svg'
-  description: 'code2llm reports `Shotgun Surgery: svg` in `packages/dsl2vql/src/dsl2vql/handlers/command.py:76`.
+  description: 'code2llm reports `Shotgun Surgery: svg` in `packages/dsl2vql/src/dsl2vql/handlers/query.py:64`.
 
 
     Mutation of variable ''svg'' spans 5 functions. Changing this logic requires work
@@ -1059,15 +1106,35 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/dsl2vql/src/dsl2vql/handlers/command.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/handlers/command.py:76:Shotgun
+  - packages/dsl2vql/src/dsl2vql/handlers/query.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/handlers/query.py:64:Shotgun
     Surgery: svg'
 - signal: code2llm_smell_shotgun_surgery
+  title: 'Address code smell: Shotgun Surgery: t'
+  description: 'code2llm reports `Shotgun Surgery: t` in `packages/img2svg/src/img2svg/cli.py:14`.
+
+
+    Mutation of variable ''t'' spans 10 functions. Changing this logic requires work
+    in many places.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: high
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - shotgun-surgery
+  files:
+  - packages/img2svg/src/img2svg/cli.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/cli.py:14:Shotgun
+    Surgery: t'
+- signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: text'
-  description: 'code2llm reports `Shotgun Surgery: text` in `packages/nlp2vql/src/nlp2vql/to_dsl.py:8`.
+  description: 'code2llm reports `Shotgun Surgery: text` in `packages/dsl2vql/src/dsl2vql/cli.py:13`.
 
 
-    Mutation of variable ''text'' spans 6 functions. Changing this logic requires
+    Mutation of variable ''text'' spans 7 functions. Changing this logic requires
     work in many places.
 
 
@@ -1079,12 +1146,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/nlp2vql/src/nlp2vql/to_dsl.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/nlp2vql/src/nlp2vql/to_dsl.py:8:Shotgun
+  - packages/dsl2vql/src/dsl2vql/cli.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/dsl2vql/src/dsl2vql/cli.py:13:Shotgun
     Surgery: text'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: trace'
-  description: 'code2llm reports `Shotgun Surgery: trace` in `packages/img2svg/src/img2svg/to_vql.py:112`.
+  description: 'code2llm reports `Shotgun Surgery: trace` in `examples/photo-roundtrip-test.py:134`.
 
 
     Mutation of variable ''trace'' spans 5 functions. Changing this logic requires
@@ -1099,12 +1166,12 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/img2svg/src/img2svg/to_vql.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/to_vql.py:112:Shotgun
+  - examples/photo-roundtrip-test.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:examples/photo-roundtrip-test.py:134:Shotgun
     Surgery: trace'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: unique'
-  description: 'code2llm reports `Shotgun Surgery: unique` in `src/vql/adopt/window.py:97`.
+  description: 'code2llm reports `Shotgun Surgery: unique` in `src/vql/adopt/portal_capture.py:18`.
 
 
     Mutation of variable ''unique'' spans 5 functions. Changing this logic requires
@@ -1119,15 +1186,15 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:97:Shotgun Surgery:
-    unique'
+  - src/vql/adopt/portal_capture.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/portal_capture.py:18:Shotgun
+    Surgery: unique'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: verb'
   description: 'code2llm reports `Shotgun Surgery: verb` in `packages/dsl2vql/src/dsl2vql/handlers/command.py:104`.
 
 
-    Mutation of variable ''verb'' spans 9 functions. Changing this logic requires
+    Mutation of variable ''verb'' spans 8 functions. Changing this logic requires
     work in many places.
 
 
@@ -1144,10 +1211,10 @@ tickets:
     Surgery: verb'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: vql_path'
-  description: 'code2llm reports `Shotgun Surgery: vql_path` in `examples/photo-roundtrip-test.py:72`.
+  description: 'code2llm reports `Shotgun Surgery: vql_path` in `examples/photo-roundtrip-test.py:134`.
 
 
-    Mutation of variable ''vql_path'' spans 5 functions. Changing this logic requires
+    Mutation of variable ''vql_path'' spans 6 functions. Changing this logic requires
     work in many places.
 
 
@@ -1160,14 +1227,14 @@ tickets:
   - shotgun-surgery
   files:
   - examples/photo-roundtrip-test.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:examples/photo-roundtrip-test.py:72:Shotgun
+  dedupe_key: 'code2llm:smell:shotgun_surgery:examples/photo-roundtrip-test.py:134:Shotgun
     Surgery: vql_path'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: w'
-  description: 'code2llm reports `Shotgun Surgery: w` in `src/vql/adopt/window.py:97`.
+  description: 'code2llm reports `Shotgun Surgery: w` in `packages/uri2vql/src/uri2vql/cli.py:10`.
 
 
-    Mutation of variable ''w'' spans 18 functions. Changing this logic requires work
+    Mutation of variable ''w'' spans 19 functions. Changing this logic requires work
     in many places.
 
 
@@ -1179,15 +1246,15 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:src/vql/adopt/window.py:97:Shotgun Surgery:
-    w'
+  - packages/uri2vql/src/uri2vql/cli.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/uri2vql/src/uri2vql/cli.py:10:Shotgun
+    Surgery: w'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: x'
-  description: 'code2llm reports `Shotgun Surgery: x` in `packages/img2vql/src/img2vql/detect.py:180`.
+  description: 'code2llm reports `Shotgun Surgery: x` in `packages/img2svg/src/img2svg/svg_emit.py:11`.
 
 
-    Mutation of variable ''x'' spans 8 functions. Changing this logic requires work
+    Mutation of variable ''x'' spans 9 functions. Changing this logic requires work
     in many places.
 
 
@@ -1199,29 +1266,9 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/img2vql/src/img2vql/detect.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/detect.py:180:Shotgun
+  - packages/img2svg/src/img2svg/svg_emit.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/svg_emit.py:11:Shotgun
     Surgery: x'
-- signal: code2llm_smell_shotgun_surgery
-  title: 'Address code smell: Shotgun Surgery: x0'
-  description: 'code2llm reports `Shotgun Surgery: x0` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
-
-
-    Mutation of variable ''x0'' spans 9 functions. Changing this logic requires work
-    in many places.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: high
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - shotgun-surgery
-  files:
-  - packages/img2vql/src/img2vql/describe_ui.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/describe_ui.py:67:Shotgun
-    Surgery: x0'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: x1'
   description: 'code2llm reports `Shotgun Surgery: x1` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
@@ -1244,10 +1291,10 @@ tickets:
     Surgery: x1'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: y'
-  description: 'code2llm reports `Shotgun Surgery: y` in `packages/img2vql/src/img2vql/detect.py:180`.
+  description: 'code2llm reports `Shotgun Surgery: y` in `packages/img2svg/src/img2svg/svg_emit.py:11`.
 
 
-    Mutation of variable ''y'' spans 7 functions. Changing this logic requires work
+    Mutation of variable ''y'' spans 8 functions. Changing this logic requires work
     in many places.
 
 
@@ -1259,29 +1306,9 @@ tickets:
   - code-smell
   - shotgun-surgery
   files:
-  - packages/img2vql/src/img2vql/detect.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/detect.py:180:Shotgun
+  - packages/img2svg/src/img2svg/svg_emit.py
+  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2svg/src/img2svg/svg_emit.py:11:Shotgun
     Surgery: y'
-- signal: code2llm_smell_shotgun_surgery
-  title: 'Address code smell: Shotgun Surgery: y0'
-  description: 'code2llm reports `Shotgun Surgery: y0` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
-
-
-    Mutation of variable ''y0'' spans 8 functions. Changing this logic requires work
-    in many places.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: high
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - shotgun-surgery
-  files:
-  - packages/img2vql/src/img2vql/describe_ui.py
-  dedupe_key: 'code2llm:smell:shotgun_surgery:packages/img2vql/src/img2vql/describe_ui.py:67:Shotgun
-    Surgery: y0'
 - signal: code2llm_smell_shotgun_surgery
   title: 'Address code smell: Shotgun Surgery: y1'
   description: 'code2llm reports `Shotgun Surgery: y1` in `packages/img2vql/src/img2vql/describe_ui.py:67`.
@@ -1341,6 +1368,25 @@ tickets:
   - packages/img2svg/src/img2svg/trace.py
   dedupe_key: code2llm:cc:packages/img2svg/src/img2svg/trace.py:packages.img2svg.src.img2svg.trace._merge_grid_cells
 - signal: code2llm_cc
+  title: 'Reduce cyclomatic complexity: packages.img2vql.src.img2vql.pipeline.orchestrate.analyze_image_to_vql
+    (CC=24)'
+  description: 'code2llm reports `packages.img2vql.src.img2vql.pipeline.orchestrate.analyze_image_to_vql`
+    at `packages/img2vql/src/img2vql/pipeline/orchestrate.py:25` with cyclomatic complexity
+    24 (limit 15).
+
+
+    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
+    code2llm after the change and keep tests green.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - complexity
+  - refactor
+  files:
+  - packages/img2vql/src/img2vql/pipeline/orchestrate.py
+  dedupe_key: code2llm:cc:packages/img2vql/src/img2vql/pipeline/orchestrate.py:packages.img2vql.src.img2vql.pipeline.orchestrate.analyze_image_to_vql
+- signal: code2llm_cc
   title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.query.query_uri
     (CC=15)'
   description: 'code2llm reports `packages.uri2vql.src.uri2vql.query.query_uri` at
@@ -1360,30 +1406,11 @@ tickets:
   - packages/uri2vql/src/uri2vql/query.py
   dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/query.py:packages.uri2vql.src.uri2vql.query.query_uri
 - signal: code2llm_cc
-  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.window._diagnose_fallback
-    (CC=15)'
-  description: 'code2llm reports `packages.uri2vql.src.uri2vql.window._diagnose_fallback`
-    at `packages/uri2vql/src/uri2vql/window.py:42` with cyclomatic complexity 15 (limit
-    15).
-
-
-    Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
-    code2llm after the change and keep tests green.'
-  priority: normal
-  labels:
-  - llm-ready
-  - code2llm
-  - complexity
-  - refactor
-  files:
-  - packages/uri2vql/src/uri2vql/window.py
-  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/window.py:packages.uri2vql.src.uri2vql.window._diagnose_fallback
-- signal: code2llm_cc
-  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.window._query_window_imgl
+  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.window_imgl.query_window_imgl
     (CC=17)'
-  description: 'code2llm reports `packages.uri2vql.src.uri2vql.window._query_window_imgl`
-    at `packages/uri2vql/src/uri2vql/window.py:204` with cyclomatic complexity 17
-    (limit 15).
+  description: 'code2llm reports `packages.uri2vql.src.uri2vql.window_imgl.query_window_imgl`
+    at `packages/uri2vql/src/uri2vql/window_imgl.py:13` with cyclomatic complexity
+    17 (limit 15).
 
 
     Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
@@ -1395,13 +1422,14 @@ tickets:
   - complexity
   - refactor
   files:
-  - packages/uri2vql/src/uri2vql/window.py
-  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/window.py:packages.uri2vql.src.uri2vql.window._query_window_imgl
+  - packages/uri2vql/src/uri2vql/window_imgl.py
+  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/window_imgl.py:packages.uri2vql.src.uri2vql.window_imgl.query_window_imgl
 - signal: code2llm_cc
-  title: 'Reduce cyclomatic complexity: src.vql.adopt.window._capture_with_portal
+  title: 'Reduce cyclomatic complexity: packages.uri2vql.src.uri2vql.window_utils.diagnose_fallback
     (CC=15)'
-  description: 'code2llm reports `src.vql.adopt.window._capture_with_portal` at `src/vql/adopt/window.py:251`
-    with cyclomatic complexity 15 (limit 15).
+  description: 'code2llm reports `packages.uri2vql.src.uri2vql.window_utils.diagnose_fallback`
+    at `packages/uri2vql/src/uri2vql/window_utils.py:39` with cyclomatic complexity
+    15 (limit 15).
 
 
     Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
@@ -1413,12 +1441,13 @@ tickets:
   - complexity
   - refactor
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: code2llm:cc:src/vql/adopt/window.py:src.vql.adopt.window._capture_with_portal
+  - packages/uri2vql/src/uri2vql/window_utils.py
+  dedupe_key: code2llm:cc:packages/uri2vql/src/uri2vql/window_utils.py:packages.uri2vql.src.uri2vql.window_utils.diagnose_fallback
 - signal: code2llm_cc
-  title: 'Reduce cyclomatic complexity: src.vql.adopt.window._merge_grid_colors (CC=15)'
-  description: 'code2llm reports `src.vql.adopt.window._merge_grid_colors` at `src/vql/adopt/window.py:559`
-    with cyclomatic complexity 15 (limit 15).
+  title: 'Reduce cyclomatic complexity: src.vql.adopt.program_grid.merge_grid_colors
+    (CC=15)'
+  description: 'code2llm reports `src.vql.adopt.program_grid.merge_grid_colors` at
+    `src/vql/adopt/program_grid.py:17` with cyclomatic complexity 15 (limit 15).
 
 
     Extract smaller functions, flatten conditionals, or split strategy branches. Re-run
@@ -1430,8 +1459,8 @@ tickets:
   - complexity
   - refactor
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: code2llm:cc:src/vql/adopt/window.py:src.vql.adopt.window._merge_grid_colors
+  - src/vql/adopt/program_grid.py
+  dedupe_key: code2llm:cc:src/vql/adopt/program_grid.py:src.vql.adopt.program_grid.merge_grid_colors
 - signal: code2llm_cc
   title: 'Reduce cyclomatic complexity: src.vql.drawing.svg_path_parser._dispatch_command
     (CC=16)'
@@ -1471,11 +1500,174 @@ tickets:
   - src/vql/drawing/svg_path_parser.py
   dedupe_key: code2llm:cc:src/vql/drawing/svg_path_parser.py:src.vql.drawing.svg_path_parser._scale_groups
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/butterfly_generator.py:22`.
+  title: 'Address code smell: Data Clump: im, w, h'
+  description: 'code2llm reports `Data Clump: im, w, h` in `packages/img2vql/src/img2vql/detect.py:91`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (im, w, h) are used together in multiple functions: packages.img2vql.src.img2vql.detect._detect_titlebar,
+    packages.img2vql.src.img2vql.detect._detect_panels, packages.img2vql.src.img2vql.detect._detect_buttons.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:data_clump:packages/img2vql/src/img2vql/detect.py:91:Data
+    Clump: im, w, h'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: im, w, h'
+  description: 'code2llm reports `Data Clump: im, w, h` in `packages/img2vql/src/img2vql/detect.py:116`.
+
+
+    Arguments (im, w, h) are used together in multiple functions: packages.img2vql.src.img2vql.detect._detect_titlebar,
+    packages.img2vql.src.img2vql.detect._detect_panels, packages.img2vql.src.img2vql.detect._detect_buttons.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:data_clump:packages/img2vql/src/img2vql/detect.py:116:Data
+    Clump: im, w, h'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: im, w, h'
+  description: 'code2llm reports `Data Clump: im, w, h` in `packages/img2vql/src/img2vql/detect.py:180`.
+
+
+    Arguments (im, w, h) are used together in multiple functions: packages.img2vql.src.img2vql.detect._detect_titlebar,
+    packages.img2vql.src.img2vql.detect._detect_panels, packages.img2vql.src.img2vql.detect._detect_buttons.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - packages/img2vql/src/img2vql/detect.py
+  dedupe_key: 'code2llm:smell:data_clump:packages/img2vql/src/img2vql/detect.py:180:Data
+    Clump: im, w, h'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: page, self, human_like'
+  description: 'code2llm reports `Data Clump: page, self, human_like` in `src/vql/renderers/playwright.py:21`.
+
+
+    Arguments (page, self, human_like) are used together in multiple functions: src.vql.renderers.playwright.PlaywrightVQLRenderer.__init__,
+    src.vql.drawing.renderers.playwright.PlaywrightRenderer.__init__.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/renderers/playwright.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/renderers/playwright.py:21:Data Clump:
+    page, self, human_like'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: page, self, human_like'
+  description: 'code2llm reports `Data Clump: page, self, human_like` in `src/vql/drawing/renderers/playwright.py:28`.
+
+
+    Arguments (page, self, human_like) are used together in multiple functions: src.vql.renderers.playwright.PlaywrightVQLRenderer.__init__,
+    src.vql.drawing.renderers.playwright.PlaywrightRenderer.__init__.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/renderers/playwright.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/playwright.py:28:Data
+    Clump: page, self, human_like'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: points, fill, self, color'
+  description: 'code2llm reports `Data Clump: points, fill, self, color` in `src/vql/drawing/renderers/base.py:45`.
+
+
+    Arguments (points, fill, self, color) are used together in multiple functions:
+    src.vql.drawing.renderers.base.Renderer.draw_path, src.vql.drawing.renderers.playwright.PlaywrightRenderer.draw_path,
+    src.vql.drawing.renderers.svg.SVGRenderer.draw_path.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/renderers/base.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/base.py:45:Data
+    Clump: points, fill, self, color'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: points, fill, self, color'
+  description: 'code2llm reports `Data Clump: points, fill, self, color` in `src/vql/drawing/renderers/playwright.py:152`.
+
+
+    Arguments (points, fill, self, color) are used together in multiple functions:
+    src.vql.drawing.renderers.base.Renderer.draw_path, src.vql.drawing.renderers.playwright.PlaywrightRenderer.draw_path,
+    src.vql.drawing.renderers.svg.SVGRenderer.draw_path.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/renderers/playwright.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/playwright.py:152:Data
+    Clump: points, fill, self, color'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: points, fill, self, color'
+  description: 'code2llm reports `Data Clump: points, fill, self, color` in `src/vql/drawing/renderers/svg.py:51`.
+
+
+    Arguments (points, fill, self, color) are used together in multiple functions:
+    src.vql.drawing.renderers.base.Renderer.draw_path, src.vql.drawing.renderers.playwright.PlaywrightRenderer.draw_path,
+    src.vql.drawing.renderers.svg.SVGRenderer.draw_path.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - data-clump
+  files:
+  - src/vql/drawing/renderers/svg.py
+  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/svg.py:51:Data
+    Clump: points, fill, self, color'
+- signal: code2llm_smell_data_clump
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/butterfly_generator.py:22`.
+
+
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1505,13 +1697,13 @@ tickets:
   files:
   - src/vql/drawing/butterfly_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/butterfly_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/dot_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/dot_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1541,13 +1733,13 @@ tickets:
   files:
   - src/vql/drawing/dot_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/dot_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/house_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/house_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1577,13 +1769,13 @@ tickets:
   files:
   - src/vql/drawing/house_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/house_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/octagon_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/octagon_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1613,13 +1805,13 @@ tickets:
   files:
   - src/vql/drawing/octagon_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/octagon_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/triangle_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/triangle_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1649,13 +1841,13 @@ tickets:
   files:
   - src/vql/drawing/triangle_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/triangle_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/fish_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/fish_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1685,13 +1877,13 @@ tickets:
   files:
   - src/vql/drawing/fish_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/fish_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/castle_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/castle_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1721,13 +1913,13 @@ tickets:
   files:
   - src/vql/drawing/castle_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/castle_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/diamond_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/diamond_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1757,13 +1949,13 @@ tickets:
   files:
   - src/vql/drawing/diamond_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/diamond_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/bird_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/bird_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1793,13 +1985,13 @@ tickets:
   files:
   - src/vql/drawing/bird_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/bird_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/mountain_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/mountain_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1829,13 +2021,13 @@ tickets:
   files:
   - src/vql/drawing/mountain_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/mountain_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/path_generator.py:16`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/path_generator.py:16`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1865,13 +2057,13 @@ tickets:
   files:
   - src/vql/drawing/path_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/path_generator.py:16:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/tree_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/tree_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1901,13 +2093,13 @@ tickets:
   files:
   - src/vql/drawing/tree_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/tree_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/crescent_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/crescent_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1937,13 +2129,13 @@ tickets:
   files:
   - src/vql/drawing/crescent_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/crescent_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/rocket_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/rocket_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -1973,13 +2165,13 @@ tickets:
   files:
   - src/vql/drawing/rocket_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/rocket_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/shape_generator.py:23`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/shape_generator.py:23`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2009,13 +2201,13 @@ tickets:
   files:
   - src/vql/drawing/shape_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/shape_generator.py:23:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/hexagon_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/hexagon_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2045,13 +2237,13 @@ tickets:
   files:
   - src/vql/drawing/hexagon_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/hexagon_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/circle_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/circle_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2081,13 +2273,13 @@ tickets:
   files:
   - src/vql/drawing/circle_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/circle_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/star_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/star_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2117,13 +2309,13 @@ tickets:
   files:
   - src/vql/drawing/star_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/star_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/line_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/line_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2153,13 +2345,13 @@ tickets:
   files:
   - src/vql/drawing/line_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/line_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/flower_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/flower_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2189,13 +2381,13 @@ tickets:
   files:
   - src/vql/drawing/flower_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/flower_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/car_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/car_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2225,13 +2417,13 @@ tickets:
   files:
   - src/vql/drawing/car_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/car_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/sun_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/sun_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2261,13 +2453,13 @@ tickets:
   files:
   - src/vql/drawing/sun_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/sun_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/spiral_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/spiral_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2297,13 +2489,13 @@ tickets:
   files:
   - src/vql/drawing/spiral_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/spiral_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/ellipse_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/ellipse_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2333,13 +2525,13 @@ tickets:
   files:
   - src/vql/drawing/ellipse_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/ellipse_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/heart_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/heart_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2369,13 +2561,13 @@ tickets:
   files:
   - src/vql/drawing/heart_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/heart_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/cat_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/cat_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2405,13 +2597,13 @@ tickets:
   files:
   - src/vql/drawing/cat_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/cat_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/wave_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/wave_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2441,13 +2633,13 @@ tickets:
   files:
   - src/vql/drawing/wave_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/wave_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/rectangle_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/rectangle_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2477,13 +2669,13 @@ tickets:
   files:
   - src/vql/drawing/rectangle_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/rectangle_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/cross_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/cross_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2513,13 +2705,13 @@ tickets:
   files:
   - src/vql/drawing/cross_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/cross_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/grid_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/grid_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2549,13 +2741,13 @@ tickets:
   files:
   - src/vql/drawing/grid_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/grid_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/square_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/square_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2585,13 +2777,13 @@ tickets:
   files:
   - src/vql/drawing/square_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/square_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/arrow_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/arrow_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2621,13 +2813,13 @@ tickets:
   files:
   - src/vql/drawing/arrow_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/arrow_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/cloud_detailed_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/cloud_detailed_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2657,13 +2849,13 @@ tickets:
   files:
   - src/vql/drawing/cloud_detailed_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/cloud_detailed_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/boat_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/boat_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2693,13 +2885,13 @@ tickets:
   files:
   - src/vql/drawing/boat_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/boat_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: cx, cy, self, size'
-  description: 'code2llm reports `Data Clump: cx, cy, self, size` in `src/vql/drawing/pentagon_generator.py:22`.
+  title: 'Address code smell: Data Clump: size, cx, cy, self'
+  description: 'code2llm reports `Data Clump: size, cx, cy, self` in `src/vql/drawing/pentagon_generator.py:22`.
 
 
-    Arguments (cx, cy, self, size) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
+    Arguments (size, cx, cy, self) are used together in multiple functions: src.vql.drawing.butterfly_generator.ButterflyGenerator.generate,
     src.vql.drawing.dot_generator.DotGenerator.generate, src.vql.drawing.house_generator.HouseGenerator.generate,
     src.vql.drawing.octagon_generator.OctagonGenerator.generate, src.vql.drawing.triangle_generator.TriangleGenerator.generate,
     src.vql.drawing.fish_generator.FishGenerator.generate, src.vql.drawing.castle_generator.CastleGenerator.generate,
@@ -2729,176 +2921,13 @@ tickets:
   files:
   - src/vql/drawing/pentagon_generator.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/pentagon_generator.py:22:Data
-    Clump: cx, cy, self, size'
+    Clump: size, cx, cy, self'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: fill, self, color, points'
-  description: 'code2llm reports `Data Clump: fill, self, color, points` in `src/vql/drawing/renderers/base.py:45`.
+  title: 'Address code smell: Data Clump: url, width, self, app, height'
+  description: 'code2llm reports `Data Clump: url, width, self, app, height` in `src/vql/drawing/renderers/base.py:30`.
 
 
-    Arguments (fill, self, color, points) are used together in multiple functions:
-    src.vql.drawing.renderers.base.Renderer.draw_path, src.vql.drawing.renderers.playwright.PlaywrightRenderer.draw_path,
-    src.vql.drawing.renderers.svg.SVGRenderer.draw_path.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: normal
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - data-clump
-  files:
-  - src/vql/drawing/renderers/base.py
-  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/base.py:45:Data
-    Clump: fill, self, color, points'
-- signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: fill, self, color, points'
-  description: 'code2llm reports `Data Clump: fill, self, color, points` in `src/vql/drawing/renderers/playwright.py:152`.
-
-
-    Arguments (fill, self, color, points) are used together in multiple functions:
-    src.vql.drawing.renderers.base.Renderer.draw_path, src.vql.drawing.renderers.playwright.PlaywrightRenderer.draw_path,
-    src.vql.drawing.renderers.svg.SVGRenderer.draw_path.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: normal
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - data-clump
-  files:
-  - src/vql/drawing/renderers/playwright.py
-  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/playwright.py:152:Data
-    Clump: fill, self, color, points'
-- signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: fill, self, color, points'
-  description: 'code2llm reports `Data Clump: fill, self, color, points` in `src/vql/drawing/renderers/svg.py:51`.
-
-
-    Arguments (fill, self, color, points) are used together in multiple functions:
-    src.vql.drawing.renderers.base.Renderer.draw_path, src.vql.drawing.renderers.playwright.PlaywrightRenderer.draw_path,
-    src.vql.drawing.renderers.svg.SVGRenderer.draw_path.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: normal
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - data-clump
-  files:
-  - src/vql/drawing/renderers/svg.py
-  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/svg.py:51:Data
-    Clump: fill, self, color, points'
-- signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: im, h, w'
-  description: 'code2llm reports `Data Clump: im, h, w` in `packages/img2vql/src/img2vql/detect.py:91`.
-
-
-    Arguments (im, h, w) are used together in multiple functions: packages.img2vql.src.img2vql.detect._detect_titlebar,
-    packages.img2vql.src.img2vql.detect._detect_panels, packages.img2vql.src.img2vql.detect._detect_buttons.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: normal
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - data-clump
-  files:
-  - packages/img2vql/src/img2vql/detect.py
-  dedupe_key: 'code2llm:smell:data_clump:packages/img2vql/src/img2vql/detect.py:91:Data
-    Clump: im, h, w'
-- signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: im, h, w'
-  description: 'code2llm reports `Data Clump: im, h, w` in `packages/img2vql/src/img2vql/detect.py:116`.
-
-
-    Arguments (im, h, w) are used together in multiple functions: packages.img2vql.src.img2vql.detect._detect_titlebar,
-    packages.img2vql.src.img2vql.detect._detect_panels, packages.img2vql.src.img2vql.detect._detect_buttons.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: normal
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - data-clump
-  files:
-  - packages/img2vql/src/img2vql/detect.py
-  dedupe_key: 'code2llm:smell:data_clump:packages/img2vql/src/img2vql/detect.py:116:Data
-    Clump: im, h, w'
-- signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: im, h, w'
-  description: 'code2llm reports `Data Clump: im, h, w` in `packages/img2vql/src/img2vql/detect.py:180`.
-
-
-    Arguments (im, h, w) are used together in multiple functions: packages.img2vql.src.img2vql.detect._detect_titlebar,
-    packages.img2vql.src.img2vql.detect._detect_panels, packages.img2vql.src.img2vql.detect._detect_buttons.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: normal
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - data-clump
-  files:
-  - packages/img2vql/src/img2vql/detect.py
-  dedupe_key: 'code2llm:smell:data_clump:packages/img2vql/src/img2vql/detect.py:180:Data
-    Clump: im, h, w'
-- signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: page, human_like, self'
-  description: 'code2llm reports `Data Clump: page, human_like, self` in `src/vql/renderers/playwright.py:21`.
-
-
-    Arguments (page, human_like, self) are used together in multiple functions: src.vql.renderers.playwright.PlaywrightVQLRenderer.__init__,
-    src.vql.drawing.renderers.playwright.PlaywrightRenderer.__init__.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: normal
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - data-clump
-  files:
-  - src/vql/renderers/playwright.py
-  dedupe_key: 'code2llm:smell:data_clump:src/vql/renderers/playwright.py:21:Data Clump:
-    page, human_like, self'
-- signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: page, human_like, self'
-  description: 'code2llm reports `Data Clump: page, human_like, self` in `src/vql/drawing/renderers/playwright.py:28`.
-
-
-    Arguments (page, human_like, self) are used together in multiple functions: src.vql.renderers.playwright.PlaywrightVQLRenderer.__init__,
-    src.vql.drawing.renderers.playwright.PlaywrightRenderer.__init__.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: normal
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - data-clump
-  files:
-  - src/vql/drawing/renderers/playwright.py
-  dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/playwright.py:28:Data
-    Clump: page, human_like, self'
-- signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: url, height, width, self, app'
-  description: 'code2llm reports `Data Clump: url, height, width, self, app` in `src/vql/drawing/renderers/base.py:30`.
-
-
-    Arguments (url, height, width, self, app) are used together in multiple functions:
+    Arguments (url, width, self, app, height) are used together in multiple functions:
     src.vql.drawing.renderers.base.Renderer.init_canvas, src.vql.drawing.renderers.playwright.PlaywrightRenderer.init_canvas,
     src.vql.drawing.renderers.svg.SVGRenderer.init_canvas.
 
@@ -2913,13 +2942,13 @@ tickets:
   files:
   - src/vql/drawing/renderers/base.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/base.py:30:Data
-    Clump: url, height, width, self, app'
+    Clump: url, width, self, app, height'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: url, height, width, self, app'
-  description: 'code2llm reports `Data Clump: url, height, width, self, app` in `src/vql/drawing/renderers/playwright.py:34`.
+  title: 'Address code smell: Data Clump: url, width, self, app, height'
+  description: 'code2llm reports `Data Clump: url, width, self, app, height` in `src/vql/drawing/renderers/playwright.py:34`.
 
 
-    Arguments (url, height, width, self, app) are used together in multiple functions:
+    Arguments (url, width, self, app, height) are used together in multiple functions:
     src.vql.drawing.renderers.base.Renderer.init_canvas, src.vql.drawing.renderers.playwright.PlaywrightRenderer.init_canvas,
     src.vql.drawing.renderers.svg.SVGRenderer.init_canvas.
 
@@ -2934,13 +2963,13 @@ tickets:
   files:
   - src/vql/drawing/renderers/playwright.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/playwright.py:34:Data
-    Clump: url, height, width, self, app'
+    Clump: url, width, self, app, height'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: url, height, width, self, app'
-  description: 'code2llm reports `Data Clump: url, height, width, self, app` in `src/vql/drawing/renderers/svg.py:35`.
+  title: 'Address code smell: Data Clump: url, width, self, app, height'
+  description: 'code2llm reports `Data Clump: url, width, self, app, height` in `src/vql/drawing/renderers/svg.py:35`.
 
 
-    Arguments (url, height, width, self, app) are used together in multiple functions:
+    Arguments (url, width, self, app, height) are used together in multiple functions:
     src.vql.drawing.renderers.base.Renderer.init_canvas, src.vql.drawing.renderers.playwright.PlaywrightRenderer.init_canvas,
     src.vql.drawing.renderers.svg.SVGRenderer.init_canvas.
 
@@ -2955,13 +2984,13 @@ tickets:
   files:
   - src/vql/drawing/renderers/svg.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/renderers/svg.py:35:Data
-    Clump: url, height, width, self, app'
+    Clump: url, width, self, app, height'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: y, self, x'
-  description: 'code2llm reports `Data Clump: y, self, x` in `src/vql/drawing/svg_path_parser.py:45`.
+  title: 'Address code smell: Data Clump: x, self, y'
+  description: 'code2llm reports `Data Clump: x, self, y` in `src/vql/drawing/svg_path_parser.py:45`.
 
 
-    Arguments (y, self, x) are used together in multiple functions: src.vql.drawing.svg_path_parser._PathState.start_subpath,
+    Arguments (x, self, y) are used together in multiple functions: src.vql.drawing.svg_path_parser._PathState.start_subpath,
     src.vql.drawing.svg_path_parser._PathState.line_to.
 
 
@@ -2975,13 +3004,13 @@ tickets:
   files:
   - src/vql/drawing/svg_path_parser.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/svg_path_parser.py:45:Data
-    Clump: y, self, x'
+    Clump: x, self, y'
 - signal: code2llm_smell_data_clump
-  title: 'Address code smell: Data Clump: y, self, x'
-  description: 'code2llm reports `Data Clump: y, self, x` in `src/vql/drawing/svg_path_parser.py:53`.
+  title: 'Address code smell: Data Clump: x, self, y'
+  description: 'code2llm reports `Data Clump: x, self, y` in `src/vql/drawing/svg_path_parser.py:53`.
 
 
-    Arguments (y, self, x) are used together in multiple functions: src.vql.drawing.svg_path_parser._PathState.start_subpath,
+    Arguments (x, self, y) are used together in multiple functions: src.vql.drawing.svg_path_parser._PathState.start_subpath,
     src.vql.drawing.svg_path_parser._PathState.line_to.
 
 
@@ -2995,7 +3024,7 @@ tickets:
   files:
   - src/vql/drawing/svg_path_parser.py
   dedupe_key: 'code2llm:smell:data_clump:src/vql/drawing/svg_path_parser.py:53:Data
-    Clump: y, self, x'
+    Clump: x, self, y'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: _bbox_contains'
   description: 'code2llm reports `God Function: _bbox_contains` in `packages/img2vql/src/img2vql/program.py:108`.
@@ -3072,25 +3101,6 @@ tickets:
   - packages/dsl2vql/src/dsl2vql/bus.py
   dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/bus.py:16:God
     Function: _dispatch_cmd'
-- signal: code2llm_smell_god_function
-  title: 'Address code smell: God Function: _image_is_blank'
-  description: 'code2llm reports `God Function: _image_is_blank` in `src/vql/adopt/window.py:131`.
-
-
-    Function ''_image_is_blank'' is oversized: CC=8, fan-out=11, mutations=5.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: normal
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - god-function
-  files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/window.py:131:God Function:
-    _image_is_blank'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: _iou'
   description: 'code2llm reports `God Function: _iou` in `packages/img2vql/src/img2vql/detect.py:304`.
@@ -3187,25 +3197,6 @@ tickets:
   dedupe_key: 'code2llm:smell:god_function:packages/mcp2vql/src/mcp2vql/server.py:29:God
     Function: _register_tools'
 - signal: code2llm_smell_god_function
-  title: 'Address code smell: God Function: _set_body'
-  description: 'code2llm reports `God Function: _set_body` in `packages/dsl2vql/src/dsl2vql/pb_codec.py:24`.
-
-
-    Function ''_set_body'' is oversized: CC=12, fan-out=6, mutations=23.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: normal
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - god-function
-  files:
-  - packages/dsl2vql/src/dsl2vql/pb_codec.py
-  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/pb_codec.py:24:God
-    Function: _set_body'
-- signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: _vtracer_paths_to_svg'
   description: 'code2llm reports `God Function: _vtracer_paths_to_svg` in `packages/img2svg/src/img2svg/svg_emit.py:40`.
 
@@ -3264,7 +3255,7 @@ tickets:
     Function: append'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: capture_screen'
-  description: 'code2llm reports `God Function: capture_screen` in `src/vql/adopt/window.py:495`.
+  description: 'code2llm reports `God Function: capture_screen` in `src/vql/adopt/capture_screen.py:31`.
 
 
     Function ''capture_screen'' is oversized: CC=7, fan-out=14, mutations=7.
@@ -3278,9 +3269,9 @@ tickets:
   - code-smell
   - god-function
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/window.py:495:God Function:
-    capture_screen'
+  - src/vql/adopt/capture_screen.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/capture_screen.py:31:God
+    Function: capture_screen'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: capture_via_portal'
   description: 'code2llm reports `God Function: capture_via_portal` in `src/vql/adopt/portal_capture.py:18`.
@@ -3300,6 +3291,44 @@ tickets:
   - src/vql/adopt/portal_capture.py
   dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/portal_capture.py:18:God
     Function: capture_via_portal'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: capture_with_portal'
+  description: 'code2llm reports `God Function: capture_with_portal` in `src/vql/adopt/capture_backends.py:119`.
+
+
+    Function ''capture_with_portal'' is oversized: CC=11, fan-out=12, mutations=5.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - src/vql/adopt/capture_backends.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/capture_backends.py:119:God
+    Function: capture_with_portal'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: chat_completion'
+  description: 'code2llm reports `God Function: chat_completion` in `packages/img2vql/src/img2vql/pipeline/llm_client.py:28`.
+
+
+    Function ''chat_completion'' is oversized: CC=7, fan-out=12, mutations=7.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/pipeline/llm_client.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/pipeline/llm_client.py:28:God
+    Function: chat_completion'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: commands_to_program'
   description: 'code2llm reports `God Function: commands_to_program` in `src/vql/compiler/legacy_drawcommand.py:72`.
@@ -3396,6 +3425,63 @@ tickets:
   dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/bus.py:46:God
     Function: dispatch'
 - signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: from_env'
+  description: 'code2llm reports `God Function: from_env` in `packages/img2vql/src/img2vql/pipeline/config.py:64`.
+
+
+    Function ''from_env'' is oversized: CC=7, fan-out=11, mutations=0.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/pipeline/config.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/pipeline/config.py:64:God
+    Function: from_env'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: handle_adopt'
+  description: 'code2llm reports `God Function: handle_adopt` in `packages/uri2vql/src/uri2vql/window_handlers.py:95`.
+
+
+    Function ''handle_adopt'' is oversized: CC=9, fan-out=11, mutations=5.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/uri2vql/src/uri2vql/window_handlers.py
+  dedupe_key: 'code2llm:smell:god_function:packages/uri2vql/src/uri2vql/window_handlers.py:95:God
+    Function: handle_adopt'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: handle_analyze'
+  description: 'code2llm reports `God Function: handle_analyze` in `packages/uri2vql/src/uri2vql/window_handlers.py:18`.
+
+
+    Function ''handle_analyze'' is oversized: CC=8, fan-out=9, mutations=7.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/uri2vql/src/uri2vql/window_handlers.py
+  dedupe_key: 'code2llm:smell:god_function:packages/uri2vql/src/uri2vql/window_handlers.py:18:God
+    Function: handle_analyze'
+- signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: handle_export'
   description: 'code2llm reports `God Function: handle_export` in `packages/dsl2vql/src/dsl2vql/handlers/command.py:76`.
 
@@ -3453,8 +3539,46 @@ tickets:
   dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/handlers/query.py:64:God
     Function: handle_render'
 - signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: handle_summary'
+  description: 'code2llm reports `God Function: handle_summary` in `packages/uri2vql/src/uri2vql/window_handlers.py:253`.
+
+
+    Function ''handle_summary'' is oversized: CC=9, fan-out=15, mutations=4.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/uri2vql/src/uri2vql/window_handlers.py
+  dedupe_key: 'code2llm:smell:god_function:packages/uri2vql/src/uri2vql/window_handlers.py:253:God
+    Function: handle_summary'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: image_is_blank'
+  description: 'code2llm reports `God Function: image_is_blank` in `src/vql/adopt/capture_image.py:12`.
+
+
+    Function ''image_is_blank'' is oversized: CC=8, fan-out=11, mutations=5.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - src/vql/adopt/capture_image.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/capture_image.py:12:God Function:
+    image_is_blank'
+- signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: image_stats'
-  description: 'code2llm reports `God Function: image_stats` in `src/vql/adopt/window.py:97`.
+  description: 'code2llm reports `God Function: image_stats` in `src/vql/adopt/capture_image.py:32`.
 
 
     Function ''image_stats'' is oversized: CC=4, fan-out=20, mutations=17.
@@ -3468,8 +3592,8 @@ tickets:
   - code-smell
   - god-function
   files:
-  - src/vql/adopt/window.py
-  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/window.py:97:God Function:
+  - src/vql/adopt/capture_image.py
+  dedupe_key: 'code2llm:smell:god_function:src/vql/adopt/capture_image.py:32:God Function:
     image_stats'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: image_to_svg'
@@ -3529,6 +3653,44 @@ tickets:
   dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/metadata.py:181:God
     Function: img2nl_metadata_slice'
 - signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: level3_adopt_program'
+  description: 'code2llm reports `God Function: level3_adopt_program` in `packages/img2vql/src/img2vql/pipeline/fast_analysis.py:67`.
+
+
+    Function ''level3_adopt_program'' is oversized: CC=7, fan-out=11, mutations=15.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/pipeline/fast_analysis.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/pipeline/fast_analysis.py:67:God
+    Function: level3_adopt_program'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: level5_llm_extract'
+  description: 'code2llm reports `God Function: level5_llm_extract` in `packages/img2vql/src/img2vql/pipeline/llm_vql.py:103`.
+
+
+    Function ''level5_llm_extract'' is oversized: CC=12, fan-out=16, mutations=16.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/pipeline/llm_vql.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/pipeline/llm_vql.py:103:God
+    Function: level5_llm_extract'
+- signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: main'
   description: 'code2llm reports `God Function: main` in `packages/uri2img2svg/src/uri2img2svg/cli.py:12`.
 
@@ -3568,25 +3730,6 @@ tickets:
     Function: main'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: main'
-  description: 'code2llm reports `God Function: main` in `examples/photo-roundtrip-test.py:294`.
-
-
-    Function ''main'' is oversized: CC=5, fan-out=21, mutations=14.
-
-
-    Make the smallest refactor that removes the smell and run local tests.'
-  priority: normal
-  labels:
-  - llm-ready
-  - code2llm
-  - code-smell
-  - god-function
-  files:
-  - examples/photo-roundtrip-test.py
-  dedupe_key: 'code2llm:smell:god_function:examples/photo-roundtrip-test.py:294:God
-    Function: main'
-- signal: code2llm_smell_god_function
-  title: 'Address code smell: God Function: main'
   description: 'code2llm reports `God Function: main` in `examples/scope-window.py:11`.
 
 
@@ -3604,6 +3747,25 @@ tickets:
   - examples/scope-window.py
   dedupe_key: 'code2llm:smell:god_function:examples/scope-window.py:11:God Function:
     main'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: merge_programs'
+  description: 'code2llm reports `God Function: merge_programs` in `packages/img2vql/src/img2vql/pipeline/llm_vql.py:166`.
+
+
+    Function ''merge_programs'' is oversized: CC=9, fan-out=9, mutations=16.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/img2vql/src/img2vql/pipeline/llm_vql.py
+  dedupe_key: 'code2llm:smell:god_function:packages/img2vql/src/img2vql/pipeline/llm_vql.py:166:God
+    Function: merge_programs'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: metadata_from_diagnose'
   description: 'code2llm reports `God Function: metadata_from_diagnose` in `packages/img2vql/src/img2vql/metadata.py:285`.
@@ -3700,6 +3862,25 @@ tickets:
   dedupe_key: 'code2llm:smell:god_function:packages/uri2img2svg/src/uri2img2svg/query.py:37:God
     Function: query_uri'
 - signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: query_window'
+  description: 'code2llm reports `God Function: query_window` in `packages/uri2vql/src/uri2vql/window.py:37`.
+
+
+    Function ''query_window'' is oversized: CC=10, fan-out=13, mutations=6.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - packages/uri2vql/src/uri2vql/window.py
+  dedupe_key: 'code2llm:smell:god_function:packages/uri2vql/src/uri2vql/window.py:37:God
+    Function: query_window'
+- signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: rapidocr_special_hits'
   description: 'code2llm reports `God Function: rapidocr_special_hits` in `packages/img2vql/src/img2vql/metadata.py:51`.
 
@@ -3777,7 +3958,7 @@ tickets:
     Function: replay'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: result_to_pb'
-  description: 'code2llm reports `God Function: result_to_pb` in `packages/dsl2vql/src/dsl2vql/pb_codec.py:143`.
+  description: 'code2llm reports `God Function: result_to_pb` in `packages/dsl2vql/src/dsl2vql/pb_codec.py:50`.
 
 
     Function ''result_to_pb'' is oversized: CC=4, fan-out=4, mutations=9.
@@ -3792,7 +3973,7 @@ tickets:
   - god-function
   files:
   - packages/dsl2vql/src/dsl2vql/pb_codec.py
-  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/pb_codec.py:143:God
+  dedupe_key: 'code2llm:smell:god_function:packages/dsl2vql/src/dsl2vql/pb_codec.py:50:God
     Function: result_to_pb'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: sample_flat_shapes'
@@ -3833,6 +4014,44 @@ tickets:
   dedupe_key: 'code2llm:smell:god_function:examples/photo-roundtrip-test.py:49:God
     Function: sample_gradient'
 - signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: sample_natural_scene'
+  description: 'code2llm reports `God Function: sample_natural_scene` in `examples/photo-roundtrip-test.py:85`.
+
+
+    Function ''sample_natural_scene'' is oversized: CC=4, fan-out=8, mutations=24.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/photo-roundtrip-test.py
+  dedupe_key: 'code2llm:smell:god_function:examples/photo-roundtrip-test.py:85:God
+    Function: sample_natural_scene'
+- signal: code2llm_smell_god_function
+  title: 'Address code smell: God Function: sample_product_photo'
+  description: 'code2llm reports `God Function: sample_product_photo` in `examples/photo-roundtrip-test.py:72`.
+
+
+    Function ''sample_product_photo'' is oversized: CC=1, fan-out=7, mutations=7.
+
+
+    Make the smallest refactor that removes the smell and run local tests.'
+  priority: normal
+  labels:
+  - llm-ready
+  - code2llm
+  - code-smell
+  - god-function
+  files:
+  - examples/photo-roundtrip-test.py
+  dedupe_key: 'code2llm:smell:god_function:examples/photo-roundtrip-test.py:72:God
+    Function: sample_product_photo'
+- signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: save_diagnose_to_program'
   description: 'code2llm reports `God Function: save_diagnose_to_program` in `packages/img2vql/src/img2vql/metadata.py:313`.
 
@@ -3853,7 +4072,7 @@ tickets:
     Function: save_diagnose_to_program'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: test_ui_grid_adopt'
-  description: 'code2llm reports `God Function: test_ui_grid_adopt` in `examples/photo-roundtrip-test.py:157`.
+  description: 'code2llm reports `God Function: test_ui_grid_adopt` in `examples/photo-roundtrip-test.py:192`.
 
 
     Function ''test_ui_grid_adopt'' is oversized: CC=2, fan-out=13, mutations=5.
@@ -3868,11 +4087,11 @@ tickets:
   - god-function
   files:
   - examples/photo-roundtrip-test.py
-  dedupe_key: 'code2llm:smell:god_function:examples/photo-roundtrip-test.py:157:God
+  dedupe_key: 'code2llm:smell:god_function:examples/photo-roundtrip-test.py:192:God
     Function: test_ui_grid_adopt'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: test_vtracer_roundtrip'
-  description: 'code2llm reports `God Function: test_vtracer_roundtrip` in `examples/photo-roundtrip-test.py:190`.
+  description: 'code2llm reports `God Function: test_vtracer_roundtrip` in `examples/photo-roundtrip-test.py:225`.
 
 
     Function ''test_vtracer_roundtrip'' is oversized: CC=10, fan-out=18, mutations=13.
@@ -3887,7 +4106,7 @@ tickets:
   - god-function
   files:
   - examples/photo-roundtrip-test.py
-  dedupe_key: 'code2llm:smell:god_function:examples/photo-roundtrip-test.py:190:God
+  dedupe_key: 'code2llm:smell:god_function:examples/photo-roundtrip-test.py:225:God
     Function: test_vtracer_roundtrip'
 - signal: code2llm_smell_god_function
   title: 'Address code smell: God Function: trace_contours_opencv'

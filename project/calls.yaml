@@ -1,15 +1,92 @@
 project: /home/tom/github/oqlos/vql
 generated_from: code2llm call graph analysis
 stats:
-  total_nodes: 218
-  total_edges: 256
-  modules_count: 53
+  total_nodes: 297
+  total_edges: 353
+  modules_count: 88
 nodes:
-  packages.uri2vql.src.uri2vql.window.compare_window_image:
-    name: compare_window_image
-    module: packages.uri2vql.src.uri2vql.window
-    line: 157
+  packages.uri2vql.src.uri2vql.window_imgl.query_window_imgl:
+    name: query_window_imgl
+    module: packages.uri2vql.src.uri2vql.window_imgl
+    line: 13
+    cyclomatic_complexity: 17
+    calls_out: 43
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.compile.compile_vql_uri:
+    name: compile_vql_uri
+    module: packages.uri2vql.src.uri2vql.compile
+    line: 20
+    cyclomatic_complexity: 7
+    calls_out: 8
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.bus._bytes_to_cmd:
+    name: _bytes_to_cmd
+    module: packages.dsl2vql.src.dsl2vql.bus
+    line: 32
+    cyclomatic_complexity: 3
+    calls_out: 5
+    calls_in: 1
+  packages.img2vql.src.img2vql.detect._detect_titlebar:
+    name: _detect_titlebar
+    module: packages.img2vql.src.img2vql.detect
+    line: 91
+    cyclomatic_complexity: 5
+    calls_out: 11
+    calls_in: 1
+  examples.photo-roundtrip-test.test_img2vql_detect:
+    name: test_img2vql_detect
+    module: examples.photo-roundtrip-test
+    line: 333
+    cyclomatic_complexity: 5
+    calls_out: 5
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_analyze:
+    name: _resolve_imgl_analyze
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl
+    line: 65
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 0
+  packages.mcp2vql.src.mcp2vql.server._require_fastmcp:
+    name: _require_fastmcp
+    module: packages.mcp2vql.src.mcp2vql.server
+    line: 10
     cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 1
+  examples.photo-roundtrip-test.test_opencv_contours:
+    name: test_opencv_contours
+    module: examples.photo-roundtrip-test
+    line: 278
+    cyclomatic_complexity: 2
+    calls_out: 13
+    calls_in: 1
+  packages.img2vql.src.img2vql.pipeline.config._env_bool:
+    name: _env_bool
+    module: packages.img2vql.src.img2vql.pipeline.config
+    line: 21
+    cyclomatic_complexity: 3
+    calls_out: 3
+    calls_in: 4
+  packages.rest2vql.src.rest2vql.window.window_refresh:
+    name: window_refresh
+    module: packages.rest2vql.src.rest2vql.window
+    line: 40
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.bus._dispatch_cmd:
+    name: _dispatch_cmd
+    module: packages.dsl2vql.src.dsl2vql.bus
+    line: 16
+    cyclomatic_complexity: 5
+    calls_out: 12
+    calls_in: 3
+  packages.dsl2vql.src.dsl2vql.schema_registry.schema_for_verb:
+    name: schema_for_verb
+    module: packages.dsl2vql.src.dsl2vql.schema_registry
+    line: 24
+    cyclomatic_complexity: 1
     calls_out: 3
     calls_in: 2
   packages.rest2vql.src.rest2vql.window.window_compare:
@@ -19,97 +96,41 @@ nodes:
     cyclomatic_complexity: 1
     calls_out: 1
     calls_in: 1
-  packages.img2vql.src.img2vql.diagnose._normalize_locale:
-    name: _normalize_locale
-    module: packages.img2vql.src.img2vql.diagnose
-    line: 9
+  packages.dsl2vql.src.dsl2vql.pb_codec.result_to_pb:
+    name: result_to_pb
+    module: packages.dsl2vql.src.dsl2vql.pb_codec
+    line: 50
     cyclomatic_complexity: 4
     calls_out: 4
-    calls_in: 1
-  src.vql.adopt.window._capture_with_mss:
-    name: _capture_with_mss
-    module: src.vql.adopt.window
-    line: 306
-    cyclomatic_complexity: 4
-    calls_out: 8
-    calls_in: 1
-  packages.rest2vql.src.rest2vql.window.window_diagnose:
-    name: window_diagnose
-    module: packages.rest2vql.src.rest2vql.window
-    line: 48
-    cyclomatic_complexity: 2
-    calls_out: 1
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.schema_registry._load_schemas:
-    name: _load_schemas
-    module: packages.dsl2vql.src.dsl2vql.schema_registry
-    line: 14
-    cyclomatic_complexity: 3
-    calls_out: 9
-    calls_in: 3
-  packages.uri2vql.src.uri2vql.nlp2uri.nlp2uri:
-    name: nlp2uri
-    module: packages.uri2vql.src.uri2vql.nlp2uri
-    line: 296
+    calls_in: 2
+  packages.uri2vql.src.uri2vql.window_utils.query_bool:
+    name: query_bool
+    module: packages.uri2vql.src.uri2vql.window_utils
+    line: 134
     cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 1
-  packages.img2svg.src.img2svg.trace.trace_vtracer:
-    name: trace_vtracer
-    module: packages.img2svg.src.img2svg.trace
-    line: 214
-    cyclomatic_complexity: 6
-    calls_out: 17
-    calls_in: 4
-  packages.img2vql.src.img2vql.metadata.img2nl_metadata_slice:
-    name: img2nl_metadata_slice
-    module: packages.img2vql.src.img2vql.metadata
-    line: 181
-    cyclomatic_complexity: 9
-    calls_out: 17
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.grammar.parse_line:
-    name: parse_line
-    module: packages.dsl2vql.src.dsl2vql.grammar
-    line: 27
-    cyclomatic_complexity: 28
-    calls_out: 27
+    calls_out: 2
     calls_in: 6
-  examples.photo-roundtrip-test.test_vtracer_roundtrip:
-    name: test_vtracer_roundtrip
-    module: examples.photo-roundtrip-test
-    line: 190
-    cyclomatic_complexity: 10
-    calls_out: 27
-    calls_in: 1
-  src.vql.facade.VQLFacade.to_commands:
-    name: to_commands
-    module: src.vql.facade
-    line: 73
+  packages.rest2vql.src.rest2vql.app.create_app:
+    name: create_app
+    module: packages.rest2vql.src.rest2vql.app
+    line: 19
     cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 0
-  src.vql.drawing.svg_path_parser._dispatch_command:
-    name: _dispatch_command
-    module: src.vql.drawing.svg_path_parser
-    line: 80
-    cyclomatic_complexity: 16
-    calls_out: 47
+    calls_out: 43
     calls_in: 1
-  src.vql.drawing.svg_path_parser.parse_svg_path:
-    name: parse_svg_path
-    module: src.vql.drawing.svg_path_parser
-    line: 173
-    cyclomatic_complexity: 7
-    calls_out: 7
+  packages.img2svg.src.img2svg.trace.trace_contours_opencv:
+    name: trace_contours_opencv
+    module: packages.img2svg.src.img2svg.trace
+    line: 135
+    cyclomatic_complexity: 8
+    calls_out: 23
+    calls_in: 6
+  packages.uri2vql.src.uri2vql.compile._dsl_from_uri:
+    name: _dsl_from_uri
+    module: packages.uri2vql.src.uri2vql.compile
+    line: 12
+    cyclomatic_complexity: 4
+    calls_out: 5
     calls_in: 1
-  packages.mcp2vql.src.mcp2vql.server.VqlMCPServer.__post_init__:
-    name: __post_init__
-    module: packages.mcp2vql.src.mcp2vql.server
-    line: 24
-    cyclomatic_complexity: 1
-    calls_out: 3
-    calls_in: 0
   packages.uri2vql.src.uri2vql.uri.is_vql_uri:
     name: is_vql_uri
     module: packages.uri2vql.src.uri2vql.uri
@@ -117,222 +138,12 @@ nodes:
     cyclomatic_complexity: 1
     calls_out: 2
     calls_in: 2
-  src.vql.renderers.svg.render_to_svg:
-    name: render_to_svg
-    module: src.vql.renderers.svg
-    line: 22
-    cyclomatic_complexity: 1
-    calls_out: 4
-    calls_in: 7
-  src.vql.compiler.legacy_drawcommand.commands_to_program:
-    name: commands_to_program
-    module: src.vql.compiler.legacy_drawcommand
-    line: 72
-    cyclomatic_complexity: 9
-    calls_out: 15
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.cli.main:
-    name: main
-    module: packages.dsl2vql.src.dsl2vql.cli
-    line: 89
-    cyclomatic_complexity: 4
-    calls_out: 2
-    calls_in: 0
-  examples.photo-roundtrip-test.sample_flat_shapes:
-    name: sample_flat_shapes
-    module: examples.photo-roundtrip-test
-    line: 35
-    cyclomatic_complexity: 1
-    calls_out: 8
-    calls_in: 1
-  packages.img2vql.src.img2vql.metadata._merge_special_hits:
-    name: _merge_special_hits
-    module: packages.img2vql.src.img2vql.metadata
-    line: 165
-    cyclomatic_complexity: 2
-    calls_out: 8
-    calls_in: 2
-  packages.uri2img2svg.src.uri2img2svg.cli.main:
-    name: main
-    module: packages.uri2img2svg.src.uri2img2svg.cli
-    line: 12
-    cyclomatic_complexity: 4
-    calls_out: 9
-    calls_in: 0
-  src.vql.validation.spec._program_colors:
-    name: _program_colors
-    module: src.vql.validation.spec
-    line: 43
-    cyclomatic_complexity: 2
-    calls_out: 2
-    calls_in: 1
-  src.vql.validation.spec._program_shapes:
-    name: _program_shapes
-    module: src.vql.validation.spec
-    line: 35
-    cyclomatic_complexity: 3
-    calls_out: 1
-    calls_in: 1
-  packages.rest2vql.src.rest2vql.window_routes.post_window_refresh:
-    name: post_window_refresh
-    module: packages.rest2vql.src.rest2vql.window_routes
-    line: 44
-    cyclomatic_complexity: 2
-    calls_out: 5
-    calls_in: 0
-  src.vql.adopt.window._capture_with_portal:
-    name: _capture_with_portal
-    module: src.vql.adopt.window
-    line: 251
-    cyclomatic_complexity: 15
-    calls_out: 21
-    calls_in: 2
-  src.vql.validation.metadata._load_imgl_metadata_schema:
-    name: _load_imgl_metadata_schema
-    module: src.vql.validation.metadata
-    line: 14
-    cyclomatic_complexity: 1
-    calls_out: 3
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.events.default_event_store:
-    name: default_event_store
-    module: packages.dsl2vql.src.dsl2vql.events
-    line: 106
-    cyclomatic_complexity: 1
-    calls_out: 4
-    calls_in: 2
-  packages.uri2vql.src.uri2vql.uri.uri_for_objects:
-    name: uri_for_objects
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 41
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 1
-  packages.dsl2img2svg.src.dsl2img2svg.dispatch._parse_kv_args:
-    name: _parse_kv_args
-    module: packages.dsl2img2svg.src.dsl2img2svg.dispatch
+  packages.uri2vql.src.uri2vql.window_utils.normalize_locale:
+    name: normalize_locale
+    module: packages.uri2vql.src.uri2vql.window_utils
     line: 29
     cyclomatic_complexity: 4
     calls_out: 4
-    calls_in: 1
-  packages.img2vql.src.img2vql.metadata.metadata_from_diagnose:
-    name: metadata_from_diagnose
-    module: packages.img2vql.src.img2vql.metadata
-    line: 285
-    cyclomatic_complexity: 6
-    calls_out: 21
-    calls_in: 1
-  src.vql.drawing.svg_path_parser._scale_groups:
-    name: _scale_groups
-    module: src.vql.drawing.svg_path_parser
-    line: 139
-    cyclomatic_complexity: 15
-    calls_out: 6
-    calls_in: 1
-  packages.img2vql.src.img2vql.detect._detect_panels:
-    name: _detect_panels
-    module: packages.img2vql.src.img2vql.detect
-    line: 116
-    cyclomatic_complexity: 5
-    calls_out: 14
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.bus.execute_dsl_line:
-    name: execute_dsl_line
-    module: packages.dsl2vql.src.dsl2vql.bus
-    line: 67
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 3
-  packages.dsl2vql.src.dsl2vql.pb_codec._set_body:
-    name: _set_body
-    module: packages.dsl2vql.src.dsl2vql.pb_codec
-    line: 24
-    cyclomatic_complexity: 12
-    calls_out: 45
-    calls_in: 1
-  packages.img2vql.src.img2vql.metadata.save_diagnose_to_program:
-    name: save_diagnose_to_program
-    module: packages.img2vql.src.img2vql.metadata
-    line: 313
-    cyclomatic_complexity: 4
-    calls_out: 16
-    calls_in: 1
-  packages.img2svg.src.img2svg.svg_emit.image_to_svg:
-    name: image_to_svg
-    module: packages.img2svg.src.img2svg.svg_emit
-    line: 86
-    cyclomatic_complexity: 7
-    calls_out: 24
-    calls_in: 4
-  packages.dsl2vql.src.dsl2vql.codec.roundtrip_text:
-    name: roundtrip_text
-    module: packages.dsl2vql.src.dsl2vql.codec
-    line: 16
-    cyclomatic_complexity: 3
-    calls_out: 6
-    calls_in: 0
-  packages.img2vql.src.img2vql.detect.detect_ui_elements:
-    name: detect_ui_elements
-    module: packages.img2vql.src.img2vql.detect
-    line: 330
-    cyclomatic_complexity: 8
-    calls_out: 19
-    calls_in: 7
-  src.vql.compiler.legacy_drawcommand.compile_to_events:
-    name: compile_to_events
-    module: src.vql.compiler.legacy_drawcommand
-    line: 127
-    cyclomatic_complexity: 3
-    calls_out: 6
-    calls_in: 2
-  src.vql.adopt.window._session_type:
-    name: _session_type
-    module: src.vql.adopt.window
-    line: 53
-    cyclomatic_complexity: 2
-    calls_out: 3
-    calls_in: 3
-  packages.uri2vql.src.uri2vql.window.diagnose_window_image:
-    name: diagnose_window_image
-    module: packages.uri2vql.src.uri2vql.window
-    line: 178
-    cyclomatic_complexity: 2
-    calls_out: 3
-    calls_in: 3
-  src.vql.validation.metadata.validate_program_metadata:
-    name: validate_program_metadata
-    module: src.vql.validation.metadata
-    line: 18
-    cyclomatic_complexity: 14
-    calls_out: 14
-    calls_in: 0
-  packages.uri2vql.src.uri2vql.patch.patch_uri:
-    name: patch_uri
-    module: packages.uri2vql.src.uri2vql.patch
-    line: 24
-    cyclomatic_complexity: 7
-    calls_out: 15
-    calls_in: 3
-  packages.uri2vql.src.uri2vql.window._query_window_imgl:
-    name: _query_window_imgl
-    module: packages.uri2vql.src.uri2vql.window
-    line: 204
-    cyclomatic_complexity: 17
-    calls_out: 45
-    calls_in: 1
-  src.vql.adopt.window.image_stats:
-    name: image_stats
-    module: src.vql.adopt.window
-    line: 97
-    cyclomatic_complexity: 4
-    calls_out: 22
-    calls_in: 4
-  packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf:
-    name: encode_protobuf
-    module: packages.dsl2vql.src.dsl2vql.pb_codec
-    line: 117
-    cyclomatic_complexity: 1
-    calls_out: 6
     calls_in: 3
   src.vql.compiler.legacy_drawcommand.program_to_commands:
     name: program_to_commands
@@ -341,41 +152,104 @@ nodes:
     cyclomatic_complexity: 4
     calls_out: 7
     calls_in: 2
-  examples.photo-roundtrip-test.test_img2vql_detect:
-    name: test_img2vql_detect
-    module: examples.photo-roundtrip-test
-    line: 271
-    cyclomatic_complexity: 5
-    calls_out: 5
-    calls_in: 1
-  examples.photo-roundtrip-test.sample_nl_drawing:
-    name: sample_nl_drawing
-    module: examples.photo-roundtrip-test
-    line: 72
-    cyclomatic_complexity: 2
-    calls_out: 12
-    calls_in: 1
-  packages.img2vql.src.img2vql.metadata._compact_special_hits:
-    name: _compact_special_hits
+  packages.img2vql.src.img2vql.metadata.merge_program_metadata:
+    name: merge_program_metadata
     module: packages.img2vql.src.img2vql.metadata
+    line: 224
+    cyclomatic_complexity: 1
+    calls_out: 8
+    calls_in: 4
+  packages.dsl2vql.src.dsl2vql.pb_body_codec.set_envelope_body:
+    name: set_envelope_body
+    module: packages.dsl2vql.src.dsl2vql.pb_body_codec
+    line: 156
+    cyclomatic_complexity: 3
+    calls_out: 7
+    calls_in: 1
+  packages.img2vql.src.img2vql.diagnose.diagnose_for_vql:
+    name: diagnose_for_vql
+    module: packages.img2vql.src.img2vql.diagnose
+    line: 57
+    cyclomatic_complexity: 10
+    calls_out: 21
+    calls_in: 5
+  packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze.run_vql_to_image:
+    name: run_vql_to_image
+    module: packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze
+    line: 31
+    cyclomatic_complexity: 2
+    calls_out: 6
+    calls_in: 0
+  src.vql.compiler.legacy_drawcommand.commands_to_program:
+    name: commands_to_program
+    module: src.vql.compiler.legacy_drawcommand
+    line: 72
+    cyclomatic_complexity: 9
+    calls_out: 15
+    calls_in: 1
+  examples.photo-roundtrip-test.sample_natural_scene:
+    name: sample_natural_scene
+    module: examples.photo-roundtrip-test
+    line: 85
+    cyclomatic_complexity: 4
+    calls_out: 15
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.cli_commands.core.run_patch:
+    name: run_patch
+    module: packages.uri2vql.src.uri2vql.cli_commands.core
+    line: 18
+    cyclomatic_complexity: 3
+    calls_out: 6
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.pb_codec.encode_text_to_protobuf:
+    name: encode_text_to_protobuf
+    module: packages.dsl2vql.src.dsl2vql.pb_codec
+    line: 39
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.cli.main:
+    name: main
+    module: packages.uri2vql.src.uri2vql.cli
+    line: 147
+    cyclomatic_complexity: 2
+    calls_out: 4
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_summary:
+    name: _resolve_window_summary
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.window
+    line: 19
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.codec.encode_protobuf:
+    name: encode_protobuf
+    module: packages.dsl2vql.src.dsl2vql.codec
     line: 26
     cyclomatic_complexity: 1
-    calls_out: 10
+    calls_out: 1
     calls_in: 2
-  packages.dsl2vql.src.dsl2vql.handlers.command._read_json:
-    name: _read_json
-    module: packages.dsl2vql.src.dsl2vql.handlers.command
-    line: 12
+  packages.img2vql.src.img2vql.pipeline.fast_analysis.level3_adopt_program:
+    name: level3_adopt_program
+    module: packages.img2vql.src.img2vql.pipeline.fast_analysis
+    line: 67
+    cyclomatic_complexity: 7
+    calls_out: 18
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.grammar_tokens.pick_flag:
+    name: pick_flag
+    module: packages.dsl2vql.src.dsl2vql.grammar_tokens
+    line: 18
+    cyclomatic_complexity: 3
+    calls_out: 2
+    calls_in: 12
+  packages.dsl2vql.src.dsl2vql.codec.decode_protobuf:
+    name: decode_protobuf
+    module: packages.dsl2vql.src.dsl2vql.codec
+    line: 32
     cyclomatic_complexity: 1
-    calls_out: 4
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.window._diagnose_fallback:
-    name: _diagnose_fallback
-    module: packages.uri2vql.src.uri2vql.window
-    line: 42
-    cyclomatic_complexity: 15
-    calls_out: 29
-    calls_in: 1
+    calls_out: 1
+    calls_in: 2
   packages.img2svg.src.img2svg.trace._parse_translate:
     name: _parse_translate
     module: packages.img2svg.src.img2svg.trace
@@ -383,271 +257,19 @@ nodes:
     cyclomatic_complexity: 3
     calls_out: 5
     calls_in: 1
-  src.vql.adopt.window._should_use_interactive_portal:
-    name: _should_use_interactive_portal
-    module: src.vql.adopt.window
-    line: 65
-    cyclomatic_complexity: 4
-    calls_out: 3
-    calls_in: 2
-  packages.dsl2vql.src.dsl2vql.bus.execute_dsl:
-    name: execute_dsl
-    module: packages.dsl2vql.src.dsl2vql.bus
-    line: 71
-    cyclomatic_complexity: 4
-    calls_out: 6
-    calls_in: 4
-  packages.img2vql.src.img2vql.detect._detect_buttons:
-    name: _detect_buttons
+  packages.img2vql.src.img2vql.detect._iou:
+    name: _iou
     module: packages.img2vql.src.img2vql.detect
-    line: 180
-    cyclomatic_complexity: 25
-    calls_out: 45
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf_to_text:
-    name: decode_protobuf_to_text
-    module: packages.dsl2vql.src.dsl2vql.pb_codec
-    line: 139
-    cyclomatic_complexity: 1
-    calls_out: 2
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.window._resolve_image_param:
-    name: _resolve_image_param
-    module: packages.uri2vql.src.uri2vql.window
-    line: 13
-    cyclomatic_complexity: 6
-    calls_out: 12
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.events.EventStore.append:
-    name: append
-    module: packages.dsl2vql.src.dsl2vql.events
-    line: 41
+    line: 304
     cyclomatic_complexity: 3
-    calls_out: 33
-    calls_in: 0
-  packages.nlp2vql.src.nlp2vql.to_dsl.nl_to_dsl_line:
-    name: nl_to_dsl_line
-    module: packages.nlp2vql.src.nlp2vql.to_dsl
-    line: 23
-    cyclomatic_complexity: 8
-    calls_out: 1
+    calls_out: 5
     calls_in: 3
-  packages.dsl2vql.src.dsl2vql.cli._main_subcommand:
-    name: _main_subcommand
-    module: packages.dsl2vql.src.dsl2vql.cli
-    line: 52
-    cyclomatic_complexity: 9
-    calls_out: 21
-    calls_in: 1
-  packages.img2vql.src.img2vql.detect._dedupe:
-    name: _dedupe
-    module: packages.img2vql.src.img2vql.detect
-    line: 317
-    cyclomatic_complexity: 8
-    calls_out: 6
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.uri.uri_for_program:
-    name: uri_for_program
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 33
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 2
-  packages.uri2vql.src.uri2vql.uri.uri_for_window_diagnose:
-    name: uri_for_window_diagnose
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 141
-    cyclomatic_complexity: 2
-    calls_out: 1
-    calls_in: 1
-  src.vql.adopt.portal_capture.capture_via_portal:
-    name: capture_via_portal
-    module: src.vql.adopt.portal_capture
-    line: 18
+  packages.uri2vql.src.uri2vql.window_analyze.analyze_window_uri:
+    name: analyze_window_uri
+    module: packages.uri2vql.src.uri2vql.window_analyze
+    line: 27
     cyclomatic_complexity: 4
-    calls_out: 30
-    calls_in: 1
-  packages.rest2vql.src.rest2vql.window_routes.post_window_analyze:
-    name: post_window_analyze
-    module: packages.rest2vql.src.rest2vql.window_routes
-    line: 68
-    cyclomatic_complexity: 2
-    calls_out: 5
-    calls_in: 0
-  packages.uri2vql.src.uri2vql.window.query_window:
-    name: query_window
-    module: packages.uri2vql.src.uri2vql.window
-    line: 391
-    cyclomatic_complexity: 69
-    calls_out: 147
-    calls_in: 2
-  src.vql.adopt.window._capture_with_gnome_screenshot:
-    name: _capture_with_gnome_screenshot
-    module: src.vql.adopt.window
-    line: 234
-    cyclomatic_complexity: 2
-    calls_out: 4
-    calls_in: 0
-  packages.dsl2img2svg.src.dsl2img2svg.cli.main:
-    name: main
-    module: packages.dsl2img2svg.src.dsl2img2svg.cli
-    line: 11
-    cyclomatic_complexity: 4
-    calls_out: 5
-    calls_in: 0
-  packages.dsl2vql.src.dsl2vql.handlers.command.handle_export:
-    name: handle_export
-    module: packages.dsl2vql.src.dsl2vql.handlers.command
-    line: 76
-    cyclomatic_complexity: 7
-    calls_out: 15
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.uri.uri_for_imgl_type:
-    name: uri_for_imgl_type
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 116
-    cyclomatic_complexity: 6
-    calls_out: 1
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.uri.uri_for_window_summary:
-    name: uri_for_window_summary
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 62
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 1
-  src.vql.adopt.window._capture_with_scrot:
-    name: _capture_with_scrot
-    module: src.vql.adopt.window
-    line: 289
-    cyclomatic_complexity: 2
-    calls_out: 4
-    calls_in: 0
-  packages.dsl2vql.src.dsl2vql.grammar.to_text:
-    name: to_text
-    module: packages.dsl2vql.src.dsl2vql.grammar
-    line: 80
-    cyclomatic_complexity: 6
-    calls_out: 11
-    calls_in: 4
-  src.vql.adopt.window.capture_screen:
-    name: capture_screen
-    module: src.vql.adopt.window
-    line: 495
-    cyclomatic_complexity: 7
-    calls_out: 14
-    calls_in: 3
-  packages.rest2vql.src.rest2vql.window_routes.post_window_compare:
-    name: post_window_compare
-    module: packages.rest2vql.src.rest2vql.window_routes
-    line: 36
-    cyclomatic_complexity: 2
-    calls_out: 5
-    calls_in: 0
-  packages.img2svg.src.img2svg.trace._parse_vtracer_svg:
-    name: _parse_vtracer_svg
-    module: packages.img2svg.src.img2svg.trace
-    line: 191
-    cyclomatic_complexity: 5
-    calls_out: 16
-    calls_in: 1
-  src.vql.facade.VQLFacade.render_png:
-    name: render_png
-    module: src.vql.facade
-    line: 69
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 0
-  src.vql.renderers.base.VQLRendererAdapter.render:
-    name: render
-    module: src.vql.renderers.base
-    line: 64
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 0
-  src.vql.adopt.window._enrich_program_metadata:
-    name: _enrich_program_metadata
-    module: src.vql.adopt.window
-    line: 544
-    cyclomatic_complexity: 2
-    calls_out: 5
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.handlers.command.handle_generate:
-    name: handle_generate
-    module: packages.dsl2vql.src.dsl2vql.handlers.command
-    line: 16
-    cyclomatic_complexity: 4
-    calls_out: 12
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.uri.uri_for_window_compare:
-    name: uri_for_window_compare
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 153
-    cyclomatic_complexity: 3
-    calls_out: 1
-    calls_in: 1
-  packages.img2vql.src.img2vql.fingerprint.load_program_fingerprint:
-    name: load_program_fingerprint
-    module: packages.img2vql.src.img2vql.fingerprint
-    line: 26
-    cyclomatic_complexity: 6
     calls_out: 9
-    calls_in: 3
-  packages.img2vql.src.img2vql.fingerprint.compare_with_program:
-    name: compare_with_program
-    module: packages.img2vql.src.img2vql.fingerprint
-    line: 56
-    cyclomatic_complexity: 5
-    calls_out: 19
-    calls_in: 4
-  packages.uri2vql.src.uri2vql.uri.parse_vql_uri:
-    name: parse_vql_uri
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 176
-    cyclomatic_complexity: 5
-    calls_out: 6
-    calls_in: 3
-  packages.uri2vql.src.uri2vql.window._normalize_locale:
-    name: _normalize_locale
-    module: packages.uri2vql.src.uri2vql.window
-    line: 32
-    cyclomatic_complexity: 4
-    calls_out: 4
-    calls_in: 2
-  src.vql.facade.VQLFacade.to_events:
-    name: to_events
-    module: src.vql.facade
-    line: 77
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 0
-  packages.rest2vql.src.rest2vql.window.window_analyze:
-    name: window_analyze
-    module: packages.rest2vql.src.rest2vql.window
-    line: 67
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 1
-  src.vql.renderers.base.render_program:
-    name: render_program
-    module: src.vql.renderers.base
-    line: 34
-    cyclomatic_complexity: 1
-    calls_out: 3
-    calls_in: 2
-  packages.img2vql.src.img2vql.fingerprint._json_safe:
-    name: _json_safe
-    module: packages.img2vql.src.img2vql.fingerprint
-    line: 43
-    cyclomatic_complexity: 7
-    calls_out: 8
-    calls_in: 3
-  src.vql.adopt.window._is_wayland:
-    name: _is_wayland
-    module: src.vql.adopt.window
-    line: 57
-    cyclomatic_complexity: 2
-    calls_out: 3
     calls_in: 3
   src.vql.drawing.nl_parser.NLDrawingParser.to_vql:
     name: to_vql
@@ -656,215 +278,26 @@ nodes:
     cyclomatic_complexity: 1
     calls_out: 1
     calls_in: 0
-  packages.dsl2vql.src.dsl2vql.handlers.query.handle_resolve:
-    name: handle_resolve
-    module: packages.dsl2vql.src.dsl2vql.handlers.query
-    line: 97
-    cyclomatic_complexity: 3
-    calls_out: 5
-    calls_in: 1
-  src.vql.adopt.window._image_is_blank:
-    name: _image_is_blank
-    module: src.vql.adopt.window
-    line: 131
-    cyclomatic_complexity: 8
-    calls_out: 12
-    calls_in: 5
-  packages.dsl2vql.src.dsl2vql.schema_registry.validate_command_dict:
-    name: validate_command_dict
-    module: packages.dsl2vql.src.dsl2vql.schema_registry
-    line: 32
-    cyclomatic_complexity: 3
-    calls_out: 7
-    calls_in: 3
-  src.vql.facade.VQLFacade.render_svg:
-    name: render_svg
-    module: src.vql.facade
-    line: 65
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 0
-  packages.dsl2img2svg.src.dsl2img2svg.dispatch.dispatch:
-    name: dispatch
-    module: packages.dsl2img2svg.src.dsl2img2svg.dispatch
-    line: 42
-    cyclomatic_complexity: 14
-    calls_out: 41
-    calls_in: 0
-  packages.img2vql.src.img2vql.program._bbox_contains:
-    name: _bbox_contains
-    module: packages.img2vql.src.img2vql.program
-    line: 108
-    cyclomatic_complexity: 4
-    calls_out: 0
-    calls_in: 1
-  packages.img2vql.src.img2vql.metadata.refresh_program_metadata:
-    name: refresh_program_metadata
-    module: packages.img2vql.src.img2vql.metadata
-    line: 245
-    cyclomatic_complexity: 4
-    calls_out: 19
-    calls_in: 4
-  packages.uri2vql.src.uri2vql.query.query_uri:
-    name: query_uri
-    module: packages.uri2vql.src.uri2vql.query
-    line: 46
-    cyclomatic_complexity: 15
-    calls_out: 20
-    calls_in: 0
-  packages.img2vql.src.img2vql.detect._avg_color:
-    name: _avg_color
-    module: packages.img2vql.src.img2vql.detect
-    line: 79
-    cyclomatic_complexity: 5
-    calls_out: 8
-    calls_in: 4
-  packages.img2vql.src.img2vql.detect._detect_toolbar:
-    name: _detect_toolbar
-    module: packages.img2vql.src.img2vql.detect
-    line: 270
-    cyclomatic_complexity: 10
-    calls_out: 21
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.uri.uri_for_window_imgl:
-    name: uri_for_window_imgl
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 66
-    cyclomatic_complexity: 3
-    calls_out: 1
-    calls_in: 2
-  packages.rest2vql.src.rest2vql.window.window_refresh:
-    name: window_refresh
-    module: packages.rest2vql.src.rest2vql.window
-    line: 40
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 1
-  src.vql.adopt.window._capture_with_grim:
-    name: _capture_with_grim
-    module: src.vql.adopt.window
-    line: 217
-    cyclomatic_complexity: 2
-    calls_out: 4
-    calls_in: 0
-  packages.img2svg.src.img2svg.svg_emit.paths_to_svg:
-    name: paths_to_svg
-    module: packages.img2svg.src.img2svg.svg_emit
-    line: 67
-    cyclomatic_complexity: 3
-    calls_out: 9
-    calls_in: 1
-  src.vql.adopt.window._capture_permission_hint:
-    name: _capture_permission_hint
-    module: src.vql.adopt.window
-    line: 468
-    cyclomatic_complexity: 2
-    calls_out: 1
-    calls_in: 3
-  examples.photo-roundtrip-test.test_img2svg_roundtrip:
-    name: test_img2svg_roundtrip
-    module: examples.photo-roundtrip-test
-    line: 99
-    cyclomatic_complexity: 8
-    calls_out: 29
-    calls_in: 2
-  packages.dsl2vql.src.dsl2vql.handlers.command.handle_from_tokens:
-    name: handle_from_tokens
-    module: packages.dsl2vql.src.dsl2vql.handlers.command
-    line: 104
-    cyclomatic_complexity: 11
-    calls_out: 15
-    calls_in: 1
-  src.vql.adopt.window._require_pillow:
-    name: _require_pillow
-    module: src.vql.adopt.window
-    line: 23
-    cyclomatic_complexity: 2
-    calls_out: 1
-    calls_in: 6
-  packages.uri2vql.src.uri2vql.nlp2uri.best_uri:
-    name: best_uri
-    module: packages.uri2vql.src.uri2vql.nlp2uri
-    line: 314
-    cyclomatic_complexity: 2
-    calls_out: 1
-    calls_in: 0
-  packages.dsl2vql.src.dsl2vql.handlers.query.handle_render:
-    name: handle_render
-    module: packages.dsl2vql.src.dsl2vql.handlers.query
-    line: 64
-    cyclomatic_complexity: 9
-    calls_out: 16
-    calls_in: 1
-  examples.generate-demo-screen._load_font:
-    name: _load_font
-    module: examples.generate-demo-screen
-    line: 12
-    cyclomatic_complexity: 3
-    calls_out: 2
-    calls_in: 3
-  packages.dsl2vql.src.dsl2vql.handlers.command.handle_patch:
-    name: handle_patch
-    module: packages.dsl2vql.src.dsl2vql.handlers.command
-    line: 58
-    cyclomatic_complexity: 3
-    calls_out: 12
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.codec.decode_protobuf:
-    name: decode_protobuf
-    module: packages.dsl2vql.src.dsl2vql.codec
-    line: 32
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 0
-  packages.rest2vql.src.rest2vql.app.create_app:
-    name: create_app
-    module: packages.rest2vql.src.rest2vql.app
-    line: 19
-    cyclomatic_complexity: 1
-    calls_out: 43
-    calls_in: 1
-  packages.img2vql.src.img2vql.diagnose.diagnose_image:
-    name: diagnose_image
-    module: packages.img2vql.src.img2vql.diagnose
-    line: 23
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_click:
+    name: _resolve_imgl_click
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl
+    line: 33
     cyclomatic_complexity: 2
     calls_out: 3
-    calls_in: 2
-  packages.img2svg.src.img2svg.to_vql.trace_to_vql_program:
-    name: trace_to_vql_program
-    module: packages.img2svg.src.img2svg.to_vql
-    line: 26
-    cyclomatic_complexity: 15
-    calls_out: 46
-    calls_in: 3
-  src.vql.adopt.window._portal_python:
-    name: _portal_python
-    module: src.vql.adopt.window
-    line: 74
-    cyclomatic_complexity: 7
-    calls_out: 5
-    calls_in: 3
-  packages.dsl2vql.src.dsl2vql.grammar.split_command:
-    name: split_command
-    module: packages.dsl2vql.src.dsl2vql.grammar
-    line: 9
-    cyclomatic_complexity: 4
-    calls_out: 4
-    calls_in: 3
-  packages.uri2vql.src.uri2vql.query._load_program:
-    name: _load_program
-    module: packages.uri2vql.src.uri2vql.query
-    line: 39
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_scene:
+    name: _resolve_scene
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.program
+    line: 27
     cyclomatic_complexity: 1
-    calls_out: 5
-    calls_in: 1
-  packages.rest2vql.src.rest2vql.window_routes.post_window_detect:
-    name: post_window_detect
-    module: packages.rest2vql.src.rest2vql.window_routes
-    line: 28
-    cyclomatic_complexity: 2
-    calls_out: 5
+    calls_out: 2
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_program:
+    name: _resolve_program
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.program
+    line: 42
+    cyclomatic_complexity: 1
+    calls_out: 2
     calls_in: 0
   packages.rest2vql.src.rest2vql.window_routes.post_window_adopt:
     name: post_window_adopt
@@ -873,146 +306,118 @@ nodes:
     cyclomatic_complexity: 2
     calls_out: 5
     calls_in: 0
-  examples.photo-roundtrip-test._require_pil:
-    name: _require_pil
-    module: examples.photo-roundtrip-test
-    line: 27
+  packages.img2vql.src.img2vql.pipeline.fast_analysis.level1_img2nl_fast:
+    name: level1_img2nl_fast
+    module: packages.img2vql.src.img2vql.pipeline.fast_analysis
+    line: 17
     cyclomatic_complexity: 2
+    calls_out: 8
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.nlp2uri.nlp2uri:
+    name: nlp2uri
+    module: packages.uri2vql.src.uri2vql.nlp2uri
+    line: 125
+    cyclomatic_complexity: 1
     calls_out: 1
-    calls_in: 2
-  packages.dsl2vql.src.dsl2vql.pb_codec.envelope_to_dict:
-    name: envelope_to_dict
-    module: packages.dsl2vql.src.dsl2vql.pb_codec
-    line: 60
-    cyclomatic_complexity: 31
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.bus.dispatch:
+    name: dispatch
+    module: packages.dsl2vql.src.dsl2vql.bus
+    line: 46
+    cyclomatic_complexity: 6
+    calls_out: 15
+    calls_in: 12
+  src.vql.adopt.capture_backends.capture_with_scrot:
+    name: capture_with_scrot
+    module: src.vql.adopt.capture_backends
+    line: 151
+    cyclomatic_complexity: 2
     calls_out: 4
-    calls_in: 1
-  examples.photo-roundtrip-test.test_ui_grid_adopt:
-    name: test_ui_grid_adopt
-    module: examples.photo-roundtrip-test
-    line: 157
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.grammar_handlers.build_resolve:
+    name: build_resolve
+    module: packages.dsl2vql.src.dsl2vql.grammar_handlers
+    line: 25
     cyclomatic_complexity: 2
-    calls_out: 17
+    calls_out: 4
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.schema_registry.validate_schema_registry:
+    name: validate_schema_registry
+    module: packages.dsl2vql.src.dsl2vql.schema_registry
+    line: 41
+    cyclomatic_complexity: 3
+    calls_out: 6
     calls_in: 1
-  src.vql.validation.spec._match_items:
-    name: _match_items
-    module: src.vql.validation.spec
-    line: 47
-    cyclomatic_complexity: 4
+  packages.rest2vql.src.rest2vql.window.window_detect:
+    name: window_detect
+    module: packages.rest2vql.src.rest2vql.window
+    line: 22
+    cyclomatic_complexity: 2
     calls_out: 3
-    calls_in: 2
-  packages.mcp2vql.src.mcp2vql.server._require_fastmcp:
-    name: _require_fastmcp
-    module: packages.mcp2vql.src.mcp2vql.server
-    line: 10
-    cyclomatic_complexity: 2
-    calls_out: 1
     calls_in: 1
-  packages.rest2vql.src.rest2vql.window_routes.post_window_summary:
-    name: post_window_summary
+  packages.dsl2vql.src.dsl2vql.pb_body_codec.envelope_to_dict:
+    name: envelope_to_dict
+    module: packages.dsl2vql.src.dsl2vql.pb_body_codec
+    line: 165
+    cyclomatic_complexity: 4
+    calls_out: 6
+    calls_in: 1
+  packages.rest2vql.src.rest2vql.window_routes.post_window_compare:
+    name: post_window_compare
     module: packages.rest2vql.src.rest2vql.window_routes
-    line: 99
+    line: 36
     cyclomatic_complexity: 2
     calls_out: 5
     calls_in: 0
-  packages.img2vql.src.img2vql.metadata.auto_ocr_special_hits:
-    name: auto_ocr_special_hits
-    module: packages.img2vql.src.img2vql.metadata
-    line: 103
-    cyclomatic_complexity: 3
-    calls_out: 7
-    calls_in: 2
-  packages.dsl2vql.src.dsl2vql.bus._bytes_to_cmd:
-    name: _bytes_to_cmd
-    module: packages.dsl2vql.src.dsl2vql.bus
-    line: 32
-    cyclomatic_complexity: 3
-    calls_out: 5
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.handlers.query.handle_query:
-    name: handle_query
-    module: packages.dsl2vql.src.dsl2vql.handlers.query
+  packages.img2vql.src.img2vql.pipeline.llm_client._image_to_data_url:
+    name: _image_to_data_url
+    module: packages.img2vql.src.img2vql.pipeline.llm_client
     line: 19
-    cyclomatic_complexity: 4
-    calls_out: 8
+    cyclomatic_complexity: 2
+    calls_out: 7
     calls_in: 1
-  packages.img2vql.src.img2vql.metadata.imgl_ocr_special_hits:
-    name: imgl_ocr_special_hits
-    module: packages.img2vql.src.img2vql.metadata
-    line: 119
-    cyclomatic_complexity: 8
-    calls_out: 12
+  src.vql.adopt.capture_policy.capture_interactive_mode:
+    name: capture_interactive_mode
+    module: src.vql.adopt.capture_policy
+    line: 20
+    cyclomatic_complexity: 2
+    calls_out: 3
     calls_in: 1
-  packages.rest2vql.src.rest2vql.window.window_summary:
-    name: window_summary
-    module: packages.rest2vql.src.rest2vql.window
-    line: 103
-    cyclomatic_complexity: 7
-    calls_out: 1
+  packages.img2svg.src.img2svg.trace.trace_vtracer:
+    name: trace_vtracer
+    module: packages.img2svg.src.img2svg.trace
+    line: 214
+    cyclomatic_complexity: 6
+    calls_out: 17
+    calls_in: 4
+  packages.nlp2vql.src.nlp2vql.to_dsl._intent:
+    name: _intent
+    module: packages.nlp2vql.src.nlp2vql.to_dsl
+    line: 8
+    cyclomatic_complexity: 11
+    calls_out: 6
     calls_in: 1
-  packages.dsl2vql.src.dsl2vql.cli._main_legacy:
-    name: _main_legacy
-    module: packages.dsl2vql.src.dsl2vql.cli
-    line: 13
-    cyclomatic_complexity: 9
-    calls_out: 20
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.window.refresh_window_metadata:
-    name: refresh_window_metadata
-    module: packages.uri2vql.src.uri2vql.window
-    line: 137
+  packages.uri2vql.src.uri2vql.cli_commands.pipeline.run_capture_and_analyze:
+    name: run_capture_and_analyze
+    module: packages.uri2vql.src.uri2vql.cli_commands.pipeline
+    line: 9
+    cyclomatic_complexity: 6
+    calls_out: 10
+    calls_in: 0
+  packages.rest2vql.src.rest2vql.window_routes._window_response:
+    name: _window_response
+    module: packages.rest2vql.src.rest2vql.window_routes
+    line: 22
     cyclomatic_complexity: 2
     calls_out: 2
-    calls_in: 3
-  packages.img2svg.src.img2svg.trace.trace_contours_opencv:
-    name: trace_contours_opencv
-    module: packages.img2svg.src.img2svg.trace
-    line: 135
-    cyclomatic_complexity: 8
-    calls_out: 23
-    calls_in: 6
-  packages.dsl2vql.src.dsl2vql.schema_registry.all_schemas:
-    name: all_schemas
-    module: packages.dsl2vql.src.dsl2vql.schema_registry
-    line: 28
+    calls_in: 7
+  src.vql.facade.VQLFacade.compile:
+    name: compile
+    module: src.vql.facade
+    line: 41
     cyclomatic_complexity: 1
-    calls_out: 2
-    calls_in: 1
-  packages.img2vql.src.img2vql.program._build_contains_relations:
-    name: _build_contains_relations
-    module: packages.img2vql.src.img2vql.program
-    line: 114
-    cyclomatic_complexity: 8
-    calls_out: 9
-    calls_in: 1
-  src.vql.adopt.window._active_window_title:
-    name: _active_window_title
-    module: src.vql.adopt.window
-    line: 479
-    cyclomatic_complexity: 4
-    calls_out: 3
-    calls_in: 1
-  packages.img2vql.src.img2vql.program.elements_to_vql_program:
-    name: elements_to_vql_program
-    module: packages.img2vql.src.img2vql.program
-    line: 25
-    cyclomatic_complexity: 11
-    calls_out: 40
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.schema_registry.schema_for_verb:
-    name: schema_for_verb
-    module: packages.dsl2vql.src.dsl2vql.schema_registry
-    line: 24
-    cyclomatic_complexity: 1
-    calls_out: 3
-    calls_in: 2
-  packages.dsl2vql.src.dsl2vql.handlers.query.handle_validate:
-    name: handle_validate
-    module: packages.dsl2vql.src.dsl2vql.handlers.query
-    line: 36
-    cyclomatic_complexity: 6
-    calls_out: 11
-    calls_in: 1
+    calls_out: 1
+    calls_in: 0
   src.vql.compiler.nl_to_vql.nl_to_program:
     name: nl_to_program
     module: src.vql.compiler.nl_to_vql
@@ -1020,6 +425,790 @@ nodes:
     cyclomatic_complexity: 6
     calls_out: 9
     calls_in: 5
+  packages.uri2vql.src.uri2vql.window_compare.compare_window_image:
+    name: compare_window_image
+    module: packages.uri2vql.src.uri2vql.window_compare
+    line: 9
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 2
+  packages.dsl2vql.src.dsl2vql.cli.main:
+    name: main
+    module: packages.dsl2vql.src.dsl2vql.cli
+    line: 89
+    cyclomatic_complexity: 4
+    calls_out: 2
+    calls_in: 0
+  src.vql.drawing.svg_path_parser._scale_groups:
+    name: _scale_groups
+    module: src.vql.drawing.svg_path_parser
+    line: 139
+    cyclomatic_complexity: 15
+    calls_out: 6
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_diagnose:
+    name: _resolve_window_diagnose
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.window
+    line: 55
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 0
+  src.vql.adopt.capture_image.image_is_blank:
+    name: image_is_blank
+    module: src.vql.adopt.capture_image
+    line: 12
+    cyclomatic_complexity: 8
+    calls_out: 12
+    calls_in: 5
+  src.vql.adopt.capture_screen.active_window_title:
+    name: active_window_title
+    module: src.vql.adopt.capture_screen
+    line: 15
+    cyclomatic_complexity: 4
+    calls_out: 3
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.uri.uri_for_window_analyze:
+    name: uri_for_window_analyze
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 49
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 2
+  packages.uri2vql.src.uri2vql.nlp2uri_extractors.extract_type_parts:
+    name: extract_type_parts
+    module: packages.uri2vql.src.uri2vql.nlp2uri_extractors
+    line: 13
+    cyclomatic_complexity: 5
+    calls_out: 8
+    calls_in: 2
+  packages.uri2vql.src.uri2vql.uri.uri_for_window_refresh:
+    name: uri_for_window_refresh
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 164
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 1
+  src.vql.adopt.capture_backends.capture_with_mss:
+    name: capture_with_mss
+    module: src.vql.adopt.capture_backends
+    line: 168
+    cyclomatic_complexity: 4
+    calls_out: 8
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.nlp2uri.dedupe_by_uri:
+    name: dedupe_by_uri
+    module: packages.uri2vql.src.uri2vql.nlp2uri
+    line: 91
+    cyclomatic_complexity: 3
+    calls_out: 4
+    calls_in: 1
+  packages.img2vql.src.img2vql.pipeline.llm_client.chat_completion:
+    name: chat_completion
+    module: packages.img2vql.src.img2vql.pipeline.llm_client
+    line: 28
+    cyclomatic_complexity: 7
+    calls_out: 18
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.uri.uri_for_scene:
+    name: uri_for_scene
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 37
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  examples.photo-roundtrip-test.test_metadata_only_reconstruction:
+    name: test_metadata_only_reconstruction
+    module: examples.photo-roundtrip-test
+    line: 306
+    cyclomatic_complexity: 1
+    calls_out: 11
+    calls_in: 1
+  packages.nlp2vql.src.nlp2vql.to_dsl.to_dsl:
+    name: to_dsl
+    module: packages.nlp2vql.src.nlp2vql.to_dsl
+    line: 41
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 2
+  packages.uri2img2svg.src.uri2img2svg.query.query_uri:
+    name: query_uri
+    module: packages.uri2img2svg.src.uri2img2svg.query
+    line: 37
+    cyclomatic_complexity: 13
+    calls_out: 28
+    calls_in: 6
+  packages.uri2vql.src.uri2vql.cli_commands.window.run_adopt_ui:
+    name: run_adopt_ui
+    module: packages.uri2vql.src.uri2vql.cli_commands.window
+    line: 38
+    cyclomatic_complexity: 2
+    calls_out: 4
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.cli_commands.window.run_compare_window:
+    name: run_compare_window
+    module: packages.uri2vql.src.uri2vql.cli_commands.window
+    line: 104
+    cyclomatic_complexity: 2
+    calls_out: 4
+    calls_in: 0
+  src.vql.validation.metadata._load_imgl_metadata_schema:
+    name: _load_imgl_metadata_schema
+    module: src.vql.validation.metadata
+    line: 14
+    cyclomatic_complexity: 1
+    calls_out: 3
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.uri.uri_for_imgl_type:
+    name: uri_for_imgl_type
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 116
+    cyclomatic_complexity: 6
+    calls_out: 1
+    calls_in: 1
+  src.vql.renderers.svg.render_to_png:
+    name: render_to_png
+    module: src.vql.renderers.svg
+    line: 30
+    cyclomatic_complexity: 2
+    calls_out: 8
+    calls_in: 10
+  packages.img2vql.src.img2vql.pipeline.fast_analysis.level4_diagnose:
+    name: level4_diagnose
+    module: packages.img2vql.src.img2vql.pipeline.fast_analysis
+    line: 140
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.events.EventStore.append:
+    name: append
+    module: packages.dsl2vql.src.dsl2vql.events
+    line: 41
+    cyclomatic_complexity: 3
+    calls_out: 33
+    calls_in: 0
+  packages.img2svg.src.img2svg.svg_emit.paths_to_svg:
+    name: paths_to_svg
+    module: packages.img2svg.src.img2svg.svg_emit
+    line: 67
+    cyclomatic_complexity: 3
+    calls_out: 9
+    calls_in: 1
+  src.vql.validation.spec.validate_program:
+    name: validate_program
+    module: src.vql.validation.spec
+    line: 60
+    cyclomatic_complexity: 4
+    calls_out: 12
+    calls_in: 2
+  src.vql.facade.VQLFacade.render_png:
+    name: render_png
+    module: src.vql.facade
+    line: 69
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.grammar.parse_line:
+    name: parse_line
+    module: packages.dsl2vql.src.dsl2vql.grammar
+    line: 13
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 6
+  packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri:
+    name: resolve_prompt_to_vql_uri
+    module: packages.uri2vql.src.uri2vql.nlp2uri
+    line: 102
+    cyclomatic_complexity: 5
+    calls_out: 7
+    calls_in: 2
+  packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze.run_pipeline_analyze:
+    name: run_pipeline_analyze
+    module: packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze
+    line: 9
+    cyclomatic_complexity: 5
+    calls_out: 5
+    calls_in: 0
+  packages.img2vql.src.img2vql.pipeline.roundtrip.roundtrip_compare:
+    name: roundtrip_compare
+    module: packages.img2vql.src.img2vql.pipeline.roundtrip
+    line: 56
+    cyclomatic_complexity: 3
+    calls_out: 7
+    calls_in: 1
+  packages.img2vql.src.img2vql.fingerprint._json_safe:
+    name: _json_safe
+    module: packages.img2vql.src.img2vql.fingerprint
+    line: 43
+    cyclomatic_complexity: 7
+    calls_out: 8
+    calls_in: 3
+  packages.dsl2vql.src.dsl2vql.handlers.query.handle_validate:
+    name: handle_validate
+    module: packages.dsl2vql.src.dsl2vql.handlers.query
+    line: 36
+    cyclomatic_complexity: 6
+    calls_out: 11
+    calls_in: 1
+  packages.img2svg.src.img2svg.to_vql.trace_to_vql_program:
+    name: trace_to_vql_program
+    module: packages.img2svg.src.img2svg.to_vql
+    line: 26
+    cyclomatic_complexity: 15
+    calls_out: 46
+    calls_in: 3
+  packages.uri2vql.src.uri2vql.nlp2uri.best_uri:
+    name: best_uri
+    module: packages.uri2vql.src.uri2vql.nlp2uri
+    line: 143
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 0
+  examples.photo-roundtrip-test.sample_nl_drawing:
+    name: sample_nl_drawing
+    module: examples.photo-roundtrip-test
+    line: 107
+    cyclomatic_complexity: 2
+    calls_out: 12
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.codec.roundtrip_text:
+    name: roundtrip_text
+    module: packages.dsl2vql.src.dsl2vql.codec
+    line: 16
+    cyclomatic_complexity: 3
+    calls_out: 6
+    calls_in: 0
+  src.vql.adopt.capture_backends.run_capture:
+    name: run_capture
+    module: src.vql.adopt.capture_backends
+    line: 33
+    cyclomatic_complexity: 7
+    calls_out: 8
+    calls_in: 5
+  packages.img2vql.src.img2vql.diagnose._recommendation:
+    name: _recommendation
+    module: packages.img2vql.src.img2vql.diagnose
+    line: 113
+    cyclomatic_complexity: 6
+    calls_out: 10
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.cli_commands.window.run_refresh_window:
+    name: run_refresh_window
+    module: packages.uri2vql.src.uri2vql.cli_commands.window
+    line: 112
+    cyclomatic_complexity: 4
+    calls_out: 7
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.handlers.command.handle_compile:
+    name: handle_compile
+    module: packages.dsl2vql.src.dsl2vql.handlers.command
+    line: 38
+    cyclomatic_complexity: 4
+    calls_out: 11
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.window_handlers.handle_analyze:
+    name: handle_analyze
+    module: packages.uri2vql.src.uri2vql.window_handlers
+    line: 18
+    cyclomatic_complexity: 8
+    calls_out: 14
+    calls_in: 0
+  packages.uri2img2svg.src.uri2img2svg.cli.main:
+    name: main
+    module: packages.uri2img2svg.src.uri2img2svg.cli
+    line: 12
+    cyclomatic_complexity: 4
+    calls_out: 9
+    calls_in: 0
+  examples.generate-demo-screen.write_demo_screen:
+    name: write_demo_screen
+    module: examples.generate-demo-screen
+    line: 24
+    cyclomatic_complexity: 1
+    calls_out: 18
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.grammar_handlers.build_patch:
+    name: build_patch
+    module: packages.dsl2vql.src.dsl2vql.grammar_handlers
+    line: 31
+    cyclomatic_complexity: 4
+    calls_out: 2
+    calls_in: 0
+  packages.img2svg.src.img2svg.trace._merge_grid_cells:
+    name: _merge_grid_cells
+    module: packages.img2svg.src.img2svg.trace
+    line: 41
+    cyclomatic_complexity: 15
+    calls_out: 9
+    calls_in: 1
+  packages.img2vql.src.img2vql.pipeline.llm_client.build_vision_user_message:
+    name: build_vision_user_message
+    module: packages.img2vql.src.img2vql.pipeline.llm_client
+    line: 74
+    cyclomatic_complexity: 4
+    calls_out: 3
+    calls_in: 1
+  packages.img2vql.src.img2vql.pipeline.orchestrate.analyze_image_to_vql:
+    name: analyze_image_to_vql
+    module: packages.img2vql.src.img2vql.pipeline.orchestrate
+    line: 25
+    cyclomatic_complexity: 24
+    calls_out: 55
+    calls_in: 1
+  packages.img2vql.src.img2vql.fingerprint.load_program_fingerprint:
+    name: load_program_fingerprint
+    module: packages.img2vql.src.img2vql.fingerprint
+    line: 26
+    cyclomatic_complexity: 6
+    calls_out: 9
+    calls_in: 4
+  packages.img2vql.src.img2vql.metadata.imgl_ocr_special_hits:
+    name: imgl_ocr_special_hits
+    module: packages.img2vql.src.img2vql.metadata
+    line: 119
+    cyclomatic_complexity: 8
+    calls_out: 12
+    calls_in: 1
+  packages.img2vql.src.img2vql.metadata.metadata_from_diagnose:
+    name: metadata_from_diagnose
+    module: packages.img2vql.src.img2vql.metadata
+    line: 285
+    cyclomatic_complexity: 6
+    calls_out: 21
+    calls_in: 1
+  packages.img2vql.src.img2vql.pipeline.roundtrip.vql_to_image:
+    name: vql_to_image
+    module: packages.img2vql.src.img2vql.pipeline.roundtrip
+    line: 12
+    cyclomatic_complexity: 4
+    calls_out: 11
+    calls_in: 2
+  src.vql.adopt.capture_backends.capture_with_gnome_shell:
+    name: capture_with_gnome_shell
+    module: src.vql.adopt.capture_backends
+    line: 55
+    cyclomatic_complexity: 2
+    calls_out: 4
+    calls_in: 0
+  src.vql.drawing.path_generator.PathGenerator.generate:
+    name: generate
+    module: src.vql.drawing.path_generator
+    line: 16
+    cyclomatic_complexity: 5
+    calls_out: 7
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.grammar_handlers.build_export:
+    name: build_export
+    module: packages.dsl2vql.src.dsl2vql.grammar_handlers
+    line: 61
+    cyclomatic_complexity: 4
+    calls_out: 3
+    calls_in: 0
+  src.vql.validation.spec._program_shapes:
+    name: _program_shapes
+    module: src.vql.validation.spec
+    line: 35
+    cyclomatic_complexity: 3
+    calls_out: 1
+    calls_in: 1
+  src.vql.facade.VQLFacade.validate:
+    name: validate
+    module: src.vql.facade
+    line: 61
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 0
+  src.vql.adopt.capture_policy.should_use_interactive_portal:
+    name: should_use_interactive_portal
+    module: src.vql.adopt.capture_policy
+    line: 24
+    cyclomatic_complexity: 4
+    calls_out: 3
+    calls_in: 2
+  src.vql.renderers.base.VQLRendererAdapter.render:
+    name: render
+    module: src.vql.renderers.base
+    line: 64
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 0
+  packages.rest2vql.src.rest2vql.window_routes.post_window_analyze:
+    name: post_window_analyze
+    module: packages.rest2vql.src.rest2vql.window_routes
+    line: 68
+    cyclomatic_complexity: 2
+    calls_out: 5
+    calls_in: 0
+  packages.img2vql.src.img2vql.detect._detect_panels:
+    name: _detect_panels
+    module: packages.img2vql.src.img2vql.detect
+    line: 116
+    cyclomatic_complexity: 5
+    calls_out: 14
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.schema_registry.all_schemas:
+    name: all_schemas
+    module: packages.dsl2vql.src.dsl2vql.schema_registry
+    line: 28
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.grammar_handlers.build_render:
+    name: build_render
+    module: packages.dsl2vql.src.dsl2vql.grammar_handlers
+    line: 45
+    cyclomatic_complexity: 4
+    calls_out: 3
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.window_handlers.handle_adopt:
+    name: handle_adopt
+    module: packages.uri2vql.src.uri2vql.window_handlers
+    line: 95
+    cyclomatic_complexity: 9
+    calls_out: 15
+    calls_in: 0
+  packages.img2vql.src.img2vql.pipeline.fast_analysis.level2_ui_detect:
+    name: level2_ui_detect
+    module: packages.img2vql.src.img2vql.pipeline.fast_analysis
+    line: 59
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  packages.img2vql.src.img2vql.pipeline.llm_vql.build_llm_extraction_prompt:
+    name: build_llm_extraction_prompt
+    module: packages.img2vql.src.img2vql.pipeline.llm_vql
+    line: 54
+    cyclomatic_complexity: 1
+    calls_out: 4
+    calls_in: 1
+  packages.img2vql.src.img2vql.pipeline.schema_prompt.build_vql_schema_prompt:
+    name: build_vql_schema_prompt
+    module: packages.img2vql.src.img2vql.pipeline.schema_prompt
+    line: 59
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  examples.generate-demo-screen.main:
+    name: main
+    module: examples.generate-demo-screen
+    line: 60
+    cyclomatic_complexity: 1
+    calls_out: 6
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.handlers.query.handle_render:
+    name: handle_render
+    module: packages.dsl2vql.src.dsl2vql.handlers.query
+    line: 64
+    cyclomatic_complexity: 9
+    calls_out: 16
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.window_metadata.refresh_window_metadata:
+    name: refresh_window_metadata
+    module: packages.uri2vql.src.uri2vql.window_metadata
+    line: 9
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 3
+  src.vql.validation.metadata.validate_program_metadata:
+    name: validate_program_metadata
+    module: src.vql.validation.metadata
+    line: 18
+    cyclomatic_complexity: 14
+    calls_out: 14
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_analyze_vql:
+    name: _resolve_window_analyze_vql
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.window
+    line: 67
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 0
+  packages.img2vql.src.img2vql.detect._flood_rects:
+    name: _flood_rects
+    module: packages.img2vql.src.img2vql.detect
+    line: 151
+    cyclomatic_complexity: 14
+    calls_out: 13
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.uri.uri_for_window_compare:
+    name: uri_for_window_compare
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 153
+    cyclomatic_complexity: 3
+    calls_out: 1
+    calls_in: 1
+  packages.img2vql.src.img2vql.metadata.auto_ocr_special_hits:
+    name: auto_ocr_special_hits
+    module: packages.img2vql.src.img2vql.metadata
+    line: 103
+    cyclomatic_complexity: 3
+    calls_out: 7
+    calls_in: 2
+  src.vql.facade.VQLFacade.to_events:
+    name: to_events
+    module: src.vql.facade
+    line: 77
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf:
+    name: encode_protobuf
+    module: packages.dsl2vql.src.dsl2vql.pb_codec
+    line: 24
+    cyclomatic_complexity: 1
+    calls_out: 6
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.uri.uri_for_objects:
+    name: uri_for_objects
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 41
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_compare:
+    name: _resolve_window_compare
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.window
+    line: 43
+    cyclomatic_complexity: 3
+    calls_out: 2
+    calls_in: 0
+  src.vql.adopt.capture_policy.is_wayland:
+    name: is_wayland
+    module: src.vql.adopt.capture_policy
+    line: 16
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 3
+  packages.img2vql.src.img2vql.program.elements_to_vql_program:
+    name: elements_to_vql_program
+    module: packages.img2vql.src.img2vql.program
+    line: 25
+    cyclomatic_complexity: 11
+    calls_out: 40
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.window_handlers.handle_summary:
+    name: handle_summary
+    module: packages.uri2vql.src.uri2vql.window_handlers
+    line: 253
+    cyclomatic_complexity: 9
+    calls_out: 43
+    calls_in: 0
+  src.vql.adopt.capture_policy.portal_python:
+    name: portal_python
+    module: src.vql.adopt.capture_policy
+    line: 33
+    cyclomatic_complexity: 7
+    calls_out: 5
+    calls_in: 3
+  packages.img2vql.src.img2vql.pipeline.config.PipelineConfig.from_env:
+    name: from_env
+    module: packages.img2vql.src.img2vql.pipeline.config
+    line: 64
+    cyclomatic_complexity: 7
+    calls_out: 22
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.run.run_uri_json:
+    name: run_uri_json
+    module: packages.uri2vql.src.uri2vql.run
+    line: 63
+    cyclomatic_complexity: 1
+    calls_out: 3
+    calls_in: 0
+  packages.img2vql.src.img2vql.pipeline.llm_vql.level5_llm_extract:
+    name: level5_llm_extract
+    module: packages.img2vql.src.img2vql.pipeline.llm_vql
+    line: 103
+    cyclomatic_complexity: 12
+    calls_out: 28
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.handlers.command.handle_export:
+    name: handle_export
+    module: packages.dsl2vql.src.dsl2vql.handlers.command
+    line: 76
+    cyclomatic_complexity: 7
+    calls_out: 15
+    calls_in: 1
+  packages.img2vql.src.img2vql.adopt.adopt_screenshot:
+    name: adopt_screenshot
+    module: packages.img2vql.src.img2vql.adopt
+    line: 14
+    cyclomatic_complexity: 2
+    calls_out: 20
+    calls_in: 5
+  packages.img2vql.src.img2vql.fingerprint.compare_with_program:
+    name: compare_with_program
+    module: packages.img2vql.src.img2vql.fingerprint
+    line: 56
+    cyclomatic_complexity: 5
+    calls_out: 19
+    calls_in: 4
+  packages.img2vql.src.img2vql.detect._hex_color:
+    name: _hex_color
+    module: packages.img2vql.src.img2vql.detect
+    line: 61
+    cyclomatic_complexity: 1
+    calls_out: 0
+    calls_in: 3
+  examples.generate-demo-screen._load_font:
+    name: _load_font
+    module: examples.generate-demo-screen
+    line: 12
+    cyclomatic_complexity: 3
+    calls_out: 2
+    calls_in: 3
+  packages.uri2vql.src.uri2vql.cli_commands.core.run_query:
+    name: run_query
+    module: packages.uri2vql.src.uri2vql.cli_commands.core
+    line: 12
+    cyclomatic_complexity: 4
+    calls_out: 4
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.uri._with_file:
+    name: _with_file
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 26
+    cyclomatic_complexity: 4
+    calls_out: 4
+    calls_in: 12
+  packages.uri2vql.src.uri2vql.cli_commands.window.run_analyze_window:
+    name: run_analyze_window
+    module: packages.uri2vql.src.uri2vql.cli_commands.window
+    line: 9
+    cyclomatic_complexity: 5
+    calls_out: 4
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.query._load_program:
+    name: _load_program
+    module: packages.uri2vql.src.uri2vql.query
+    line: 39
+    cyclomatic_complexity: 1
+    calls_out: 5
+    calls_in: 1
+  packages.dsl2img2svg.src.dsl2img2svg.dispatch.dispatch:
+    name: dispatch
+    module: packages.dsl2img2svg.src.dsl2img2svg.dispatch
+    line: 42
+    cyclomatic_complexity: 14
+    calls_out: 41
+    calls_in: 0
+  packages.img2vql.src.img2vql.metadata._compact_special_hits:
+    name: _compact_special_hits
+    module: packages.img2vql.src.img2vql.metadata
+    line: 26
+    cyclomatic_complexity: 1
+    calls_out: 10
+    calls_in: 2
+  packages.img2vql.src.img2vql.pipeline.config._load_dotenv:
+    name: _load_dotenv
+    module: packages.img2vql.src.img2vql.pipeline.config
+    line: 10
+    cyclomatic_complexity: 4
+    calls_out: 5
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.events.default_event_store:
+    name: default_event_store
+    module: packages.dsl2vql.src.dsl2vql.events
+    line: 106
+    cyclomatic_complexity: 1
+    calls_out: 4
+    calls_in: 2
+  packages.uri2vql.src.uri2vql.uri.uri_for_window_imgl:
+    name: uri_for_window_imgl
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 66
+    cyclomatic_complexity: 3
+    calls_out: 1
+    calls_in: 2
+  packages.rest2vql.src.rest2vql.window.window_summary:
+    name: window_summary
+    module: packages.rest2vql.src.rest2vql.window
+    line: 103
+    cyclomatic_complexity: 7
+    calls_out: 1
+    calls_in: 1
+  packages.img2vql.src.img2vql.metadata.save_diagnose_to_program:
+    name: save_diagnose_to_program
+    module: packages.img2vql.src.img2vql.metadata
+    line: 313
+    cyclomatic_complexity: 4
+    calls_out: 16
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._match_imgl_type:
+    name: _match_imgl_type
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl
+    line: 42
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.bus.execute_dsl:
+    name: execute_dsl
+    module: packages.dsl2vql.src.dsl2vql.bus
+    line: 71
+    cyclomatic_complexity: 4
+    calls_out: 6
+    calls_in: 4
+  packages.cli2vql.src.cli2vql.cli._repl:
+    name: _repl
+    module: packages.cli2vql.src.cli2vql.cli
+    line: 12
+    cyclomatic_complexity: 6
+    calls_out: 8
+    calls_in: 1
+  examples.photo-roundtrip-test.sample_gradient:
+    name: sample_gradient
+    module: examples.photo-roundtrip-test
+    line: 49
+    cyclomatic_complexity: 3
+    calls_out: 21
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_objects:
+    name: _resolve_objects
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.program
+    line: 15
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.uri.uri_for_window_diagnose:
+    name: uri_for_window_diagnose
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 141
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 1
+  packages.img2vql.src.img2vql.pipeline.roundtrip.image_to_vql:
+    name: image_to_vql
+    module: packages.img2vql.src.img2vql.pipeline.roundtrip
+    line: 32
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 1
+  packages.img2vql.src.img2vql.metadata._text_likely:
+    name: _text_likely
+    module: packages.img2vql.src.img2vql.metadata
+    line: 37
+    cyclomatic_complexity: 4
+    calls_out: 7
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.cli_commands.core.run_run:
+    name: run_run
+    module: packages.uri2vql.src.uri2vql.cli_commands.core
+    line: 25
+    cyclomatic_complexity: 5
+    calls_out: 4
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.grammar_handlers.build_compile:
+    name: build_compile
+    module: packages.dsl2vql.src.dsl2vql.grammar_handlers
+    line: 53
+    cyclomatic_complexity: 3
+    calls_out: 7
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.cli_commands.window.run_diagnose_window:
+    name: run_diagnose_window
+    module: packages.uri2vql.src.uri2vql.cli_commands.window
+    line: 90
+    cyclomatic_complexity: 3
+    calls_out: 4
+    calls_in: 0
   packages.img2vql.src.img2vql.metadata._json_safe:
     name: _json_safe
     module: packages.img2vql.src.img2vql.metadata
@@ -1027,10 +1216,164 @@ nodes:
     cyclomatic_complexity: 7
     calls_out: 8
     calls_in: 7
-  src.vql.adopt.window._capture_with_gnome_shell:
-    name: _capture_with_gnome_shell
-    module: src.vql.adopt.window
-    line: 187
+  src.vql.adopt.capture_backends.capture_with_portal:
+    name: capture_with_portal
+    module: src.vql.adopt.capture_backends
+    line: 119
+    cyclomatic_complexity: 11
+    calls_out: 14
+    calls_in: 2
+  src.vql.adopt.portal_capture.capture_via_portal:
+    name: capture_via_portal
+    module: src.vql.adopt.portal_capture
+    line: 18
+    cyclomatic_complexity: 4
+    calls_out: 30
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.window_handlers.handle_diagnose:
+    name: handle_diagnose
+    module: packages.uri2vql.src.uri2vql.window_handlers
+    line: 143
+    cyclomatic_complexity: 8
+    calls_out: 13
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.window_utils.resolve_window_image:
+    name: resolve_window_image
+    module: packages.uri2vql.src.uri2vql.window_utils
+    line: 119
+    cyclomatic_complexity: 8
+    calls_out: 17
+    calls_in: 3
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_type:
+    name: _resolve_imgl_type
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl
+    line: 49
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.nlp2uri.build_intent_context:
+    name: build_intent_context
+    module: packages.uri2vql.src.uri2vql.nlp2uri
+    line: 20
+    cyclomatic_complexity: 12
+    calls_out: 11
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.window.query_window:
+    name: query_window
+    module: packages.uri2vql.src.uri2vql.window
+    line: 37
+    cyclomatic_complexity: 10
+    calls_out: 15
+    calls_in: 2
+  packages.rest2vql.src.rest2vql.window_routes.post_window_refresh:
+    name: post_window_refresh
+    module: packages.rest2vql.src.rest2vql.window_routes
+    line: 44
+    cyclomatic_complexity: 2
+    calls_out: 5
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.cli._main_legacy:
+    name: _main_legacy
+    module: packages.dsl2vql.src.dsl2vql.cli
+    line: 13
+    cyclomatic_complexity: 9
+    calls_out: 20
+    calls_in: 1
+  packages.mcp2vql.src.mcp2vql.server.VqlMCPServer.__post_init__:
+    name: __post_init__
+    module: packages.mcp2vql.src.mcp2vql.server
+    line: 24
+    cyclomatic_complexity: 1
+    calls_out: 3
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.uri.uri_for_imgl_list:
+    name: uri_for_imgl_list
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 83
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  src.vql.adopt.portal_capture.main:
+    name: main
+    module: src.vql.adopt.portal_capture
+    line: 97
+    cyclomatic_complexity: 2
+    calls_out: 9
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_refresh:
+    name: _resolve_window_refresh
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.window
+    line: 31
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 0
+  src.vql.drawing.svg_path_parser.parse_svg_path:
+    name: parse_svg_path
+    module: src.vql.drawing.svg_path_parser
+    line: 173
+    cyclomatic_complexity: 7
+    calls_out: 7
+    calls_in: 1
+  src.vql.adopt.capture_image.image_stats:
+    name: image_stats
+    module: src.vql.adopt.capture_image
+    line: 32
+    cyclomatic_complexity: 4
+    calls_out: 22
+    calls_in: 7
+  packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze.run_roundtrip:
+    name: run_roundtrip
+    module: packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze
+    line: 43
+    cyclomatic_complexity: 2
+    calls_out: 4
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.cli_commands.capture.run_capture_screen:
+    name: run_capture_screen
+    module: packages.uri2vql.src.uri2vql.cli_commands.capture
+    line: 9
+    cyclomatic_complexity: 7
+    calls_out: 13
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.window_utils.payload_result:
+    name: payload_result
+    module: packages.uri2vql.src.uri2vql.window_utils
+    line: 138
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 5
+  packages.img2vql.src.img2vql.pipeline.llm_vql.parse_vql_json_from_llm:
+    name: parse_vql_json_from_llm
+    module: packages.img2vql.src.img2vql.pipeline.llm_vql
+    line: 80
+    cyclomatic_complexity: 5
+    calls_out: 10
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.codec.encode_text:
+    name: encode_text
+    module: packages.dsl2vql.src.dsl2vql.codec
+    line: 9
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 0
+  examples.photo-roundtrip-test._require_pil:
+    name: _require_pil
+    module: examples.photo-roundtrip-test
+    line: 27
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 4
+  packages.dsl2vql.src.dsl2vql.handlers.command.handle_generate:
+    name: handle_generate
+    module: packages.dsl2vql.src.dsl2vql.handlers.command
+    line: 16
+    cyclomatic_complexity: 4
+    calls_out: 12
+    calls_in: 1
+  src.vql.adopt.capture_backends.capture_with_grim:
+    name: capture_with_grim
+    module: src.vql.adopt.capture_backends
+    line: 85
     cyclomatic_complexity: 2
     calls_out: 4
     calls_in: 0
@@ -1041,243 +1384,33 @@ nodes:
     cyclomatic_complexity: 2
     calls_out: 5
     calls_in: 0
-  src.vql.adopt.window.screenshot_to_program:
-    name: screenshot_to_program
-    module: src.vql.adopt.window
-    line: 593
-    cyclomatic_complexity: 12
-    calls_out: 44
-    calls_in: 3
-  packages.uri2img2svg.src.uri2img2svg.uri.parse_img2svg_uri:
-    name: parse_img2svg_uri
-    module: packages.uri2img2svg.src.uri2img2svg.uri
-    line: 42
-    cyclomatic_complexity: 9
-    calls_out: 11
-    calls_in: 1
-  packages.img2vql.src.img2vql.diagnose.diagnose_for_vql:
-    name: diagnose_for_vql
-    module: packages.img2vql.src.img2vql.diagnose
-    line: 57
-    cyclomatic_complexity: 10
-    calls_out: 21
+  packages.img2svg.src.img2svg.svg_emit.image_to_svg:
+    name: image_to_svg
+    module: packages.img2svg.src.img2svg.svg_emit
+    line: 86
+    cyclomatic_complexity: 7
+    calls_out: 24
     calls_in: 4
-  packages.rest2vql.src.rest2vql.window.window_detect:
-    name: window_detect
-    module: packages.rest2vql.src.rest2vql.window
-    line: 22
-    cyclomatic_complexity: 2
-    calls_out: 3
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.codec.encode_text:
-    name: encode_text
-    module: packages.dsl2vql.src.dsl2vql.codec
-    line: 9
-    cyclomatic_complexity: 2
-    calls_out: 2
-    calls_in: 0
-  packages.rest2vql.src.rest2vql.window_routes._window_response:
-    name: _window_response
-    module: packages.rest2vql.src.rest2vql.window_routes
-    line: 22
-    cyclomatic_complexity: 2
-    calls_out: 2
-    calls_in: 7
-  packages.uri2vql.src.uri2vql.run.run_uri_json:
-    name: run_uri_json
-    module: packages.uri2vql.src.uri2vql.run
-    line: 63
-    cyclomatic_complexity: 1
-    calls_out: 3
-    calls_in: 0
-  packages.img2vql.src.img2vql.metadata._text_likely:
-    name: _text_likely
-    module: packages.img2vql.src.img2vql.metadata
-    line: 37
-    cyclomatic_complexity: 4
-    calls_out: 7
-    calls_in: 1
-  packages.nlp2vql.src.nlp2vql.to_dsl.to_dsl:
-    name: to_dsl
-    module: packages.nlp2vql.src.nlp2vql.to_dsl
-    line: 41
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 2
-  packages.uri2vql.src.uri2vql.uri.uri_for_object:
-    name: uri_for_object
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 45
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 0
-  src.vql.facade.VQLFacade.validate:
-    name: validate
-    module: src.vql.facade
-    line: 61
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 0
-  src.vql.facade.VQLFacade.compile:
-    name: compile
-    module: src.vql.facade
-    line: 41
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 0
-  packages.uri2vql.src.uri2vql.uri.uri_for_imgl_list:
-    name: uri_for_imgl_list
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 83
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 1
-  packages.img2vql.src.img2vql.describe_ui.describe_ui_layout:
-    name: describe_ui_layout
-    module: packages.img2vql.src.img2vql.describe_ui
-    line: 67
-    cyclomatic_complexity: 14
-    calls_out: 39
-    calls_in: 6
-  examples.photo-roundtrip-test.sample_gradient:
-    name: sample_gradient
-    module: examples.photo-roundtrip-test
-    line: 49
-    cyclomatic_complexity: 3
-    calls_out: 21
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.uri.uri_for_window_analyze:
-    name: uri_for_window_analyze
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 49
-    cyclomatic_complexity: 2
-    calls_out: 1
-    calls_in: 2
-  packages.dsl2vql.src.dsl2vql.handlers.command.handle_compile:
-    name: handle_compile
-    module: packages.dsl2vql.src.dsl2vql.handlers.command
-    line: 38
-    cyclomatic_complexity: 4
+  packages.uri2vql.src.uri2vql.window_handlers.handle_refresh:
+    name: handle_refresh
+    module: packages.uri2vql.src.uri2vql.window_handlers
+    line: 216
+    cyclomatic_complexity: 6
     calls_out: 11
-    calls_in: 1
-  packages.img2vql.src.img2vql.metadata.merge_program_metadata:
-    name: merge_program_metadata
-    module: packages.img2vql.src.img2vql.metadata
-    line: 224
-    cyclomatic_complexity: 1
-    calls_out: 8
-    calls_in: 3
-  examples.photo-roundtrip-test.test_opencv_contours:
-    name: test_opencv_contours
-    module: examples.photo-roundtrip-test
-    line: 243
-    cyclomatic_complexity: 2
-    calls_out: 13
-    calls_in: 1
-  examples.generate-demo-screen.write_demo_screen:
-    name: write_demo_screen
-    module: examples.generate-demo-screen
-    line: 24
-    cyclomatic_complexity: 1
-    calls_out: 18
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.bus._dispatch_cmd:
-    name: _dispatch_cmd
-    module: packages.dsl2vql.src.dsl2vql.bus
-    line: 16
-    cyclomatic_complexity: 5
-    calls_out: 12
-    calls_in: 3
-  packages.uri2vql.src.uri2vql.uri.uri_for_scene:
-    name: uri_for_scene
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 37
-    cyclomatic_complexity: 1
-    calls_out: 1
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.grammar.pick_flag:
-    name: pick_flag
-    module: packages.dsl2vql.src.dsl2vql.grammar
-    line: 19
-    cyclomatic_complexity: 3
-    calls_out: 2
-    calls_in: 12
-  packages.nlp2vql.src.nlp2vql.apply.apply_nl:
-    name: apply_nl
-    module: packages.nlp2vql.src.nlp2vql.apply
-    line: 33
-    cyclomatic_complexity: 2
-    calls_out: 4
-    calls_in: 2
-  src.vql.adopt.window.capture_diagnose:
-    name: capture_diagnose
-    module: src.vql.adopt.window
-    line: 388
-    cyclomatic_complexity: 33
-    calls_out: 44
-    calls_in: 1
-  src.vql.adopt.portal_capture.main:
-    name: main
-    module: src.vql.adopt.portal_capture
-    line: 97
-    cyclomatic_complexity: 2
-    calls_out: 9
     calls_in: 0
-  packages.rest2vql.src.rest2vql.window.window_adopt:
-    name: window_adopt
-    module: packages.rest2vql.src.rest2vql.window
-    line: 84
+  src.vql.facade.VQLFacade.to_commands:
+    name: to_commands
+    module: src.vql.facade
+    line: 73
     cyclomatic_complexity: 1
     calls_out: 1
-    calls_in: 1
-  packages.img2vql.src.img2vql.detect._iou:
-    name: _iou
-    module: packages.img2vql.src.img2vql.detect
-    line: 304
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.handlers.query.handle_resolve:
+    name: handle_resolve
+    module: packages.dsl2vql.src.dsl2vql.handlers.query
+    line: 97
     cyclomatic_complexity: 3
     calls_out: 5
-    calls_in: 3
-  packages.img2svg.src.img2svg.trace._hex_color:
-    name: _hex_color
-    module: packages.img2svg.src.img2svg.trace
-    line: 37
-    cyclomatic_complexity: 1
-    calls_out: 0
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.uri.uri_for_window_refresh:
-    name: uri_for_window_refresh
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 164
-    cyclomatic_complexity: 2
-    calls_out: 1
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.uri._with_file:
-    name: _with_file
-    module: packages.uri2vql.src.uri2vql.uri
-    line: 26
-    cyclomatic_complexity: 4
-    calls_out: 4
-    calls_in: 12
-  examples.photo-roundtrip-test.main:
-    name: main
-    module: examples.photo-roundtrip-test
-    line: 294
-    cyclomatic_complexity: 5
-    calls_out: 45
-    calls_in: 0
-  packages.cli2vql.src.cli2vql.cli._repl:
-    name: _repl
-    module: packages.cli2vql.src.cli2vql.cli
-    line: 12
-    cyclomatic_complexity: 6
-    calls_out: 8
-    calls_in: 1
-  packages.img2svg.src.img2svg.trace._merge_grid_cells:
-    name: _merge_grid_cells
-    module: packages.img2svg.src.img2svg.trace
-    line: 41
-    cyclomatic_complexity: 15
-    calls_out: 9
     calls_in: 1
   packages.uri2vql.src.uri2vql.uri.uri_for_imgl_click:
     name: uri_for_imgl_click
@@ -1286,145 +1419,117 @@ nodes:
     cyclomatic_complexity: 6
     calls_out: 1
     calls_in: 1
-  packages.img2vql.src.img2vql.detect._detect_titlebar:
-    name: _detect_titlebar
-    module: packages.img2vql.src.img2vql.detect
-    line: 91
-    cyclomatic_complexity: 5
-    calls_out: 11
+  src.vql.drawing.svg_path_parser._dispatch_command:
+    name: _dispatch_command
+    module: src.vql.drawing.svg_path_parser
+    line: 80
+    cyclomatic_complexity: 16
+    calls_out: 47
     calls_in: 1
-  packages.nlp2vql.src.nlp2vql.to_dsl._intent:
-    name: _intent
-    module: packages.nlp2vql.src.nlp2vql.to_dsl
-    line: 8
-    cyclomatic_complexity: 11
-    calls_out: 6
-    calls_in: 1
-  examples.generate-demo-screen.main:
-    name: main
-    module: examples.generate-demo-screen
-    line: 60
-    cyclomatic_complexity: 1
-    calls_out: 6
-    calls_in: 0
-  src.vql.adopt.window._run_capture:
-    name: _run_capture
-    module: src.vql.adopt.window
-    line: 165
-    cyclomatic_complexity: 7
-    calls_out: 8
-    calls_in: 5
-  packages.dsl2vql.src.dsl2vql.pb_codec.result_to_pb:
-    name: result_to_pb
-    module: packages.dsl2vql.src.dsl2vql.pb_codec
-    line: 143
-    cyclomatic_complexity: 4
-    calls_out: 4
-    calls_in: 2
-  packages.img2svg.src.img2svg.to_vql.image_to_vql:
-    name: image_to_vql
-    module: packages.img2svg.src.img2svg.to_vql
-    line: 112
-    cyclomatic_complexity: 5
-    calls_out: 17
-    calls_in: 4
-  packages.uri2img2svg.src.uri2img2svg.query.query_uri:
-    name: query_uri
-    module: packages.uri2img2svg.src.uri2img2svg.query
-    line: 37
-    cyclomatic_complexity: 13
-    calls_out: 28
-    calls_in: 6
-  packages.rest2vql.src.rest2vql.cli.main:
-    name: main
-    module: packages.rest2vql.src.rest2vql.cli
-    line: 8
-    cyclomatic_complexity: 1
-    calls_out: 7
-    calls_in: 0
-  src.vql.adopt.window._finalize_capture:
-    name: _finalize_capture
-    module: src.vql.adopt.window
-    line: 151
-    cyclomatic_complexity: 1
-    calls_out: 4
-    calls_in: 3
-  src.vql.adopt.window.analyze_screenshot:
-    name: analyze_screenshot
-    module: src.vql.adopt.window
-    line: 712
-    cyclomatic_complexity: 13
-    calls_out: 45
-    calls_in: 2
-  packages.dsl2vql.src.dsl2vql.handlers.query._load_program:
-    name: _load_program
-    module: packages.dsl2vql.src.dsl2vql.handlers.query
-    line: 12
-    cyclomatic_complexity: 1
-    calls_out: 5
-    calls_in: 2
-  src.vql.drawing.path_generator.PathGenerator.generate:
-    name: generate
-    module: src.vql.drawing.path_generator
-    line: 16
-    cyclomatic_complexity: 5
-    calls_out: 7
-    calls_in: 0
-  packages.img2vql.src.img2vql.adopt.adopt_screenshot:
-    name: adopt_screenshot
-    module: packages.img2vql.src.img2vql.adopt
-    line: 14
-    cyclomatic_complexity: 2
-    calls_out: 20
-    calls_in: 4
-  packages.dsl2vql.src.dsl2vql.bus.dispatch:
-    name: dispatch
-    module: packages.dsl2vql.src.dsl2vql.bus
-    line: 46
-    cyclomatic_complexity: 6
-    calls_out: 15
-    calls_in: 12
-  src.vql.renderers.svg.render_to_png:
-    name: render_to_png
-    module: src.vql.renderers.svg
-    line: 30
-    cyclomatic_complexity: 2
-    calls_out: 8
-    calls_in: 8
-  packages.img2vql.src.img2vql.detect._flood_rects:
-    name: _flood_rects
-    module: packages.img2vql.src.img2vql.detect
-    line: 151
-    cyclomatic_complexity: 14
-    calls_out: 13
-    calls_in: 1
-  src.vql.adopt.window._capture_backends:
-    name: _capture_backends
-    module: src.vql.adopt.window
-    line: 341
-    cyclomatic_complexity: 7
-    calls_out: 7
-    calls_in: 2
-  packages.img2vql.src.img2vql.metadata.rapidocr_special_hits:
-    name: rapidocr_special_hits
-    module: packages.img2vql.src.img2vql.metadata
-    line: 51
-    cyclomatic_complexity: 10
-    calls_out: 16
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.compile.compile_vql_uri:
-    name: compile_vql_uri
-    module: packages.uri2vql.src.uri2vql.compile
-    line: 20
-    cyclomatic_complexity: 7
-    calls_out: 8
-    calls_in: 0
-  src.vql.adopt.window._capture_interactive_mode:
-    name: _capture_interactive_mode
-    module: src.vql.adopt.window
-    line: 61
+  packages.uri2vql.src.uri2vql.window_diagnose.diagnose_window_image:
+    name: diagnose_window_image
+    module: packages.uri2vql.src.uri2vql.window_diagnose
+    line: 11
     cyclomatic_complexity: 2
     calls_out: 3
+    calls_in: 3
+  packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf:
+    name: decode_protobuf
+    module: packages.dsl2vql.src.dsl2vql.pb_codec
+    line: 33
+    cyclomatic_complexity: 1
+    calls_out: 3
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_analyze:
+    name: _resolve_window_analyze
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.window
+    line: 87
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 0
+  packages.img2vql.src.img2vql.detect._detect_toolbar:
+    name: _detect_toolbar
+    module: packages.img2vql.src.img2vql.detect
+    line: 270
+    cyclomatic_complexity: 10
+    calls_out: 21
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.grammar.to_text:
+    name: to_text
+    module: packages.dsl2vql.src.dsl2vql.grammar
+    line: 20
+    cyclomatic_complexity: 6
+    calls_out: 11
+    calls_in: 4
+  src.vql.adopt.program_enrichment.enrich_program_metadata:
+    name: enrich_program_metadata
+    module: src.vql.adopt.program_enrichment
+    line: 22
+    cyclomatic_complexity: 2
+    calls_out: 5
+    calls_in: 1
+  examples.photo-roundtrip-test.sample_product_photo:
+    name: sample_product_photo
+    module: examples.photo-roundtrip-test
+    line: 72
+    cyclomatic_complexity: 1
+    calls_out: 7
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.window_handlers.handle_compare:
+    name: handle_compare
+    module: packages.uri2vql.src.uri2vql.window_handlers
+    line: 180
+    cyclomatic_complexity: 6
+    calls_out: 12
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.query.query_uri:
+    name: query_uri
+    module: packages.uri2vql.src.uri2vql.query
+    line: 46
+    cyclomatic_complexity: 15
+    calls_out: 20
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.handlers.command.handle_patch:
+    name: handle_patch
+    module: packages.dsl2vql.src.dsl2vql.handlers.command
+    line: 58
+    cyclomatic_complexity: 3
+    calls_out: 12
+    calls_in: 1
+  packages.img2svg.src.img2svg.trace._hex_color:
+    name: _hex_color
+    module: packages.img2svg.src.img2svg.trace
+    line: 37
+    cyclomatic_complexity: 1
+    calls_out: 0
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.handlers.query.handle_query:
+    name: handle_query
+    module: packages.dsl2vql.src.dsl2vql.handlers.query
+    line: 19
+    cyclomatic_complexity: 4
+    calls_out: 8
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.grammar_tokens.split_command:
+    name: split_command
+    module: packages.dsl2vql.src.dsl2vql.grammar_tokens
+    line: 8
+    cyclomatic_complexity: 4
+    calls_out: 4
+    calls_in: 3
+  packages.dsl2vql.src.dsl2vql.handlers.command.handle_from_tokens:
+    name: handle_from_tokens
+    module: packages.dsl2vql.src.dsl2vql.handlers.command
+    line: 104
+    cyclomatic_complexity: 11
+    calls_out: 15
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.window_utils.resolve_image_param:
+    name: resolve_image_param
+    module: packages.uri2vql.src.uri2vql.window_utils
+    line: 10
+    cyclomatic_complexity: 6
+    calls_out: 12
     calls_in: 1
   packages.uri2vql.src.uri2vql.run.run_uri:
     name: run_uri
@@ -1433,97 +1538,76 @@ nodes:
     cyclomatic_complexity: 7
     calls_out: 8
     calls_in: 1
-  src.vql.adopt.window._optional_fingerprint:
-    name: _optional_fingerprint
-    module: src.vql.adopt.window
-    line: 532
-    cyclomatic_complexity: 3
-    calls_out: 3
+  packages.img2vql.src.img2vql.detect._detect_buttons:
+    name: _detect_buttons
+    module: packages.img2vql.src.img2vql.detect
+    line: 180
+    cyclomatic_complexity: 25
+    calls_out: 45
     calls_in: 1
-  src.vql.drawing.svg_path_parser._tokenize_path:
-    name: _tokenize_path
-    module: src.vql.drawing.svg_path_parser
-    line: 135
+  packages.img2svg.src.img2svg.trace._parse_vtracer_svg:
+    name: _parse_vtracer_svg
+    module: packages.img2svg.src.img2svg.trace
+    line: 191
+    cyclomatic_complexity: 5
+    calls_out: 16
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.uri.uri_for_program:
+    name: uri_for_program
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 33
     cyclomatic_complexity: 1
     calls_out: 1
+    calls_in: 2
+  packages.img2vql.src.img2vql.detect._dedupe:
+    name: _dedupe
+    module: packages.img2vql.src.img2vql.detect
+    line: 317
+    cyclomatic_complexity: 8
+    calls_out: 6
     calls_in: 1
-  packages.uri2vql.src.uri2vql.window.analyze_window_uri:
-    name: analyze_window_uri
-    module: packages.uri2vql.src.uri2vql.window
-    line: 351
-    cyclomatic_complexity: 4
-    calls_out: 9
-    calls_in: 3
-  packages.dsl2vql.src.dsl2vql.pb_codec.encode_result_protobuf:
-    name: encode_result_protobuf
-    module: packages.dsl2vql.src.dsl2vql.pb_codec
-    line: 156
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_vql_generic:
+    name: _resolve_vql_generic
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.program
+    line: 54
     cyclomatic_complexity: 1
     calls_out: 2
-    calls_in: 2
-  packages.img2vql.src.img2vql.diagnose._recommendation:
-    name: _recommendation
-    module: packages.img2vql.src.img2vql.diagnose
-    line: 113
-    cyclomatic_complexity: 6
-    calls_out: 10
-    calls_in: 1
-  packages.img2vql.src.img2vql.detect._hex_color:
-    name: _hex_color
-    module: packages.img2vql.src.img2vql.detect
-    line: 61
-    cyclomatic_complexity: 1
-    calls_out: 0
-    calls_in: 3
-  src.vql.validation.spec.validate_program:
-    name: validate_program
-    module: src.vql.validation.spec
-    line: 60
-    cyclomatic_complexity: 4
-    calls_out: 12
-    calls_in: 2
-  packages.dsl2vql.src.dsl2vql.codec.encode_protobuf:
-    name: encode_protobuf
-    module: packages.dsl2vql.src.dsl2vql.codec
-    line: 26
+    calls_in: 0
+  packages.uri2vql.src.uri2vql.window_handlers.handle_imgl:
+    name: handle_imgl
+    module: packages.uri2vql.src.uri2vql.window_handlers
+    line: 301
     cyclomatic_complexity: 1
     calls_out: 1
     calls_in: 0
-  packages.uri2vql.src.uri2vql.compile._dsl_from_uri:
-    name: _dsl_from_uri
-    module: packages.uri2vql.src.uri2vql.compile
-    line: 12
-    cyclomatic_complexity: 4
-    calls_out: 5
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.schema_registry.validate_schema_registry:
-    name: validate_schema_registry
-    module: packages.dsl2vql.src.dsl2vql.schema_registry
-    line: 41
-    cyclomatic_complexity: 3
-    calls_out: 6
-    calls_in: 1
-  packages.dsl2vql.src.dsl2vql.pb_codec.encode_text_to_protobuf:
-    name: encode_text_to_protobuf
-    module: packages.dsl2vql.src.dsl2vql.pb_codec
-    line: 132
-    cyclomatic_complexity: 2
-    calls_out: 3
-    calls_in: 1
-  packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri:
-    name: resolve_prompt_to_vql_uri
-    module: packages.uri2vql.src.uri2vql.nlp2uri
-    line: 39
-    cyclomatic_complexity: 54
-    calls_out: 68
-    calls_in: 2
-  packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf:
-    name: decode_protobuf
-    module: packages.dsl2vql.src.dsl2vql.pb_codec
-    line: 126
+  packages.uri2vql.src.uri2vql.cli.build_parser:
+    name: build_parser
+    module: packages.uri2vql.src.uri2vql.cli
+    line: 10
     cyclomatic_complexity: 1
-    calls_out: 3
-    calls_in: 3
+    calls_out: 85
+    calls_in: 1
+  packages.rest2vql.src.rest2vql.window.window_adopt:
+    name: window_adopt
+    module: packages.rest2vql.src.rest2vql.window
+    line: 84
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  packages.img2vql.src.img2vql.diagnose._normalize_locale:
+    name: _normalize_locale
+    module: packages.img2vql.src.img2vql.diagnose
+    line: 9
+    cyclomatic_complexity: 4
+    calls_out: 4
+    calls_in: 1
+  examples.photo-roundtrip-test.sample_flat_shapes:
+    name: sample_flat_shapes
+    module: examples.photo-roundtrip-test
+    line: 35
+    cyclomatic_complexity: 1
+    calls_out: 8
+    calls_in: 1
   packages.img2svg.src.img2svg.trace.trace_image_regions:
     name: trace_image_regions
     module: packages.img2svg.src.img2svg.trace
@@ -1531,6 +1615,475 @@ nodes:
     cyclomatic_complexity: 6
     calls_out: 17
     calls_in: 6
+  packages.img2vql.src.img2vql.metadata.img2nl_metadata_slice:
+    name: img2nl_metadata_slice
+    module: packages.img2vql.src.img2vql.metadata
+    line: 181
+    cyclomatic_complexity: 9
+    calls_out: 17
+    calls_in: 2
+  src.vql.adopt.program_enrichment.optional_fingerprint:
+    name: optional_fingerprint
+    module: src.vql.adopt.program_enrichment
+    line: 10
+    cyclomatic_complexity: 3
+    calls_out: 3
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.grammar_handlers.build_query:
+    name: build_query
+    module: packages.dsl2vql.src.dsl2vql.grammar_handlers
+    line: 13
+    cyclomatic_complexity: 4
+    calls_out: 3
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf_to_text:
+    name: decode_protobuf_to_text
+    module: packages.dsl2vql.src.dsl2vql.pb_codec
+    line: 46
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 1
+  packages.img2vql.src.img2vql.pipeline.fast_analysis.level0_image_stats:
+    name: level0_image_stats
+    module: packages.img2vql.src.img2vql.pipeline.fast_analysis
+    line: 11
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  packages.img2vql.src.img2vql.detect.detect_ui_elements:
+    name: detect_ui_elements
+    module: packages.img2vql.src.img2vql.detect
+    line: 330
+    cyclomatic_complexity: 8
+    calls_out: 19
+    calls_in: 8
+  packages.uri2vql.src.uri2vql.uri.uri_for_window_summary:
+    name: uri_for_window_summary
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 62
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.window_utils.diagnose_fallback:
+    name: diagnose_fallback
+    module: packages.uri2vql.src.uri2vql.window_utils
+    line: 39
+    cyclomatic_complexity: 15
+    calls_out: 29
+    calls_in: 1
+  packages.uri2img2svg.src.uri2img2svg.uri.parse_img2svg_uri:
+    name: parse_img2svg_uri
+    module: packages.uri2img2svg.src.uri2img2svg.uri
+    line: 42
+    cyclomatic_complexity: 9
+    calls_out: 11
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.uri.parse_vql_uri:
+    name: parse_vql_uri
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 176
+    cyclomatic_complexity: 5
+    calls_out: 6
+    calls_in: 3
+  packages.img2vql.src.img2vql.detect._avg_color:
+    name: _avg_color
+    module: packages.img2vql.src.img2vql.detect
+    line: 79
+    cyclomatic_complexity: 5
+    calls_out: 8
+    calls_in: 4
+  src.vql.validation.spec._match_items:
+    name: _match_items
+    module: src.vql.validation.spec
+    line: 47
+    cyclomatic_complexity: 4
+    calls_out: 3
+    calls_in: 2
+  src.vql.compiler.legacy_drawcommand.compile_to_events:
+    name: compile_to_events
+    module: src.vql.compiler.legacy_drawcommand
+    line: 127
+    cyclomatic_complexity: 3
+    calls_out: 6
+    calls_in: 2
+  src.vql.adopt.capture_screen.capture_screen:
+    name: capture_screen
+    module: src.vql.adopt.capture_screen
+    line: 31
+    cyclomatic_complexity: 7
+    calls_out: 14
+    calls_in: 3
+  src.vql.adopt.capture_policy.capture_permission_hint:
+    name: capture_permission_hint
+    module: src.vql.adopt.capture_policy
+    line: 56
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 3
+  packages.img2vql.src.img2vql.metadata._merge_special_hits:
+    name: _merge_special_hits
+    module: packages.img2vql.src.img2vql.metadata
+    line: 165
+    cyclomatic_complexity: 2
+    calls_out: 8
+    calls_in: 2
+  packages.img2vql.src.img2vql.metadata.refresh_program_metadata:
+    name: refresh_program_metadata
+    module: packages.img2vql.src.img2vql.metadata
+    line: 245
+    cyclomatic_complexity: 4
+    calls_out: 19
+    calls_in: 4
+  src.vql.drawing.svg_path_parser._tokenize_path:
+    name: _tokenize_path
+    module: src.vql.drawing.svg_path_parser
+    line: 135
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  packages.img2vql.src.img2vql.program._build_contains_relations:
+    name: _build_contains_relations
+    module: packages.img2vql.src.img2vql.program
+    line: 114
+    cyclomatic_complexity: 8
+    calls_out: 9
+    calls_in: 1
+  src.vql.adopt.capture_backends.capture_backends:
+    name: capture_backends
+    module: src.vql.adopt.capture_backends
+    line: 203
+    cyclomatic_complexity: 7
+    calls_out: 7
+    calls_in: 2
+  src.vql.adopt.window.analyze_screenshot:
+    name: analyze_screenshot
+    module: src.vql.adopt.window
+    line: 33
+    cyclomatic_complexity: 13
+    calls_out: 45
+    calls_in: 2
+  packages.rest2vql.src.rest2vql.window_routes.post_window_detect:
+    name: post_window_detect
+    module: packages.rest2vql.src.rest2vql.window_routes
+    line: 28
+    cyclomatic_complexity: 2
+    calls_out: 5
+    calls_in: 0
+  packages.img2vql.src.img2vql.metadata.rapidocr_special_hits:
+    name: rapidocr_special_hits
+    module: packages.img2vql.src.img2vql.metadata
+    line: 51
+    cyclomatic_complexity: 10
+    calls_out: 16
+    calls_in: 1
+  src.vql.validation.spec._program_colors:
+    name: _program_colors
+    module: src.vql.validation.spec
+    line: 43
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.grammar_handlers.build_generate:
+    name: build_generate
+    module: packages.dsl2vql.src.dsl2vql.grammar_handlers
+    line: 39
+    cyclomatic_complexity: 3
+    calls_out: 3
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.schema_registry.validate_command_dict:
+    name: validate_command_dict
+    module: packages.dsl2vql.src.dsl2vql.schema_registry
+    line: 32
+    cyclomatic_complexity: 3
+    calls_out: 7
+    calls_in: 3
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_list:
+    name: _resolve_imgl_list
+    module: packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl
+    line: 21
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 0
+  src.vql.adopt.capture_backends.capture_with_gnome_screenshot:
+    name: capture_with_gnome_screenshot
+    module: src.vql.adopt.capture_backends
+    line: 102
+    cyclomatic_complexity: 2
+    calls_out: 4
+    calls_in: 0
+  src.vql.adopt.capture_backends.finalize_capture:
+    name: finalize_capture
+    module: src.vql.adopt.capture_backends
+    line: 19
+    cyclomatic_complexity: 1
+    calls_out: 4
+    calls_in: 3
+  packages.nlp2vql.src.nlp2vql.apply.apply_nl:
+    name: apply_nl
+    module: packages.nlp2vql.src.nlp2vql.apply
+    line: 33
+    cyclomatic_complexity: 2
+    calls_out: 4
+    calls_in: 2
+  packages.nlp2vql.src.nlp2vql.to_dsl.nl_to_dsl_line:
+    name: nl_to_dsl_line
+    module: packages.nlp2vql.src.nlp2vql.to_dsl
+    line: 23
+    cyclomatic_complexity: 8
+    calls_out: 1
+    calls_in: 3
+  packages.uri2vql.src.uri2vql.uri.uri_for_object:
+    name: uri_for_object
+    module: packages.uri2vql.src.uri2vql.uri
+    line: 45
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.grammar_handlers.build_command:
+    name: build_command
+    module: packages.dsl2vql.src.dsl2vql.grammar_handlers
+    line: 81
+    cyclomatic_complexity: 2
+    calls_out: 2
+    calls_in: 1
+  packages.img2vql.src.img2vql.pipeline.llm_vql._program_summary:
+    name: _program_summary
+    module: packages.img2vql.src.img2vql.pipeline.llm_vql
+    line: 42
+    cyclomatic_complexity: 4
+    calls_out: 11
+    calls_in: 1
+  packages.rest2vql.src.rest2vql.window_routes.post_window_summary:
+    name: post_window_summary
+    module: packages.rest2vql.src.rest2vql.window_routes
+    line: 99
+    cyclomatic_complexity: 2
+    calls_out: 5
+    calls_in: 0
+  src.vql.adopt.capture_types.require_pillow:
+    name: require_pillow
+    module: src.vql.adopt.capture_types
+    line: 13
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 6
+  packages.img2vql.src.img2vql.diagnose.diagnose_image:
+    name: diagnose_image
+    module: packages.img2vql.src.img2vql.diagnose
+    line: 23
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 2
+  packages.uri2vql.src.uri2vql.nlp2uri_extractors.extract_click_target:
+    name: extract_click_target
+    module: packages.uri2vql.src.uri2vql.nlp2uri_extractors
+    line: 6
+    cyclomatic_complexity: 3
+    calls_out: 3
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.schema_registry._load_schemas:
+    name: _load_schemas
+    module: packages.dsl2vql.src.dsl2vql.schema_registry
+    line: 14
+    cyclomatic_complexity: 3
+    calls_out: 9
+    calls_in: 3
+  packages.img2svg.src.img2svg.to_vql.image_to_vql:
+    name: image_to_vql
+    module: packages.img2svg.src.img2svg.to_vql
+    line: 112
+    cyclomatic_complexity: 5
+    calls_out: 17
+    calls_in: 5
+  src.vql.renderers.svg.render_to_svg:
+    name: render_to_svg
+    module: src.vql.renderers.svg
+    line: 22
+    cyclomatic_complexity: 1
+    calls_out: 4
+    calls_in: 7
+  packages.uri2vql.src.uri2vql.cli_commands.window.run_detect_window:
+    name: run_detect_window
+    module: packages.uri2vql.src.uri2vql.cli_commands.window
+    line: 27
+    cyclomatic_complexity: 4
+    calls_out: 6
+    calls_in: 0
+  packages.img2vql.src.img2vql.program._bbox_contains:
+    name: _bbox_contains
+    module: packages.img2vql.src.img2vql.program
+    line: 108
+    cyclomatic_complexity: 4
+    calls_out: 0
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.handlers.query._load_program:
+    name: _load_program
+    module: packages.dsl2vql.src.dsl2vql.handlers.query
+    line: 12
+    cyclomatic_complexity: 1
+    calls_out: 5
+    calls_in: 2
+  packages.uri2vql.src.uri2vql.window_handlers.handle_detect:
+    name: handle_detect
+    module: packages.uri2vql.src.uri2vql.window_handlers
+    line: 52
+    cyclomatic_complexity: 8
+    calls_out: 13
+    calls_in: 0
+  packages.rest2vql.src.rest2vql.window.window_analyze:
+    name: window_analyze
+    module: packages.rest2vql.src.rest2vql.window
+    line: 67
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 1
+  packages.uri2vql.src.uri2vql.cli_commands.core.run_resolve:
+    name: run_resolve
+    module: packages.uri2vql.src.uri2vql.cli_commands.core
+    line: 36
+    cyclomatic_complexity: 5
+    calls_out: 4
+    calls_in: 0
+  packages.img2vql.src.img2vql.pipeline.llm_vql._compact_fast_context:
+    name: _compact_fast_context
+    module: packages.img2vql.src.img2vql.pipeline.llm_vql
+    line: 15
+    cyclomatic_complexity: 9
+    calls_out: 21
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.bus.execute_dsl_line:
+    name: execute_dsl_line
+    module: packages.dsl2vql.src.dsl2vql.bus
+    line: 67
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 3
+  examples.photo-roundtrip-test.test_img2svg_roundtrip:
+    name: test_img2svg_roundtrip
+    module: examples.photo-roundtrip-test
+    line: 134
+    cyclomatic_complexity: 8
+    calls_out: 29
+    calls_in: 4
+  src.vql.facade.VQLFacade.render_svg:
+    name: render_svg
+    module: src.vql.facade
+    line: 65
+    cyclomatic_complexity: 1
+    calls_out: 1
+    calls_in: 0
+  packages.dsl2vql.src.dsl2vql.pb_codec.encode_result_protobuf:
+    name: encode_result_protobuf
+    module: packages.dsl2vql.src.dsl2vql.pb_codec
+    line: 63
+    cyclomatic_complexity: 1
+    calls_out: 2
+    calls_in: 2
+  src.vql.adopt.capture_diagnose.capture_diagnose:
+    name: capture_diagnose
+    module: src.vql.adopt.capture_diagnose
+    line: 22
+    cyclomatic_complexity: 33
+    calls_out: 42
+    calls_in: 1
+  src.vql.adopt.capture_policy.session_type:
+    name: session_type
+    module: src.vql.adopt.capture_policy
+    line: 12
+    cyclomatic_complexity: 2
+    calls_out: 3
+    calls_in: 3
+  packages.img2vql.src.img2vql.describe_ui.describe_ui_layout:
+    name: describe_ui_layout
+    module: packages.img2vql.src.img2vql.describe_ui
+    line: 67
+    cyclomatic_complexity: 14
+    calls_out: 39
+    calls_in: 6
+  packages.dsl2img2svg.src.dsl2img2svg.cli.main:
+    name: main
+    module: packages.dsl2img2svg.src.dsl2img2svg.cli
+    line: 11
+    cyclomatic_complexity: 4
+    calls_out: 5
+    calls_in: 0
+  src.vql.renderers.base.render_program:
+    name: render_program
+    module: src.vql.renderers.base
+    line: 34
+    cyclomatic_complexity: 1
+    calls_out: 3
+    calls_in: 2
+  packages.dsl2vql.src.dsl2vql.cli._main_subcommand:
+    name: _main_subcommand
+    module: packages.dsl2vql.src.dsl2vql.cli
+    line: 52
+    cyclomatic_complexity: 9
+    calls_out: 21
+    calls_in: 1
+  packages.dsl2vql.src.dsl2vql.handlers.command._read_json:
+    name: _read_json
+    module: packages.dsl2vql.src.dsl2vql.handlers.command
+    line: 12
+    cyclomatic_complexity: 1
+    calls_out: 4
+    calls_in: 1
+  packages.rest2vql.src.rest2vql.window.window_diagnose:
+    name: window_diagnose
+    module: packages.rest2vql.src.rest2vql.window
+    line: 48
+    cyclomatic_complexity: 2
+    calls_out: 1
+    calls_in: 1
+  src.vql.adopt.program_grid.screenshot_to_program:
+    name: screenshot_to_program
+    module: src.vql.adopt.program_grid
+    line: 51
+    cyclomatic_complexity: 12
+    calls_out: 44
+    calls_in: 5
+  packages.uri2vql.src.uri2vql.patch.patch_uri:
+    name: patch_uri
+    module: packages.uri2vql.src.uri2vql.patch
+    line: 24
+    cyclomatic_complexity: 7
+    calls_out: 15
+    calls_in: 3
+  packages.dsl2img2svg.src.dsl2img2svg.dispatch._parse_kv_args:
+    name: _parse_kv_args
+    module: packages.dsl2img2svg.src.dsl2img2svg.dispatch
+    line: 29
+    cyclomatic_complexity: 4
+    calls_out: 4
+    calls_in: 1
+  examples.photo-roundtrip-test.test_vtracer_roundtrip:
+    name: test_vtracer_roundtrip
+    module: examples.photo-roundtrip-test
+    line: 225
+    cyclomatic_complexity: 10
+    calls_out: 27
+    calls_in: 2
+  examples.photo-roundtrip-test.main:
+    name: main
+    module: examples.photo-roundtrip-test
+    line: 356
+    cyclomatic_complexity: 5
+    calls_out: 55
+    calls_in: 0
+  packages.rest2vql.src.rest2vql.cli.main:
+    name: main
+    module: packages.rest2vql.src.rest2vql.cli
+    line: 8
+    cyclomatic_complexity: 1
+    calls_out: 7
+    calls_in: 0
+  examples.photo-roundtrip-test.test_ui_grid_adopt:
+    name: test_ui_grid_adopt
+    module: examples.photo-roundtrip-test
+    line: 192
+    cyclomatic_complexity: 2
+    calls_out: 17
+    calls_in: 1
 edges:
 - caller: packages.uri2img2svg.src.uri2img2svg.cli.main
   callee: packages.uri2img2svg.src.uri2img2svg.query.query_uri
@@ -1548,7 +2101,7 @@ edges:
   callee: packages.dsl2vql.src.dsl2vql.schema_registry.validate_command_dict
   call_type: resolved
 - caller: packages.dsl2vql.src.dsl2vql.bus._dispatch_cmd
-  callee: packages.dsl2vql.src.dsl2vql.grammar.split_command
+  callee: packages.dsl2vql.src.dsl2vql.grammar_tokens.split_command
   call_type: resolved
 - caller: packages.dsl2vql.src.dsl2vql.bus._dispatch_cmd
   callee: packages.dsl2vql.src.dsl2vql.handlers.command.handle_from_tokens
@@ -1557,7 +2110,7 @@ edges:
   callee: packages.dsl2vql.src.dsl2vql.events.default_event_store
   call_type: resolved
 - caller: packages.dsl2vql.src.dsl2vql.bus._bytes_to_cmd
-  callee: packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf
+  callee: packages.dsl2vql.src.dsl2vql.codec.decode_protobuf
   call_type: resolved
 - caller: packages.dsl2vql.src.dsl2vql.bus._bytes_to_cmd
   callee: packages.dsl2vql.src.dsl2vql.grammar.to_text
@@ -1566,7 +2119,7 @@ edges:
   callee: packages.dsl2vql.src.dsl2vql.grammar.parse_line
   call_type: resolved
 - caller: packages.dsl2vql.src.dsl2vql.bus.dispatch
-  callee: packages.dsl2vql.src.dsl2vql.grammar.split_command
+  callee: packages.dsl2vql.src.dsl2vql.grammar_tokens.split_command
   call_type: resolved
 - caller: packages.dsl2vql.src.dsl2vql.bus.dispatch
   callee: packages.dsl2vql.src.dsl2vql.bus._dispatch_cmd
@@ -1599,28 +2152,7 @@ edges:
   callee: packages.dsl2vql.src.dsl2vql.cli._main_subcommand
   call_type: resolved
 - caller: packages.dsl2vql.src.dsl2vql.events.EventStore.append
-  callee: packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf
-  call_type: resolved
-- caller: packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf
-  callee: packages.dsl2vql.src.dsl2vql.pb_codec._set_body
-  call_type: resolved
-- caller: packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf
-  callee: packages.dsl2vql.src.dsl2vql.pb_codec.envelope_to_dict
-  call_type: resolved
-- caller: packages.dsl2vql.src.dsl2vql.pb_codec.encode_text_to_protobuf
-  callee: packages.dsl2vql.src.dsl2vql.grammar.parse_line
-  call_type: resolved
-- caller: packages.dsl2vql.src.dsl2vql.pb_codec.encode_text_to_protobuf
-  callee: packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf
-  call_type: resolved
-- caller: packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf_to_text
-  callee: packages.dsl2vql.src.dsl2vql.grammar.to_text
-  call_type: resolved
-- caller: packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf_to_text
-  callee: packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf
-  call_type: resolved
-- caller: packages.dsl2vql.src.dsl2vql.pb_codec.encode_result_protobuf
-  callee: packages.dsl2vql.src.dsl2vql.pb_codec.result_to_pb
+  callee: packages.dsl2vql.src.dsl2vql.codec.encode_protobuf
   call_type: resolved
 - caller: packages.dsl2vql.src.dsl2vql.schema_registry.schema_for_verb
   callee: packages.dsl2vql.src.dsl2vql.schema_registry._load_schemas
@@ -1633,12 +2165,6 @@ edges:
   call_type: resolved
 - caller: packages.dsl2vql.src.dsl2vql.schema_registry.validate_schema_registry
   callee: packages.dsl2vql.src.dsl2vql.schema_registry._load_schemas
-  call_type: resolved
-- caller: packages.dsl2vql.src.dsl2vql.grammar.parse_line
-  callee: packages.dsl2vql.src.dsl2vql.grammar.split_command
-  call_type: resolved
-- caller: packages.dsl2vql.src.dsl2vql.grammar.parse_line
-  callee: packages.dsl2vql.src.dsl2vql.grammar.pick_flag
   call_type: resolved
 - caller: packages.dsl2vql.src.dsl2vql.codec.encode_text
   callee: packages.dsl2vql.src.dsl2vql.grammar.parse_line
@@ -1754,11 +2280,8 @@ edges:
 - caller: packages.mcp2vql.src.mcp2vql.server.VqlMCPServer.__post_init__
   callee: packages.mcp2vql.src.mcp2vql.server._require_fastmcp
   call_type: resolved
-- caller: packages.uri2vql.src.uri2vql.nlp2uri.nlp2uri
-  callee: packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
-  call_type: resolved
-- caller: packages.uri2vql.src.uri2vql.nlp2uri.best_uri
-  callee: packages.uri2vql.src.uri2vql.nlp2uri.nlp2uri
+- caller: packages.uri2vql.src.uri2vql.window_analyze.analyze_window_uri
+  callee: src.vql.adopt.window.analyze_screenshot
   call_type: resolved
 - caller: packages.uri2vql.src.uri2vql.query.query_uri
   callee: packages.uri2vql.src.uri2vql.window.query_window
@@ -1768,6 +2291,12 @@ edges:
   call_type: resolved
 - caller: packages.uri2vql.src.uri2vql.query.query_uri
   callee: packages.uri2vql.src.uri2vql.query._load_program
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_imgl.query_window_imgl
+  callee: packages.uri2vql.src.uri2vql.window_utils.resolve_image_param
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_imgl.query_window_imgl
+  callee: packages.uri2vql.src.uri2vql.window_utils.query_bool
   call_type: resolved
 - caller: packages.uri2vql.src.uri2vql.uri.uri_for_program
   callee: packages.uri2vql.src.uri2vql.uri._with_file
@@ -1808,36 +2337,6 @@ edges:
 - caller: packages.uri2vql.src.uri2vql.uri.uri_for_window_refresh
   callee: packages.uri2vql.src.uri2vql.uri._with_file
   call_type: resolved
-- caller: packages.uri2vql.src.uri2vql.window._diagnose_fallback
-  callee: src.vql.adopt.window.image_stats
-  call_type: resolved
-- caller: packages.uri2vql.src.uri2vql.window._diagnose_fallback
-  callee: packages.uri2vql.src.uri2vql.window._normalize_locale
-  call_type: resolved
-- caller: packages.uri2vql.src.uri2vql.window.refresh_window_metadata
-  callee: packages.img2vql.src.img2vql.metadata.refresh_program_metadata
-  call_type: resolved
-- caller: packages.uri2vql.src.uri2vql.window.compare_window_image
-  callee: packages.img2vql.src.img2vql.fingerprint.compare_with_program
-  call_type: resolved
-- caller: packages.uri2vql.src.uri2vql.window.diagnose_window_image
-  callee: packages.uri2vql.src.uri2vql.window._normalize_locale
-  call_type: resolved
-- caller: packages.uri2vql.src.uri2vql.window.diagnose_window_image
-  callee: packages.img2vql.src.img2vql.diagnose.diagnose_for_vql
-  call_type: resolved
-- caller: packages.uri2vql.src.uri2vql.window.diagnose_window_image
-  callee: packages.uri2vql.src.uri2vql.window._diagnose_fallback
-  call_type: resolved
-- caller: packages.uri2vql.src.uri2vql.window._query_window_imgl
-  callee: packages.uri2vql.src.uri2vql.window._resolve_image_param
-  call_type: resolved
-- caller: packages.uri2vql.src.uri2vql.window.analyze_window_uri
-  callee: src.vql.adopt.window.analyze_screenshot
-  call_type: resolved
-- caller: packages.uri2vql.src.uri2vql.window.query_window
-  callee: packages.uri2vql.src.uri2vql.window.analyze_window_uri
-  call_type: resolved
 - caller: packages.uri2vql.src.uri2vql.compile.compile_vql_uri
   callee: packages.uri2vql.src.uri2vql.compile._dsl_from_uri
   call_type: resolved
@@ -1858,6 +2357,27 @@ edges:
   call_type: resolved
 - caller: packages.uri2vql.src.uri2vql.patch.patch_uri
   callee: packages.uri2vql.src.uri2vql.uri.parse_vql_uri
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_metadata.refresh_window_metadata
+  callee: packages.img2vql.src.img2vql.metadata.refresh_program_metadata
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_compare.compare_window_image
+  callee: packages.img2vql.src.img2vql.fingerprint.compare_with_program
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_utils.diagnose_fallback
+  callee: src.vql.adopt.capture_image.image_stats
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_utils.diagnose_fallback
+  callee: packages.uri2vql.src.uri2vql.window_utils.normalize_locale
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_diagnose.diagnose_window_image
+  callee: packages.uri2vql.src.uri2vql.window_utils.normalize_locale
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_diagnose.diagnose_window_image
+  callee: packages.img2vql.src.img2vql.diagnose.diagnose_for_vql
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_diagnose.diagnose_window_image
+  callee: packages.uri2vql.src.uri2vql.window_utils.diagnose_fallback
   call_type: resolved
 - caller: packages.nlp2vql.src.nlp2vql.apply.apply_nl
   callee: packages.nlp2vql.src.nlp2vql.to_dsl.nl_to_dsl_line
@@ -2036,6 +2556,9 @@ edges:
 - caller: packages.img2vql.src.img2vql.fingerprint.compare_with_program
   callee: packages.img2vql.src.img2vql.fingerprint._json_safe
   call_type: resolved
+- caller: packages.img2vql.src.img2vql.diagnose._normalize_locale
+  callee: packages.uri2vql.src.uri2vql.window_utils.normalize_locale
+  call_type: resolved
 - caller: packages.img2vql.src.img2vql.diagnose.diagnose_image
   callee: packages.img2vql.src.img2vql.diagnose._normalize_locale
   call_type: resolved
@@ -2058,6 +2581,12 @@ edges:
   callee: examples.photo-roundtrip-test._require_pil
   call_type: resolved
 - caller: examples.photo-roundtrip-test.sample_gradient
+  callee: examples.photo-roundtrip-test._require_pil
+  call_type: resolved
+- caller: examples.photo-roundtrip-test.sample_product_photo
+  callee: examples.photo-roundtrip-test._require_pil
+  call_type: resolved
+- caller: examples.photo-roundtrip-test.sample_natural_scene
   callee: examples.photo-roundtrip-test._require_pil
   call_type: resolved
 - caller: examples.photo-roundtrip-test.sample_nl_drawing
@@ -2085,7 +2614,7 @@ edges:
   callee: src.vql.renderers.svg.render_to_svg
   call_type: resolved
 - caller: examples.photo-roundtrip-test.test_ui_grid_adopt
-  callee: src.vql.adopt.window.screenshot_to_program
+  callee: src.vql.adopt.program_grid.screenshot_to_program
   call_type: resolved
 - caller: examples.photo-roundtrip-test.test_ui_grid_adopt
   callee: src.vql.renderers.svg.render_to_png
@@ -2111,6 +2640,9 @@ edges:
 - caller: examples.photo-roundtrip-test.test_opencv_contours
   callee: src.vql.renderers.svg.render_to_png
   call_type: resolved
+- caller: examples.photo-roundtrip-test.test_metadata_only_reconstruction
+  callee: src.vql.renderers.svg.render_to_png
+  call_type: resolved
 - caller: examples.photo-roundtrip-test.test_img2vql_detect
   callee: packages.img2vql.src.img2vql.detect.detect_ui_elements
   call_type: resolved
@@ -2119,6 +2651,12 @@ edges:
   call_type: resolved
 - caller: examples.photo-roundtrip-test.main
   callee: examples.photo-roundtrip-test.sample_gradient
+  call_type: resolved
+- caller: examples.photo-roundtrip-test.main
+  callee: examples.photo-roundtrip-test.sample_product_photo
+  call_type: resolved
+- caller: examples.photo-roundtrip-test.main
+  callee: examples.photo-roundtrip-test.sample_natural_scene
   call_type: resolved
 - caller: examples.generate-demo-screen.write_demo_screen
   callee: examples.generate-demo-screen._load_font
@@ -2162,11 +2700,23 @@ edges:
 - caller: src.vql.drawing.path_generator.PathGenerator.generate
   callee: src.vql.drawing.svg_path_parser.parse_svg_path
   call_type: resolved
+- caller: src.vql.drawing.svg_path_parser.parse_svg_path
+  callee: src.vql.drawing.svg_path_parser._scale_groups
+  call_type: resolved
+- caller: src.vql.drawing.svg_path_parser.parse_svg_path
+  callee: src.vql.drawing.svg_path_parser._dispatch_command
+  call_type: resolved
+- caller: src.vql.drawing.svg_path_parser.parse_svg_path
+  callee: src.vql.drawing.svg_path_parser._tokenize_path
+  call_type: resolved
 - caller: src.vql.compiler.legacy_drawcommand.compile_to_events
   callee: src.vql.compiler.legacy_drawcommand.program_to_commands
   call_type: resolved
 - caller: src.vql.compiler.nl_to_vql.nl_to_program
   callee: src.vql.compiler.legacy_drawcommand.commands_to_program
+  call_type: resolved
+- caller: src.vql.validation.metadata.validate_program_metadata
+  callee: src.vql.validation.metadata._load_imgl_metadata_schema
   call_type: resolved
 - caller: src.vql.validation.spec.validate_program
   callee: src.vql.validation.spec._match_items
@@ -2177,128 +2727,422 @@ edges:
 - caller: src.vql.validation.spec.validate_program
   callee: src.vql.validation.spec._program_colors
   call_type: resolved
-- caller: src.vql.adopt.window._is_wayland
-  callee: src.vql.adopt.window._session_type
-  call_type: resolved
-- caller: src.vql.adopt.window._should_use_interactive_portal
-  callee: src.vql.adopt.window._capture_interactive_mode
-  call_type: resolved
-- caller: src.vql.adopt.window.image_stats
-  callee: src.vql.adopt.window._require_pillow
-  call_type: resolved
-- caller: src.vql.adopt.window.image_stats
-  callee: src.vql.adopt.window._image_is_blank
-  call_type: resolved
-- caller: src.vql.adopt.window._image_is_blank
-  callee: src.vql.adopt.window._require_pillow
-  call_type: resolved
-- caller: src.vql.adopt.window._finalize_capture
-  callee: src.vql.adopt.window._require_pillow
-  call_type: resolved
-- caller: src.vql.adopt.window._run_capture
-  callee: src.vql.adopt.window._image_is_blank
-  call_type: resolved
-- caller: src.vql.adopt.window._run_capture
-  callee: src.vql.adopt.window._finalize_capture
-  call_type: resolved
-- caller: src.vql.adopt.window._capture_with_gnome_shell
-  callee: src.vql.adopt.window._run_capture
-  call_type: resolved
-- caller: src.vql.adopt.window._capture_with_grim
-  callee: src.vql.adopt.window._run_capture
-  call_type: resolved
-- caller: src.vql.adopt.window._capture_with_gnome_screenshot
-  callee: src.vql.adopt.window._run_capture
-  call_type: resolved
-- caller: src.vql.adopt.window._capture_with_portal
-  callee: src.vql.adopt.window._portal_python
-  call_type: resolved
-- caller: src.vql.adopt.window._capture_with_portal
-  callee: src.vql.adopt.window._image_is_blank
-  call_type: resolved
-- caller: src.vql.adopt.window._capture_with_portal
-  callee: src.vql.adopt.window._finalize_capture
-  call_type: resolved
-- caller: src.vql.adopt.window._capture_with_scrot
-  callee: src.vql.adopt.window._run_capture
-  call_type: resolved
-- caller: src.vql.adopt.window._capture_with_mss
-  callee: src.vql.adopt.window._run_capture
-  call_type: resolved
-- caller: src.vql.adopt.window._capture_backends
-  callee: src.vql.adopt.window._is_wayland
-  call_type: resolved
-- caller: src.vql.adopt.window._capture_backends
-  callee: src.vql.adopt.window._capture_with_portal
-  call_type: resolved
-- caller: src.vql.adopt.window._capture_backends
-  callee: src.vql.adopt.window._capture_with_mss
-  call_type: resolved
-- caller: src.vql.adopt.window.capture_diagnose
-  callee: src.vql.adopt.window._require_pillow
-  call_type: resolved
-- caller: src.vql.adopt.window.capture_diagnose
-  callee: src.vql.adopt.window._capture_backends
-  call_type: resolved
-- caller: src.vql.adopt.window.capture_diagnose
-  callee: src.vql.adopt.window._should_use_interactive_portal
-  call_type: resolved
-- caller: src.vql.adopt.window.capture_diagnose
-  callee: src.vql.adopt.window._is_wayland
-  call_type: resolved
-- caller: src.vql.adopt.window.capture_diagnose
-  callee: src.vql.adopt.window._portal_python
-  call_type: resolved
-- caller: src.vql.adopt.window._capture_permission_hint
-  callee: src.vql.adopt.window._is_wayland
-  call_type: resolved
-- caller: src.vql.adopt.window.capture_screen
-  callee: src.vql.adopt.window._require_pillow
-  call_type: resolved
-- caller: src.vql.adopt.window.capture_screen
-  callee: src.vql.adopt.window._capture_backends
-  call_type: resolved
-- caller: src.vql.adopt.window.capture_screen
-  callee: src.vql.adopt.window._active_window_title
-  call_type: resolved
-- caller: src.vql.adopt.window.capture_screen
-  callee: src.vql.adopt.window._should_use_interactive_portal
-  call_type: resolved
-- caller: src.vql.adopt.window._enrich_program_metadata
-  callee: packages.img2vql.src.img2vql.metadata.merge_program_metadata
-  call_type: resolved
-- caller: src.vql.adopt.window._enrich_program_metadata
-  callee: src.vql.adopt.window._optional_fingerprint
-  call_type: resolved
-- caller: src.vql.adopt.window.screenshot_to_program
-  callee: src.vql.adopt.window._require_pillow
-  call_type: resolved
-- caller: src.vql.adopt.window.screenshot_to_program
-  callee: src.vql.adopt.window._enrich_program_metadata
-  call_type: resolved
-- caller: src.vql.adopt.window.analyze_screenshot
-  callee: src.vql.adopt.window.image_stats
-  call_type: resolved
-- caller: src.vql.adopt.window.analyze_screenshot
-  callee: src.vql.adopt.window.screenshot_to_program
-  call_type: resolved
-- caller: src.vql.adopt.window.analyze_screenshot
-  callee: src.vql.adopt.window.capture_screen
-  call_type: resolved
 - caller: src.vql.adopt.portal_capture.main
   callee: src.vql.adopt.portal_capture.capture_via_portal
   call_type: resolved
-- caller: src.vql.drawing.svg_path_parser.parse_svg_path
-  callee: src.vql.drawing.svg_path_parser._scale_groups
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_list
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_imgl_list
   call_type: resolved
-- caller: src.vql.drawing.svg_path_parser.parse_svg_path
-  callee: src.vql.drawing.svg_path_parser._dispatch_command
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_click
+  callee: packages.uri2vql.src.uri2vql.nlp2uri_extractors.extract_click_target
   call_type: resolved
-- caller: src.vql.drawing.svg_path_parser.parse_svg_path
-  callee: src.vql.drawing.svg_path_parser._tokenize_path
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_click
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_imgl_click
   call_type: resolved
-- caller: src.vql.validation.metadata.validate_program_metadata
-  callee: src.vql.validation.metadata._load_imgl_metadata_schema
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._match_imgl_type
+  callee: packages.uri2vql.src.uri2vql.nlp2uri_extractors.extract_type_parts
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_type
+  callee: packages.uri2vql.src.uri2vql.nlp2uri_extractors.extract_type_parts
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_type
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_imgl_type
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_analyze
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_window_imgl
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_objects
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_objects
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_scene
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_scene
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_program
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_program
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_vql_generic
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_program
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.grammar.parse_line
+  callee: packages.dsl2vql.src.dsl2vql.grammar_tokens.split_command
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.grammar.parse_line
+  callee: packages.dsl2vql.src.dsl2vql.grammar_handlers.build_command
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf
+  callee: packages.dsl2vql.src.dsl2vql.pb_body_codec.set_envelope_body
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf
+  callee: packages.dsl2vql.src.dsl2vql.pb_body_codec.envelope_to_dict
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.pb_codec.encode_text_to_protobuf
+  callee: packages.dsl2vql.src.dsl2vql.grammar.parse_line
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.pb_codec.encode_text_to_protobuf
+  callee: packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf_to_text
+  callee: packages.dsl2vql.src.dsl2vql.grammar.to_text
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf_to_text
+  callee: packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.pb_codec.encode_result_protobuf
+  callee: packages.dsl2vql.src.dsl2vql.pb_codec.result_to_pb
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_summary
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_window_summary
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_refresh
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_window_refresh
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_compare
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_window_compare
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_diagnose
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_window_diagnose
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_analyze_vql
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_window_analyze
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_analyze
+  callee: packages.uri2vql.src.uri2vql.uri.uri_for_window_analyze
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.pipeline.run_capture_and_analyze
+  callee: packages.uri2vql.src.uri2vql.window_analyze.analyze_window_uri
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.pipeline.run_capture_and_analyze
+  callee: src.vql.adopt.capture_screen.capture_screen
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.pipeline.run_capture_and_analyze
+  callee: packages.uri2vql.src.uri2vql.window_diagnose.diagnose_window_image
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze.run_pipeline_analyze
+  callee: packages.img2svg.src.img2svg.to_vql.image_to_vql
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze.run_vql_to_image
+  callee: packages.img2vql.src.img2vql.pipeline.roundtrip.vql_to_image
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze.run_roundtrip
+  callee: packages.img2vql.src.img2vql.pipeline.roundtrip.roundtrip_compare
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.core.run_query
+  callee: packages.uri2img2svg.src.uri2img2svg.query.query_uri
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.core.run_patch
+  callee: packages.uri2vql.src.uri2vql.patch.patch_uri
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.core.run_run
+  callee: packages.dsl2vql.src.dsl2vql.bus.dispatch
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.core.run_resolve
+  callee: packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
+  callee: packages.uri2vql.src.uri2vql.nlp2uri.build_intent_context
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
+  callee: packages.uri2vql.src.uri2vql.nlp2uri.dedupe_by_uri
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri.nlp2uri
+  callee: packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.nlp2uri.best_uri
+  callee: packages.uri2vql.src.uri2vql.nlp2uri.nlp2uri
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.window.run_analyze_window
+  callee: packages.uri2vql.src.uri2vql.window_analyze.analyze_window_uri
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.window.run_detect_window
+  callee: packages.img2vql.src.img2vql.detect.detect_ui_elements
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.window.run_detect_window
+  callee: packages.img2vql.src.img2vql.describe_ui.describe_ui_layout
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.window.run_adopt_ui
+  callee: packages.img2vql.src.img2vql.adopt.adopt_screenshot
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.window.run_diagnose_window
+  callee: packages.uri2vql.src.uri2vql.window_diagnose.diagnose_window_image
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.window.run_compare_window
+  callee: packages.uri2vql.src.uri2vql.window_compare.compare_window_image
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.window.run_refresh_window
+  callee: packages.uri2vql.src.uri2vql.window_metadata.refresh_window_metadata
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.roundtrip.vql_to_image
+  callee: src.vql.renderers.svg.render_to_png
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.roundtrip.image_to_vql
+  callee: packages.img2vql.src.img2vql.pipeline.orchestrate.analyze_image_to_vql
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.roundtrip.roundtrip_compare
+  callee: packages.img2vql.src.img2vql.pipeline.roundtrip.image_to_vql
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.roundtrip.roundtrip_compare
+  callee: src.vql.adopt.capture_image.image_stats
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.fast_analysis.level0_image_stats
+  callee: src.vql.adopt.capture_image.image_stats
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.fast_analysis.level1_img2nl_fast
+  callee: packages.img2vql.src.img2vql.metadata.img2nl_metadata_slice
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.fast_analysis.level2_ui_detect
+  callee: packages.img2vql.src.img2vql.detect.detect_ui_elements
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.fast_analysis.level3_adopt_program
+  callee: src.vql.adopt.program_grid.screenshot_to_program
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.fast_analysis.level3_adopt_program
+  callee: packages.img2vql.src.img2vql.adopt.adopt_screenshot
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.fast_analysis.level4_diagnose
+  callee: packages.img2vql.src.img2vql.diagnose.diagnose_for_vql
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.llm_client.build_vision_user_message
+  callee: packages.img2vql.src.img2vql.pipeline.llm_client._image_to_data_url
+  call_type: resolved
+- caller: src.vql.adopt.capture_policy.is_wayland
+  callee: src.vql.adopt.capture_policy.session_type
+  call_type: resolved
+- caller: src.vql.adopt.capture_policy.should_use_interactive_portal
+  callee: src.vql.adopt.capture_policy.capture_interactive_mode
+  call_type: resolved
+- caller: src.vql.adopt.capture_policy.capture_permission_hint
+  callee: src.vql.adopt.capture_policy.is_wayland
+  call_type: resolved
+- caller: src.vql.adopt.capture_image.image_is_blank
+  callee: src.vql.adopt.capture_types.require_pillow
+  call_type: resolved
+- caller: src.vql.adopt.capture_image.image_stats
+  callee: src.vql.adopt.capture_types.require_pillow
+  call_type: resolved
+- caller: src.vql.adopt.capture_image.image_stats
+  callee: src.vql.adopt.capture_image.image_is_blank
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.orchestrate.analyze_image_to_vql
+  callee: packages.img2vql.src.img2vql.pipeline.fast_analysis.level0_image_stats
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.orchestrate.analyze_image_to_vql
+  callee: packages.img2vql.src.img2vql.pipeline.fast_analysis.level1_img2nl_fast
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.orchestrate.analyze_image_to_vql
+  callee: packages.img2vql.src.img2vql.pipeline.fast_analysis.level2_ui_detect
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.orchestrate.analyze_image_to_vql
+  callee: packages.img2vql.src.img2vql.pipeline.fast_analysis.level3_adopt_program
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.orchestrate.analyze_image_to_vql
+  callee: packages.img2vql.src.img2vql.metadata.merge_program_metadata
+  call_type: resolved
+- caller: src.vql.adopt.window.analyze_screenshot
+  callee: src.vql.adopt.capture_image.image_stats
+  call_type: resolved
+- caller: src.vql.adopt.window.analyze_screenshot
+  callee: src.vql.adopt.program_grid.screenshot_to_program
+  call_type: resolved
+- caller: src.vql.adopt.window.analyze_screenshot
+  callee: src.vql.adopt.capture_screen.capture_screen
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.grammar_handlers.build_query
+  callee: packages.dsl2vql.src.dsl2vql.grammar_tokens.pick_flag
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.grammar_handlers.build_resolve
+  callee: packages.dsl2vql.src.dsl2vql.grammar_tokens.pick_flag
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.grammar_handlers.build_patch
+  callee: packages.dsl2vql.src.dsl2vql.grammar_tokens.pick_flag
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.grammar_handlers.build_generate
+  callee: packages.dsl2vql.src.dsl2vql.grammar_tokens.pick_flag
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.grammar_handlers.build_render
+  callee: packages.dsl2vql.src.dsl2vql.grammar_tokens.pick_flag
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.grammar_handlers.build_compile
+  callee: packages.dsl2vql.src.dsl2vql.grammar_tokens.pick_flag
+  call_type: resolved
+- caller: packages.dsl2vql.src.dsl2vql.grammar_handlers.build_export
+  callee: packages.dsl2vql.src.dsl2vql.grammar_tokens.pick_flag
+  call_type: resolved
+- caller: src.vql.adopt.program_enrichment.enrich_program_metadata
+  callee: packages.img2vql.src.img2vql.metadata.merge_program_metadata
+  call_type: resolved
+- caller: src.vql.adopt.program_enrichment.enrich_program_metadata
+  callee: src.vql.adopt.program_enrichment.optional_fingerprint
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_analyze
+  callee: packages.uri2vql.src.uri2vql.window_analyze.analyze_window_uri
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_analyze
+  callee: packages.uri2vql.src.uri2vql.window_utils.query_bool
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_detect
+  callee: packages.uri2vql.src.uri2vql.window_utils.payload_result
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_detect
+  callee: packages.img2vql.src.img2vql.detect.detect_ui_elements
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_detect
+  callee: packages.img2vql.src.img2vql.describe_ui.describe_ui_layout
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_adopt
+  callee: packages.uri2vql.src.uri2vql.window_utils.query_bool
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_adopt
+  callee: packages.uri2vql.src.uri2vql.window_utils.payload_result
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_adopt
+  callee: packages.img2vql.src.img2vql.adopt.adopt_screenshot
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_diagnose
+  callee: packages.uri2vql.src.uri2vql.window_utils.resolve_window_image
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_diagnose
+  callee: packages.uri2vql.src.uri2vql.window_utils.query_bool
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_diagnose
+  callee: packages.uri2vql.src.uri2vql.window_diagnose.diagnose_window_image
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_diagnose
+  callee: packages.uri2vql.src.uri2vql.window_utils.payload_result
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_compare
+  callee: packages.uri2vql.src.uri2vql.window_compare.compare_window_image
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_compare
+  callee: packages.uri2vql.src.uri2vql.window_utils.payload_result
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_refresh
+  callee: packages.uri2vql.src.uri2vql.window_utils.resolve_window_image
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_refresh
+  callee: packages.uri2vql.src.uri2vql.window_metadata.refresh_window_metadata
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_refresh
+  callee: packages.uri2vql.src.uri2vql.window_utils.payload_result
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_summary
+  callee: packages.uri2vql.src.uri2vql.window_utils.query_bool
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_summary
+  callee: packages.uri2vql.src.uri2vql.window_utils.resolve_window_image
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.window_handlers.handle_imgl
+  callee: packages.uri2vql.src.uri2vql.window_imgl.query_window_imgl
+  call_type: resolved
+- caller: src.vql.adopt.capture_diagnose.capture_diagnose
+  callee: src.vql.adopt.capture_types.require_pillow
+  call_type: resolved
+- caller: src.vql.adopt.capture_diagnose.capture_diagnose
+  callee: src.vql.adopt.capture_backends.capture_backends
+  call_type: resolved
+- caller: src.vql.adopt.capture_diagnose.capture_diagnose
+  callee: src.vql.adopt.capture_policy.should_use_interactive_portal
+  call_type: resolved
+- caller: src.vql.adopt.capture_diagnose.capture_diagnose
+  callee: src.vql.adopt.capture_policy.is_wayland
+  call_type: resolved
+- caller: src.vql.adopt.capture_diagnose.capture_diagnose
+  callee: src.vql.adopt.capture_policy.portal_python
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.finalize_capture
+  callee: src.vql.adopt.capture_types.require_pillow
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.run_capture
+  callee: src.vql.adopt.capture_image.image_is_blank
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.run_capture
+  callee: src.vql.adopt.capture_backends.finalize_capture
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.capture_with_gnome_shell
+  callee: src.vql.adopt.capture_backends.run_capture
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.capture_with_grim
+  callee: src.vql.adopt.capture_backends.run_capture
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.capture_with_gnome_screenshot
+  callee: src.vql.adopt.capture_backends.run_capture
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.capture_with_portal
+  callee: src.vql.adopt.capture_policy.portal_python
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.capture_with_portal
+  callee: src.vql.adopt.capture_image.image_is_blank
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.capture_with_portal
+  callee: src.vql.adopt.capture_backends.finalize_capture
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.capture_with_scrot
+  callee: src.vql.adopt.capture_backends.run_capture
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.capture_with_mss
+  callee: src.vql.adopt.capture_backends.run_capture
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.capture_backends
+  callee: src.vql.adopt.capture_policy.is_wayland
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.capture_backends
+  callee: src.vql.adopt.capture_backends.capture_with_portal
+  call_type: resolved
+- caller: src.vql.adopt.capture_backends.capture_backends
+  callee: src.vql.adopt.capture_backends.capture_with_mss
+  call_type: resolved
+- caller: src.vql.adopt.program_grid.screenshot_to_program
+  callee: src.vql.adopt.capture_types.require_pillow
+  call_type: resolved
+- caller: src.vql.adopt.program_grid.screenshot_to_program
+  callee: src.vql.adopt.program_enrichment.enrich_program_metadata
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.capture.run_capture_screen
+  callee: src.vql.adopt.capture_screen.capture_screen
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli_commands.capture.run_capture_screen
+  callee: src.vql.adopt.capture_diagnose.capture_diagnose
+  call_type: resolved
+- caller: packages.uri2vql.src.uri2vql.cli.main
+  callee: packages.uri2vql.src.uri2vql.cli.build_parser
+  call_type: resolved
+- caller: src.vql.adopt.capture_screen.capture_screen
+  callee: src.vql.adopt.capture_types.require_pillow
+  call_type: resolved
+- caller: src.vql.adopt.capture_screen.capture_screen
+  callee: src.vql.adopt.capture_backends.capture_backends
+  call_type: resolved
+- caller: src.vql.adopt.capture_screen.capture_screen
+  callee: src.vql.adopt.capture_screen.active_window_title
+  call_type: resolved
+- caller: src.vql.adopt.capture_screen.capture_screen
+  callee: src.vql.adopt.capture_policy.should_use_interactive_portal
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.config.PipelineConfig.from_env
+  callee: packages.img2vql.src.img2vql.pipeline.config._load_dotenv
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.config.PipelineConfig.from_env
+  callee: packages.img2vql.src.img2vql.pipeline.config._env_bool
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.llm_vql.build_llm_extraction_prompt
+  callee: packages.img2vql.src.img2vql.pipeline.schema_prompt.build_vql_schema_prompt
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.llm_vql.build_llm_extraction_prompt
+  callee: packages.img2vql.src.img2vql.pipeline.llm_vql._program_summary
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.llm_vql.level5_llm_extract
+  callee: packages.img2vql.src.img2vql.pipeline.llm_vql._compact_fast_context
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.llm_vql.level5_llm_extract
+  callee: packages.img2vql.src.img2vql.pipeline.llm_vql.build_llm_extraction_prompt
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.llm_vql.level5_llm_extract
+  callee: packages.img2vql.src.img2vql.pipeline.llm_client.build_vision_user_message
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.llm_vql.level5_llm_extract
+  callee: packages.img2vql.src.img2vql.pipeline.llm_client.chat_completion
+  call_type: resolved
+- caller: packages.img2vql.src.img2vql.pipeline.llm_vql.level5_llm_extract
+  callee: packages.img2vql.src.img2vql.pipeline.llm_vql.parse_vql_json_from_llm
   call_type: resolved
 modules:
   examples.generate-demo-screen:
@@ -2310,9 +3154,12 @@ modules:
   - examples.photo-roundtrip-test.main
   - examples.photo-roundtrip-test.sample_flat_shapes
   - examples.photo-roundtrip-test.sample_gradient
+  - examples.photo-roundtrip-test.sample_natural_scene
   - examples.photo-roundtrip-test.sample_nl_drawing
+  - examples.photo-roundtrip-test.sample_product_photo
   - examples.photo-roundtrip-test.test_img2svg_roundtrip
   - examples.photo-roundtrip-test.test_img2vql_detect
+  - examples.photo-roundtrip-test.test_metadata_only_reconstruction
   - examples.photo-roundtrip-test.test_opencv_contours
   - examples.photo-roundtrip-test.test_ui_grid_adopt
   - examples.photo-roundtrip-test.test_vtracer_roundtrip
@@ -2343,9 +3190,19 @@ modules:
   - packages.dsl2vql.src.dsl2vql.events.default_event_store
   packages.dsl2vql.src.dsl2vql.grammar:
   - packages.dsl2vql.src.dsl2vql.grammar.parse_line
-  - packages.dsl2vql.src.dsl2vql.grammar.pick_flag
-  - packages.dsl2vql.src.dsl2vql.grammar.split_command
   - packages.dsl2vql.src.dsl2vql.grammar.to_text
+  packages.dsl2vql.src.dsl2vql.grammar_handlers:
+  - packages.dsl2vql.src.dsl2vql.grammar_handlers.build_command
+  - packages.dsl2vql.src.dsl2vql.grammar_handlers.build_compile
+  - packages.dsl2vql.src.dsl2vql.grammar_handlers.build_export
+  - packages.dsl2vql.src.dsl2vql.grammar_handlers.build_generate
+  - packages.dsl2vql.src.dsl2vql.grammar_handlers.build_patch
+  - packages.dsl2vql.src.dsl2vql.grammar_handlers.build_query
+  - packages.dsl2vql.src.dsl2vql.grammar_handlers.build_render
+  - packages.dsl2vql.src.dsl2vql.grammar_handlers.build_resolve
+  packages.dsl2vql.src.dsl2vql.grammar_tokens:
+  - packages.dsl2vql.src.dsl2vql.grammar_tokens.pick_flag
+  - packages.dsl2vql.src.dsl2vql.grammar_tokens.split_command
   packages.dsl2vql.src.dsl2vql.handlers.command:
   - packages.dsl2vql.src.dsl2vql.handlers.command._read_json
   - packages.dsl2vql.src.dsl2vql.handlers.command.handle_compile
@@ -2359,14 +3216,15 @@ modules:
   - packages.dsl2vql.src.dsl2vql.handlers.query.handle_render
   - packages.dsl2vql.src.dsl2vql.handlers.query.handle_resolve
   - packages.dsl2vql.src.dsl2vql.handlers.query.handle_validate
+  packages.dsl2vql.src.dsl2vql.pb_body_codec:
+  - packages.dsl2vql.src.dsl2vql.pb_body_codec.envelope_to_dict
+  - packages.dsl2vql.src.dsl2vql.pb_body_codec.set_envelope_body
   packages.dsl2vql.src.dsl2vql.pb_codec:
-  - packages.dsl2vql.src.dsl2vql.pb_codec._set_body
   - packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf
   - packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf_to_text
   - packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf
   - packages.dsl2vql.src.dsl2vql.pb_codec.encode_result_protobuf
   - packages.dsl2vql.src.dsl2vql.pb_codec.encode_text_to_protobuf
-  - packages.dsl2vql.src.dsl2vql.pb_codec.envelope_to_dict
   - packages.dsl2vql.src.dsl2vql.pb_codec.result_to_pb
   packages.dsl2vql.src.dsl2vql.schema_registry:
   - packages.dsl2vql.src.dsl2vql.schema_registry._load_schemas
@@ -2425,6 +3283,34 @@ modules:
   - packages.img2vql.src.img2vql.metadata.rapidocr_special_hits
   - packages.img2vql.src.img2vql.metadata.refresh_program_metadata
   - packages.img2vql.src.img2vql.metadata.save_diagnose_to_program
+  packages.img2vql.src.img2vql.pipeline.config:
+  - packages.img2vql.src.img2vql.pipeline.config.PipelineConfig.from_env
+  - packages.img2vql.src.img2vql.pipeline.config._env_bool
+  - packages.img2vql.src.img2vql.pipeline.config._load_dotenv
+  packages.img2vql.src.img2vql.pipeline.fast_analysis:
+  - packages.img2vql.src.img2vql.pipeline.fast_analysis.level0_image_stats
+  - packages.img2vql.src.img2vql.pipeline.fast_analysis.level1_img2nl_fast
+  - packages.img2vql.src.img2vql.pipeline.fast_analysis.level2_ui_detect
+  - packages.img2vql.src.img2vql.pipeline.fast_analysis.level3_adopt_program
+  - packages.img2vql.src.img2vql.pipeline.fast_analysis.level4_diagnose
+  packages.img2vql.src.img2vql.pipeline.llm_client:
+  - packages.img2vql.src.img2vql.pipeline.llm_client._image_to_data_url
+  - packages.img2vql.src.img2vql.pipeline.llm_client.build_vision_user_message
+  - packages.img2vql.src.img2vql.pipeline.llm_client.chat_completion
+  packages.img2vql.src.img2vql.pipeline.llm_vql:
+  - packages.img2vql.src.img2vql.pipeline.llm_vql._compact_fast_context
+  - packages.img2vql.src.img2vql.pipeline.llm_vql._program_summary
+  - packages.img2vql.src.img2vql.pipeline.llm_vql.build_llm_extraction_prompt
+  - packages.img2vql.src.img2vql.pipeline.llm_vql.level5_llm_extract
+  - packages.img2vql.src.img2vql.pipeline.llm_vql.parse_vql_json_from_llm
+  packages.img2vql.src.img2vql.pipeline.orchestrate:
+  - packages.img2vql.src.img2vql.pipeline.orchestrate.analyze_image_to_vql
+  packages.img2vql.src.img2vql.pipeline.roundtrip:
+  - packages.img2vql.src.img2vql.pipeline.roundtrip.image_to_vql
+  - packages.img2vql.src.img2vql.pipeline.roundtrip.roundtrip_compare
+  - packages.img2vql.src.img2vql.pipeline.roundtrip.vql_to_image
+  packages.img2vql.src.img2vql.pipeline.schema_prompt:
+  - packages.img2vql.src.img2vql.pipeline.schema_prompt.build_vql_schema_prompt
   packages.img2vql.src.img2vql.program:
   - packages.img2vql.src.img2vql.program._bbox_contains
   - packages.img2vql.src.img2vql.program._build_contains_relations
@@ -2465,13 +3351,59 @@ modules:
   - packages.uri2img2svg.src.uri2img2svg.query.query_uri
   packages.uri2img2svg.src.uri2img2svg.uri:
   - packages.uri2img2svg.src.uri2img2svg.uri.parse_img2svg_uri
+  packages.uri2vql.src.uri2vql.cli:
+  - packages.uri2vql.src.uri2vql.cli.build_parser
+  - packages.uri2vql.src.uri2vql.cli.main
+  packages.uri2vql.src.uri2vql.cli_commands.capture:
+  - packages.uri2vql.src.uri2vql.cli_commands.capture.run_capture_screen
+  packages.uri2vql.src.uri2vql.cli_commands.core:
+  - packages.uri2vql.src.uri2vql.cli_commands.core.run_patch
+  - packages.uri2vql.src.uri2vql.cli_commands.core.run_query
+  - packages.uri2vql.src.uri2vql.cli_commands.core.run_resolve
+  - packages.uri2vql.src.uri2vql.cli_commands.core.run_run
+  packages.uri2vql.src.uri2vql.cli_commands.pipeline:
+  - packages.uri2vql.src.uri2vql.cli_commands.pipeline.run_capture_and_analyze
+  packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze:
+  - packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze.run_pipeline_analyze
+  - packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze.run_roundtrip
+  - packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze.run_vql_to_image
+  packages.uri2vql.src.uri2vql.cli_commands.window:
+  - packages.uri2vql.src.uri2vql.cli_commands.window.run_adopt_ui
+  - packages.uri2vql.src.uri2vql.cli_commands.window.run_analyze_window
+  - packages.uri2vql.src.uri2vql.cli_commands.window.run_compare_window
+  - packages.uri2vql.src.uri2vql.cli_commands.window.run_detect_window
+  - packages.uri2vql.src.uri2vql.cli_commands.window.run_diagnose_window
+  - packages.uri2vql.src.uri2vql.cli_commands.window.run_refresh_window
   packages.uri2vql.src.uri2vql.compile:
   - packages.uri2vql.src.uri2vql.compile._dsl_from_uri
   - packages.uri2vql.src.uri2vql.compile.compile_vql_uri
   packages.uri2vql.src.uri2vql.nlp2uri:
   - packages.uri2vql.src.uri2vql.nlp2uri.best_uri
+  - packages.uri2vql.src.uri2vql.nlp2uri.build_intent_context
+  - packages.uri2vql.src.uri2vql.nlp2uri.dedupe_by_uri
   - packages.uri2vql.src.uri2vql.nlp2uri.nlp2uri
   - packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
+  packages.uri2vql.src.uri2vql.nlp2uri_extractors:
+  - packages.uri2vql.src.uri2vql.nlp2uri_extractors.extract_click_target
+  - packages.uri2vql.src.uri2vql.nlp2uri_extractors.extract_type_parts
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl:
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._match_imgl_type
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_analyze
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_click
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_list
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_type
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.program:
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_objects
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_program
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_scene
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_vql_generic
+  packages.uri2vql.src.uri2vql.nlp2uri_intents.window:
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_analyze
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_analyze_vql
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_compare
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_diagnose
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_refresh
+  - packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_summary
   packages.uri2vql.src.uri2vql.patch:
   - packages.uri2vql.src.uri2vql.patch.patch_uri
   packages.uri2vql.src.uri2vql.query:
@@ -2498,44 +3430,70 @@ modules:
   - packages.uri2vql.src.uri2vql.uri.uri_for_window_refresh
   - packages.uri2vql.src.uri2vql.uri.uri_for_window_summary
   packages.uri2vql.src.uri2vql.window:
-  - packages.uri2vql.src.uri2vql.window._diagnose_fallback
-  - packages.uri2vql.src.uri2vql.window._normalize_locale
-  - packages.uri2vql.src.uri2vql.window._query_window_imgl
-  - packages.uri2vql.src.uri2vql.window._resolve_image_param
-  - packages.uri2vql.src.uri2vql.window.analyze_window_uri
-  - packages.uri2vql.src.uri2vql.window.compare_window_image
-  - packages.uri2vql.src.uri2vql.window.diagnose_window_image
   - packages.uri2vql.src.uri2vql.window.query_window
-  - packages.uri2vql.src.uri2vql.window.refresh_window_metadata
+  packages.uri2vql.src.uri2vql.window_analyze:
+  - packages.uri2vql.src.uri2vql.window_analyze.analyze_window_uri
+  packages.uri2vql.src.uri2vql.window_compare:
+  - packages.uri2vql.src.uri2vql.window_compare.compare_window_image
+  packages.uri2vql.src.uri2vql.window_diagnose:
+  - packages.uri2vql.src.uri2vql.window_diagnose.diagnose_window_image
+  packages.uri2vql.src.uri2vql.window_handlers:
+  - packages.uri2vql.src.uri2vql.window_handlers.handle_adopt
+  - packages.uri2vql.src.uri2vql.window_handlers.handle_analyze
+  - packages.uri2vql.src.uri2vql.window_handlers.handle_compare
+  - packages.uri2vql.src.uri2vql.window_handlers.handle_detect
+  - packages.uri2vql.src.uri2vql.window_handlers.handle_diagnose
+  - packages.uri2vql.src.uri2vql.window_handlers.handle_imgl
+  - packages.uri2vql.src.uri2vql.window_handlers.handle_refresh
+  - packages.uri2vql.src.uri2vql.window_handlers.handle_summary
+  packages.uri2vql.src.uri2vql.window_imgl:
+  - packages.uri2vql.src.uri2vql.window_imgl.query_window_imgl
+  packages.uri2vql.src.uri2vql.window_metadata:
+  - packages.uri2vql.src.uri2vql.window_metadata.refresh_window_metadata
+  packages.uri2vql.src.uri2vql.window_utils:
+  - packages.uri2vql.src.uri2vql.window_utils.diagnose_fallback
+  - packages.uri2vql.src.uri2vql.window_utils.normalize_locale
+  - packages.uri2vql.src.uri2vql.window_utils.payload_result
+  - packages.uri2vql.src.uri2vql.window_utils.query_bool
+  - packages.uri2vql.src.uri2vql.window_utils.resolve_image_param
+  - packages.uri2vql.src.uri2vql.window_utils.resolve_window_image
+  src.vql.adopt.capture_backends:
+  - src.vql.adopt.capture_backends.capture_backends
+  - src.vql.adopt.capture_backends.capture_with_gnome_screenshot
+  - src.vql.adopt.capture_backends.capture_with_gnome_shell
+  - src.vql.adopt.capture_backends.capture_with_grim
+  - src.vql.adopt.capture_backends.capture_with_mss
+  - src.vql.adopt.capture_backends.capture_with_portal
+  - src.vql.adopt.capture_backends.capture_with_scrot
+  - src.vql.adopt.capture_backends.finalize_capture
+  - src.vql.adopt.capture_backends.run_capture
+  src.vql.adopt.capture_diagnose:
+  - src.vql.adopt.capture_diagnose.capture_diagnose
+  src.vql.adopt.capture_image:
+  - src.vql.adopt.capture_image.image_is_blank
+  - src.vql.adopt.capture_image.image_stats
+  src.vql.adopt.capture_policy:
+  - src.vql.adopt.capture_policy.capture_interactive_mode
+  - src.vql.adopt.capture_policy.capture_permission_hint
+  - src.vql.adopt.capture_policy.is_wayland
+  - src.vql.adopt.capture_policy.portal_python
+  - src.vql.adopt.capture_policy.session_type
+  - src.vql.adopt.capture_policy.should_use_interactive_portal
+  src.vql.adopt.capture_screen:
+  - src.vql.adopt.capture_screen.active_window_title
+  - src.vql.adopt.capture_screen.capture_screen
+  src.vql.adopt.capture_types:
+  - src.vql.adopt.capture_types.require_pillow
   src.vql.adopt.portal_capture:
   - src.vql.adopt.portal_capture.capture_via_portal
   - src.vql.adopt.portal_capture.main
+  src.vql.adopt.program_enrichment:
+  - src.vql.adopt.program_enrichment.enrich_program_metadata
+  - src.vql.adopt.program_enrichment.optional_fingerprint
+  src.vql.adopt.program_grid:
+  - src.vql.adopt.program_grid.screenshot_to_program
   src.vql.adopt.window:
-  - src.vql.adopt.window._active_window_title
-  - src.vql.adopt.window._capture_backends
-  - src.vql.adopt.window._capture_interactive_mode
-  - src.vql.adopt.window._capture_permission_hint
-  - src.vql.adopt.window._capture_with_gnome_screenshot
-  - src.vql.adopt.window._capture_with_gnome_shell
-  - src.vql.adopt.window._capture_with_grim
-  - src.vql.adopt.window._capture_with_mss
-  - src.vql.adopt.window._capture_with_portal
-  - src.vql.adopt.window._capture_with_scrot
-  - src.vql.adopt.window._enrich_program_metadata
-  - src.vql.adopt.window._finalize_capture
-  - src.vql.adopt.window._image_is_blank
-  - src.vql.adopt.window._is_wayland
-  - src.vql.adopt.window._optional_fingerprint
-  - src.vql.adopt.window._portal_python
-  - src.vql.adopt.window._require_pillow
-  - src.vql.adopt.window._run_capture
-  - src.vql.adopt.window._session_type
-  - src.vql.adopt.window._should_use_interactive_portal
   - src.vql.adopt.window.analyze_screenshot
-  - src.vql.adopt.window.capture_diagnose
-  - src.vql.adopt.window.capture_screen
-  - src.vql.adopt.window.image_stats
-  - src.vql.adopt.window.screenshot_to_program
   src.vql.compiler.legacy_drawcommand:
   - src.vql.compiler.legacy_drawcommand.commands_to_program
   - src.vql.compiler.legacy_drawcommand.compile_to_events
@@ -2587,20 +3545,43 @@ entry_points:
 - packages.dsl2img2svg.src.dsl2img2svg.dispatch.DispatchResult.to_dict
 - packages.dsl2img2svg.src.dsl2img2svg.dispatch.dispatch
 - packages.dsl2vql.src.dsl2vql.cli.main
-- packages.dsl2vql.src.dsl2vql.codec.decode_protobuf
-- packages.dsl2vql.src.dsl2vql.codec.encode_protobuf
 - packages.dsl2vql.src.dsl2vql.codec.encode_text
 - packages.dsl2vql.src.dsl2vql.codec.roundtrip_text
 - packages.dsl2vql.src.dsl2vql.events.DslEvent.to_dict
 - packages.dsl2vql.src.dsl2vql.events.EventStore.__init__
 - packages.dsl2vql.src.dsl2vql.events.EventStore.append
 - packages.dsl2vql.src.dsl2vql.events.EventStore.replay
+- packages.dsl2vql.src.dsl2vql.grammar_handlers.build_compile
+- packages.dsl2vql.src.dsl2vql.grammar_handlers.build_export
+- packages.dsl2vql.src.dsl2vql.grammar_handlers.build_generate
+- packages.dsl2vql.src.dsl2vql.grammar_handlers.build_patch
+- packages.dsl2vql.src.dsl2vql.grammar_handlers.build_query
+- packages.dsl2vql.src.dsl2vql.grammar_handlers.build_render
+- packages.dsl2vql.src.dsl2vql.grammar_handlers.build_resolve
+- packages.dsl2vql.src.dsl2vql.grammar_handlers.build_validate
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.decode_compile
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.decode_export
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.decode_generate
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.decode_patch
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.decode_query
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.decode_render
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.decode_resolve
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.decode_validate
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.encode_compile
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.encode_export
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.encode_generate
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.encode_patch
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.encode_query
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.encode_render
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.encode_resolve
+- packages.dsl2vql.src.dsl2vql.pb_body_codec.encode_validate
 - packages.dsl2vql.src.dsl2vql.result.DslResult.to_dict
 - packages.img2svg.src.img2svg.cli.main
 - packages.img2svg.src.img2svg.trace.TracedRegion.to_dict
 - packages.img2vql.src.img2vql.cli.main
 - packages.img2vql.src.img2vql.detect.UIElement.to_dict
 - packages.img2vql.src.img2vql.fingerprint.fingerprint_for_image
+- packages.img2vql.src.img2vql.pipeline.config.PipelineConfig.from_env
 - packages.mcp2vql.src.mcp2vql.server.VqlMCPServer.__post_init__
 - packages.mcp2vql.src.mcp2vql.server.VqlMCPServer._register_tools
 - packages.mcp2vql.src.mcp2vql.server.VqlMCPServer.run
@@ -2620,23 +3601,75 @@ entry_points:
 - packages.uri2img2svg.src.uri2img2svg.uri.is_img2svg_uri
 - packages.uri2img2svg.src.uri2img2svg.uri.uri_for_vectorize
 - packages.uri2vql.src.uri2vql.cli.main
+- packages.uri2vql.src.uri2vql.cli_commands.capture.run_capture_screen
+- packages.uri2vql.src.uri2vql.cli_commands.core.run_patch
+- packages.uri2vql.src.uri2vql.cli_commands.core.run_query
+- packages.uri2vql.src.uri2vql.cli_commands.core.run_resolve
+- packages.uri2vql.src.uri2vql.cli_commands.core.run_run
+- packages.uri2vql.src.uri2vql.cli_commands.pipeline.run_capture_and_analyze
+- packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze.run_pipeline_analyze
+- packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze.run_roundtrip
+- packages.uri2vql.src.uri2vql.cli_commands.pipeline_analyze.run_vql_to_image
+- packages.uri2vql.src.uri2vql.cli_commands.window.run_adopt_imgl
+- packages.uri2vql.src.uri2vql.cli_commands.window.run_adopt_ui
+- packages.uri2vql.src.uri2vql.cli_commands.window.run_analyze_window
+- packages.uri2vql.src.uri2vql.cli_commands.window.run_compare_window
+- packages.uri2vql.src.uri2vql.cli_commands.window.run_detect_window
+- packages.uri2vql.src.uri2vql.cli_commands.window.run_diagnose_window
+- packages.uri2vql.src.uri2vql.cli_commands.window.run_refresh_window
 - packages.uri2vql.src.uri2vql.compile.compile_vql_uri
-- packages.uri2vql.src.uri2vql.nlp2uri.ResolvedVqlUri.to_dict
 - packages.uri2vql.src.uri2vql.nlp2uri.best_uri
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._match_imgl_analyze
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._match_imgl_click
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._match_imgl_list
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._match_imgl_type
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_analyze
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_click
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_list
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl._resolve_imgl_type
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.program._match_objects
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.program._match_program
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.program._match_scene
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.program._match_vql_generic
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_objects
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_program
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_scene
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.program._resolve_vql_generic
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.window._match_window_analyze
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.window._match_window_analyze_vql
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.window._match_window_compare
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.window._match_window_diagnose
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.window._match_window_refresh
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.window._match_window_summary
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_analyze
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_analyze_vql
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_compare
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_diagnose
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_refresh
+- packages.uri2vql.src.uri2vql.nlp2uri_intents.window._resolve_window_summary
+- packages.uri2vql.src.uri2vql.nlp2uri_types.ResolvedVqlUri.to_dict
 - packages.uri2vql.src.uri2vql.patch.PatchResult.to_dict
 - packages.uri2vql.src.uri2vql.query.QueryResult.to_dict
 - packages.uri2vql.src.uri2vql.query.query_uri
 - packages.uri2vql.src.uri2vql.run.RunResult.to_dict
 - packages.uri2vql.src.uri2vql.run.run_uri_json
 - packages.uri2vql.src.uri2vql.uri.uri_for_object
-- packages.uri2vql.src.uri2vql.window.WindowAnalyzeResult.to_dict
+- packages.uri2vql.src.uri2vql.window_analyze.WindowAnalyzeResult.to_dict
+- packages.uri2vql.src.uri2vql.window_handlers.handle_adopt
+- packages.uri2vql.src.uri2vql.window_handlers.handle_analyze
+- packages.uri2vql.src.uri2vql.window_handlers.handle_compare
+- packages.uri2vql.src.uri2vql.window_handlers.handle_detect
+- packages.uri2vql.src.uri2vql.window_handlers.handle_diagnose
+- packages.uri2vql.src.uri2vql.window_handlers.handle_imgl
+- packages.uri2vql.src.uri2vql.window_handlers.handle_refresh
+- packages.uri2vql.src.uri2vql.window_handlers.handle_summary
+- src.vql.adopt.capture_backends.capture_with_gnome_screenshot
+- src.vql.adopt.capture_backends.capture_with_gnome_shell
+- src.vql.adopt.capture_backends.capture_with_grim
+- src.vql.adopt.capture_backends.capture_with_scrot
+- src.vql.adopt.capture_types.CaptureAttempt.to_dict
+- src.vql.adopt.capture_types.CaptureInfo.to_dict
 - src.vql.adopt.portal_capture.main
-- src.vql.adopt.window.CaptureAttempt.to_dict
-- src.vql.adopt.window.CaptureInfo.to_dict
-- src.vql.adopt.window._capture_with_gnome_screenshot
-- src.vql.adopt.window._capture_with_gnome_shell
-- src.vql.adopt.window._capture_with_grim
-- src.vql.adopt.window._capture_with_scrot
 - src.vql.drawing.arrow_generator.ArrowGenerator.generate
 - src.vql.drawing.bird_generator.BirdGenerator.generate
 - src.vql.drawing.boat_generator.BoatGenerator.generate

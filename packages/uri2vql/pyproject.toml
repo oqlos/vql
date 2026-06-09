@@ -16,7 +16,11 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-diagnose = ["img2vql>=0.1.0"]
+# img2vql is a sibling package in the monorepo — install with:
+#   pip install -e packages/img2vql
+# (see install-dev.sh; do not use PyPI extras here — breaks editable monorepo layout)
+diagnose = []
+pipeline = []
 imgl = ["imgl>=0.6.0"]
 
 [project.scripts]

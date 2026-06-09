@@ -16,7 +16,7 @@ SUMD - Structured Unified Markdown Descriptor for AI-aware project refactorizati
 ## Metadata
 
 - **name**: `vql`
-- **version**: `0.1.3`
+- **version**: `0.1.4`
 - **python_requires**: `>=3.10`
 - **license**: Apache-2.0
 - **ai_model**: `openrouter/qwen/qwen3-coder-next`
@@ -36,7 +36,7 @@ SUMD (description) → DOQL/source (code) → taskfile (automation) → testql (
 
 app {
   name: vql;
-  version: 0.1.3;
+  version: 0.1.4;
 }
 
 dependencies {
@@ -204,7 +204,7 @@ pfix>=0.1.60
 
 ## Call Graph
 
-*213 nodes · 252 edges · 52 modules · CC̄=4.1*
+*218 nodes · 256 edges · 53 modules · CC̄=4.1*
 
 ### Hubs (by degree)
 
@@ -212,17 +212,17 @@ pfix>=0.1.60
 |----------|----|----|-----|-------|
 | `query_window` *(in packages.uri2vql.src.uri2vql.window)* | 69 ⚠ | 2 | 147 | **149** |
 | `resolve_prompt_to_vql_uri` *(in packages.uri2vql.src.uri2vql.nlp2uri)* | 54 ⚠ | 2 | 68 | **70** |
-| `parse_svg_path` *(in src.vql.drawing.svg_path_parser)* | 43 ⚠ | 1 | 64 | **65** |
 | `trace_to_vql_program` *(in packages.img2svg.src.img2svg.to_vql)* | 15 ⚠ | 3 | 46 | **49** |
-| `analyze_screenshot` *(in src.vql.adopt.window)* | 13 ⚠ | 2 | 45 | **47** |
+| `_dispatch_command` *(in src.vql.drawing.svg_path_parser)* | 16 ⚠ | 1 | 47 | **48** |
 | `screenshot_to_program` *(in src.vql.adopt.window)* | 12 ⚠ | 3 | 44 | **47** |
+| `analyze_screenshot` *(in src.vql.adopt.window)* | 13 ⚠ | 2 | 45 | **47** |
 | `_set_body` *(in packages.dsl2vql.src.dsl2vql.pb_codec)* | 12 ⚠ | 1 | 45 | **46** |
-| `_detect_buttons` *(in packages.img2vql.src.img2vql.detect)* | 25 ⚠ | 1 | 45 | **46** |
+| `_query_window_imgl` *(in packages.uri2vql.src.uri2vql.window)* | 17 ⚠ | 1 | 45 | **46** |
 
 ```toon markpact:analysis path=project/calls.toon.yaml
 # code2llm call graph | /home/tom/github/oqlos/vql
-# generated in 0.14s
-# nodes: 213 | edges: 252 | modules: 52
+# generated in 0.10s
+# nodes: 218 | edges: 256 | modules: 53
 # CC̄=4.1
 
 HUBS[20]:
@@ -230,20 +230,20 @@ HUBS[20]:
     CC=69  in:2  out:147  total:149
   packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
     CC=54  in:2  out:68  total:70
-  src.vql.drawing.svg_path_parser.parse_svg_path
-    CC=43  in:1  out:64  total:65
   packages.img2svg.src.img2svg.to_vql.trace_to_vql_program
     CC=15  in:3  out:46  total:49
-  src.vql.adopt.window.analyze_screenshot
-    CC=13  in:2  out:45  total:47
+  src.vql.drawing.svg_path_parser._dispatch_command
+    CC=16  in:1  out:47  total:48
   src.vql.adopt.window.screenshot_to_program
     CC=12  in:3  out:44  total:47
+  src.vql.adopt.window.analyze_screenshot
+    CC=13  in:2  out:45  total:47
   packages.dsl2vql.src.dsl2vql.pb_codec._set_body
     CC=12  in:1  out:45  total:46
-  packages.img2vql.src.img2vql.detect._detect_buttons
-    CC=25  in:1  out:45  total:46
   packages.uri2vql.src.uri2vql.window._query_window_imgl
     CC=17  in:1  out:45  total:46
+  packages.img2vql.src.img2vql.detect._detect_buttons
+    CC=25  in:1  out:45  total:46
   packages.img2vql.src.img2vql.describe_ui.describe_ui_layout
     CC=14  in:6  out:39  total:45
   src.vql.adopt.window.capture_diagnose
@@ -252,16 +252,16 @@ HUBS[20]:
     CC=5  in:0  out:45  total:45
   packages.rest2vql.src.rest2vql.app.create_app
     CC=1  in:1  out:43  total:44
-  packages.img2vql.src.img2vql.program.elements_to_vql_program
-    CC=11  in:1  out:40  total:41
   packages.dsl2img2svg.src.dsl2img2svg.dispatch.dispatch
     CC=14  in:0  out:41  total:41
+  packages.img2vql.src.img2vql.program.elements_to_vql_program
+    CC=11  in:1  out:40  total:41
   packages.uri2img2svg.src.uri2img2svg.query.query_uri
     CC=13  in:6  out:28  total:34
-  packages.dsl2vql.src.dsl2vql.events.EventStore.append
-    CC=3  in:0  out:33  total:33
   packages.dsl2vql.src.dsl2vql.grammar.parse_line
     CC=28  in:6  out:27  total:33
+  packages.dsl2vql.src.dsl2vql.events.EventStore.append
+    CC=3  in:0  out:33  total:33
   src.vql.adopt.portal_capture.capture_via_portal
     CC=4  in:1  out:30  total:31
   examples.photo-roundtrip-test.test_img2svg_roundtrip
@@ -490,8 +490,11 @@ MODULES:
     to_vql  CC=1  out:1
   src.vql.drawing.path_generator  [1 funcs]
     generate  CC=5  out:7
-  src.vql.drawing.svg_path_parser  [1 funcs]
-    parse_svg_path  CC=43  out:64
+  src.vql.drawing.svg_path_parser  [4 funcs]
+    _dispatch_command  CC=16  out:47
+    _scale_groups  CC=15  out:6
+    _tokenize_path  CC=1  out:1
+    parse_svg_path  CC=7  out:7
   src.vql.facade  [6 funcs]
     compile  CC=1  out:1
     render_png  CC=1  out:1
@@ -505,6 +508,9 @@ MODULES:
   src.vql.renderers.svg  [2 funcs]
     render_to_png  CC=2  out:8
     render_to_svg  CC=1  out:4
+  src.vql.validation.metadata  [2 funcs]
+    _load_imgl_metadata_schema  CC=1  out:3
+    validate_program_metadata  CC=14  out:14
   src.vql.validation.spec  [4 funcs]
     _match_items  CC=4  out:3
     _program_colors  CC=2  out:2
@@ -584,8 +590,8 @@ EDGES:
 
 ```toon markpact:analysis path=project/calls.toon.yaml
 # code2llm call graph | /home/tom/github/oqlos/vql
-# generated in 0.14s
-# nodes: 213 | edges: 252 | modules: 52
+# generated in 0.10s
+# nodes: 218 | edges: 256 | modules: 53
 # CC̄=4.1
 
 HUBS[20]:
@@ -593,20 +599,20 @@ HUBS[20]:
     CC=69  in:2  out:147  total:149
   packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
     CC=54  in:2  out:68  total:70
-  src.vql.drawing.svg_path_parser.parse_svg_path
-    CC=43  in:1  out:64  total:65
   packages.img2svg.src.img2svg.to_vql.trace_to_vql_program
     CC=15  in:3  out:46  total:49
-  src.vql.adopt.window.analyze_screenshot
-    CC=13  in:2  out:45  total:47
+  src.vql.drawing.svg_path_parser._dispatch_command
+    CC=16  in:1  out:47  total:48
   src.vql.adopt.window.screenshot_to_program
     CC=12  in:3  out:44  total:47
+  src.vql.adopt.window.analyze_screenshot
+    CC=13  in:2  out:45  total:47
   packages.dsl2vql.src.dsl2vql.pb_codec._set_body
     CC=12  in:1  out:45  total:46
-  packages.img2vql.src.img2vql.detect._detect_buttons
-    CC=25  in:1  out:45  total:46
   packages.uri2vql.src.uri2vql.window._query_window_imgl
     CC=17  in:1  out:45  total:46
+  packages.img2vql.src.img2vql.detect._detect_buttons
+    CC=25  in:1  out:45  total:46
   packages.img2vql.src.img2vql.describe_ui.describe_ui_layout
     CC=14  in:6  out:39  total:45
   src.vql.adopt.window.capture_diagnose
@@ -615,16 +621,16 @@ HUBS[20]:
     CC=5  in:0  out:45  total:45
   packages.rest2vql.src.rest2vql.app.create_app
     CC=1  in:1  out:43  total:44
-  packages.img2vql.src.img2vql.program.elements_to_vql_program
-    CC=11  in:1  out:40  total:41
   packages.dsl2img2svg.src.dsl2img2svg.dispatch.dispatch
     CC=14  in:0  out:41  total:41
+  packages.img2vql.src.img2vql.program.elements_to_vql_program
+    CC=11  in:1  out:40  total:41
   packages.uri2img2svg.src.uri2img2svg.query.query_uri
     CC=13  in:6  out:28  total:34
-  packages.dsl2vql.src.dsl2vql.events.EventStore.append
-    CC=3  in:0  out:33  total:33
   packages.dsl2vql.src.dsl2vql.grammar.parse_line
     CC=28  in:6  out:27  total:33
+  packages.dsl2vql.src.dsl2vql.events.EventStore.append
+    CC=3  in:0  out:33  total:33
   src.vql.adopt.portal_capture.capture_via_portal
     CC=4  in:1  out:30  total:31
   examples.photo-roundtrip-test.test_img2svg_roundtrip
@@ -853,8 +859,11 @@ MODULES:
     to_vql  CC=1  out:1
   src.vql.drawing.path_generator  [1 funcs]
     generate  CC=5  out:7
-  src.vql.drawing.svg_path_parser  [1 funcs]
-    parse_svg_path  CC=43  out:64
+  src.vql.drawing.svg_path_parser  [4 funcs]
+    _dispatch_command  CC=16  out:47
+    _scale_groups  CC=15  out:6
+    _tokenize_path  CC=1  out:1
+    parse_svg_path  CC=7  out:7
   src.vql.facade  [6 funcs]
     compile  CC=1  out:1
     render_png  CC=1  out:1
@@ -868,6 +877,9 @@ MODULES:
   src.vql.renderers.svg  [2 funcs]
     render_to_png  CC=2  out:8
     render_to_svg  CC=1  out:4
+  src.vql.validation.metadata  [2 funcs]
+    _load_imgl_metadata_schema  CC=1  out:3
+    validate_program_metadata  CC=14  out:14
   src.vql.validation.spec  [4 funcs]
     _match_items  CC=4  out:3
     _program_colors  CC=2  out:2
@@ -930,13 +942,15 @@ EDGES:
 ### Code Analysis (`project/analysis.toon.yaml`)
 
 ```toon markpact:analysis path=project/analysis.toon.yaml
-# code2llm | 165f 119602L | python:129,toml:11,json:9,shell:8,yaml:5,proto:2 | 2026-06-09
-# generated in 0.05s
-# CC̅=4.1 | critical:15/410 | dups:0 | cycles:0
+# code2llm | 168f 121044L | python:130,toml:11,json:10,shell:8,yaml:6,proto:2 | 2026-06-09
+# generated in 0.04s
+# CC̅=4.1 | critical:16/421 | dups:0 | cycles:0
 
-HEALTH[15]:
+HEALTH[16]:
   🟡 CC    envelope_to_dict CC=31 (limit:15)
   🟡 CC    parse_line CC=28 (limit:15)
+  🟡 CC    _merge_grid_cells CC=15 (limit:15)
+  🟡 CC    trace_to_vql_program CC=15 (limit:15)
   🟡 CC    main CC=53 (limit:15)
   🟡 CC    resolve_prompt_to_vql_uri CC=54 (limit:15)
   🟡 CC    query_uri CC=15 (limit:15)
@@ -947,14 +961,13 @@ HEALTH[15]:
   🟡 CC    _capture_with_portal CC=15 (limit:15)
   🟡 CC    capture_diagnose CC=33 (limit:15)
   🟡 CC    _merge_grid_colors CC=15 (limit:15)
-  🟡 CC    _merge_grid_cells CC=15 (limit:15)
-  🟡 CC    trace_to_vql_program CC=15 (limit:15)
-  🟡 CC    parse_svg_path CC=43 (limit:15)
+  🟡 CC    _dispatch_command CC=16 (limit:15)
+  🟡 CC    _scale_groups CC=15 (limit:15)
 
 REFACTOR[1]:
-  1. split 15 high-CC methods  (CC>15)
+  1. split 16 high-CC methods  (CC>15)
 
-PIPELINES[167]:
+PIPELINES[174]:
   [1] Src [main]: main → query_uri → parse_img2svg_uri
       PURITY: 100% pure
   [2] Src [is_img2svg_uri]: is_img2svg_uri
@@ -981,79 +994,79 @@ PIPELINES[167]:
       PURITY: 100% pure
   [13] Src [main]: main → _repl → dispatch → split_command
       PURITY: 100% pure
-  [14] Src [__post_init__]: __post_init__ → _require_fastmcp
+  [14] Src [main]: main → image_to_svg → trace_contours_opencv
       PURITY: 100% pure
-  [15] Src [_register_tools]: _register_tools → query_uri → parse_img2svg_uri
+  [15] Src [to_dict]: to_dict
       PURITY: 100% pure
-  [16] Src [run]: run
+  [16] Src [__post_init__]: __post_init__ → _require_fastmcp
       PURITY: 100% pure
-  [17] Src [main]: main
+  [17] Src [_register_tools]: _register_tools → query_uri → parse_img2svg_uri
       PURITY: 100% pure
-  [18] Src [main]: main → query_uri → parse_img2svg_uri
+  [18] Src [run]: run
       PURITY: 100% pure
-  [19] Src [best_uri]: best_uri → nlp2uri → resolve_prompt_to_vql_uri → _extract_click_target
+  [19] Src [main]: main
       PURITY: 100% pure
-  [20] Src [query_uri]: query_uri → query_window → analyze_window_uri → analyze_screenshot → ...(2 more)
+  [20] Src [main]: main → query_uri → parse_img2svg_uri
       PURITY: 100% pure
-  [21] Src [uri_for_object]: uri_for_object → _with_file
+  [21] Src [best_uri]: best_uri → nlp2uri → resolve_prompt_to_vql_uri → _extract_click_target
       PURITY: 100% pure
-  [22] Src [compile_vql_uri]: compile_vql_uri → _dsl_from_uri
+  [22] Src [query_uri]: query_uri → query_window → analyze_window_uri → analyze_screenshot → ...(2 more)
       PURITY: 100% pure
-  [23] Src [run_uri_json]: run_uri_json → run_uri → parse_vql_uri
+  [23] Src [uri_for_object]: uri_for_object → _with_file
       PURITY: 100% pure
-  [24] Src [main]: main → apply_nl → nl_to_dsl_line → _intent
+  [24] Src [compile_vql_uri]: compile_vql_uri → _dsl_from_uri
       PURITY: 100% pure
-  [25] Src [main]: main → create_app → schema_for_verb → _load_schemas
+  [25] Src [run_uri_json]: run_uri_json → run_uri → parse_vql_uri
       PURITY: 100% pure
-  [26] Src [post_window_detect]: post_window_detect → _window_response
+  [26] Src [main]: main → apply_nl → nl_to_dsl_line → _intent
       PURITY: 100% pure
-  [27] Src [post_window_compare]: post_window_compare → _window_response
+  [27] Src [main]: main → create_app → schema_for_verb → _load_schemas
       PURITY: 100% pure
-  [28] Src [post_window_refresh]: post_window_refresh → _window_response
+  [28] Src [post_window_detect]: post_window_detect → _window_response
       PURITY: 100% pure
-  [29] Src [post_window_diagnose]: post_window_diagnose → _window_response
+  [29] Src [post_window_compare]: post_window_compare → _window_response
       PURITY: 100% pure
-  [30] Src [post_window_analyze]: post_window_analyze → _window_response
+  [30] Src [post_window_refresh]: post_window_refresh → _window_response
       PURITY: 100% pure
-  [31] Src [post_window_adopt]: post_window_adopt → _window_response
+  [31] Src [post_window_diagnose]: post_window_diagnose → _window_response
       PURITY: 100% pure
-  [32] Src [post_window_summary]: post_window_summary → _window_response
+  [32] Src [post_window_analyze]: post_window_analyze → _window_response
       PURITY: 100% pure
-  [33] Src [main]: main → dispatch → split_command
+  [33] Src [post_window_adopt]: post_window_adopt → _window_response
       PURITY: 100% pure
-  [34] Src [dispatch]: dispatch → _parse_kv_args
+  [34] Src [post_window_summary]: post_window_summary → _window_response
       PURITY: 100% pure
-  [35] Src [main]: main → detect_ui_elements → _detect_titlebar → _avg_color
+  [35] Src [main]: main → dispatch → split_command
       PURITY: 100% pure
-  [36] Src [to_dict]: to_dict
+  [36] Src [dispatch]: dispatch → _parse_kv_args
       PURITY: 100% pure
-  [37] Src [fingerprint_for_image]: fingerprint_for_image
+  [37] Src [main]: main → detect_ui_elements → _detect_titlebar → _avg_color
       PURITY: 100% pure
-  [38] Src [main]: main → write_demo_screen → _load_font
+  [38] Src [to_dict]: to_dict
       PURITY: 100% pure
-  [39] Src [main]: main
+  [39] Src [fingerprint_for_image]: fingerprint_for_image
       PURITY: 100% pure
-  [40] Src [compile]: compile → nl_to_program → commands_to_program
+  [40] Src [main]: main → sample_flat_shapes → _require_pil
       PURITY: 100% pure
-  [41] Src [validate]: validate → validate_program → _match_items
+  [41] Src [main]: main → write_demo_screen → _load_font
       PURITY: 100% pure
-  [42] Src [render_svg]: render_svg → render_to_svg → render_program → compile_to_events → ...(1 more)
+  [42] Src [main]: main
       PURITY: 100% pure
-  [43] Src [render_png]: render_png → render_to_png → render_to_svg → render_program → ...(2 more)
+  [43] Src [compile]: compile → nl_to_program → commands_to_program
       PURITY: 100% pure
-  [44] Src [to_commands]: to_commands → program_to_commands
+  [44] Src [validate]: validate → validate_program → _match_items
       PURITY: 100% pure
-  [45] Src [to_events]: to_events → compile_to_events → program_to_commands
+  [45] Src [render_svg]: render_svg → render_to_svg → render_program → compile_to_events → ...(1 more)
       PURITY: 100% pure
-  [46] Src [run]: run
+  [46] Src [render_png]: render_png → render_to_png → render_to_svg → render_program → ...(2 more)
       PURITY: 100% pure
-  [47] Src [render]: render → render_program → compile_to_events → program_to_commands
+  [47] Src [to_commands]: to_commands → program_to_commands
       PURITY: 100% pure
-  [48] Src [__getattr__]: __getattr__
+  [48] Src [to_events]: to_events → compile_to_events → program_to_commands
       PURITY: 100% pure
-  [49] Src [__init__]: __init__
+  [49] Src [run]: run
       PURITY: 100% pure
-  [50] Src [validate]: validate
+  [50] Src [render]: render → render_program → compile_to_events → program_to_commands
       PURITY: 100% pure
 
 LAYERS:
@@ -1067,8 +1080,8 @@ LAYERS:
   │ uri                        183L  1C   16m  CC=6      ←5
   │ !! pb_codec                   157L  0C    8m  CC=31     ←6
   │ query                      144L  1C    2m  CC=13     ←6
-  │ program                    141L  0C    4m  CC=11     ←1
   │ !! to_vql                     141L  0C    3m  CC=15     ←4
+  │ program                    141L  0C    4m  CC=11     ←1
   │ server                     135L  1C    5m  CC=2      ←0
   │ svg_emit                   134L  0C    4m  CC=7      ←4
   │ command                    130L  0C    6m  CC=11     ←1
@@ -1108,8 +1121,8 @@ LAYERS:
   │ pyproject.toml              26L  0C    0m  CC=0.0    ←0
   │ pyproject.toml              26L  0C    0m  CC=0.0    ←0
   │ pyproject.toml              26L  0C    0m  CC=0.0    ←0
-  │ __init__                    26L  0C    0m  CC=0.0    ←0
   │ pyproject.toml              26L  0C    0m  CC=0.0    ←0
+  │ __init__                    26L  0C    0m  CC=0.0    ←0
   │ cli                         24L  0C    1m  CC=1      ←0
   │ pyproject.toml              24L  0C    0m  CC=0.0    ←0
   │ result.proto                23L  0C    0m  CC=0.0    ←0
@@ -1144,7 +1157,7 @@ LAYERS:
   │ commands                   271L  8C   19m  CC=8      ←0
   │ nl_parser                  225L  1C    8m  CC=11     ←0
   │ playwright                 215L  1C    8m  CC=9      ←0
-  │ !! svg_path_parser            192L  0C    1m  CC=43     ←1
+  │ !! svg_path_parser            205L  1C   10m  CC=16     ←1
   │ events                     142L  7C    7m  CC=1      ←0
   │ legacy_drawcommand         142L  0C    3m  CC=9      ←3
   │ colors                     135L  1C    6m  CC=6      ←0
@@ -1159,14 +1172,16 @@ LAYERS:
   │ nl_to_vql                   69L  0C    1m  CC=6      ←4
   │ base                        65L  2C    3m  CC=1      ←1
   │ castle_generator            63L  1C    1m  CC=3      ←0
+  │ metadata                    57L  0C    2m  CC=14     ←0
+  │ __init__                    56L  0C    0m  CC=0.0    ←0
   │ cat_generator               55L  1C    1m  CC=4      ←0
-  │ __init__                    54L  0C    0m  CC=0.0    ←0
-  │ api                         54L  0C    0m  CC=0.0    ←0
+  │ api                         55L  0C    0m  CC=0.0    ←0
   │ rocket_generator            52L  1C    1m  CC=2      ←0
   │ svg                         51L  1C    2m  CC=2      ←4
   │ butterfly_generator         50L  1C    1m  CC=5      ←0
   │ bird_generator              49L  1C    1m  CC=2      ←0
   │ car_generator               48L  1C    1m  CC=3      ←0
+  │ program_metadata_imgl.json    48L  0C    0m  CC=0.0    ←0
   │ cloud_detailed_generator    47L  1C    1m  CC=4      ←0
   │ fish_generator              46L  1C    1m  CC=3      ←0
   │ arrow_generator             46L  1C    1m  CC=3      ←0
@@ -1194,16 +1209,16 @@ LAYERS:
   │ pentagon_generator          27L  1C    1m  CC=2      ←0
   │ triangle_generator          26L  1C    1m  CC=1      ←0
   │ rectangle_generator         26L  1C    1m  CC=1      ←0
+  │ path_generator              25L  1C    1m  CC=5      ←0
   │ line_generator              25L  1C    1m  CC=1      ←0
   │ square_generator            25L  1C    1m  CC=1      ←0
-  │ path_generator              25L  1C    1m  CC=5      ←0
   │ __init__                    23L  0C    1m  CC=2      ←0
   │ playwright                  22L  1C    1m  CC=1      ←0
   │ __init__                    19L  0C    0m  CC=0.0    ←0
   │ __init__                    16L  0C    0m  CC=0.0    ←0
   │ __init__                    15L  0C    0m  CC=0.0    ←0
   │ __init__                    14L  0C    0m  CC=0.0    ←0
-  │ __init__                    11L  0C    0m  CC=0.0    ←0
+  │ __init__                    13L  0C    0m  CC=0.0    ←0
   │ __init__                     9L  0C    0m  CC=0.0    ←0
   │
   examples/                       CC̄=2.5    ←in:0  →out:18  !! split
@@ -1218,6 +1233,7 @@ LAYERS:
   │ !! layout.vql.json          78775L  0C    0m  CC=0.0    ←0
   │ !! layout.vql.imgl.json     21939L  0C    0m  CC=0.0    ←0
   │ !! app.vql.json              5803L  0C    0m  CC=0.0    ←0
+  │ !! planfile.yaml             1319L  0C    0m  CC=0.0    ←0
   │ !! goal.yaml                  511L  0C    0m  CC=0.0    ←0
   │ Makefile                   112L  0C    0m  CC=0.0    ←0
   │ prefact.yaml                94L  0C    0m  CC=0.0    ←0
@@ -1250,16 +1266,16 @@ COUPLING:
       packages.nlp2vql                     2                                                                                                                                                        ←2                                                                ──                      
       packages.cli2vql                     3                                                                                                                                                                                                                                                ──
   CYCLES: none
+  HUB: packages.uri2img2svg/ (fan-in=5)
+  HUB: packages.dsl2vql/ (fan-in=19)
   HUB: packages.img2svg/ (fan-in=15)
   HUB: packages.img2vql/ (fan-in=24)
   HUB: src.vql/ (fan-in=24)
-  HUB: packages.dsl2vql/ (fan-in=19)
-  HUB: packages.uri2img2svg/ (fan-in=5)
-  SMELL: examples/ fan-out=18 → split needed
-  SMELL: packages.mcp2vql/ fan-out=14 → split needed
-  SMELL: packages.uri2vql/ fan-out=18 → split needed
   SMELL: packages.dsl2vql/ fan-out=10 → split needed
   SMELL: packages.rest2vql/ fan-out=15 → split needed
+  SMELL: examples/ fan-out=18 → split needed
+  SMELL: packages.uri2vql/ fan-out=18 → split needed
+  SMELL: packages.mcp2vql/ fan-out=14 → split needed
 
 EXTERNAL:
   validation: run `vallm batch .` → validation.toon
@@ -1269,15 +1285,15 @@ EXTERNAL:
 ### Duplication (`project/duplication.toon.yaml`)
 
 ```toon markpact:analysis path=project/duplication.toon.yaml
-# redup/duplication | 10 groups | 128f 11040L | 2026-06-09
+# redup/duplication | 10 groups | 129f 11115L | 2026-06-09
 
 SUMMARY:
-  files_scanned: 128
-  total_lines:   11040
+  files_scanned: 129
+  total_lines:   11115
   dup_groups:    10
   dup_fragments: 20
   saved_lines:   82
-  scan_ms:       5712
+  scan_ms:       4087
 
 HOTSPOTS[7] (files with most duplication):
   src/vql/adopt/window.py  dup=48L  groups=2  frags=4  (0.4%)
@@ -1386,7 +1402,7 @@ METRICS-TARGET:
 ### Evolution / Churn (`project/evolution.toon.yaml`)
 
 ```toon markpact:analysis path=project/evolution.toon.yaml
-# code2llm/evolution | 390 func | 100f | 2026-06-09
+# code2llm/evolution | 401 func | 101f | 2026-06-09
 # generated in 0.00s
 
 NEXT[10] (ranked by impact):
@@ -1410,25 +1426,25 @@ NEXT[10] (ranked by impact):
       WHY: CC=25 exceeds 15
       EFFORT: ~1h  IMPACT: 625
 
-  [6] !! SPLIT-FUNC      parse_svg_path  CC=43  fan=12
-      WHY: CC=43 exceeds 15
-      EFFORT: ~1h  IMPACT: 516
-
-  [7] !  SPLIT-FUNC      _query_window_imgl  CC=17  fan=22
+  [6] !  SPLIT-FUNC      _query_window_imgl  CC=17  fan=22
       WHY: CC=17 exceeds 15
       EFFORT: ~1h  IMPACT: 374
 
-  [8] !  SPLIT-FUNC      trace_to_vql_program  CC=15  fan=22
+  [7] !  SPLIT-FUNC      trace_to_vql_program  CC=15  fan=22
       WHY: CC=15 exceeds 15
       EFFORT: ~1h  IMPACT: 330
 
-  [9] !  SPLIT-FUNC      query_uri  CC=15  fan=17
+  [8] !  SPLIT-FUNC      query_uri  CC=15  fan=17
       WHY: CC=15 exceeds 15
       EFFORT: ~1h  IMPACT: 255
 
-  [10] !  SPLIT-FUNC      _capture_with_portal  CC=15  fan=15
+  [9] !  SPLIT-FUNC      _capture_with_portal  CC=15  fan=15
       WHY: CC=15 exceeds 15
       EFFORT: ~1h  IMPACT: 225
+
+  [10] !  SPLIT-FUNC      _diagnose_fallback  CC=15  fan=14
+      WHY: CC=15 exceeds 15
+      EFFORT: ~1h  IMPACT: 210
 
 
 RISKS[3]:
@@ -1439,8 +1455,8 @@ RISKS[3]:
 METRICS-TARGET:
   CC̄:          4.2 → ≤2.9
   max-CC:      69 → ≤20
-  god-modules: 6 → 0
-  high-CC(≥15): 15 → ≤7
+  god-modules: 7 → 0
+  high-CC(≥15): 16 → ≤8
   hub-types:   0 → ≤0
 
 PATTERNS (language parser shared logic):

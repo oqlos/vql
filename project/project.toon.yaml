@@ -1,54 +1,56 @@
-# vql | 421 func | 105f | 121044L | python | 2026-06-09
+# vql | 530 func | 140f | 122723L | python | 2026-06-09
 # generated in 0.00s
 
 HEALTH:
-  CC̄=4.1  critical=36 (limit:10)  dup=2  cycles=0
+  CC̄=3.5  critical=34 (limit:10)  dup=2  cycles=0
 
 ALERTS[20]:
-  !!! cc_exceeded      query_window = 69 (limit:15)
-  !!! cc_exceeded      resolve_prompt_to_vql_uri = 54 (limit:15)
-  !!! cc_exceeded      main = 53 (limit:15)
-  !!! high_fan_out     main = 44 (limit:10)
-  !!! high_fan_out     query_window = 34 (limit:10)
+  !!! high_fan_out     analyze_image_to_vql = 38 (limit:10)
   !!! cc_exceeded      capture_diagnose = 33 (limit:15)
-  !!! cc_exceeded      envelope_to_dict = 31 (limit:15)
   !!! high_fan_out     screenshot_to_program = 30 (limit:10)
-  !!! high_fan_out     capture_diagnose = 29 (limit:10)
-  !!! cc_exceeded      parse_line = 28 (limit:15)
+  !!! high_fan_out     capture_diagnose = 28 (limit:10)
+  !!! high_fan_out     create_app = 27 (limit:10)
+  !!! cc_exceeded      _detect_buttons = 25 (limit:15)
+  !!! high_fan_out     _detect_buttons = 25 (limit:10)
+  !!! high_fan_out     analyze_screenshot = 25 (limit:10)
+  !!! high_fan_out     main = 24 (limit:10)
+  !!! high_fan_out     capture_via_portal = 24 (limit:10)
 
-MODULES[168] (top by size):
+MODULES[207] (top by size):
   M[layout.vql.json] 78775L C:0 F:0 CC↑0 D:0 (json)
   M[layout.vql.imgl.json] 21939L C:0 F:0 CC↑0 D:0 (json)
   M[app.vql.json] 5803L C:0 F:0 CC↑0 D:0 (json)
   M[planfile.yaml] 1319L C:0 F:0 CC↑0 D:0 (yaml)
-  M[src/vql/adopt/window.py] 804L C:3 F:29 CC↑33 D:5 (python)
-  M[packages/uri2vql/src/uri2vql/window.py] 653L C:1 F:11 CC↑69 D:4 (python)
   M[goal.yaml] 511L C:0 F:0 CC↑0 D:0 (yaml)
   M[src/vql/schema/program.py] 423L C:12 F:32 CC↑5 D:0 (python)
-  M[packages/img2vql/src/img2vql/detect.py] 379L C:1 F:12 CC↑25 D:7 (python)
-  M[packages/uri2vql/src/uri2vql/cli.py] 352L C:0 F:1 CC↑53 D:0 (python)
-  M[packages/img2vql/src/img2vql/metadata.py] 339L C:0 F:12 CC↑10 D:6 (python)
-  M[examples/photo-roundtrip-test.py] 338L C:0 F:10 CC↑10 D:0 (python)
-  M[packages/uri2vql/src/uri2vql/nlp2uri.py] 329L C:1 F:6 CC↑54 D:1 (python)
+  M[examples/photo-roundtrip-test.py] 406L C:0 F:13 CC↑10 D:0 (python)
+  M[packages/img2vql/src/img2vql/detect.py] 379L C:1 F:12 CC↑25 D:8 (python)
+  M[packages/img2vql/src/img2vql/metadata.py] 339L C:0 F:12 CC↑10 D:9 (python)
+  M[packages/uri2vql/src/uri2vql/window_handlers.py] 331L C:0 F:8 CC↑9 D:0 (python)
   M[src/vql/drawing/commands.py] 271L C:8 F:19 CC↑8 D:0 (python)
   M[packages/img2svg/src/img2svg/trace.py] 263L C:1 F:8 CC↑15 D:6 (python)
-  LANGS: python:130/toml:11/json:10/shell:8/yaml:6/proto:2/other:1
+  M[src/vql/adopt/capture_backends.py] 227L C:0 F:9 CC↑11 D:2 (python)
+  M[src/vql/drawing/nl_parser.py] 225L C:1 F:8 CC↑11 D:0 (python)
+  M[src/vql/drawing/renderers/playwright.py] 215L C:1 F:8 CC↑9 D:0 (python)
+  LANGS: python:168/json:11/toml:11/shell:8/yaml:6/proto:2/other:1
 
 HOTSPOTS[10]:
-  ★ main fan=44  // Orchestrates 44 calls
-  ★ query_window fan=34  // Handle vql://window/* URIs (analyze + query adopted program).
+  ★ analyze_image_to_vql fan=38  // Analysis pipeline, 38 stages
   ★ screenshot_to_program fan=30  // Adopt a screenshot into a VQL program.
 
 Uses a coarse color grid to emit rectang
-  ★ capture_diagnose fan=29  // Try each capture backend and report why it failed (blank, denied, missing tool).
+  ★ capture_diagnose fan=28  // Try each capture backend and report why it failed (blank, denied, missing tool).
   ★ create_app fan=27  // Orchestrates 27 calls
+  ★ _detect_buttons fan=25  // Compact high-contrast rectangles → button-like controls.
+
+Works on a downsampled
 
 REFACTOR[15]:
-  [1] H/L Split envelope_to_dict (CC=31)
-  [2] H/L Split parse_line (CC=28)
-  [3] H/L Split main (CC=53)
-  [4] H/L Split resolve_prompt_to_vql_uri (CC=54)
-  [5] H/L Split query_window (CC=69)
+  [1] H/L Split _detect_buttons (CC=25)
+  [2] H/L Split capture_diagnose (CC=33)
+  [3] H/H Split god module app.vql.json (5803L, 0 classes)
+  [4] H/H Split god module goal.yaml (511L, 0 classes)
+  [5] H/H Split god module layout.vql.imgl.json (21939L, 0 classes)
 
 EVOLUTION:
-  2026-06-09 CC̄=4.1 crit=36 121044L // Automated analysis
+  2026-06-09 CC̄=3.5 crit=34 122723L // Automated analysis

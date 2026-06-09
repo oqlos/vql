@@ -1,5 +1,5 @@
 % ── Project Metadata ─────────────────────────────────────
-project_metadata('vql', '0.1.3', 'python').
+project_metadata('vql', '0.1.4', 'python').
 
 % ── Project Files ────────────────────────────────────────
 project_file('app.doql.less', 148, 'less').
@@ -7,7 +7,7 @@ project_file('examples/full-pipeline.sh', 81, 'shell').
 project_file('examples/generate-demo-screen.py', 77, 'python').
 project_file('examples/img2nl-vql-flow.sh', 215, 'shell').
 project_file('examples/live-capture-test.sh', 95, 'shell').
-project_file('examples/photo-roundtrip-test.py', 339, 'python').
+project_file('examples/photo-roundtrip-test.py', 407, 'python').
 project_file('examples/scope-window.py', 54, 'python').
 project_file('install-dev.sh', 38, 'shell').
 project_file('packages/cli2vql/src/cli2vql/__init__.py', 2, 'python').
@@ -85,11 +85,11 @@ project_file('packages/uri2vql/tests/test_nlp2uri_window.py', 31, 'python').
 project_file('packages/uri2vql/tests/test_window_refresh.py', 79, 'python').
 project_file('project.sh', 59, 'shell').
 project_file('scripts/test-goal.sh', 7, 'shell').
-project_file('src/vql/__init__.py', 55, 'python').
+project_file('src/vql/__init__.py', 57, 'python').
 project_file('src/vql/adopt/__init__.py', 20, 'python').
 project_file('src/vql/adopt/portal_capture.py', 110, 'python').
 project_file('src/vql/adopt/window.py', 805, 'python').
-project_file('src/vql/api.py', 55, 'python').
+project_file('src/vql/api.py', 56, 'python').
 project_file('src/vql/compiler/__init__.py', 16, 'python').
 project_file('src/vql/compiler/legacy_drawcommand.py', 143, 'python').
 project_file('src/vql/compiler/nl_to_vql.py', 70, 'python').
@@ -149,10 +149,12 @@ project_file('src/vql/renderers/playwright.py', 23, 'python').
 project_file('src/vql/renderers/svg.py', 52, 'python').
 project_file('src/vql/schema/__init__.py', 34, 'python').
 project_file('src/vql/schema/program.py', 424, 'python').
-project_file('src/vql/validation/__init__.py', 12, 'python').
+project_file('src/vql/validation/__init__.py', 14, 'python').
+project_file('src/vql/validation/metadata.py', 58, 'python').
 project_file('src/vql/validation/spec.py', 92, 'python').
 project_file('tests/test_adopt_window_capture.py', 37, 'python').
-project_file('tests/test_photo_roundtrip.py', 101, 'python').
+project_file('tests/test_metadata_validation.py', 41, 'python').
+project_file('tests/test_photo_roundtrip.py', 116, 'python').
 project_file('tests/test_screenshot_merge.py', 31, 'python').
 project_file('tests/test_vql.py', 245, 'python').
 project_file('tree.sh', 2, 'shell').
@@ -164,13 +166,16 @@ python_function('examples/generate-demo-screen.py', 'main', 0, 1, 6).
 python_function('examples/photo-roundtrip-test.py', '_require_pil', 0, 2, 1).
 python_function('examples/photo-roundtrip-test.py', 'sample_flat_shapes', 1, 1, 8).
 python_function('examples/photo-roundtrip-test.py', 'sample_gradient', 1, 3, 12).
+python_function('examples/photo-roundtrip-test.py', 'sample_product_photo', 1, 1, 7).
+python_function('examples/photo-roundtrip-test.py', 'sample_natural_scene', 1, 4, 8).
 python_function('examples/photo-roundtrip-test.py', 'sample_nl_drawing', 1, 2, 9).
 python_function('examples/photo-roundtrip-test.py', 'test_img2svg_roundtrip', 2, 8, 21).
 python_function('examples/photo-roundtrip-test.py', 'test_ui_grid_adopt', 1, 2, 12).
 python_function('examples/photo-roundtrip-test.py', 'test_vtracer_roundtrip', 2, 10, 17).
 python_function('examples/photo-roundtrip-test.py', 'test_opencv_contours', 2, 2, 9).
+python_function('examples/photo-roundtrip-test.py', 'test_metadata_only_reconstruction', 1, 1, 9).
 python_function('examples/photo-roundtrip-test.py', 'test_img2vql_detect', 1, 5, 4).
-python_function('examples/photo-roundtrip-test.py', 'main', 0, 5, 21).
+python_function('examples/photo-roundtrip-test.py', 'main', 0, 5, 24).
 python_function('examples/scope-window.py', 'main', 0, 6, 7).
 python_function('packages/cli2vql/src/cli2vql/cli.py', '_repl', 1, 6, 5).
 python_function('packages/cli2vql/src/cli2vql/cli.py', 'main', 1, 14, 16).
@@ -431,6 +436,8 @@ python_function('src/vql/renderers/__init__.py', '__getattr__', 1, 2, 1).
 python_function('src/vql/renderers/base.py', 'render_program', 2, 1, 3).
 python_function('src/vql/renderers/svg.py', 'render_to_svg', 1, 1, 4).
 python_function('src/vql/renderers/svg.py', 'render_to_png', 2, 2, 7).
+python_function('src/vql/validation/metadata.py', '_load_imgl_metadata_schema', 0, 1, 3).
+python_function('src/vql/validation/metadata.py', 'validate_program_metadata', 1, 14, 8).
 python_function('src/vql/validation/spec.py', '_program_shapes', 1, 3, 1).
 python_function('src/vql/validation/spec.py', '_program_colors', 1, 2, 2).
 python_function('src/vql/validation/spec.py', '_match_items', 3, 4, 2).
@@ -438,11 +445,16 @@ python_function('src/vql/validation/spec.py', 'validate_program', 2, 4, 9).
 python_function('tests/test_adopt_window_capture.py', 'test_image_is_blank_detects_black', 1, 2, 3).
 python_function('tests/test_adopt_window_capture.py', 'test_image_is_blank_accepts_colored', 1, 2, 4).
 python_function('tests/test_adopt_window_capture.py', 'test_image_stats_reports_blank', 1, 4, 3).
+python_function('tests/test_metadata_validation.py', 'test_empty_metadata_valid', 0, 3, 1).
+python_function('tests/test_metadata_validation.py', 'test_valid_imgl_metadata', 0, 2, 1).
+python_function('tests/test_metadata_validation.py', 'test_invalid_capture_type', 0, 2, 2).
+python_function('tests/test_metadata_validation.py', 'test_invalid_window_os', 1, 2, 2).
 python_function('tests/test_photo_roundtrip.py', '_flat_shapes_image', 1, 1, 4).
 python_function('tests/test_photo_roundtrip.py', 'test_nl_drawing_roundtrip', 1, 4, 4).
 python_function('tests/test_photo_roundtrip.py', 'test_img2svg_sets_scene_background', 1, 4, 6).
 python_function('tests/test_photo_roundtrip.py', 'test_img2svg_vql_render_roundtrip', 1, 4, 10).
 python_function('tests/test_photo_roundtrip.py', 'test_vtracer_roundtrip_when_installed', 1, 4, 8).
+python_function('tests/test_photo_roundtrip.py', 'test_metadata_only_program_renders_background_only', 1, 3, 8).
 python_function('tests/test_photo_roundtrip.py', 'test_trace_contours_graceful_without_opencv', 1, 4, 4).
 python_function('tests/test_screenshot_merge.py', 'test_screenshot_merge_reduces_object_count', 1, 5, 8).
 python_function('tests/test_vql.py', 'test_empty_program_is_structurally_valid', 0, 3, 4).

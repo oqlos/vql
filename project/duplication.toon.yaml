@@ -1,112 +1,190 @@
-# redup/duplication | 10 groups | 129f 11115L | 2026-06-09
+# redup/duplication | 20 groups | 167f 12685L | 2026-06-09
 
 SUMMARY:
-  files_scanned: 129
-  total_lines:   11115
-  dup_groups:    10
-  dup_fragments: 20
-  saved_lines:   82
-  scan_ms:       4087
+  files_scanned: 167
+  total_lines:   12685
+  dup_groups:    20
+  dup_fragments: 49
+  saved_lines:   201
+  scan_ms:       4149
 
 HOTSPOTS[7] (files with most duplication):
-  src/vql/adopt/window.py  dup=48L  groups=2  frags=4  (0.4%)
+  packages/dsl2vql/src/dsl2vql/pb_body_codec.py  dup=67L  groups=4  frags=13  (0.5%)
+  src/vql/adopt/capture_backends.py  dup=48L  groups=2  frags=4  (0.4%)
+  packages/uri2vql/src/uri2vql/nlp2uri_intents/window.py  dup=40L  groups=3  frags=5  (0.3%)
   packages/rest2vql/src/rest2vql/window_routes.py  dup=36L  groups=2  frags=4  (0.3%)
+  packages/uri2vql/src/uri2vql/nlp2uri_intents/program.py  dup=24L  groups=1  frags=4  (0.2%)
   packages/uri2vql/src/uri2vql/uri.py  dup=20L  groups=1  frags=2  (0.2%)
-  packages/img2vql/src/img2vql/fingerprint.py  dup=11L  groups=1  frags=1  (0.1%)
-  packages/img2vql/src/img2vql/metadata.py  dup=11L  groups=1  frags=1  (0.1%)
-  packages/img2vql/src/img2vql/diagnose.py  dup=8L  groups=1  frags=1  (0.1%)
-  packages/uri2vql/src/uri2vql/window.py  dup=8L  groups=1  frags=1  (0.1%)
+  packages/dsl2vql/src/dsl2vql/grammar_handlers.py  dup=18L  groups=1  frags=3  (0.1%)
 
-DUPLICATES[10] (ranked by impact):
-  [a493779543db54d2]   STRU  _capture_with_grim  L=15 N=2 saved=15 sim=1.00
-      src/vql/adopt/window.py:217-231  (_capture_with_grim)
-      src/vql/adopt/window.py:289-303  (_capture_with_scrot)
+DUPLICATES[20] (ranked by impact):
+  [94a79d6601a2756c]   STRU  decode_query  L=7 N=5 saved=28 sim=1.00
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:69-75  (decode_query)
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:90-96  (decode_patch)
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:106-112  (decode_render)
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:115-121  (decode_compile)
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:124-130  (decode_export)
+  [19e1d9f85fed6953]   STRU  _resolve_objects  L=6 N=5 saved=24 sim=1.00
+      packages/uri2vql/src/uri2vql/nlp2uri_intents/program.py:15-20  (_resolve_objects)
+      packages/uri2vql/src/uri2vql/nlp2uri_intents/program.py:27-32  (_resolve_scene)
+      packages/uri2vql/src/uri2vql/nlp2uri_intents/program.py:42-47  (_resolve_program)
+      packages/uri2vql/src/uri2vql/nlp2uri_intents/program.py:54-59  (_resolve_vql_generic)
+      packages/uri2vql/src/uri2vql/nlp2uri_intents/window.py:19-24  (_resolve_window_summary)
+  [a493779543db54d2]   STRU  capture_with_grim  L=15 N=2 saved=15 sim=1.00
+      src/vql/adopt/capture_backends.py:85-99  (capture_with_grim)
+      src/vql/adopt/capture_backends.py:151-165  (capture_with_scrot)
   [b0bee04d87d1dcf7]   STRU  post_window_diagnose  L=13 N=2 saved=13 sim=1.00
       packages/rest2vql/src/rest2vql/window_routes.py:52-64  (post_window_diagnose)
       packages/rest2vql/src/rest2vql/window_routes.py:83-95  (post_window_adopt)
+  [5a18905fa7fbc1da]   STRU  build_query  L=6 N=3 saved=12 sim=1.00
+      packages/dsl2vql/src/dsl2vql/grammar_handlers.py:13-18  (build_query)
+      packages/dsl2vql/src/dsl2vql/grammar_handlers.py:45-50  (build_render)
+      packages/dsl2vql/src/dsl2vql/grammar_handlers.py:61-66  (build_export)
+  [9d474e54e83c58ac]   STRU  encode_query  L=4 N=4 saved=12 sim=1.00
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:25-28  (encode_query)
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:40-43  (encode_patch)
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:51-54  (encode_render)
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:63-66  (encode_export)
+  [355d82b04c4e1886]   STRU  run_roundtrip  L=12 N=2 saved=12 sim=1.00
+      packages/uri2vql/src/uri2vql/cli_commands/pipeline_analyze.py:43-54  (run_roundtrip)
+      packages/uri2vql/src/uri2vql/cli_commands/window.py:38-49  (run_adopt_ui)
   [1c4cf578f377406c]   EXAC  _json_safe  L=11 N=2 saved=11 sim=1.00
       packages/img2vql/src/img2vql/fingerprint.py:43-53  (_json_safe)
       packages/img2vql/src/img2vql/metadata.py:13-23  (_json_safe)
+  [e19f3a42a7c4468b]   STRU  _resolve_window_analyze_vql  L=11 N=2 saved=11 sim=1.00
+      packages/uri2vql/src/uri2vql/nlp2uri_intents/window.py:67-77  (_resolve_window_analyze_vql)
+      packages/uri2vql/src/uri2vql/nlp2uri_intents/window.py:87-97  (_resolve_window_analyze)
   [085bde726092c26c]   STRU  uri_for_window_diagnose  L=10 N=2 saved=10 sim=1.00
       packages/uri2vql/src/uri2vql/uri.py:141-150  (uri_for_window_diagnose)
       packages/uri2vql/src/uri2vql/uri.py:164-173  (uri_for_window_refresh)
   [de5cf8cb508ec617]   STRU  runner  L=9 N=2 saved=9 sim=1.00
-      src/vql/adopt/window.py:221-229  (runner)
-      src/vql/adopt/window.py:293-301  (runner)
-  [99163857767f8c3d]   EXAC  _normalize_locale  L=8 N=2 saved=8 sim=1.00
+      src/vql/adopt/capture_backends.py:89-97  (runner)
+      src/vql/adopt/capture_backends.py:155-163  (runner)
+  [e880eeb23cd6a3b4]   STRU  _normalize_locale  L=8 N=2 saved=8 sim=1.00
       packages/img2vql/src/img2vql/diagnose.py:9-16  (_normalize_locale)
-      packages/uri2vql/src/uri2vql/window.py:32-39  (_normalize_locale)
+      packages/uri2vql/src/uri2vql/window_utils.py:29-36  (normalize_locale)
+  [75b906dbba147c4a]   STRU  _resolve_imgl_list  L=6 N=2 saved=6 sim=1.00
+      packages/uri2vql/src/uri2vql/nlp2uri_intents/imgl.py:21-26  (_resolve_imgl_list)
+      packages/uri2vql/src/uri2vql/nlp2uri_intents/imgl.py:65-70  (_resolve_imgl_analyze)
+  [fa4f9f30c7339272]   STRU  _resolve_window_refresh  L=6 N=2 saved=6 sim=1.00
+      packages/uri2vql/src/uri2vql/nlp2uri_intents/window.py:31-36  (_resolve_window_refresh)
+      packages/uri2vql/src/uri2vql/nlp2uri_intents/window.py:55-60  (_resolve_window_diagnose)
   [6369695505dbbdc9]   EXAC  _load_program  L=5 N=2 saved=5 sim=1.00
       packages/dsl2vql/src/dsl2vql/handlers/query.py:12-16  (_load_program)
       packages/uri2vql/src/uri2vql/query.py:39-43  (_load_program)
+  [8442c29e2f253dfc]   STRU  decode_resolve  L=5 N=2 saved=5 sim=1.00
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:83-87  (decode_resolve)
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:99-103  (decode_generate)
   [d0f06494257d1187]   STRU  post_window_detect  L=5 N=2 saved=5 sim=1.00
       packages/rest2vql/src/rest2vql/window_routes.py:28-32  (post_window_detect)
       packages/rest2vql/src/rest2vql/window_routes.py:36-40  (post_window_compare)
   [5a0ff58926871c07]   EXAC  dispose  L=3 N=2 saved=3 sim=1.00
       src/vql/drawing/renderers/base.py:82-84  (dispose)
       src/vql/drawing/renderers/playwright.py:213-215  (dispose)
+  [6b41be71340c3901]   STRU  encode_resolve  L=3 N=2 saved=3 sim=1.00
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:35-37  (encode_resolve)
+      packages/dsl2vql/src/dsl2vql/pb_body_codec.py:46-48  (encode_generate)
   [ee7230ffe84d4777]   STRU  _role_name  L=3 N=2 saved=3 sim=1.00
       packages/img2vql/src/img2vql/describe_ui.py:57-59  (_role_name)
       packages/img2vql/src/img2vql/describe_ui.py:62-64  (_loc_name)
 
-REFACTOR[10] (ranked by priority):
-  [1] ○ extract_function   → src/vql/adopt/utils/_capture_with_grim.py
+REFACTOR[20] (ranked by priority):
+  [1] ○ extract_function   → packages/dsl2vql/src/dsl2vql/utils/decode_query.py
+      WHY: 5 occurrences of 7-line block across 1 files — saves 28 lines
+      FILES: packages/dsl2vql/src/dsl2vql/pb_body_codec.py
+  [2] ○ extract_function   → packages/uri2vql/src/uri2vql/nlp2uri_intents/utils/_resolve_objects.py
+      WHY: 5 occurrences of 6-line block across 2 files — saves 24 lines
+      FILES: packages/uri2vql/src/uri2vql/nlp2uri_intents/program.py, packages/uri2vql/src/uri2vql/nlp2uri_intents/window.py
+  [3] ○ extract_function   → src/vql/adopt/utils/capture_with_grim.py
       WHY: 2 occurrences of 15-line block across 1 files — saves 15 lines
-      FILES: src/vql/adopt/window.py
-  [2] ○ extract_function   → packages/rest2vql/src/rest2vql/utils/post_window_diagnose.py
+      FILES: src/vql/adopt/capture_backends.py
+  [4] ○ extract_function   → packages/rest2vql/src/rest2vql/utils/post_window_diagnose.py
       WHY: 2 occurrences of 13-line block across 1 files — saves 13 lines
       FILES: packages/rest2vql/src/rest2vql/window_routes.py
-  [3] ○ extract_function   → packages/img2vql/src/img2vql/utils/_json_safe.py
+  [5] ○ extract_function   → packages/dsl2vql/src/dsl2vql/utils/build_query.py
+      WHY: 3 occurrences of 6-line block across 1 files — saves 12 lines
+      FILES: packages/dsl2vql/src/dsl2vql/grammar_handlers.py
+  [6] ○ extract_function   → packages/dsl2vql/src/dsl2vql/utils/encode_query.py
+      WHY: 4 occurrences of 4-line block across 1 files — saves 12 lines
+      FILES: packages/dsl2vql/src/dsl2vql/pb_body_codec.py
+  [7] ○ extract_function   → packages/uri2vql/src/uri2vql/cli_commands/utils/run_roundtrip.py
+      WHY: 2 occurrences of 12-line block across 2 files — saves 12 lines
+      FILES: packages/uri2vql/src/uri2vql/cli_commands/pipeline_analyze.py, packages/uri2vql/src/uri2vql/cli_commands/window.py
+  [8] ○ extract_function   → packages/img2vql/src/img2vql/utils/_json_safe.py
       WHY: 2 occurrences of 11-line block across 2 files — saves 11 lines
       FILES: packages/img2vql/src/img2vql/fingerprint.py, packages/img2vql/src/img2vql/metadata.py
-  [4] ○ extract_function   → packages/uri2vql/src/uri2vql/utils/uri_for_window_diagnose.py
+  [9] ○ extract_function   → packages/uri2vql/src/uri2vql/nlp2uri_intents/utils/_resolve_window_analyze_vql.py
+      WHY: 2 occurrences of 11-line block across 1 files — saves 11 lines
+      FILES: packages/uri2vql/src/uri2vql/nlp2uri_intents/window.py
+  [10] ○ extract_function   → packages/uri2vql/src/uri2vql/utils/uri_for_window_diagnose.py
       WHY: 2 occurrences of 10-line block across 1 files — saves 10 lines
       FILES: packages/uri2vql/src/uri2vql/uri.py
-  [5] ○ extract_function   → src/vql/adopt/utils/runner.py
+  [11] ○ extract_function   → src/vql/adopt/utils/runner.py
       WHY: 2 occurrences of 9-line block across 1 files — saves 9 lines
-      FILES: src/vql/adopt/window.py
-  [6] ○ extract_function   → packages/utils/_normalize_locale.py
+      FILES: src/vql/adopt/capture_backends.py
+  [12] ○ extract_function   → packages/utils/_normalize_locale.py
       WHY: 2 occurrences of 8-line block across 2 files — saves 8 lines
-      FILES: packages/img2vql/src/img2vql/diagnose.py, packages/uri2vql/src/uri2vql/window.py
-  [7] ○ extract_function   → packages/utils/_load_program.py
+      FILES: packages/img2vql/src/img2vql/diagnose.py, packages/uri2vql/src/uri2vql/window_utils.py
+  [13] ○ extract_function   → packages/uri2vql/src/uri2vql/nlp2uri_intents/utils/_resolve_imgl_list.py
+      WHY: 2 occurrences of 6-line block across 1 files — saves 6 lines
+      FILES: packages/uri2vql/src/uri2vql/nlp2uri_intents/imgl.py
+  [14] ○ extract_function   → packages/uri2vql/src/uri2vql/nlp2uri_intents/utils/_resolve_window_refresh.py
+      WHY: 2 occurrences of 6-line block across 1 files — saves 6 lines
+      FILES: packages/uri2vql/src/uri2vql/nlp2uri_intents/window.py
+  [15] ○ extract_function   → packages/utils/_load_program.py
       WHY: 2 occurrences of 5-line block across 2 files — saves 5 lines
       FILES: packages/dsl2vql/src/dsl2vql/handlers/query.py, packages/uri2vql/src/uri2vql/query.py
-  [8] ○ extract_function   → packages/rest2vql/src/rest2vql/utils/post_window_detect.py
+  [16] ○ extract_function   → packages/dsl2vql/src/dsl2vql/utils/decode_resolve.py
+      WHY: 2 occurrences of 5-line block across 1 files — saves 5 lines
+      FILES: packages/dsl2vql/src/dsl2vql/pb_body_codec.py
+  [17] ○ extract_function   → packages/rest2vql/src/rest2vql/utils/post_window_detect.py
       WHY: 2 occurrences of 5-line block across 1 files — saves 5 lines
       FILES: packages/rest2vql/src/rest2vql/window_routes.py
-  [9] ○ extract_function   → src/vql/drawing/renderers/utils/dispose.py
+  [18] ○ extract_function   → src/vql/drawing/renderers/utils/dispose.py
       WHY: 2 occurrences of 3-line block across 2 files — saves 3 lines
       FILES: src/vql/drawing/renderers/base.py, src/vql/drawing/renderers/playwright.py
-  [10] ○ extract_function   → packages/img2vql/src/img2vql/utils/_role_name.py
+  [19] ○ extract_function   → packages/dsl2vql/src/dsl2vql/utils/encode_resolve.py
+      WHY: 2 occurrences of 3-line block across 1 files — saves 3 lines
+      FILES: packages/dsl2vql/src/dsl2vql/pb_body_codec.py
+  [20] ○ extract_function   → packages/img2vql/src/img2vql/utils/_role_name.py
       WHY: 2 occurrences of 3-line block across 1 files — saves 3 lines
       FILES: packages/img2vql/src/img2vql/describe_ui.py
 
-QUICK_WINS[6] (low risk, high savings — do first):
-  [1] extract_function   saved=15L  → src/vql/adopt/utils/_capture_with_grim.py
-      FILES: window.py
-  [2] extract_function   saved=13L  → packages/rest2vql/src/rest2vql/utils/post_window_diagnose.py
+QUICK_WINS[14] (low risk, high savings — do first):
+  [1] extract_function   saved=28L  → packages/dsl2vql/src/dsl2vql/utils/decode_query.py
+      FILES: pb_body_codec.py
+  [2] extract_function   saved=24L  → packages/uri2vql/src/uri2vql/nlp2uri_intents/utils/_resolve_objects.py
+      FILES: program.py, window.py
+  [3] extract_function   saved=15L  → src/vql/adopt/utils/capture_with_grim.py
+      FILES: capture_backends.py
+  [4] extract_function   saved=13L  → packages/rest2vql/src/rest2vql/utils/post_window_diagnose.py
       FILES: window_routes.py
-  [3] extract_function   saved=11L  → packages/img2vql/src/img2vql/utils/_json_safe.py
+  [5] extract_function   saved=12L  → packages/dsl2vql/src/dsl2vql/utils/build_query.py
+      FILES: grammar_handlers.py
+  [6] extract_function   saved=12L  → packages/dsl2vql/src/dsl2vql/utils/encode_query.py
+      FILES: pb_body_codec.py
+  [7] extract_function   saved=12L  → packages/uri2vql/src/uri2vql/cli_commands/utils/run_roundtrip.py
+      FILES: pipeline_analyze.py, window.py
+  [8] extract_function   saved=11L  → packages/img2vql/src/img2vql/utils/_json_safe.py
       FILES: fingerprint.py, metadata.py
-  [4] extract_function   saved=10L  → packages/uri2vql/src/uri2vql/utils/uri_for_window_diagnose.py
-      FILES: uri.py
-  [5] extract_function   saved=9L  → src/vql/adopt/utils/runner.py
+  [9] extract_function   saved=11L  → packages/uri2vql/src/uri2vql/nlp2uri_intents/utils/_resolve_window_analyze_vql.py
       FILES: window.py
-  [6] extract_function   saved=8L  → packages/utils/_normalize_locale.py
-      FILES: diagnose.py, window.py
+  [10] extract_function   saved=10L  → packages/uri2vql/src/uri2vql/utils/uri_for_window_diagnose.py
+      FILES: uri.py
 
-EFFORT_ESTIMATE (total ≈ 2.7h):
-  medium _capture_with_grim                  saved=15L  ~30min
+EFFORT_ESTIMATE (total ≈ 6.7h):
+  medium decode_query                        saved=28L  ~56min
+  medium _resolve_objects                    saved=24L  ~48min
+  medium capture_with_grim                   saved=15L  ~30min
   easy   post_window_diagnose                saved=13L  ~26min
+  easy   build_query                         saved=12L  ~24min
+  easy   encode_query                        saved=12L  ~24min
+  easy   run_roundtrip                       saved=12L  ~24min
   easy   _json_safe                          saved=11L  ~22min
+  easy   _resolve_window_analyze_vql         saved=11L  ~22min
   easy   uri_for_window_diagnose             saved=10L  ~20min
-  easy   runner                              saved=9L  ~18min
-  easy   _normalize_locale                   saved=8L  ~16min
-  easy   _load_program                       saved=5L  ~10min
-  easy   post_window_detect                  saved=5L  ~10min
-  easy   dispose                             saved=3L  ~6min
-  easy   _role_name                          saved=3L  ~6min
+  ... +10 more (~106min)
 
 METRICS-TARGET:
-  dup_groups:  10 → 0
-  saved_lines: 82 lines recoverable
+  dup_groups:  20 → 0
+  saved_lines: 201 lines recoverable

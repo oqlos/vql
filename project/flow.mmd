@@ -25,10 +25,13 @@ flowchart TD
         packages__dsl2vql__src__dsl2vql__events__DslEvent__to_dict["to_dict"]
         packages__dsl2vql__src__dsl2vql__events__EventStore__append["append"]
         packages__dsl2vql__src__dsl2vql__events__EventStore__replay["replay"]
-        ...["+226 more"]
+        ...["+298 more"]
     end
 
     subgraph Exporters
+        packages__dsl2vql__src__dsl2vql__pb_body_codec__encode_export["encode_export"]
+        packages__dsl2vql__src__dsl2vql__pb_body_codec__decode_export["decode_export"]
+        packages__dsl2vql__src__dsl2vql__grammar_handlers__build_export["build_export"]
     end
 
     class packages__uri2img2svg__src__uri2img2svg__cli__main,packages__uri2img2svg__src__uri2img2svg__query__QueryResult__to_dict,packages__uri2img2svg__src__uri2img2svg__uri__is_img2svg_uri,packages__uri2img2svg__src__uri2img2svg__uri__uri_for_vectorize,packages__dsl2vql__src__dsl2vql__cli___main_legacy,packages__dsl2vql__src__dsl2vql__cli___main_subcommand,packages__dsl2vql__src__dsl2vql__cli__main,packages__dsl2vql__src__dsl2vql__events__DslEvent__to_dict,packages__dsl2vql__src__dsl2vql__events__EventStore__append,packages__dsl2vql__src__dsl2vql__events__EventStore__replay entry

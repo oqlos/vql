@@ -1,13 +1,58 @@
-# vql
+# VQL - Visual Query Language
+
+## before
+```bash
+uri2vql pipeline-analyze --image /tmp/screen.png --out app.vql.json --llm
+```
+![1.png](docs/1.png)
+
+## after
+```bash
+uri2vql vql-to-image --program app.vql.json --out app.render.png
+```
+![2.png](docs/2.png)
+
+VQL objects
+[app.vql.json](docs/app.vql.json)
+```bash
+{
+  "version": "1.0",
+  "render_target": "svg",
+  "scene": {
+    "width": 2560.0,
+    "height": 1600.0,
+    "background": "#FFFFFF",
+    "url": "file:///tmp/screen.png",
+    "app": "desktop",
+    "layers": [
+      {
+        "id": "screen_regions",
+        "objects": [
+          {
+            "id": "region_000",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 213.0,
+                  "height": 133.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#2F342E",
+              "fill": true,
+              "stroke_width": 0.0,
+```
 
 
 ## AI Cost Tracking
 
-![PyPI](https://img.shields.io/badge/pypi-costs-blue) ![Version](https://img.shields.io/badge/version-0.1.4-blue) ![Python](https://img.shields.io/badge/python-3.9+-blue) ![License](https://img.shields.io/badge/license-Apache--2.0-green)
-![AI Cost](https://img.shields.io/badge/AI%20Cost-$6.95-orange) ![Human Time](https://img.shields.io/badge/Human%20Time-3.5h-blue) ![Model](https://img.shields.io/badge/Model-openrouter%2Fqwen%2Fqwen3--coder--next-lightgrey)
+![PyPI](https://img.shields.io/badge/pypi-costs-blue) ![Version](https://img.shields.io/badge/version-0.1.5-blue) ![Python](https://img.shields.io/badge/python-3.9+-blue) ![License](https://img.shields.io/badge/license-Apache--2.0-green)
+![AI Cost](https://img.shields.io/badge/AI%20Cost-$7.78-orange) ![Human Time](https://img.shields.io/badge/Human%20Time-3.6h-blue) ![Model](https://img.shields.io/badge/Model-openrouter%2Fqwen%2Fqwen3--coder--next-lightgrey)
 
-- 🤖 **LLM usage:** $6.9464 (5 commits)
-- 👤 **Human dev:** ~$347 (3.5h @ $100/h, 30min dedup)
+- 🤖 **LLM usage:** $7.7792 (6 commits)
+- 👤 **Human dev:** ~$359 (3.6h @ $100/h, 30min dedup)
 
 Generated on 2026-06-09 using [openrouter/qwen/qwen3-coder-next](https://openrouter.ai/qwen/qwen3-coder-next)
 

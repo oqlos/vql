@@ -1,18 +1,19 @@
-# vql | 168f 121044L | json:10,yaml:6,toml:11,shell:8,python:130,proto:2 | 2026-06-09
+# vql | 207f 122723L | json:11,yaml:6,toml:11,shell:8,python:168,proto:2 | 2026-06-09
 # generated in 0.03s
-# stats: 421 func | 0 cls | 168 mod | CC̄=4.1 | critical:16 | cycles:0
-# alerts[5]: CC query_window=69; CC resolve_prompt_to_vql_uri=54; CC main=53; fan-out main=44; fan-out query_window=34
-# hotspots[5]: main fan=44; query_window fan=34; screenshot_to_program fan=30; capture_diagnose fan=29; create_app fan=27
-# evolution: CC̄ 4.2→4.1 (improved -0.1)
+# stats: 530 func | 0 cls | 207 mod | CC̄=3.5 | critical:11 | cycles:0
+# alerts[5]: fan-out analyze_image_to_vql=38; CC capture_diagnose=33; fan-out screenshot_to_program=30; fan-out capture_diagnose=28; fan-out create_app=27
+# hotspots[5]: analyze_image_to_vql fan=38; screenshot_to_program fan=30; capture_diagnose fan=28; create_app fan=27; _detect_buttons fan=25
+# evolution: CC̄ 4.1→3.5 (improved -0.6)
 # Keys: M=modules, D=details, i=imports, e=exports, c=classes, f=functions, m=methods
-M[168]:
+M[207]:
   Makefile,112
   app.vql.json,5803
+  docs/photo-roundtrip-sample.vql.json,41
   examples/full-pipeline.sh,80
   examples/generate-demo-screen.py,76
   examples/img2nl-vql-flow.sh,214
   examples/live-capture-test.sh,94
-  examples/photo-roundtrip-test.py,338
+  examples/photo-roundtrip-test.py,406
   examples/scope-window.py,53
   goal.yaml,511
   install-dev.sh,37
@@ -36,11 +37,14 @@ M[168]:
   packages/dsl2vql/src/dsl2vql/codec.py,35
   packages/dsl2vql/src/dsl2vql/engine.py,8
   packages/dsl2vql/src/dsl2vql/events.py,108
-  packages/dsl2vql/src/dsl2vql/grammar.py,96
+  packages/dsl2vql/src/dsl2vql/grammar.py,36
+  packages/dsl2vql/src/dsl2vql/grammar_handlers.py,88
+  packages/dsl2vql/src/dsl2vql/grammar_tokens.py,23
   packages/dsl2vql/src/dsl2vql/handlers/__init__.py,5
   packages/dsl2vql/src/dsl2vql/handlers/command.py,130
   packages/dsl2vql/src/dsl2vql/handlers/query.py,109
-  packages/dsl2vql/src/dsl2vql/pb_codec.py,157
+  packages/dsl2vql/src/dsl2vql/pb_body_codec.py,173
+  packages/dsl2vql/src/dsl2vql/pb_codec.py,64
   packages/dsl2vql/src/dsl2vql/result.py,28
   packages/dsl2vql/src/dsl2vql/schema/commands/compile.schema.json,12
   packages/dsl2vql/src/dsl2vql/schema/commands/generate.schema.json,11
@@ -59,7 +63,7 @@ M[168]:
   packages/img2svg/src/img2svg/to_vql.py,141
   packages/img2svg/src/img2svg/trace.py,263
   packages/img2vql/pyproject.toml,26
-  packages/img2vql/src/img2vql/__init__.py,26
+  packages/img2vql/src/img2vql/__init__.py,31
   packages/img2vql/src/img2vql/adopt.py,63
   packages/img2vql/src/img2vql/cli.py,87
   packages/img2vql/src/img2vql/describe_ui.py,121
@@ -67,6 +71,14 @@ M[168]:
   packages/img2vql/src/img2vql/diagnose.py,125
   packages/img2vql/src/img2vql/fingerprint.py,104
   packages/img2vql/src/img2vql/metadata.py,339
+  packages/img2vql/src/img2vql/pipeline/__init__.py,14
+  packages/img2vql/src/img2vql/pipeline/config.py,94
+  packages/img2vql/src/img2vql/pipeline/fast_analysis.py,150
+  packages/img2vql/src/img2vql/pipeline/llm_client.py,88
+  packages/img2vql/src/img2vql/pipeline/llm_vql.py,199
+  packages/img2vql/src/img2vql/pipeline/orchestrate.py,138
+  packages/img2vql/src/img2vql/pipeline/roundtrip.py,86
+  packages/img2vql/src/img2vql/pipeline/schema_prompt.py,68
   packages/img2vql/src/img2vql/program.py,141
   packages/mcp2vql/pyproject.toml,24
   packages/mcp2vql/src/mcp2vql/__init__.py,5
@@ -90,14 +102,33 @@ M[168]:
   packages/uri2img2svg/src/uri2img2svg/uri.py,59
   packages/uri2vql/pyproject.toml,26
   packages/uri2vql/src/uri2vql/__init__.py,45
-  packages/uri2vql/src/uri2vql/cli.py,352
+  packages/uri2vql/src/uri2vql/cli.py,156
+  packages/uri2vql/src/uri2vql/cli_commands/__init__.py,41
+  packages/uri2vql/src/uri2vql/cli_commands/capture.py,57
+  packages/uri2vql/src/uri2vql/cli_commands/core.py,47
+  packages/uri2vql/src/uri2vql/cli_commands/pipeline.py,35
+  packages/uri2vql/src/uri2vql/cli_commands/pipeline_analyze.py,54
+  packages/uri2vql/src/uri2vql/cli_commands/window.py,125
   packages/uri2vql/src/uri2vql/compile.py,36
-  packages/uri2vql/src/uri2vql/nlp2uri.py,329
+  packages/uri2vql/src/uri2vql/nlp2uri.py,158
+  packages/uri2vql/src/uri2vql/nlp2uri_extractors.py,23
+  packages/uri2vql/src/uri2vql/nlp2uri_intents/__init__.py,14
+  packages/uri2vql/src/uri2vql/nlp2uri_intents/imgl.py,78
+  packages/uri2vql/src/uri2vql/nlp2uri_intents/program.py,67
+  packages/uri2vql/src/uri2vql/nlp2uri_intents/window.py,107
+  packages/uri2vql/src/uri2vql/nlp2uri_types.py,47
   packages/uri2vql/src/uri2vql/patch.py,40
   packages/uri2vql/src/uri2vql/query.py,95
   packages/uri2vql/src/uri2vql/run.py,64
   packages/uri2vql/src/uri2vql/uri.py,183
-  packages/uri2vql/src/uri2vql/window.py,653
+  packages/uri2vql/src/uri2vql/window.py,53
+  packages/uri2vql/src/uri2vql/window_analyze.py,64
+  packages/uri2vql/src/uri2vql/window_compare.py,27
+  packages/uri2vql/src/uri2vql/window_diagnose.py,34
+  packages/uri2vql/src/uri2vql/window_handlers.py,331
+  packages/uri2vql/src/uri2vql/window_imgl.py,135
+  packages/uri2vql/src/uri2vql/window_metadata.py,26
+  packages/uri2vql/src/uri2vql/window_utils.py,158
   planfile.yaml,1319
   prefact.yaml,94
   project.sh,59
@@ -105,8 +136,16 @@ M[168]:
   scripts/test-goal.sh,6
   src/vql/__init__.py,56
   src/vql/adopt/__init__.py,19
+  src/vql/adopt/capture_backends.py,227
+  src/vql/adopt/capture_diagnose.py,98
+  src/vql/adopt/capture_image.py,63
+  src/vql/adopt/capture_policy.py,64
+  src/vql/adopt/capture_screen.py,61
+  src/vql/adopt/capture_types.py,60
   src/vql/adopt/portal_capture.py,109
-  src/vql/adopt/window.py,804
+  src/vql/adopt/program_enrichment.py,34
+  src/vql/adopt/program_grid.py,166
+  src/vql/adopt/window.py,125
   src/vql/api.py,55
   src/vql/compiler/__init__.py,15
   src/vql/compiler/legacy_drawcommand.py,142
@@ -175,78 +214,9 @@ M[168]:
   testql-scenarios/generated-from-pytests.testql.toon.yaml,12
   tree.sh,1
 D:
-  packages/uri2vql/src/uri2vql/window.py:
-    e: WindowAnalyzeResult,_resolve_image_param,_normalize_locale,_diagnose_fallback,_resolve_window_image,refresh_window_metadata,compare_window_image,diagnose_window_image,_query_window_imgl,analyze_window_uri,query_window
-    WindowAnalyzeResult: to_dict(0)
-    _resolve_image_param(image)
-    _normalize_locale(locale)
-    _diagnose_fallback(image)
-    _resolve_window_image(out_file;image)
-    refresh_window_metadata(image)
-    compare_window_image(image)
-    diagnose_window_image(image)
-    _query_window_imgl()
-    analyze_window_uri(uri)
-    query_window(uri)
-  packages/uri2vql/src/uri2vql/nlp2uri.py:
-    e: ResolvedVqlUri,resolve_prompt_to_vql_uri,_extract_click_target,_extract_type_parts,nlp2uri,best_uri
-    ResolvedVqlUri: to_dict(0)
-    resolve_prompt_to_vql_uri(prompt)
-    _extract_click_target(normalized)
-    _extract_type_parts(normalized)
-    nlp2uri(prompt)
-    best_uri(prompt)
-  packages/uri2vql/src/uri2vql/cli.py:
-    e: main
-    main(argv)
-  src/vql/adopt/window.py:
-    e: CaptureError,CaptureInfo,CaptureAttempt,_require_pillow,_session_type,_is_wayland,_capture_interactive_mode,_should_use_interactive_portal,_portal_python,image_stats,_image_is_blank,_finalize_capture,_run_capture,_capture_with_gnome_shell,_capture_with_grim,_capture_with_gnome_screenshot,_capture_with_portal,_capture_with_scrot,_capture_with_mss,_capture_backends,capture_diagnose,_capture_permission_hint,_active_window_title,capture_screen,_hex_color,_optional_fingerprint,_enrich_program_metadata,_merge_grid_colors,screenshot_to_program,analyze_screenshot
-    CaptureError(RuntimeError):  # Raised when no capture backend produced a usable image...
-    CaptureInfo: to_dict(0)
-    CaptureAttempt: to_dict(0)
-    _require_pillow()
-    _session_type()
-    _is_wayland()
-    _capture_interactive_mode()
-    _should_use_interactive_portal()
-    _portal_python()
-    image_stats(path)
-    _image_is_blank(path)
-    _finalize_capture(out)
-    _run_capture(out)
-    _capture_with_gnome_shell(out)
-    _capture_with_grim(out)
-    _capture_with_gnome_screenshot(out)
-    _capture_with_portal(out)
-    _capture_with_scrot(out)
-    _capture_with_mss(out)
-    _capture_backends()
+  src/vql/adopt/capture_diagnose.py:
+    e: capture_diagnose
     capture_diagnose(out)
-    _capture_permission_hint()
-    _active_window_title()
-    capture_screen(out)
-    _hex_color(rgb)
-    _optional_fingerprint(image_path)
-    _enrich_program_metadata(base;path)
-    _merge_grid_colors(colors)
-    screenshot_to_program(image_path)
-    analyze_screenshot(image_path)
-  packages/dsl2vql/src/dsl2vql/pb_codec.py:
-    e: _set_body,envelope_to_dict,encode_protobuf,decode_protobuf,encode_text_to_protobuf,decode_protobuf_to_text,result_to_pb,encode_result_protobuf
-    _set_body(envelope;cmd)
-    envelope_to_dict(envelope)
-    encode_protobuf(cmd)
-    decode_protobuf(data)
-    encode_text_to_protobuf(line)
-    decode_protobuf_to_text(data)
-    result_to_pb(result)
-    encode_result_protobuf(result)
-  packages/dsl2vql/src/dsl2vql/grammar.py:
-    e: split_command,pick_flag,parse_line,to_text
-    split_command(line)
-    pick_flag(tokens;flag)
-    parse_line(line)
-    to_text(cmd)
   packages/img2vql/src/img2vql/detect.py:
     e: UIElement,_hex_color,_location_label,_avg_color,_detect_titlebar,_detect_panels,_flood_rects,_detect_buttons,_detect_toolbar,_iou,_dedupe,detect_ui_elements
     UIElement: to_dict(0)  # Detected UI region with role and location...
@@ -261,6 +231,12 @@ D:
     _iou(a;b)
     _dedupe(elements)
     detect_ui_elements(image_path)
+  packages/img2vql/src/img2vql/pipeline/orchestrate.py:
+    e: analyze_image_to_vql
+    analyze_image_to_vql(image_path)
+  packages/uri2vql/src/uri2vql/window_imgl.py:
+    e: query_window_imgl
+    query_window_imgl()
   src/vql/drawing/svg_path_parser.py:
     e: _PathState,_dispatch_command,_tokenize_path,_scale_groups,parse_svg_path
     _PathState: next_num(0),close_subpath(0),start_subpath(2),line_to(2),append_cubic(6),append_quadratic(4)
@@ -288,6 +264,19 @@ D:
     QueryResult: to_dict(0)
     _load_program(path)
     query_uri(uri)
+  packages/uri2vql/src/uri2vql/window_utils.py:
+    e: resolve_image_param,normalize_locale,diagnose_fallback,resolve_window_image,query_bool,payload_result
+    resolve_image_param(image)
+    normalize_locale(locale)
+    diagnose_fallback(image)
+    resolve_window_image(out_file;image)
+    query_bool(raw)
+    payload_result()
+  src/vql/adopt/program_grid.py:
+    e: hex_color,merge_grid_colors,screenshot_to_program
+    hex_color(rgb)
+    merge_grid_colors(colors)
+    screenshot_to_program(image_path)
   packages/cli2vql/src/cli2vql/cli.py:
     e: _repl,main
     _repl(default_file)
@@ -310,6 +299,25 @@ D:
     e: QueryResult,query_uri
     QueryResult: to_dict(0)
     query_uri(uri)
+  src/vql/adopt/window.py:
+    e: analyze_screenshot
+    analyze_screenshot(image_path)
+  packages/uri2vql/src/uri2vql/nlp2uri.py:
+    e: build_intent_context,dedupe_by_uri,resolve_prompt_to_vql_uri,nlp2uri,best_uri
+    build_intent_context(normalized)
+    dedupe_by_uri(hits)
+    resolve_prompt_to_vql_uri(prompt)
+    nlp2uri(prompt)
+    best_uri(prompt)
+  packages/img2vql/src/img2vql/pipeline/llm_vql.py:
+    e: _compact_fast_context,_program_summary,build_llm_extraction_prompt,parse_vql_json_from_llm,validate_vql_program,level5_llm_extract,merge_programs
+    _compact_fast_context(l1;l2;l4)
+    _program_summary(program)
+    build_llm_extraction_prompt()
+    parse_vql_json_from_llm(content)
+    validate_vql_program(data)
+    level5_llm_extract(image_path)
+    merge_programs(base;llm_program)
   packages/dsl2vql/src/dsl2vql/handlers/command.py:
     e: _read_json,handle_generate,handle_compile,handle_patch,handle_export,handle_from_tokens
     _read_json(path)
@@ -338,6 +346,20 @@ D:
   src/vql/drawing/nl_parser.py:
     e: NLDrawingParser
     NLDrawingParser: __init__(1),parse(3),to_vql(5),detect_shape(1),detect_color(2),_extract_shapes(1),_extract_size_params(1),_extract_shape_specific_params(2)  # Parse natural language drawing instructions into DrawCommand...
+  src/vql/adopt/capture_backends.py:
+    e: finalize_capture,run_capture,capture_with_gnome_shell,capture_with_grim,capture_with_gnome_screenshot,capture_with_portal,capture_with_scrot,capture_with_mss,capture_backends
+    finalize_capture(out)
+    run_capture(out)
+    capture_with_gnome_shell(out)
+    capture_with_grim(out)
+    capture_with_gnome_screenshot(out)
+    capture_with_portal(out)
+    capture_with_scrot(out)
+    capture_with_mss(out)
+    capture_backends()
+  packages/uri2vql/src/uri2vql/window.py:
+    e: query_window
+    query_window(uri)
   packages/img2vql/src/img2vql/cli.py:
     e: main
     main(argv)
@@ -362,15 +384,18 @@ D:
     diagnose_for_vql(image_path)
     _recommendation(diag)
   examples/photo-roundtrip-test.py:
-    e: _require_pil,sample_flat_shapes,sample_gradient,sample_nl_drawing,test_img2svg_roundtrip,test_ui_grid_adopt,test_vtracer_roundtrip,test_opencv_contours,test_img2vql_detect,main
+    e: _require_pil,sample_flat_shapes,sample_gradient,sample_product_photo,sample_natural_scene,sample_nl_drawing,test_img2svg_roundtrip,test_ui_grid_adopt,test_vtracer_roundtrip,test_opencv_contours,test_metadata_only_reconstruction,test_img2vql_detect,main
     _require_pil()
     sample_flat_shapes(out)
     sample_gradient(out)
+    sample_product_photo(out)
+    sample_natural_scene(out)
     sample_nl_drawing(out)
     test_img2svg_roundtrip(image;out)
     test_ui_grid_adopt(out)
     test_vtracer_roundtrip(image;out)
     test_opencv_contours(image;out)
+    test_metadata_only_reconstruction(out)
     test_img2vql_detect(out)
     main()
   packages/uri2img2svg/src/uri2img2svg/uri.py:
@@ -399,6 +424,16 @@ D:
     program_to_commands(program)
     commands_to_program(commands)
     compile_to_events(program)
+  packages/uri2vql/src/uri2vql/window_handlers.py:
+    e: handle_analyze,handle_detect,handle_adopt,handle_diagnose,handle_compare,handle_refresh,handle_summary,handle_imgl
+    handle_analyze()
+    handle_detect()
+    handle_adopt()
+    handle_diagnose()
+    handle_compare()
+    handle_refresh()
+    handle_summary()
+    handle_imgl()
   src/vql/drawing/commands.py:
     e: DrawCommand,InitCanvas,DrawShape,SetColor,SelectTool,ClearCanvas,CommandHandler,CommandBus
     DrawCommand(ABC): validate(0)  # Abstract base for all drawing commands...
@@ -409,6 +444,10 @@ D:
     ClearCanvas(DrawCommand): validate(0)  # Clear the entire canvas...
     CommandHandler(Protocol): __call__(3)  # Protocol for command handlers...
     CommandBus: __init__(1),register_handler(2),add_pre_hook(1),add_post_hook(1),dispatch(1),rebuild_state(0),_apply_event(1),_handle_init_canvas(1),_handle_draw_shape(1),_handle_set_color(1),_handle_select_tool(1),_handle_clear_canvas(1)  # Dispatches commands to handlers, validates, and emits events...
+  src/vql/adopt/capture_image.py:
+    e: image_is_blank,image_stats
+    image_is_blank(path)
+    image_stats(path)
   packages/img2svg/src/img2svg/svg_emit.py:
     e: regions_to_svg,_vtracer_paths_to_svg,paths_to_svg,image_to_svg
     regions_to_svg(trace)
@@ -444,6 +483,41 @@ D:
     load_program_fingerprint(vql_program)
     _json_safe(value)
     compare_with_program(image_path;vql_program)
+  packages/img2vql/src/img2vql/pipeline/fast_analysis.py:
+    e: level0_image_stats,level1_img2nl_fast,level2_ui_detect,level3_adopt_program,level4_diagnose
+    level0_image_stats(image_path)
+    level1_img2nl_fast(image_path)
+    level2_ui_detect(image_path)
+    level3_adopt_program(image_path)
+    level4_diagnose(image_path)
+  packages/img2vql/src/img2vql/pipeline/llm_client.py:
+    e: LLMClientError,_image_to_data_url,chat_completion,build_vision_user_message
+    LLMClientError(RuntimeError):
+    _image_to_data_url(path)
+    chat_completion(config;messages)
+    build_vision_user_message()
+  src/vql/adopt/capture_policy.py:
+    e: session_type,is_wayland,capture_interactive_mode,should_use_interactive_portal,portal_python,capture_permission_hint
+    session_type()
+    is_wayland()
+    capture_interactive_mode()
+    should_use_interactive_portal()
+    portal_python()
+    capture_permission_hint()
+  packages/uri2vql/src/uri2vql/cli_commands/capture.py:
+    e: run_capture_screen
+    run_capture_screen(args)
+  src/vql/adopt/capture_screen.py:
+    e: active_window_title,capture_screen
+    active_window_title()
+    capture_screen(out)
+  packages/img2vql/src/img2vql/pipeline/config.py:
+    e: PipelineLLMConfig,PipelineConfig,_load_dotenv,_env_bool,_env_float
+    PipelineLLMConfig:
+    PipelineConfig: from_env(0)
+    _load_dotenv()
+    _env_bool(name;default)
+    _env_float(name;default)
   packages/dsl2vql/src/dsl2vql/bus.py:
     e: _dispatch_cmd,_bytes_to_cmd,dispatch,execute_dsl_line,execute_dsl
     _dispatch_cmd(cmd)
@@ -490,6 +564,13 @@ Usage:
   src/vql/compiler/nl_to_vql.py:
     e: nl_to_program
     nl_to_program(text)
+  packages/dsl2vql/src/dsl2vql/grammar.py:
+    e: parse_line,to_text
+    parse_line(line)
+    to_text(cmd)
+  packages/uri2vql/src/uri2vql/cli_commands/pipeline.py:
+    e: run_capture_and_analyze
+    run_capture_and_analyze(args)
   src/vql/schema/program.py:
     e: RenderTarget,Style,Transform,Anchor,Constraint,Relation,Primitive,Object,Layer,Scene,ValidationSpec,VQLProgram
     RenderTarget(str,Enum):  # Supported render backends for a VQL program...
@@ -512,9 +593,37 @@ Usage:
   src/vql/drawing/path_generator.py:
     e: PathGenerator
     PathGenerator(ShapeGenerator): generate(3)
+  packages/uri2vql/src/uri2vql/nlp2uri_extractors.py:
+    e: extract_click_target,extract_type_parts
+    extract_click_target(normalized)
+    extract_type_parts(normalized)
+  packages/uri2vql/src/uri2vql/cli_commands/pipeline_analyze.py:
+    e: run_pipeline_analyze,run_vql_to_image,run_roundtrip
+    run_pipeline_analyze(args)
+    run_vql_to_image(args)
+    run_roundtrip(args)
+  packages/uri2vql/src/uri2vql/cli_commands/core.py:
+    e: run_query,run_patch,run_run,run_resolve
+    run_query(args)
+    run_patch(args)
+    run_run(args)
+    run_resolve(args)
+  packages/uri2vql/src/uri2vql/cli_commands/window.py:
+    e: run_analyze_window,run_detect_window,run_adopt_ui,run_adopt_imgl,run_diagnose_window,run_compare_window,run_refresh_window
+    run_analyze_window(args)
+    run_detect_window(args)
+    run_adopt_ui(args)
+    run_adopt_imgl(args)
+    run_diagnose_window(args)
+    run_compare_window(args)
+    run_refresh_window(args)
   packages/uri2img2svg/src/uri2img2svg/cli.py:
     e: main
     main(argv)
+  packages/uri2vql/src/uri2vql/window_analyze.py:
+    e: WindowAnalyzeResult,analyze_window_uri
+    WindowAnalyzeResult: to_dict(0)
+    analyze_window_uri(uri)
   packages/dsl2img2svg/src/dsl2img2svg/cli.py:
     e: main
     main(argv)
@@ -535,6 +644,54 @@ Usage:
     e: capture_via_portal,main
     capture_via_portal(out)
     main(argv)
+  packages/dsl2vql/src/dsl2vql/grammar_tokens.py:
+    e: split_command,pick_flag
+    split_command(line)
+    pick_flag(tokens;flag)
+  packages/dsl2vql/src/dsl2vql/pb_codec.py:
+    e: encode_protobuf,decode_protobuf,encode_text_to_protobuf,decode_protobuf_to_text,result_to_pb,encode_result_protobuf
+    encode_protobuf(cmd)
+    decode_protobuf(data)
+    encode_text_to_protobuf(line)
+    decode_protobuf_to_text(data)
+    result_to_pb(result)
+    encode_result_protobuf(result)
+  packages/dsl2vql/src/dsl2vql/pb_body_codec.py:
+    e: encode_query,encode_validate,encode_resolve,encode_patch,encode_generate,encode_render,encode_compile,encode_export,decode_query,decode_validate,decode_resolve,decode_patch,decode_generate,decode_render,decode_compile,decode_export,set_envelope_body,envelope_to_dict
+    encode_query(msg;cmd)
+    encode_validate(msg;cmd)
+    encode_resolve(msg;cmd)
+    encode_patch(msg;cmd)
+    encode_generate(msg;cmd)
+    encode_render(msg;cmd)
+    encode_compile(msg;cmd)
+    encode_export(msg;cmd)
+    decode_query(msg;cmd)
+    decode_validate(msg;cmd)
+    decode_resolve(msg;cmd)
+    decode_patch(msg;cmd)
+    decode_generate(msg;cmd)
+    decode_render(msg;cmd)
+    decode_compile(msg;cmd)
+    decode_export(msg;cmd)
+    set_envelope_body(envelope;cmd)
+    envelope_to_dict(envelope)
+  packages/img2vql/src/img2vql/pipeline/roundtrip.py:
+    e: vql_to_image,image_to_vql,roundtrip_compare
+    vql_to_image(program;out_path)
+    image_to_vql(image_path;out_program)
+    roundtrip_compare(image_path)
+  packages/dsl2vql/src/dsl2vql/grammar_handlers.py:
+    e: build_query,build_validate,build_resolve,build_patch,build_generate,build_render,build_compile,build_export,build_command
+    build_query(rest;cmd)
+    build_validate(rest;cmd)
+    build_resolve(rest;cmd)
+    build_patch(rest;cmd)
+    build_generate(rest;cmd)
+    build_render(rest;cmd)
+    build_compile(rest;cmd)
+    build_export(rest;cmd)
+    build_command(verb;rest)
   packages/dsl2vql/src/dsl2vql/schema_registry.py:
     e: _load_schemas,schema_for_verb,all_schemas,validate_command_dict,validate_schema_registry
     _load_schemas()
@@ -591,11 +748,48 @@ New shapes can ...
 
 Concrete implementations:
 - Pl...
+  packages/uri2vql/src/uri2vql/nlp2uri_intents/imgl.py:
+    e: _match_imgl_list,_resolve_imgl_list,_match_imgl_click,_resolve_imgl_click,_match_imgl_type,_resolve_imgl_type,_match_imgl_analyze,_resolve_imgl_analyze
+    _match_imgl_list(ctx)
+    _resolve_imgl_list(ctx)
+    _match_imgl_click(ctx)
+    _resolve_imgl_click(ctx)
+    _match_imgl_type(ctx)
+    _resolve_imgl_type(ctx)
+    _match_imgl_analyze(ctx)
+    _resolve_imgl_analyze(ctx)
+  packages/uri2vql/src/uri2vql/nlp2uri_intents/window.py:
+    e: _match_window_summary,_resolve_window_summary,_match_window_refresh,_resolve_window_refresh,_match_window_compare,_resolve_window_compare,_match_window_diagnose,_resolve_window_diagnose,_match_window_analyze_vql,_resolve_window_analyze_vql,_match_window_analyze,_resolve_window_analyze
+    _match_window_summary(ctx)
+    _resolve_window_summary(ctx)
+    _match_window_refresh(ctx)
+    _resolve_window_refresh(ctx)
+    _match_window_compare(ctx)
+    _resolve_window_compare(ctx)
+    _match_window_diagnose(ctx)
+    _resolve_window_diagnose(ctx)
+    _match_window_analyze_vql(ctx)
+    _resolve_window_analyze_vql(ctx)
+    _match_window_analyze(ctx)
+    _resolve_window_analyze(ctx)
+  src/vql/adopt/program_enrichment.py:
+    e: optional_fingerprint,enrich_program_metadata
+    optional_fingerprint(image_path)
+    enrich_program_metadata(base;path)
   packages/mcp2vql/src/mcp2vql/server.py:
     e: VqlMCPServer,_require_fastmcp,main
     VqlMCPServer: __post_init__(0),_register_tools(0),run(0)
     _require_fastmcp()
     main()
+  packages/uri2vql/src/uri2vql/window_metadata.py:
+    e: refresh_window_metadata
+    refresh_window_metadata(image)
+  packages/uri2vql/src/uri2vql/window_compare.py:
+    e: compare_window_image
+    compare_window_image(image)
+  packages/uri2vql/src/uri2vql/window_diagnose.py:
+    e: diagnose_window_image
+    diagnose_window_image(image)
   packages/nlp2vql/src/nlp2vql/apply.py:
     e: ApplyResult,apply_nl
     ApplyResult: to_dict(0)
@@ -664,6 +858,26 @@ Concrete implementations:
   src/vql/drawing/pentagon_generator.py:
     e: PentagonGenerator
     PentagonGenerator(ShapeGenerator): generate(3)
+  packages/uri2vql/src/uri2vql/nlp2uri_intents/program.py:
+    e: _match_objects,_resolve_objects,_match_scene,_resolve_scene,_match_program,_resolve_program,_match_vql_generic,_resolve_vql_generic
+    _match_objects(ctx)
+    _resolve_objects(ctx)
+    _match_scene(ctx)
+    _resolve_scene(ctx)
+    _match_program(ctx)
+    _resolve_program(ctx)
+    _match_vql_generic(ctx)
+    _resolve_vql_generic(ctx)
+  packages/uri2vql/src/uri2vql/cli.py:
+    e: build_parser,main
+    build_parser()
+    main(argv)
+  src/vql/adopt/capture_types.py:
+    e: CaptureError,CaptureInfo,CaptureAttempt,require_pillow
+    CaptureError(RuntimeError):  # Raised when no capture backend produced a usable image...
+    CaptureInfo: to_dict(0)
+    CaptureAttempt: to_dict(0)
+    require_pillow()
   packages/dsl2vql/src/dsl2vql/result.py:
     e: DslResult
     DslResult: to_dict(0)
@@ -720,9 +934,18 @@ Concrete implementations:
   src/vql/drawing/boat_generator.py:
     e: BoatGenerator
     BoatGenerator(ShapeGenerator): generate(3)
+  packages/img2vql/src/img2vql/pipeline/schema_prompt.py:
+    e: build_vql_schema_prompt
+    build_vql_schema_prompt()
+  packages/uri2vql/src/uri2vql/nlp2uri_types.py:
+    e: ResolvedVqlUri,IntentContext,IntentHandler
+    ResolvedVqlUri: to_dict(0)
+    IntentContext:
+    IntentHandler:
   layout.vql.imgl.json:
   goal.yaml:
   app.vql.json:
+  planfile.yaml:
   Makefile:
   nlp2uri.yaml:
   pyproject.toml:
@@ -765,7 +988,7 @@ Concrete implementations:
   packages/dsl2img2svg/pyproject.toml:
   packages/dsl2img2svg/src/dsl2img2svg/__init__.py:
   packages/img2vql/pyproject.toml:
-  packages/img2vql/src/img2vql/__init__.py:
+  docs/photo-roundtrip-sample.vql.json:
   examples/img2nl-vql-flow.sh:
     e: resolve_venv_bin,run_uri2vql,run_imgl,ensure_demo_image,maybe_scope_window,run_imgl_enrichment
     resolve_venv_bin()
@@ -776,18 +999,21 @@ Concrete implementations:
     run_imgl_enrichment()
   examples/full-pipeline.sh:
   examples/live-capture-test.sh:
+  src/vql/__init__.py:
+  src/vql/api.py:
   src/vql/schema/__init__.py:
+  src/vql/schema/program_metadata_imgl.json:
   src/vql/drawing/__init__.py:
   src/vql/drawing/shapes.py:
   src/vql/drawing/renderers/__init__.py:
   src/vql/compiler/__init__.py:
+  src/vql/validation/__init__.py:
   src/vql/library/__init__.py:
   src/vql/adopt/__init__.py:
   scripts/test-goal.sh:
   testql-scenarios/generated-from-pytests.testql.toon.yaml:
   testql-scenarios/generated-cli-tests.testql.toon.yaml:
-  planfile.yaml:
-  src/vql/__init__.py:
-  src/vql/api.py:
-  src/vql/schema/program_metadata_imgl.json:
-  src/vql/validation/__init__.py:
+  packages/img2vql/src/img2vql/__init__.py:
+  packages/img2vql/src/img2vql/pipeline/__init__.py:
+  packages/uri2vql/src/uri2vql/cli_commands/__init__.py:
+  packages/uri2vql/src/uri2vql/nlp2uri_intents/__init__.py:

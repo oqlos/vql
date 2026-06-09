@@ -324,19 +324,19 @@ pip install -e .[dev]
 ### `project/map.toon.yaml`
 
 ```toon markpact:analysis path=project/map.toon.yaml
-# vql | 154f 13315L | python:145,shell:8,less:1 | 2026-06-09
-# stats: 305 func | 97 cls | 154 mod | CC̄=5.2 | critical:34 | cycles:0
+# vql | 156f 13502L | python:147,shell:8,less:1 | 2026-06-09
+# stats: 315 func | 97 cls | 156 mod | CC̄=5.2 | critical:35 | cycles:0
 # alerts[5]: CC query_window=69; CC resolve_prompt_to_vql_uri=54; CC main=53; CC capture_diagnose=33; CC envelope_to_dict=31
 # hotspots[5]: main fan=29; query_window fan=29; screenshot_to_program fan=28; create_app fan=25; capture_diagnose fan=25
 # evolution: baseline
 # Keys: M=modules, D=details, i=imports, e=exports, c=classes, f=functions, m=methods
-M[154]:
+M[156]:
   app.doql.less,148
   examples/full-pipeline.sh,81
   examples/generate-demo-screen.py,77
   examples/img2nl-vql-flow.sh,215
   examples/live-capture-test.sh,95
-  examples/photo-roundtrip-test.py,339
+  examples/photo-roundtrip-test.py,407
   examples/scope-window.py,54
   install-dev.sh,38
   packages/cli2vql/src/cli2vql/__init__.py,2
@@ -414,11 +414,11 @@ M[154]:
   packages/uri2vql/tests/test_window_refresh.py,79
   project.sh,59
   scripts/test-goal.sh,7
-  src/vql/__init__.py,55
+  src/vql/__init__.py,57
   src/vql/adopt/__init__.py,20
   src/vql/adopt/portal_capture.py,110
   src/vql/adopt/window.py,805
-  src/vql/api.py,55
+  src/vql/api.py,56
   src/vql/compiler/__init__.py,16
   src/vql/compiler/legacy_drawcommand.py,143
   src/vql/compiler/nl_to_vql.py,70
@@ -478,10 +478,12 @@ M[154]:
   src/vql/renderers/svg.py,52
   src/vql/schema/__init__.py,34
   src/vql/schema/program.py,424
-  src/vql/validation/__init__.py,12
+  src/vql/validation/__init__.py,14
+  src/vql/validation/metadata.py,58
   src/vql/validation/spec.py,92
   tests/test_adopt_window_capture.py,37
-  tests/test_photo_roundtrip.py,101
+  tests/test_metadata_validation.py,41
+  tests/test_photo_roundtrip.py,116
   tests/test_screenshot_merge.py,31
   tests/test_vql.py,245
   tree.sh,2
@@ -492,15 +494,18 @@ D:
     write_demo_screen(path)
     main()
   examples/photo-roundtrip-test.py:
-    e: _require_pil,sample_flat_shapes,sample_gradient,sample_nl_drawing,test_img2svg_roundtrip,test_ui_grid_adopt,test_vtracer_roundtrip,test_opencv_contours,test_img2vql_detect,main
+    e: _require_pil,sample_flat_shapes,sample_gradient,sample_product_photo,sample_natural_scene,sample_nl_drawing,test_img2svg_roundtrip,test_ui_grid_adopt,test_vtracer_roundtrip,test_opencv_contours,test_metadata_only_reconstruction,test_img2vql_detect,main
     _require_pil()
     sample_flat_shapes(out)
     sample_gradient(out)
+    sample_product_photo(out)
+    sample_natural_scene(out)
     sample_nl_drawing(out)
     test_img2svg_roundtrip(image;out)
     test_ui_grid_adopt(out)
     test_vtracer_roundtrip(image;out)
     test_opencv_contours(image;out)
+    test_metadata_only_reconstruction(out)
     test_img2vql_detect(out)
     main()
   examples/scope-window.py:
@@ -1109,6 +1114,10 @@ D:
     ValidationSpec: to_dict(0),from_dict(2)  # Declarative expectation describing what a correct render mus
     VQLProgram: validate(0),is_valid(0),object_count(0),to_dict(0),from_dict(2)  # Top-level VQL program — the contract between NL parsing and 
   src/vql/validation/__init__.py:
+  src/vql/validation/metadata.py:
+    e: _load_imgl_metadata_schema,validate_program_metadata
+    _load_imgl_metadata_schema()
+    validate_program_metadata(metadata)
   src/vql/validation/spec.py:
     e: _program_shapes,_program_colors,_match_items,validate_program,VQLValidationReport
     VQLValidationReport: to_dict(0)  # Outcome of validating a program against a spec.
@@ -1121,13 +1130,20 @@ D:
     test_image_is_blank_detects_black(tmp_path)
     test_image_is_blank_accepts_colored(tmp_path)
     test_image_stats_reports_blank(tmp_path)
+  tests/test_metadata_validation.py:
+    e: test_empty_metadata_valid,test_valid_imgl_metadata,test_invalid_capture_type,test_invalid_window_os
+    test_empty_metadata_valid()
+    test_valid_imgl_metadata()
+    test_invalid_capture_type()
+    test_invalid_window_os(meta)
   tests/test_photo_roundtrip.py:
-    e: _flat_shapes_image,test_nl_drawing_roundtrip,test_img2svg_sets_scene_background,test_img2svg_vql_render_roundtrip,test_vtracer_roundtrip_when_installed,test_trace_contours_graceful_without_opencv
+    e: _flat_shapes_image,test_nl_drawing_roundtrip,test_img2svg_sets_scene_background,test_img2svg_vql_render_roundtrip,test_vtracer_roundtrip_when_installed,test_metadata_only_program_renders_background_only,test_trace_contours_graceful_without_opencv
     _flat_shapes_image(path)
     test_nl_drawing_roundtrip(tmp_path)
     test_img2svg_sets_scene_background(tmp_path)
     test_img2svg_vql_render_roundtrip(tmp_path)
     test_vtracer_roundtrip_when_installed(tmp_path)
+    test_metadata_only_program_renders_background_only(tmp_path)
     test_trace_contours_graceful_without_opencv(tmp_path)
   tests/test_screenshot_merge.py:
     e: test_screenshot_merge_reduces_object_count
@@ -1158,7 +1174,7 @@ D:
 
 ```prolog markpact:analysis path=project/logic.pl
 % ── Project Metadata ─────────────────────────────────────
-project_metadata('vql', '0.1.3', 'python').
+project_metadata('vql', '0.1.4', 'python').
 
 % ── Project Files ────────────────────────────────────────
 project_file('app.doql.less', 148, 'less').
@@ -1166,7 +1182,7 @@ project_file('examples/full-pipeline.sh', 81, 'shell').
 project_file('examples/generate-demo-screen.py', 77, 'python').
 project_file('examples/img2nl-vql-flow.sh', 215, 'shell').
 project_file('examples/live-capture-test.sh', 95, 'shell').
-project_file('examples/photo-roundtrip-test.py', 339, 'python').
+project_file('examples/photo-roundtrip-test.py', 407, 'python').
 project_file('examples/scope-window.py', 54, 'python').
 project_file('install-dev.sh', 38, 'shell').
 project_file('packages/cli2vql/src/cli2vql/__init__.py', 2, 'python').
@@ -1244,11 +1260,11 @@ project_file('packages/uri2vql/tests/test_nlp2uri_window.py', 31, 'python').
 project_file('packages/uri2vql/tests/test_window_refresh.py', 79, 'python').
 project_file('project.sh', 59, 'shell').
 project_file('scripts/test-goal.sh', 7, 'shell').
-project_file('src/vql/__init__.py', 55, 'python').
+project_file('src/vql/__init__.py', 57, 'python').
 project_file('src/vql/adopt/__init__.py', 20, 'python').
 project_file('src/vql/adopt/portal_capture.py', 110, 'python').
 project_file('src/vql/adopt/window.py', 805, 'python').
-project_file('src/vql/api.py', 55, 'python').
+project_file('src/vql/api.py', 56, 'python').
 project_file('src/vql/compiler/__init__.py', 16, 'python').
 project_file('src/vql/compiler/legacy_drawcommand.py', 143, 'python').
 project_file('src/vql/compiler/nl_to_vql.py', 70, 'python').
@@ -1308,10 +1324,12 @@ project_file('src/vql/renderers/playwright.py', 23, 'python').
 project_file('src/vql/renderers/svg.py', 52, 'python').
 project_file('src/vql/schema/__init__.py', 34, 'python').
 project_file('src/vql/schema/program.py', 424, 'python').
-project_file('src/vql/validation/__init__.py', 12, 'python').
+project_file('src/vql/validation/__init__.py', 14, 'python').
+project_file('src/vql/validation/metadata.py', 58, 'python').
 project_file('src/vql/validation/spec.py', 92, 'python').
 project_file('tests/test_adopt_window_capture.py', 37, 'python').
-project_file('tests/test_photo_roundtrip.py', 101, 'python').
+project_file('tests/test_metadata_validation.py', 41, 'python').
+project_file('tests/test_photo_roundtrip.py', 116, 'python').
 project_file('tests/test_screenshot_merge.py', 31, 'python').
 project_file('tests/test_vql.py', 245, 'python').
 project_file('tree.sh', 2, 'shell').
@@ -1323,13 +1341,16 @@ python_function('examples/generate-demo-screen.py', 'main', 0, 1, 6).
 python_function('examples/photo-roundtrip-test.py', '_require_pil', 0, 2, 1).
 python_function('examples/photo-roundtrip-test.py', 'sample_flat_shapes', 1, 1, 8).
 python_function('examples/photo-roundtrip-test.py', 'sample_gradient', 1, 3, 12).
+python_function('examples/photo-roundtrip-test.py', 'sample_product_photo', 1, 1, 7).
+python_function('examples/photo-roundtrip-test.py', 'sample_natural_scene', 1, 4, 8).
 python_function('examples/photo-roundtrip-test.py', 'sample_nl_drawing', 1, 2, 9).
 python_function('examples/photo-roundtrip-test.py', 'test_img2svg_roundtrip', 2, 8, 21).
 python_function('examples/photo-roundtrip-test.py', 'test_ui_grid_adopt', 1, 2, 12).
 python_function('examples/photo-roundtrip-test.py', 'test_vtracer_roundtrip', 2, 10, 17).
 python_function('examples/photo-roundtrip-test.py', 'test_opencv_contours', 2, 2, 9).
+python_function('examples/photo-roundtrip-test.py', 'test_metadata_only_reconstruction', 1, 1, 9).
 python_function('examples/photo-roundtrip-test.py', 'test_img2vql_detect', 1, 5, 4).
-python_function('examples/photo-roundtrip-test.py', 'main', 0, 5, 21).
+python_function('examples/photo-roundtrip-test.py', 'main', 0, 5, 24).
 python_function('examples/scope-window.py', 'main', 0, 6, 7).
 python_function('packages/cli2vql/src/cli2vql/cli.py', '_repl', 1, 6, 5).
 python_function('packages/cli2vql/src/cli2vql/cli.py', 'main', 1, 14, 16).
@@ -1590,6 +1611,8 @@ python_function('src/vql/renderers/__init__.py', '__getattr__', 1, 2, 1).
 python_function('src/vql/renderers/base.py', 'render_program', 2, 1, 3).
 python_function('src/vql/renderers/svg.py', 'render_to_svg', 1, 1, 4).
 python_function('src/vql/renderers/svg.py', 'render_to_png', 2, 2, 7).
+python_function('src/vql/validation/metadata.py', '_load_imgl_metadata_schema', 0, 1, 3).
+python_function('src/vql/validation/metadata.py', 'validate_program_metadata', 1, 14, 8).
 python_function('src/vql/validation/spec.py', '_program_shapes', 1, 3, 1).
 python_function('src/vql/validation/spec.py', '_program_colors', 1, 2, 2).
 python_function('src/vql/validation/spec.py', '_match_items', 3, 4, 2).
@@ -1597,11 +1620,16 @@ python_function('src/vql/validation/spec.py', 'validate_program', 2, 4, 9).
 python_function('tests/test_adopt_window_capture.py', 'test_image_is_blank_detects_black', 1, 2, 3).
 python_function('tests/test_adopt_window_capture.py', 'test_image_is_blank_accepts_colored', 1, 2, 4).
 python_function('tests/test_adopt_window_capture.py', 'test_image_stats_reports_blank', 1, 4, 3).
+python_function('tests/test_metadata_validation.py', 'test_empty_metadata_valid', 0, 3, 1).
+python_function('tests/test_metadata_validation.py', 'test_valid_imgl_metadata', 0, 2, 1).
+python_function('tests/test_metadata_validation.py', 'test_invalid_capture_type', 0, 2, 2).
+python_function('tests/test_metadata_validation.py', 'test_invalid_window_os', 1, 2, 2).
 python_function('tests/test_photo_roundtrip.py', '_flat_shapes_image', 1, 1, 4).
 python_function('tests/test_photo_roundtrip.py', 'test_nl_drawing_roundtrip', 1, 4, 4).
 python_function('tests/test_photo_roundtrip.py', 'test_img2svg_sets_scene_background', 1, 4, 6).
 python_function('tests/test_photo_roundtrip.py', 'test_img2svg_vql_render_roundtrip', 1, 4, 10).
 python_function('tests/test_photo_roundtrip.py', 'test_vtracer_roundtrip_when_installed', 1, 4, 8).
+python_function('tests/test_photo_roundtrip.py', 'test_metadata_only_program_renders_background_only', 1, 3, 8).
 python_function('tests/test_photo_roundtrip.py', 'test_trace_contours_graceful_without_opencv', 1, 4, 4).
 python_function('tests/test_screenshot_merge.py', 'test_screenshot_merge_reduces_object_count', 1, 5, 8).
 python_function('tests/test_vql.py', 'test_empty_program_is_structurally_valid', 0, 3, 4).
@@ -2023,7 +2051,7 @@ sumd_workflow_step('goal', 1, 'goal -a').
 
 ## Call Graph
 
-*213 nodes · 252 edges · 52 modules · CC̄=4.1*
+*218 nodes · 256 edges · 53 modules · CC̄=4.1*
 
 ### Hubs (by degree)
 
@@ -2031,17 +2059,17 @@ sumd_workflow_step('goal', 1, 'goal -a').
 |----------|----|----|-----|-------|
 | `query_window` *(in packages.uri2vql.src.uri2vql.window)* | 69 ⚠ | 2 | 147 | **149** |
 | `resolve_prompt_to_vql_uri` *(in packages.uri2vql.src.uri2vql.nlp2uri)* | 54 ⚠ | 2 | 68 | **70** |
-| `parse_svg_path` *(in src.vql.drawing.svg_path_parser)* | 43 ⚠ | 1 | 64 | **65** |
 | `trace_to_vql_program` *(in packages.img2svg.src.img2svg.to_vql)* | 15 ⚠ | 3 | 46 | **49** |
-| `analyze_screenshot` *(in src.vql.adopt.window)* | 13 ⚠ | 2 | 45 | **47** |
+| `_dispatch_command` *(in src.vql.drawing.svg_path_parser)* | 16 ⚠ | 1 | 47 | **48** |
 | `screenshot_to_program` *(in src.vql.adopt.window)* | 12 ⚠ | 3 | 44 | **47** |
+| `analyze_screenshot` *(in src.vql.adopt.window)* | 13 ⚠ | 2 | 45 | **47** |
 | `_set_body` *(in packages.dsl2vql.src.dsl2vql.pb_codec)* | 12 ⚠ | 1 | 45 | **46** |
-| `_detect_buttons` *(in packages.img2vql.src.img2vql.detect)* | 25 ⚠ | 1 | 45 | **46** |
+| `_query_window_imgl` *(in packages.uri2vql.src.uri2vql.window)* | 17 ⚠ | 1 | 45 | **46** |
 
 ```toon markpact:analysis path=project/calls.toon.yaml
 # code2llm call graph | /home/tom/github/oqlos/vql
-# generated in 0.14s
-# nodes: 213 | edges: 252 | modules: 52
+# generated in 0.10s
+# nodes: 218 | edges: 256 | modules: 53
 # CC̄=4.1
 
 HUBS[20]:
@@ -2049,20 +2077,20 @@ HUBS[20]:
     CC=69  in:2  out:147  total:149
   packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri
     CC=54  in:2  out:68  total:70
-  src.vql.drawing.svg_path_parser.parse_svg_path
-    CC=43  in:1  out:64  total:65
   packages.img2svg.src.img2svg.to_vql.trace_to_vql_program
     CC=15  in:3  out:46  total:49
-  src.vql.adopt.window.analyze_screenshot
-    CC=13  in:2  out:45  total:47
+  src.vql.drawing.svg_path_parser._dispatch_command
+    CC=16  in:1  out:47  total:48
   src.vql.adopt.window.screenshot_to_program
     CC=12  in:3  out:44  total:47
+  src.vql.adopt.window.analyze_screenshot
+    CC=13  in:2  out:45  total:47
   packages.dsl2vql.src.dsl2vql.pb_codec._set_body
     CC=12  in:1  out:45  total:46
-  packages.img2vql.src.img2vql.detect._detect_buttons
-    CC=25  in:1  out:45  total:46
   packages.uri2vql.src.uri2vql.window._query_window_imgl
     CC=17  in:1  out:45  total:46
+  packages.img2vql.src.img2vql.detect._detect_buttons
+    CC=25  in:1  out:45  total:46
   packages.img2vql.src.img2vql.describe_ui.describe_ui_layout
     CC=14  in:6  out:39  total:45
   src.vql.adopt.window.capture_diagnose
@@ -2071,16 +2099,16 @@ HUBS[20]:
     CC=5  in:0  out:45  total:45
   packages.rest2vql.src.rest2vql.app.create_app
     CC=1  in:1  out:43  total:44
-  packages.img2vql.src.img2vql.program.elements_to_vql_program
-    CC=11  in:1  out:40  total:41
   packages.dsl2img2svg.src.dsl2img2svg.dispatch.dispatch
     CC=14  in:0  out:41  total:41
+  packages.img2vql.src.img2vql.program.elements_to_vql_program
+    CC=11  in:1  out:40  total:41
   packages.uri2img2svg.src.uri2img2svg.query.query_uri
     CC=13  in:6  out:28  total:34
-  packages.dsl2vql.src.dsl2vql.events.EventStore.append
-    CC=3  in:0  out:33  total:33
   packages.dsl2vql.src.dsl2vql.grammar.parse_line
     CC=28  in:6  out:27  total:33
+  packages.dsl2vql.src.dsl2vql.events.EventStore.append
+    CC=3  in:0  out:33  total:33
   src.vql.adopt.portal_capture.capture_via_portal
     CC=4  in:1  out:30  total:31
   examples.photo-roundtrip-test.test_img2svg_roundtrip
@@ -2309,8 +2337,11 @@ MODULES:
     to_vql  CC=1  out:1
   src.vql.drawing.path_generator  [1 funcs]
     generate  CC=5  out:7
-  src.vql.drawing.svg_path_parser  [1 funcs]
-    parse_svg_path  CC=43  out:64
+  src.vql.drawing.svg_path_parser  [4 funcs]
+    _dispatch_command  CC=16  out:47
+    _scale_groups  CC=15  out:6
+    _tokenize_path  CC=1  out:1
+    parse_svg_path  CC=7  out:7
   src.vql.facade  [6 funcs]
     compile  CC=1  out:1
     render_png  CC=1  out:1
@@ -2324,6 +2355,9 @@ MODULES:
   src.vql.renderers.svg  [2 funcs]
     render_to_png  CC=2  out:8
     render_to_svg  CC=1  out:4
+  src.vql.validation.metadata  [2 funcs]
+    _load_imgl_metadata_schema  CC=1  out:3
+    validate_program_metadata  CC=14  out:14
   src.vql.validation.spec  [4 funcs]
     _match_items  CC=4  out:3
     _program_colors  CC=2  out:2

@@ -3476,7 +3476,7 @@ wheels = [
 
 [[package]]
 name = "vql"
-version = "0.1.4"
+version = "0.1.5"
 source = { editable = "." }
 
 [package.optional-dependencies]
@@ -3493,6 +3493,11 @@ dev = [
     { name = "pillow" },
     { name = "protobuf" },
     { name = "pytest" },
+]
+pipeline = [
+    { name = "cairosvg" },
+    { name = "mss" },
+    { name = "pillow" },
 ]
 playwright = [
     { name = "playwright" },
@@ -3517,8 +3522,9 @@ requires-dist = [
     { name = "playwright", marker = "extra == 'playwright'", specifier = ">=1.40.0" },
     { name = "protobuf", marker = "extra == 'dev'", specifier = ">=5.0" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.0" },
+    { name = "vql", extras = ["desktop", "png"], marker = "extra == 'pipeline'" },
 ]
-provides-extras = ["png", "desktop", "playwright", "dev"]
+provides-extras = ["png", "desktop", "playwright", "pipeline", "dev"]
 
 [[package]]
 name = "wcwidth"

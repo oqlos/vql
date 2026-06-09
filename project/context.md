@@ -5,12 +5,12 @@
 
 - **Project**: /home/tom/github/oqlos/vql
 - **Primary Language**: python
-- **Languages**: python: 130, toml: 11, json: 10, shell: 8, yaml: 6
+- **Languages**: python: 168, json: 11, toml: 11, shell: 8, yaml: 6
 - **Analysis Mode**: static
-- **Total Functions**: 421
-- **Total Classes**: 97
-- **Modules**: 168
-- **Entry Points**: 231
+- **Total Functions**: 530
+- **Total Classes**: 102
+- **Modules**: 207
+- **Entry Points**: 306
 
 ## Architecture by Module
 
@@ -19,20 +19,23 @@
 - **Classes**: 12
 - **File**: `program.py`
 
-### src.vql.adopt.window
-- **Functions**: 29
-- **Classes**: 3
-- **File**: `window.py`
-
 ### src.vql.drawing.commands
 - **Functions**: 19
 - **Classes**: 8
 - **File**: `commands.py`
 
+### packages.dsl2vql.src.dsl2vql.pb_body_codec
+- **Functions**: 18
+- **File**: `pb_body_codec.py`
+
 ### packages.uri2vql.src.uri2vql.uri
 - **Functions**: 16
 - **Classes**: 1
 - **File**: `uri.py`
+
+### examples.photo-roundtrip-test
+- **Functions**: 13
+- **File**: `photo-roundtrip-test.py`
 
 ### src.vql.drawing.event_store
 - **Functions**: 13
@@ -48,23 +51,22 @@
 - **Classes**: 1
 - **File**: `detect.py`
 
-### packages.uri2vql.src.uri2vql.window
-- **Functions**: 11
-- **Classes**: 1
+### packages.uri2vql.src.uri2vql.nlp2uri_intents.window
+- **Functions**: 12
 - **File**: `window.py`
-
-### examples.photo-roundtrip-test
-- **Functions**: 10
-- **File**: `photo-roundtrip-test.py`
 
 ### src.vql.drawing.svg_path_parser
 - **Functions**: 10
 - **Classes**: 1
 - **File**: `svg_path_parser.py`
 
-### packages.dsl2vql.src.dsl2vql.pb_codec
-- **Functions**: 8
-- **File**: `pb_codec.py`
+### packages.dsl2vql.src.dsl2vql.grammar_handlers
+- **Functions**: 9
+- **File**: `grammar_handlers.py`
+
+### src.vql.adopt.capture_backends
+- **Functions**: 9
+- **File**: `capture_backends.py`
 
 ### packages.img2svg.src.img2svg.trace
 - **Functions**: 8
@@ -95,30 +97,23 @@
 - **Classes**: 1
 - **File**: `svg.py`
 
-### packages.rest2vql.src.rest2vql.window
-- **Functions**: 7
-- **Classes**: 1
-- **File**: `window.py`
+### packages.uri2vql.src.uri2vql.nlp2uri_intents.imgl
+- **Functions**: 8
+- **File**: `imgl.py`
 
-### src.vql.facade
-- **Functions**: 7
-- **Classes**: 2
-- **File**: `facade.py`
-
-### src.vql.drawing.events
-- **Functions**: 7
-- **Classes**: 7
-- **File**: `events.py`
+### packages.uri2vql.src.uri2vql.nlp2uri_intents.program
+- **Functions**: 8
+- **File**: `program.py`
 
 ## Key Entry Points
 
 Main execution flows into the system:
 
-### packages.uri2vql.src.uri2vql.cli.main
-- **Calls**: argparse.ArgumentParser, parser.add_subparsers, sub.add_parser, q.add_argument, q.add_argument, q.add_argument, sub.add_parser, p.add_argument
-
 ### examples.photo-roundtrip-test.main
 - **Calls**: argparse.ArgumentParser, parser.add_argument, parser.parse_args, None.resolve, out.mkdir, print, examples.photo-roundtrip-test.sample_flat_shapes, examples.photo-roundtrip-test.sample_gradient
+
+### packages.uri2vql.src.uri2vql.window_handlers.handle_summary
+- **Calls**: packages.uri2vql.src.uri2vql.window_utils.query_bool, json.loads, QueryResult, None.is_file, QueryResult, packages.uri2vql.src.uri2vql.window_utils.resolve_window_image, None.read_text, prog.get
 
 ### packages.dsl2img2svg.src.dsl2img2svg.dispatch.dispatch
 > Dispatch a single DSL line for img2svg.
@@ -138,6 +133,9 @@ Main execution flows into the system:
 
 ### packages.nlp2vql.src.nlp2vql.cli.main
 - **Calls**: argparse.ArgumentParser, parser.add_subparsers, sub.add_parser, t.add_argument, t.add_argument, sub.add_parser, a.add_argument, a.add_argument
+
+### packages.img2vql.src.img2vql.pipeline.config.PipelineConfig.from_env
+- **Calls**: packages.img2vql.src.img2vql.pipeline.config._load_dotenv, PipelineLLMConfig, cls, os.environ.get, os.environ.get, os.environ.get, os.environ.get, os.environ.get
 
 ### packages.cli2vql.src.cli2vql.cli.main
 - **Calls**: argparse.ArgumentParser, parser.add_subparsers, sub.add_parser, sub.add_parser, e.add_argument, sub.add_parser, r.add_argument, parser.add_argument
@@ -166,6 +164,9 @@ Args:
 ### src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator.generate
 - **Calls**: pts.append, pts.append, range, range, range, pts.append, pts.append, pts.append
 
+### packages.uri2vql.src.uri2vql.window_handlers.handle_adopt
+- **Calls**: int, packages.uri2vql.src.uri2vql.window_utils.query_bool, packages.uri2vql.src.uri2vql.window_utils.payload_result, QueryResult, packages.img2vql.src.img2vql.adopt.adopt_screenshot, None.is_file, qs.get, QueryResult
+
 ### src.vql.validation.metadata.validate_program_metadata
 > Validate imgl-specific metadata keys when present.
 
@@ -173,8 +174,20 @@ Uses jsonschema when installed; otherwise performs minimal structural checks.
 Empty metadata is va
 - **Calls**: metadata.get, metadata.get, issues.append, jsonschema.validate, isinstance, isinstance, issues.append, window_os.items
 
+### packages.uri2vql.src.uri2vql.window_handlers.handle_analyze
+- **Calls**: int, int, None.lower, packages.uri2vql.src.uri2vql.window_analyze.analyze_window_uri, json.dumps, QueryResult, packages.uri2vql.src.uri2vql.window_utils.query_bool, result.to_dict
+
 ### packages.dsl2vql.src.dsl2vql.events.EventStore.replay
 - **Calls**: self.path.read_bytes, self.path.is_file, len, int.from_bytes, result_pb2.DslEvent, pb.ParseFromString, events.append, DslEvent
+
+### packages.uri2vql.src.uri2vql.window_handlers.handle_detect
+- **Calls**: packages.uri2vql.src.uri2vql.window_utils.payload_result, QueryResult, packages.img2vql.src.img2vql.detect.detect_ui_elements, payload.get, None.is_file, qs.get, packages.img2vql.src.img2vql.describe_ui.describe_ui_layout, QueryResult
+
+### packages.uri2vql.src.uri2vql.window_handlers.handle_diagnose
+- **Calls**: packages.uri2vql.src.uri2vql.window_utils.resolve_window_image, packages.uri2vql.src.uri2vql.window_utils.query_bool, packages.uri2vql.src.uri2vql.window_diagnose.diagnose_window_image, packages.uri2vql.src.uri2vql.window_utils.payload_result, QueryResult, qs.get, qs.get, bool
+
+### packages.uri2vql.src.uri2vql.cli_commands.capture.run_capture_screen
+- **Calls**: src.vql.adopt.capture_screen.capture_screen, print, src.vql.adopt.capture_diagnose.capture_diagnose, print, json.dumps, print, print, json.dumps
 
 ### src.vql.schema.program.Scene.from_dict
 - **Calls**: cls, float, float, data.get, data.get, data.get, data.get, data.get
@@ -182,6 +195,9 @@ Empty metadata is va
 ### src.vql.drawing.renderers.playwright.PlaywrightRenderer.set_color
 > Set the drawing color via multiple strategies (platform-independent).
 - **Calls**: self._page.locator, buttons.count, float, self._page.locator, self._page.evaluate, self._page.evaluate, ci.count, ci.evaluate
+
+### packages.uri2vql.src.uri2vql.window_handlers.handle_compare
+- **Calls**: packages.uri2vql.src.uri2vql.window_compare.compare_window_image, packages.uri2vql.src.uri2vql.window_utils.payload_result, QueryResult, None.is_file, QueryResult, None.is_file, bool, qs.get
 
 ### src.vql.schema.program.Transform.from_dict
 - **Calls**: cls, float, float, float, float, float, data.get, data.get
@@ -201,55 +217,44 @@ Raises:
 ### src.vql.drawing.sun_generator.SunGenerator.generate
 - **Calls**: params.get, range, range, circle.append, groups.append, math.cos, math.sin, math.cos
 
-### src.vql.drawing.cat_generator.CatGenerator.generate
-- **Calls**: range, range, range, body.append, head.append, tail.append, math.cos, math.cos
-
-### src.vql.drawing.renderers.playwright.PlaywrightRenderer.init_canvas
-> Navigate to URL and discover the canvas element.
-- **Calls**: self._page.locator, canvas.bounding_box, self._page.goto, self._page.wait_for_timeout, canvas.wait_for, self._page.get_by_text, self._page.wait_for_timeout, btn.is_visible
-
-### src.vql.schema.program.ValidationSpec.from_dict
-- **Calls**: cls, data.get, list, list, int, dict, data.get, data.get
-
-### src.vql.schema.program.VQLProgram.from_dict
-- **Calls**: data.get, cls, Scene.from_dict, RenderTarget, dict, data.get, data.get, ValidationSpec.from_dict
-
-### src.vql.drawing.butterfly_generator.ButterflyGenerator.generate
-- **Calls**: range, range, ulw.append, llw.append, math.sin, math.sin, math.cos, math.sin
-
-### src.vql.drawing.castle_generator.CastleGenerator.generate
-- **Calls**: range, range, gate.extend, bm.append, bm.append, bm.append, bm.append, gate.append
-
-### src.vql.drawing.commands.CommandBus._apply_event
-> Apply a single event to update internal state.
-- **Calls**: isinstance, p.get, p.get, p.get, p.get, isinstance, p.get, isinstance
-
 ## Process Flows
 
 Key execution flows identified:
 
 ### Flow 1: main
 ```
-main [packages.uri2vql.src.uri2vql.cli]
+main [examples.photo-roundtrip-test]
 ```
 
-### Flow 2: dispatch
+### Flow 2: handle_summary
+```
+handle_summary [packages.uri2vql.src.uri2vql.window_handlers]
+  └─ →> query_bool
+```
+
+### Flow 3: dispatch
 ```
 dispatch [packages.dsl2img2svg.src.dsl2img2svg.dispatch]
   └─> _parse_kv_args
 ```
 
-### Flow 3: append
+### Flow 4: append
 ```
 append [packages.dsl2vql.src.dsl2vql.events.EventStore]
 ```
 
-### Flow 4: _register_tools
+### Flow 5: _register_tools
 ```
 _register_tools [packages.mcp2vql.src.mcp2vql.server.VqlMCPServer]
 ```
 
-### Flow 5: query_uri
+### Flow 6: from_env
+```
+from_env [packages.img2vql.src.img2vql.pipeline.config.PipelineConfig]
+  └─ →> _load_dotenv
+```
+
+### Flow 7: query_uri
 ```
 query_uri [packages.uri2vql.src.uri2vql.query]
   └─> _load_program
@@ -257,29 +262,19 @@ query_uri [packages.uri2vql.src.uri2vql.query]
   └─ →> parse_vql_uri
 ```
 
-### Flow 6: from_dict
+### Flow 8: from_dict
 ```
 from_dict [src.vql.schema.program.Object]
 ```
 
-### Flow 7: _extract_shape_specific_params
+### Flow 9: _extract_shape_specific_params
 ```
 _extract_shape_specific_params [src.vql.drawing.nl_parser.NLDrawingParser]
 ```
 
-### Flow 8: parse
+### Flow 10: parse
 ```
 parse [src.vql.drawing.nl_parser.NLDrawingParser]
-```
-
-### Flow 9: generate
-```
-generate [src.vql.drawing.cloud_detailed_generator.CloudDetailedGenerator]
-```
-
-### Flow 10: validate_program_metadata
-```
-validate_program_metadata [src.vql.validation.metadata]
 ```
 
 ## Key Classes
@@ -418,29 +413,11 @@ Key functions that process and transform data:
 ### packages.uri2img2svg.src.uri2img2svg.uri.parse_img2svg_uri
 - **Output to**: urlparse, parse_qs, int, Img2SvgUri, ValueError
 
-### packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf
-- **Output to**: command_pb2.DslEnvelope, None.upper, packages.dsl2vql.src.dsl2vql.pb_codec._set_body, envelope.SerializeToString, str
-
-### packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf
-- **Output to**: command_pb2.DslEnvelope, envelope.ParseFromString, packages.dsl2vql.src.dsl2vql.pb_codec.envelope_to_dict
-
-### packages.dsl2vql.src.dsl2vql.pb_codec.encode_text_to_protobuf
-- **Output to**: packages.dsl2vql.src.dsl2vql.grammar.parse_line, packages.dsl2vql.src.dsl2vql.pb_codec.encode_protobuf, ValueError
-
-### packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf_to_text
-- **Output to**: packages.dsl2vql.src.dsl2vql.grammar.to_text, packages.dsl2vql.src.dsl2vql.pb_codec.decode_protobuf
-
-### packages.dsl2vql.src.dsl2vql.pb_codec.encode_result_protobuf
-- **Output to**: None.SerializeToString, packages.dsl2vql.src.dsl2vql.pb_codec.result_to_pb
-
 ### packages.dsl2vql.src.dsl2vql.schema_registry.validate_command_dict
 - **Output to**: None.upper, packages.dsl2vql.src.dsl2vql.schema_registry.schema_for_verb, jsonschema.Draft202012Validator, str, sorted
 
 ### packages.dsl2vql.src.dsl2vql.schema_registry.validate_schema_registry
 - **Output to**: None.items, packages.dsl2vql.src.dsl2vql.schema_registry._load_schemas, None.get, errors.append, None.get
-
-### packages.dsl2vql.src.dsl2vql.grammar.parse_line
-- **Output to**: packages.dsl2vql.src.dsl2vql.grammar.split_command, None.upper, packages.dsl2vql.src.dsl2vql.grammar.pick_flag, packages.dsl2vql.src.dsl2vql.grammar.pick_flag, f.lower
 
 ### packages.dsl2vql.src.dsl2vql.codec.encode_text
 - **Output to**: packages.dsl2vql.src.dsl2vql.grammar.parse_line, packages.dsl2vql.src.dsl2vql.schema_registry.validate_command_dict
@@ -496,6 +473,21 @@ Args:
    
 - **Output to**: text.lower, self.CLEAR_PATTERNS.search, self._colors.extract_colors, self._extract_shapes, self._extract_size_params
 
+### src.vql.drawing.commands.DrawCommand.validate
+> Return list of validation errors (empty = valid).
+
+### src.vql.drawing.commands.InitCanvas.validate
+- **Output to**: errors.append, errors.append
+
+### src.vql.drawing.commands.DrawShape.validate
+- **Output to**: errors.append
+
+### src.vql.drawing.commands.SetColor.validate
+
+### src.vql.drawing.commands.SelectTool.validate
+
+### src.vql.drawing.commands.ClearCanvas.validate
+
 ## Behavioral Patterns
 
 ### recursion__json_safe
@@ -522,15 +514,16 @@ Args:
 
 Functions exposed as public API (no underscore prefix):
 
-- `packages.uri2vql.src.uri2vql.cli.main` - 148 calls
-- `packages.uri2vql.src.uri2vql.window.query_window` - 147 calls
-- `packages.uri2vql.src.uri2vql.nlp2uri.resolve_prompt_to_vql_uri` - 68 calls
+- `packages.uri2vql.src.uri2vql.cli.build_parser` - 85 calls
+- `examples.photo-roundtrip-test.main` - 55 calls
+- `packages.img2vql.src.img2vql.pipeline.orchestrate.analyze_image_to_vql` - 55 calls
 - `packages.img2svg.src.img2svg.to_vql.trace_to_vql_program` - 46 calls
-- `examples.photo-roundtrip-test.main` - 45 calls
 - `src.vql.adopt.window.analyze_screenshot` - 45 calls
-- `src.vql.adopt.window.capture_diagnose` - 44 calls
-- `src.vql.adopt.window.screenshot_to_program` - 44 calls
+- `src.vql.adopt.program_grid.screenshot_to_program` - 44 calls
+- `packages.uri2vql.src.uri2vql.window_imgl.query_window_imgl` - 43 calls
 - `packages.rest2vql.src.rest2vql.app.create_app` - 43 calls
+- `packages.uri2vql.src.uri2vql.window_handlers.handle_summary` - 43 calls
+- `src.vql.adopt.capture_diagnose.capture_diagnose` - 42 calls
 - `packages.dsl2img2svg.src.dsl2img2svg.dispatch.dispatch` - 41 calls
 - `packages.img2vql.src.img2vql.program.elements_to_vql_program` - 40 calls
 - `packages.img2vql.src.img2vql.describe_ui.describe_ui_layout` - 39 calls
@@ -538,14 +531,16 @@ Functions exposed as public API (no underscore prefix):
 - `packages.dsl2vql.src.dsl2vql.events.EventStore.append` - 33 calls
 - `packages.img2svg.src.img2svg.cli.main` - 31 calls
 - `src.vql.adopt.portal_capture.capture_via_portal` - 30 calls
+- `packages.uri2vql.src.uri2vql.window_utils.diagnose_fallback` - 29 calls
 - `examples.photo-roundtrip-test.test_img2svg_roundtrip` - 29 calls
 - `packages.uri2img2svg.src.uri2img2svg.query.query_uri` - 28 calls
-- `packages.dsl2vql.src.dsl2vql.grammar.parse_line` - 27 calls
+- `packages.img2vql.src.img2vql.pipeline.llm_vql.level5_llm_extract` - 28 calls
 - `examples.photo-roundtrip-test.test_vtracer_roundtrip` - 27 calls
 - `packages.img2svg.src.img2svg.svg_emit.image_to_svg` - 24 calls
 - `packages.img2svg.src.img2svg.trace.trace_contours_opencv` - 23 calls
 - `packages.nlp2vql.src.nlp2vql.cli.main` - 22 calls
-- `src.vql.adopt.window.image_stats` - 22 calls
+- `src.vql.adopt.capture_image.image_stats` - 22 calls
+- `packages.img2vql.src.img2vql.pipeline.config.PipelineConfig.from_env` - 22 calls
 - `packages.cli2vql.src.cli2vql.cli.main` - 21 calls
 - `packages.img2vql.src.img2vql.metadata.metadata_from_diagnose` - 21 calls
 - `packages.img2vql.src.img2vql.diagnose.diagnose_for_vql` - 21 calls
@@ -556,12 +551,9 @@ Functions exposed as public API (no underscore prefix):
 - `packages.img2vql.src.img2vql.detect.detect_ui_elements` - 19 calls
 - `packages.img2vql.src.img2vql.fingerprint.compare_with_program` - 19 calls
 - `examples.scope-window.main` - 19 calls
+- `packages.img2vql.src.img2vql.pipeline.llm_vql.merge_programs` - 19 calls
 - `examples.generate-demo-screen.write_demo_screen` - 18 calls
 - `src.vql.schema.program.Object.from_dict` - 18 calls
-- `packages.img2svg.src.img2svg.trace.trace_image_regions` - 17 calls
-- `packages.img2svg.src.img2svg.trace.trace_vtracer` - 17 calls
-- `packages.img2svg.src.img2svg.to_vql.image_to_vql` - 17 calls
-- `packages.img2vql.src.img2vql.metadata.img2nl_metadata_slice` - 17 calls
 
 ## System Interactions
 
@@ -570,35 +562,35 @@ How components interact:
 ```mermaid
 graph TD
     main --> ArgumentParser
-    main --> add_subparsers
-    main --> add_parser
     main --> add_argument
     main --> parse_args
     main --> resolve
     main --> mkdir
+    handle_summary --> query_bool
+    handle_summary --> loads
+    handle_summary --> QueryResult
+    handle_summary --> is_file
     dispatch --> strip
     dispatch --> startswith
     dispatch --> split
     dispatch --> upper
     dispatch --> _parse_kv_args
+    main --> add_subparsers
+    main --> add_parser
     append --> DslEvent
     append --> mkdir
     append --> ParseFromString
     append --> DslResult
     _register_tools --> tool
+    from_env --> _load_dotenv
+    from_env --> PipelineLLMConfig
+    from_env --> cls
+    from_env --> get
     query_uri --> startswith
     query_uri --> query_window
     query_uri --> parse_vql_uri
     query_uri --> _load_program
     query_uri --> to_dict
-    from_dict --> cls
-    from_dict --> get
-    from_dict --> from_dict
-    from_dict --> float
-    _extract_shape_speci --> search
-    _extract_shape_speci --> int
-    _extract_shape_speci --> group
-    parse --> lower
 ```
 
 ## Reverse Engineering Guidelines

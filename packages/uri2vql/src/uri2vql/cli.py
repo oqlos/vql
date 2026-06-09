@@ -3,14 +3,11 @@
 from __future__ import annotations
 
 import argparse
-import json
-import sys
 
-from uri2vql.patch import patch_uri
-from uri2vql.query import query_uri
+from uri2vql.cli_commands import COMMAND_RUNNERS
 
 
-def main(argv: list[str] | None = None) -> int:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="uri2vql", description="vql:// URI query and patch")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
@@ -119,233 +116,43 @@ def main(argv: list[str] | None = None) -> int:
     ca.add_argument("--diagnose", action="store_true", help="Run diagnose-window --save after analyze")
     ca.add_argument("--no-interactive", action="store_true", help="Disable xdg-portal interactive capture")
 
-    args = parser.parse_args(argv)
+    pa = sub.add_parser(
+        "pipeline-analyze",
+        help="Multi-level img2nl → adopt → optional LLM → VQL program (+ render PNG)",
+    )
+    pa.add_argument("--image", required=True)
+    pa.add_argument("--out", default="app.vql.json")
+    pa.add_argument("--render", default="", help="PNG render path (default: <out>.render.png)")
+    pa.add_argument("--locale", default="pl")
+    pa.add_argument("--grid", type=int, default=12)
+    pa.add_argument("--method", default="auto", choices=["auto", "grid", "detect", "imgl"])
+    pa.add_argument("--llm", action="store_true", help="Force LLM extraction (requires .env keys)")
+    pa.add_argument("--no-llm", action="store_true", help="Skip LLM even when VQL_LLM_ENABLED=1")
 
-    if args.cmd == "query":
-        result = query_uri(args.uri, file=args.file or None, fmt=args.format)
-        print(result.rendered or json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
-        return 0 if result.ok else 1
+    vi = sub.add_parser("vql-to-image", help="Render VQL program JSON to PNG")
+    vi.add_argument("--program", required=True)
+    vi.add_argument("--out", default="render.png")
+    vi.add_argument("--scale", type=float, default=1.0)
 
-    if args.cmd == "patch":
-        content = open(args.with_path, encoding="utf-8").read()
-        result = patch_uri(args.uri, content=content, file=args.file or None)
-        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
-        return 0 if result.ok else 1
+    rt = sub.add_parser("roundtrip", help="image → VQL → PNG roundtrip with stats")
+    rt.add_argument("--image", required=True)
+    rt.add_argument("--out", default="roundtrip.vql.json")
+    rt.add_argument("--render", default="roundtrip.render.png")
+    rt.add_argument("--locale", default="pl")
+    rt.add_argument("--llm", action="store_true", help="Include LLM extraction step")
 
-    if args.cmd == "run":
-        from dsl2vql import dispatch
+    return parser
 
-        line = f'QUERY {args.uri}'
-        if args.file:
-            line += f" FILE {args.file}"
-        result = dispatch(line, default_file=args.file or None)
-        print(result.output or json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
-        return 0 if result.ok else 1
 
-    if args.cmd == "resolve":
-        from uri2vql.nlp2uri import resolve_prompt_to_vql_uri
+def main(argv: list[str] | None = None) -> int:
+    from uri2vql._bootstrap import ensure_img2vql
 
-        hits = resolve_prompt_to_vql_uri(
-            args.prompt,
-            file=args.file or None,
-            monitor=args.monitor,
-            grid=args.grid,
-            image=args.image or None,
-        )
-        print(json.dumps([hit.to_dict() for hit in hits], ensure_ascii=False, indent=2))
-        return 0 if hits else 1
-
-    if args.cmd == "capture-screen":
-        from vql.adopt.window import CaptureError, capture_diagnose, capture_screen
-
-        try:
-            if args.diagnose:
-                payload = capture_diagnose(
-                    args.out,
-                    monitor=args.monitor,
-                    interactive_portal=args.interactive or None,
-                )
-                print(json.dumps(payload, ensure_ascii=False, indent=2))
-                return 0 if payload.get("ok") else 1
-
-            info = capture_screen(
-                args.out,
-                monitor=args.monitor,
-                interactive=args.interactive or None,
-            )
-            print(
-                json.dumps(
-                    {
-                        "ok": True,
-                        "source": info.source,
-                        "path": info.path,
-                        "width": info.width,
-                        "height": info.height,
-                        "window_title": info.window_title,
-                    },
-                    ensure_ascii=False,
-                    indent=2,
-                )
-            )
-            return 0
-        except ImportError as exc:
-            print(
-                json.dumps(
-                    {
-                        "ok": False,
-                        "error": str(exc),
-                        "hint": "pip install 'vql[desktop]' pillow mss",
-                    },
-                    ensure_ascii=False,
-                    indent=2,
-                )
-            )
-            return 1
-        except CaptureError as exc:
-            print(json.dumps({"ok": False, "error": str(exc)}, ensure_ascii=False, indent=2))
-            return 1
-
-    if args.cmd == "analyze-window":
-        from uri2vql.window import analyze_window_uri
-
-        uri = f"vql://window/analyze?file={args.out}&monitor={args.monitor}&grid={args.grid}"
-        if args.image:
-            uri += f"&image={args.image}"
-        result = analyze_window_uri(
-            uri,
-            file=args.out,
-            monitor=args.monitor,
-            grid=args.grid,
-            image=args.image or None,
-            interactive=args.interactive or None,
-        )
-        print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
-        return 0 if result.ok else 1
-
-    if args.cmd == "detect-window":
-        from img2vql.detect import detect_ui_elements
-        from img2vql.describe_ui import describe_ui_layout
-
-        payload = detect_ui_elements(args.image)
-        if args.describe and payload.get("ok"):
-            payload["description"] = describe_ui_layout(payload, locale=args.locale)
-        print(json.dumps(payload, ensure_ascii=False, indent=2))
-        return 0 if payload.get("ok") else 1
-
-    if args.cmd == "adopt-ui":
-        from img2vql.adopt import adopt_screenshot
-
-        payload = adopt_screenshot(
-            args.image,
-            out_program=args.out,
-            locale=args.locale,
-            include_grid=args.with_grid,
-            grid=args.grid,
-        )
-        print(json.dumps(payload, ensure_ascii=False, indent=2))
-        return 0 if payload.get("ok") else 1
-
-    if args.cmd == "adopt-imgl":
-        try:
-            from imgl import ImglConfig, analyze, write_vql_program
-        except ImportError:
-            print(
-                json.dumps(
-                    {
-                        "ok": False,
-                        "error": "imgl not installed. Run: pip install -e /path/to/semcod/imgl",
-                    },
-                    indent=2,
-                )
-            )
-            return 1
-
-        scene = analyze(
-            args.image,
-            lang=args.lang,
-            config=ImglConfig(use_img2vql=True),
-        )
-        out_path = write_vql_program(
-            scene,
-            args.out,
-            include_grid=args.with_grid,
-            grid=args.grid,
-        )
-        payload = {
-            "ok": True,
-            "path": args.image,
-            "program": str(out_path),
-            "element_count": scene.metadata.get("element_count", 0),
-            "roles": scene.metadata.get("roles", {}),
-            "detect_source": scene.metadata.get("detect_source", ""),
-        }
-        print(json.dumps(payload, ensure_ascii=False, indent=2))
-        return 0
-
-    if args.cmd == "diagnose-window":
-        from uri2vql.window import diagnose_window_image
-
-        payload = diagnose_window_image(
-            args.image,
-            vql_program=args.vql_program or None,
-            locale=args.locale,
-            translate_mode=args.translate_mode,
-            save_to_program=args.save,
-        )
-        print(json.dumps(payload, ensure_ascii=False, indent=2))
-        return 0 if payload.get("ok") else 1
-
-    if args.cmd == "compare-window":
-        from uri2vql.window import compare_window_image
-
-        payload = compare_window_image(args.image, vql_program=args.vql_program)
-        print(json.dumps(payload, ensure_ascii=False, indent=2))
-        return 0 if payload.get("ok") else 1
-
-    if args.cmd == "refresh-window":
-        from uri2vql.window import _resolve_window_image, refresh_window_metadata
-
-        image = _resolve_window_image(args.vql_program, args.image or None)
-        if not image:
-            print(json.dumps({"ok": False, "error": "image missing; pass --image or set metadata.image"}, indent=2))
-            return 1
-        payload = refresh_window_metadata(
-            image,
-            vql_program=args.vql_program,
-            locale=args.locale,
-        )
-        print(json.dumps(payload, ensure_ascii=False, indent=2))
-        return 0 if payload.get("ok") else 1
-
-    if args.cmd == "capture-and-analyze":
-        from vql.adopt.window import CaptureError, capture_screen
-        from uri2vql.window import analyze_window_uri, diagnose_window_image
-
-        cap_path = args.capture_out or "/tmp/vql-capture.png"
-        try:
-            info = capture_screen(cap_path, interactive=not args.no_interactive)
-        except (ImportError, CaptureError) as exc:
-            print(json.dumps({"ok": False, "error": str(exc)}, ensure_ascii=False, indent=2))
-            return 1
-
-        result = analyze_window_uri(
-            f"vql://window/analyze?file={args.out}&grid={args.grid}&image={info.path}",
-            file=args.out,
-            grid=args.grid,
-            image=info.path,
-        )
-        out: dict = {"capture": info.to_dict(), "analyze": result.to_dict()}
-        if args.diagnose and result.ok:
-            out["diagnose"] = diagnose_window_image(
-                info.path,
-                vql_program=args.out,
-                locale=args.locale,
-                save_to_program=True,
-            )
-        print(json.dumps(out, ensure_ascii=False, indent=2))
-        return 0 if result.ok else 1
-
-    return 1
+    ensure_img2vql()
+    args = build_parser().parse_args(argv)
+    runner = COMMAND_RUNNERS.get(args.cmd)
+    if runner is None:
+        return 1
+    return runner(args)
 
 
 if __name__ == "__main__":
