@@ -8,6 +8,7 @@ from img2vql.fingerprint import compare_with_program, fingerprint_for_image, loa
 from img2vql.metadata import img2nl_metadata_slice, merge_program_metadata, refresh_program_metadata, save_diagnose_to_program
 from img2vql.pipeline import analyze_image_to_vql, image_to_vql, roundtrip_compare, vql_to_image
 from img2vql.program import elements_to_vql_program
+from img2vql.vdisplay_context import from_screen_context, render_layout_svg, reverse_generate
 
 __all__ = [
     "UIElement",
@@ -28,4 +29,7 @@ __all__ = [
     "roundtrip_compare",
     "save_diagnose_to_program",
     "vql_to_image",
+    "from_screen_context",
+    "reverse_generate",
+    "render_layout_svg",
 ]
