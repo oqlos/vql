@@ -136,6 +136,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - OCR label → `ui_elements.metadata.label` (z auto-OCR / imgl)
 - CI: `img2nl-vql-flow.sh` w pipeline (synthetic PNG, bez imgl)
 
+## [0.1.7] - 2026-06-24
+
+### Docs
+- Update README.md
+
+### Other
+- Update app.vql.events.pb
+
 ## [0.1.6] - 2026-06-17
 
 ### Docs
