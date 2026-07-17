@@ -1,0 +1,10 @@
+# local.dev.txt — locally developed dependencies of this project (generated 2026-07-04)
+# by ~/github/local.dev.sh — DO NOT EDIT; see ~/github/local.dev.md
+# project: uri2vql 0.1.0 (python) at /home/tom/github/oqlos/vql/packages/uri2vql
+# deps declared: 4 | with local source: 2
+
+## LOCAL DEPS  (dep | required | local source (version) | installed | status)
+imgl | >=0.6.0 | /home/tom/github/semcod/imgl (0.7.16) | 0.7.14 editable | OK-EDITABLE  [pyproject.toml[imgl]]
+vql | >=0.1.0 | /home/tom/github/oqlos/vql (0.1.7) | 0.1.6 editable | OK-EDITABLE  [pyproject.toml]
+
+## EXTERNAL DEPS (no local source, 2): mss, pillow

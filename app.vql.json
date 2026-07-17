@@ -1,0 +1,2154 @@
+{
+  "version": "1.0",
+  "render_target": "svg",
+  "scene": {
+    "width": 1280.0,
+    "height": 900.0,
+    "background": "#FFFFFF",
+    "url": "file:///home/tom/.urirun/artifacts/screenshots/vnc_capture.png",
+    "app": "desktop",
+    "layers": [
+      {
+        "id": "screen_regions",
+        "objects": [
+          {
+            "id": "region_000",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 1272.0,
+                  "height": 150.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#000000",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 636.0,
+            "center_y": 75.0,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                0,
+                0
+              ],
+              "span": [
+                12,
+                2
+              ],
+              "rgb": [
+                0,
+                0,
+                0
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_001",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 424.0,
+                  "height": 450.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#000000",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 212.0,
+            "center_y": 375.0,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                0,
+                2
+              ],
+              "span": [
+                4,
+                6
+              ],
+              "rgb": [
+                0,
+                0,
+                0
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_002",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#08080D",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 477.0,
+            "center_y": 187.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                4,
+                2
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                8,
+                8,
+                13
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_003",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#13121E",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 583.0,
+            "center_y": 187.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                5,
+                2
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                19,
+                18,
+                30
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_004",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#14131F",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 689.0,
+            "center_y": 187.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                6,
+                2
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                20,
+                19,
+                31
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_005",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#09080E",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 795.0,
+            "center_y": 187.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                7,
+                2
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                9,
+                8,
+                14
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_006",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 424.0,
+                  "height": 450.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#000000",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 1060.0,
+            "center_y": 375.0,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                8,
+                2
+              ],
+              "span": [
+                4,
+                6
+              ],
+              "rgb": [
+                0,
+                0,
+                0
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_007",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#2D2A46",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 477.0,
+            "center_y": 262.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                4,
+                3
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                45,
+                42,
+                70
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_008",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#665FA0",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 583.0,
+            "center_y": 262.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                5,
+                3
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                102,
+                95,
+                160
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_009",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#4E4879",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 689.0,
+            "center_y": 262.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                6,
+                3
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                78,
+                72,
+                121
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_010",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#25233A",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 795.0,
+            "center_y": 262.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                7,
+                3
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                37,
+                35,
+                58
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_011",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#2C2945",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 477.0,
+            "center_y": 337.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                4,
+                4
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                44,
+                41,
+                69
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_012",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#5D5690",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 583.0,
+            "center_y": 337.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                5,
+                4
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                93,
+                86,
+                144
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_013",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#4B4575",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 689.0,
+            "center_y": 337.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                6,
+                4
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                75,
+                69,
+                117
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_014",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#26243C",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 795.0,
+            "center_y": 337.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                7,
+                4
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                38,
+                36,
+                60
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_015",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#222035",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 477.0,
+            "center_y": 412.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                4,
+                5
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                34,
+                32,
+                53
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_016",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#373355",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 583.0,
+            "center_y": 412.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                5,
+                5
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                55,
+                51,
+                85
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_017",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#443F6A",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 689.0,
+            "center_y": 412.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                6,
+                5
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                68,
+                63,
+                106
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_018",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#2C2945",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 795.0,
+            "center_y": 412.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                7,
+                5
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                44,
+                41,
+                69
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_019",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#27253D",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 477.0,
+            "center_y": 487.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                4,
+                6
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                39,
+                37,
+                61
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_020",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#3E3A61",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 583.0,
+            "center_y": 487.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                5,
+                6
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                62,
+                58,
+                97
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_021",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#423E67",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 689.0,
+            "center_y": 487.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                6,
+                6
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                66,
+                62,
+                103
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_022",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#302D4B",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 795.0,
+            "center_y": 487.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                7,
+                6
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                48,
+                45,
+                75
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_023",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#09090F",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 477.0,
+            "center_y": 562.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                4,
+                7
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                9,
+                9,
+                15
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_024",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#1A1827",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 583.0,
+            "center_y": 562.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                5,
+                7
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                26,
+                24,
+                39
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_025",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#191727",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 689.0,
+            "center_y": 562.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                6,
+                7
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                25,
+                23,
+                39
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_026",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#0B0A11",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 795.0,
+            "center_y": 562.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                7,
+                7
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                11,
+                10,
+                17
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_027",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 318.0,
+                  "height": 225.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#000000",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 159.0,
+            "center_y": 712.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                0,
+                8
+              ],
+              "span": [
+                3,
+                3
+              ],
+              "rgb": [
+                0,
+                0,
+                0
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_028",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#13111D",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 371.0,
+            "center_y": 637.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                3,
+                8
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                19,
+                17,
+                29
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_029",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#161523",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 477.0,
+            "center_y": 637.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                4,
+                8
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                22,
+                21,
+                35
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_030",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#12111C",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 583.0,
+            "center_y": 637.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                5,
+                8
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                18,
+                17,
+                28
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_031",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#100F19",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 689.0,
+            "center_y": 637.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                6,
+                8
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                16,
+                15,
+                25
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_032",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#12101B",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 795.0,
+            "center_y": 637.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                7,
+                8
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                18,
+                16,
+                27
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_033",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#13121E",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 901.0,
+            "center_y": 637.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                8,
+                8
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                19,
+                18,
+                30
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_034",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#010101",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 1007.0,
+            "center_y": 637.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                9,
+                8
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                1,
+                1,
+                1
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_035",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 212.0,
+                  "height": 225.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#000000",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 1166.0,
+            "center_y": 712.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                10,
+                8
+              ],
+              "span": [
+                2,
+                3
+              ],
+              "rgb": [
+                0,
+                0,
+                0
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_036",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#07060B",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 371.0,
+            "center_y": 712.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                3,
+                9
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                7,
+                6,
+                11
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_037",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#09080E",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 477.0,
+            "center_y": 712.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                4,
+                9
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                9,
+                8,
+                14
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_038",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#08080D",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 583.0,
+            "center_y": 712.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                5,
+                9
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                8,
+                8,
+                13
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_039",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#07070B",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 689.0,
+            "center_y": 712.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                6,
+                9
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                7,
+                7,
+                11
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_040",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 212.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#07060B",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 848.0,
+            "center_y": 712.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                7,
+                9
+              ],
+              "span": [
+                2,
+                1
+              ],
+              "rgb": [
+                7,
+                6,
+                11
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_041",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 150.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#000000",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 1007.0,
+            "center_y": 750.0,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                9,
+                9
+              ],
+              "span": [
+                1,
+                2
+              ],
+              "rgb": [
+                0,
+                0,
+                0
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_042",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 636.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#000000",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 636.0,
+            "center_y": 787.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                3,
+                10
+              ],
+              "span": [
+                6,
+                1
+              ],
+              "rgb": [
+                0,
+                0,
+                0
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_043",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#242322",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 53.0,
+            "center_y": 862.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                0,
+                11
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                36,
+                35,
+                34
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_044",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 212.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#262423",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 212.0,
+            "center_y": 862.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                1,
+                11
+              ],
+              "span": [
+                2,
+                1
+              ],
+              "rgb": [
+                38,
+                36,
+                35
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_045",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 106.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#292725",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 371.0,
+            "center_y": 862.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                3,
+                11
+              ],
+              "span": [
+                1,
+                1
+              ],
+              "rgb": [
+                41,
+                39,
+                37
+              ],
+              "source": "merged_region"
+            }
+          },
+          {
+            "id": "region_046",
+            "primitives": [
+              {
+                "shape_type": "rectangle",
+                "params": {
+                  "width": 848.0,
+                  "height": 75.0
+                }
+              }
+            ],
+            "style": {
+              "color": "#2A2826",
+              "fill": true,
+              "stroke_width": 0.0,
+              "opacity": 1.0
+            },
+            "transform": {
+              "translate_x": 0.0,
+              "translate_y": 0.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotate_deg": 0.0
+            },
+            "center_x": 848.0,
+            "center_y": 862.5,
+            "anchors": [],
+            "constraints": [],
+            "metadata": {
+              "grid": [
+                4,
+                11
+              ],
+              "span": [
+                8,
+                1
+              ],
+              "rgb": [
+                42,
+                40,
+                38
+              ],
+              "source": "merged_region"
+            }
+          }
+        ],
+        "visible": true
+      }
+    ],
+    "relations": []
+  },
+  "validation": null,
+  "metadata": {
+    "source": "screenshot_adopt",
+    "grid": 12,
+    "merge_regions": true,
+    "region_count": 47,
+    "dominant_colors": [
+      "#000000",
+      "#2A2826",
+      "#07060B",
+      "#08080D",
+      "#13121E",
+      "#09080E",
+      "#2C2945",
+      "#262423"
+    ],
+    "analyzed_at": "2026-07-05T12:08:48.087499+00:00",
+    "image": "/home/tom/.urirun/artifacts/screenshots/vnc_capture.png"
+  }
+}

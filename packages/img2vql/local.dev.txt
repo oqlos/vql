@@ -1,0 +1,10 @@
+# local.dev.txt — locally developed dependencies of this project (generated 2026-07-04)
+# by ~/github/local.dev.sh — DO NOT EDIT; see ~/github/local.dev.md
+# project: img2vql 0.2.0 (python) at /home/tom/github/oqlos/vql/packages/img2vql
+# deps declared: 5 | with local source: 2
+
+## LOCAL DEPS  (dep | required | local source (version) | installed | status)
+img2nl | >=0.1.0 | /home/tom/github/wronai/img2nl (0.1.8) | 0.1.8 editable | OK-EDITABLE  [pyproject.toml]
+vql | >=0.1.0 | /home/tom/github/oqlos/vql (0.1.7) | 0.1.6 editable | OK-EDITABLE  [pyproject.toml]
+
+## EXTERNAL DEPS (no local source, 3): opencv-python-headless, pillow, rapidocr-onnxruntime

@@ -1,0 +1,9 @@
+# local.dev.txt — locally developed dependencies of this project (generated 2026-07-04)
+# by ~/github/local.dev.sh — DO NOT EDIT; see ~/github/local.dev.md
+# project: img2svg 0.1.0 (python) at /home/tom/github/oqlos/vql/packages/img2svg
+# deps declared: 5 | with local source: 1
+
+## LOCAL DEPS  (dep | required | local source (version) | installed | status)
+vql | >=0.1.0 | /home/tom/github/oqlos/vql (0.1.7) | 0.1.6 editable | OK-EDITABLE  [pyproject.toml]
+
+## EXTERNAL DEPS (no local source, 4): numpy, opencv-python-headless, pillow, vtracer

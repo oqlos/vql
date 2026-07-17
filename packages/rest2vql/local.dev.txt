@@ -1,0 +1,12 @@
+# local.dev.txt — locally developed dependencies of this project (generated 2026-07-04)
+# by ~/github/local.dev.sh — DO NOT EDIT; see ~/github/local.dev.md
+# project: rest2vql 0.1.0 (python) at /home/tom/github/oqlos/vql/packages/rest2vql
+# deps declared: 8 | with local source: 4
+
+## LOCAL DEPS  (dep | required | local source (version) | installed | status)
+dsl2vql | >=0.1.0 | /home/tom/github/oqlos/vql/packages/dsl2vql (0.1.0) | 0.1.0 editable | OK-EDITABLE  [pyproject.toml]
+img2vql | >=0.2.0 | /home/tom/github/oqlos/vql/packages/img2vql (0.2.0) | - | NOT-INSTALLED  [pyproject.toml[window]]
+uri2vql | >=0.1.0 | /home/tom/github/oqlos/vql/packages/uri2vql (0.1.0) | 0.1.0 editable | OK-EDITABLE  [pyproject.toml[window]]
+vql | * | /home/tom/github/oqlos/vql (0.1.7) | 0.1.6 editable | OK-EDITABLE  [pyproject.toml[window]]
+
+## EXTERNAL DEPS (no local source, 4): fastapi, httpx, pytest, uvicorn
